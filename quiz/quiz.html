@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz | InterviewPrepX</title>
+    <link rel="stylesheet" href="../css/quiz.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="quiz-header">
+        <div class="timer" id="timer">20:00</div>
+        <h2>Java Fundamentals Quiz</h2>
+        <button class="palette-toggle" onclick="togglePalette()">☰</button>
+    </header>
+
+    <!-- MAIN -->
+    <div class="quiz-container">
+
+        <!-- QUESTION AREA -->
+        <div class="question-panel">
+            <h3 id="questionText"></h3>
+
+            <div class="options" id="options"></div>
+
+            <div class="actions">
+                <button onclick="prevQuestion()">Previous</button>
+                <button onclick="flagQuestion()">Flag for Review</button>
+                <button onclick="submitQuiz()" class="primary">Submit</button>
+            </div>
+        </div>
+
+        <!-- QUESTION PALETTE -->
+        <aside class="palette" id="palette">
+            <h4>
+                <span id="progressText">0 of 0 Completed</span>
+            </h4>
+            <div class="legend">
+                <span class="answered"></span> Answered
+                <span class="flagged"></span> Flagged
+                <span class="unanswered"></span> Unanswered
+            </div>
+            <div class="palette-grid" id="paletteGrid"></div>
+        </aside>
+
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+
+</html>

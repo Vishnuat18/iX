@@ -1,0 +1,2594 @@
+[
+  {
+    "id": 1,
+    "level": "Basic",
+    "question": "What are the data types in Java? Java has two types of data",
+    "answer": "types:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 2,
+    "level": "Basic",
+    "question": "Primitive Data Types: These include byte, short, int, long, float, double,",
+    "answer": "char, and boolean. They store simple values and are not objects.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 3,
+    "level": "Basic",
+    "question": "Non-Primitive Data Types: These include String, Array, Class, and",
+    "answer": "Interface. They are derived from primitive data types and provide more functionalities.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 4,
+    "level": "Basic",
+    "question": "What are wrapper classes?",
+    "answer": "Wrapper classes provide an object representation of primitive data types, such as Integers, Doubles, and Booleans. These classes allow primitives to be used in collections and provide useful utility methods.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 5,
+    "level": "Basic",
+    "question": "Are there dynamic arrays in Java?",
+    "answer": "Java arrays are fixed indynamically. Q4 size. However, ArrayList (from the Java.util package) provides a dynamic array implementation where elements can be added or removed dynamically.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 6,
+    "level": "Basic",
+    "question": "What is JVM?",
+    "answer": "The Java Virtual Machine (JVM) is a part of the Java Runtime Environment (JRE). It is responsible for executing Java bytecode by converting it into machine code specific to the operating system.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 7,
+    "level": "Basic",
+    "question": "Why is Java platform-independent?",
+    "answer": "Java achieves platform independence through bytecode. The Java compiler converts code into bytecode, which the JVM interprets for the underlying OS, making Java write-once, run-anywhere.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 8,
+    "level": "Basic",
+    "question": "What are local and global variables?",
+    "answer": "● Local variables are declared inside methods or blocks and are accessible only within their scope. ● Global variables (also called instance variables) are declared within a",
+    "hasCode": true,
+    "codeSample": "class but outside any method and have a wider scope."
+  },
+  {
+    "id": 9,
+    "level": "Basic",
+    "question": "What is data encapsulation?",
+    "answer": "Encapsulation is an OOP principle where data (variables) and code (methods)",
+    "hasCode": true,
+    "codeSample": "are bundled into a single unit (class). It restricts direct access to data using\naccess modifiers (private, protected)."
+  },
+  {
+    "id": 10,
+    "level": "Basic",
+    "question": "What is function overloading?",
+    "answer": "Function overloading allows multiple methods to have the same name but different parameter lists. The compiler differentiates them based on the number or type of parameters. Example: { { return rectangleArea; } { return squareArea; } Figure f = new Figure(); } }",
+    "hasCode": true,
+    "codeSample": "public class Figure\npublic int area(int a, int b)\nint rectangleArea = a*b;\npublic int area(int a)\nint squareArea = a*a;\npublic static void main(String[] args ){\nSystem.out.println(\"Area of square \" + f.area(5));\nSystem.out.println(\"Area of Rectangle \" + f.area(5,3));"
+  },
+  {
+    "id": 11,
+    "level": "Basic",
+    "question": "What is function overriding?",
+    "answer": "Overriding allows a subclass to provide a specific implementation of a method defined in its superclass. It enables dynamic method dispatch (runtime polymorphism).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 12,
+    "level": "Basic",
+    "question": "Why is the main method static in Java?",
+    "answer": "instantiation.",
+    "hasCode": true,
+    "codeSample": "The main method is static so that it can be called without creating an\ninstance of the class, allowing the program to start execution without object"
+  },
+  {
+    "id": 13,
+    "level": "Basic",
+    "question": "What is the difference between the throw and throws keywords",
+    "answer": "in Java? Feature throw throws Purpose Used to explicitly Declares that a throw an exception method may throw an exception Exception(\"Error\") myMethod() throws IOException Number of Exceptions Can throw one Can declare exception at a time multiple exceptions using commas",
+    "hasCode": true,
+    "codeSample": "Usage throw new public void"
+  },
+  {
+    "id": 14,
+    "level": "Basic",
+    "question": "What do you mean by singleton class?",
+    "answer": "initialization or eager initialization approach.",
+    "hasCode": true,
+    "codeSample": "A singleton class ensures that only one instance of the class exists throughout\nthe application's lifecycle. It is implemented using a private constructor, a\nstatic instance variable, and a public static method that returns the single\ninstance. The most common way to create a singleton class is using the lazy"
+  },
+  {
+    "id": 15,
+    "level": "Basic",
+    "question": "Does every try block need a catch block?",
+    "answer": "No, a try block does not necessarily need a catch block. It can be followed by either a catch block, a final block, or both. A catch block handles exceptions that may arise in the try block, while a final block ensures that certain code (such as resource cleanup) is executed regardless of whether an exception occurs.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 16,
+    "level": "Basic",
+    "question": "What is the usage of the super keyword in Java?",
+    "answer": "to:",
+    "hasCode": true,
+    "codeSample": "The super keyword in Java is used to refer to the parent class. It can be used"
+  },
+  {
+    "id": 17,
+    "level": "Basic",
+    "question": "Call the constructor of the parent class.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 18,
+    "level": "Basic",
+    "question": "Access the parent class’s methods and variables when they are",
+    "answer": "overridden in a subclass.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 19,
+    "level": "Basic",
+    "question": "Differentiate between methods and attributes of the parent and child",
+    "answer": "",
+    "hasCode": true,
+    "codeSample": "class when they have the same name."
+  },
+  {
+    "id": 20,
+    "level": "Basic",
+    "question": "What do you mean by the final keyword?",
+    "answer": "The final keyword is used to restrict modifications in Java. It can be applied in three contexts:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 21,
+    "level": "Basic",
+    "question": "Final variable: Its value cannot be changed once assigned.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 22,
+    "level": "Basic",
+    "question": "Final method: Prevents method overriding in subclasses.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 23,
+    "level": "Basic",
+    "question": "Final class: Prevents inheritance by other classes.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 24,
+    "level": "Basic",
+    "question": "How is an exception handled in Java?",
+    "answer": "Java handles exceptions using the try-catch-finally mechanism:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 25,
+    "level": "Basic",
+    "question": "Try block: Contains the code that might generate an exception.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 26,
+    "level": "Basic",
+    "question": "Catch block: Handles the exception and defines what should be done",
+    "answer": "when an error occurs.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 27,
+    "level": "Basic",
+    "question": "Finally block: Executes regardless of whether an exception occurs or",
+    "answer": "not, often used for resource cleanup (e.g., closing files or database connections).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 28,
+    "level": "Basic",
+    "question": "How can objects in a Java class be prevented from",
+    "answer": "serialization? Serialization converts an object into a byte stream for storage or transmission. To prevent serialization:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 29,
+    "level": "Basic",
+    "question": "Declare fields as transient to exclude them from serialization.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 30,
+    "level": "Basic",
+    "question": "Implement writeObject() and readObject() methods to control",
+    "answer": "serialization.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 31,
+    "level": "Basic",
+    "question": "Extend NotSerializableException to explicitly prevent serialization.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 32,
+    "level": "Basic",
+    "question": "What is the difference between a constructor and a method in Java?",
+    "answer": "Constructor Method It has no return type. It always has a return type. It has a return It always has the same name It can have any name of its choice.",
+    "hasCode": true,
+    "codeSample": "type void when not returning anything.\nas the class name."
+  },
+  {
+    "id": 33,
+    "level": "Basic",
+    "question": "Why is reflection used in Java?",
+    "answer": "Reflection in Java allows a running program to inspect and manipulate its methods, fields, and constructors at runtime. It is commonly used in properties.",
+    "hasCode": true,
+    "codeSample": "frameworks, debugging tools, and JavaBeans to dynamically access class"
+  },
+  {
+    "id": 34,
+    "level": "Basic",
+    "question": "What are the different types of ClassLoaders in Java?",
+    "answer": "Java provides three main types of ClassLoaders:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 35,
+    "level": "Basic",
+    "question": "Bootstrap ClassLoader: Loads core Java classes from rt.jar and other",
+    "answer": "essential libraries. It is implemented in native code and does not have",
+    "hasCode": true,
+    "codeSample": "a Java class representation."
+  },
+  {
+    "id": 36,
+    "level": "Basic",
+    "question": "Extension ClassLoader: Loads classes from the JRE/lib/ext directory or",
+    "answer": "any other specified extension directories. It is implemented as sun.misc.Launcher$ExtClassLoader.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 37,
+    "level": "Basic",
+    "question": "System (Application) ClassLoader: Loads application classes from the",
+    "answer": "classpath (defined by CLASSPATH, -cp, or -classpath options). It is a child of the Extension ClassLoader.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 38,
+    "level": "Basic",
+    "question": "What is a copy constructor in Java?",
+    "answer": "A copy constructor creates a new object by copying the properties of an initializes the new object with the same values.",
+    "hasCode": true,
+    "codeSample": "existing object. It takes an instance of the same class as an argument and"
+  },
+  {
+    "id": 39,
+    "level": "Basic",
+    "question": "What is object cloning in Java?",
+    "answer": "Object cloning is a way to create an exact copy of an object. Java provides the clone() method from the Cloneable interface to perform shallow copies. A shallow copy copies field values but does not duplicate referenced objects, while a deep copy creates new instances of referenced objects.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 40,
+    "level": "Basic",
+    "question": "Is Java a purely object-oriented language?",
+    "answer": "No, Java is not purely object-oriented because it supports primitive data object-oriented language would require every entity to be an object.",
+    "hasCode": true,
+    "codeSample": "types like int, char, boolean, and double, which are not objects. A purely"
+  },
+  {
+    "id": 41,
+    "level": "Basic",
+    "question": "What is a package in Java?",
+    "answer": "A package in Java is a collection of related classes and interfaces grouped to organize code and prevent naming conflicts. ● Built-in packages: java.lang, java.util, etc. ● User-defined packages: Created by developers for organizing custom classes.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 42,
+    "level": "Basic",
+    "question": "What is coercion in Java?",
+    "answer": "Coercion in Java refers to the automatic or explicit conversion of one data type into another. ● Implicit coercion: Automatically converts smaller data types to larger ● Explicit coercion (casting): Converts larger data types to smaller ones",
+    "hasCode": true,
+    "codeSample": "ones (e.g., int to double).\nusing type casting (e.g., (int) 3.14)."
+  },
+  {
+    "id": 43,
+    "level": "Basic",
+    "question": "Can a private method be overridden in Java?",
+    "answer": "treated as a separate method rather than an override.",
+    "hasCode": true,
+    "codeSample": "No, private methods cannot be overridden because they are not accessible\noutside their class. If a subclass defines a method with the same name, it is"
+  },
+  {
+    "id": 44,
+    "level": "Basic",
+    "question": "What are the phases in the lifecycle of a thread in Java?",
+    "answer": "A Java thread goes through the following states:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 45,
+    "level": "Basic",
+    "question": "New: The thread is created but has not started executing.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 46,
+    "level": "Basic",
+    "question": "Runnable: The thread is ready to run and waiting for CPU allocation.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 47,
+    "level": "Basic",
+    "question": "Blocked: The thread is waiting for a resource or lock to be available.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 48,
+    "level": "Basic",
+    "question": "Waiting: The thread is indefinitely waiting for another thread to notify",
+    "answer": "it.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 49,
+    "level": "Basic",
+    "question": "Timed Waiting: The thread waits for a specified time (e.g., using",
+    "answer": "Thread.sleep()).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 50,
+    "level": "Basic",
+    "question": "Terminated: The thread has completed execution or stopped due to an",
+    "answer": "error.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 51,
+    "level": "Basic",
+    "question": "What is a marker interface in Java?",
+    "answer": "A marker interface is an interface with no methods or fields, used to provide metadata to the JVM or compiler. Examples include Serializable and Cloneable. Modern Java prefers annotations over marker interfaces.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 52,
+    "level": "Basic",
+    "question": "What is a memory leak in Java?",
+    "answer": "A memory leak occurs when objects that are no longer needed are not garbage collected because they are still referenced somewhere. This can cause excessive memory consumption and slow down the application.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 53,
+    "level": "Basic",
+    "question": "What is the difference between new and newInstance() in",
+    "answer": "Java? compile time. ● newInstance() (from Class) creates an object dynamically at runtime, requiring reflection, and is slower because it involves additional security and access checks.",
+    "hasCode": true,
+    "codeSample": "● New is a keyword that creates a new object of a known class at"
+  },
+  {
+    "id": 54,
+    "level": "Basic",
+    "question": "What is the difference between JDK, JRE, and JVM?",
+    "answer": "● JDK (Java Development Kit) – Contains JRE + development tools (compiler, debugger) for developing and running Java applications. ● JRE (Java Runtime Environment) – Includes JVM + libraries needed to run Java applications but lacks development tools. ● JVM (Java Virtual Machine) – Executes Java bytecode, providing platform independence and memory management (GC). JDK > JRE > JVM – JDK includes JRE, and JRE includes JVM. JDK is for developers, while JRE is for users running Java applications",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 55,
+    "level": "Basic",
+    "question": "What is the difference between abstraction and",
+    "answer": "encapsulation? ● Abstraction hides implementation details and exposes only essential functionalities (e.g., using interfaces and abstract classes). direct access using access modifiers.",
+    "hasCode": true,
+    "codeSample": "● Encapsulation bundles data and methods within a class and restricts"
+  },
+  {
+    "id": 56,
+    "level": "Basic",
+    "question": "What is inheritance in Java?",
+    "answer": "hierarchical relationships. ● Achieved using the extends keyword. ● Supports single and multilevel inheritance (not multiple inheritance with classes). ● Allows method overriding for polymorphism.",
+    "hasCode": true,
+    "codeSample": "Inheritance in Java is a mechanism where a child class acquires properties\nand behaviors of a parent class, promoting code reusability and\n● The super (super) keyword is used to access parent class members."
+  },
+  {
+    "id": 57,
+    "level": "Basic",
+    "question": "What are functional interfaces in Java 8?",
+    "answer": "Functional interfaces have exactly one abstract method and are used with lambda expressions. Examples include Runnable, Callable, and Comparator.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 58,
+    "level": "Basic",
+    "question": "What is polymorphism in Java?",
+    "answer": "Polymorphism allows the same method to behave differently based on the context. ● Compile-time polymorphism (Method Overloading): Methods with the same name but different parameters. ● Runtime polymorphism (Method Overriding): A subclass provides a specific implementation of a parent method.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 59,
+    "level": "Basic",
+    "question": "What is the purpose of the default keyword in interfaces?",
+    "answer": "The default keyword allows methods in interfaces to have default implementations, enabling backward compatibility without forcing all implementing classes to override them.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 60,
+    "level": "Basic",
+    "question": "What is an interface in Java?",
+    "answer": "An interface in Java is a blueprint for classes that defines a contract without implementation. ● Declared using the interface keyword. ● Contains only abstract methods (until Java 7). ● Supports multiple inheritance. ● Implemented by classes using the implements keyword.",
+    "hasCode": true,
+    "codeSample": "● Java 8+ allows default and static methods with implementations."
+  },
+  {
+    "id": 61,
+    "level": "Basic",
+    "question": "What is the difference between ArrayList and Vector?",
+    "answer": "● ArrayList is not synchronized (faster), while Vector is synchronized (thread-safe). ● ArrayList increases its size by 50% when full, while Vector doubles its size.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 62,
+    "level": "Basic",
+    "question": "What is an abstract class?",
+    "answer": "meant to be extended by subclasses. ● Declared using the abstract keyword. ● Can have both abstract (without implementation) and concrete methods. ● Used for partial implementation and code reusability. ● Must be extended by a subclass that provides implementations for abstract methods.",
+    "hasCode": true,
+    "codeSample": "An abstract class in Java is a class that cannot be instantiated and is"
+  },
+  {
+    "id": 63,
+    "level": "Basic",
+    "question": "What is the difference between HashMap and ConcurrentHashMap?",
+    "answer": "● HashMap is not thread-safe, while ConcurrentHashMap is thread-safe. ● ConcurrentHashMap locks only portions of the map, improving performance. ● HashMap allows one null key, but ConcurrentHashMap does not.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 64,
+    "level": "Basic",
+    "question": "What is the difference between an abstract class and an interface?",
+    "answer": "● Interface: Contains only abstract methods (before Java 8) and supports multiple inheritance.",
+    "hasCode": true,
+    "codeSample": "● Abstract class: Can have both abstract and concrete methods."
+  },
+  {
+    "id": 65,
+    "level": "Basic",
+    "question": "What is the Java Memory Model (JMM)?",
+    "answer": "The Java Memory Model (JMM) defines how threads interact with memory and ensures visibility, ordering, and atomicity of shared data in a multi-threaded environment. ● Controls how variables are read/written across threads. ● Ensures happens-before relationships to prevent race conditions. ● Uses volatile, synchronized, and locks for thread safety. ● Helps in optimizing CPU caching and instruction reordering. ● Ensures safe and predictable concurrency behavior.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 66,
+    "level": "Basic",
+    "question": "What is this keyword in Java?",
+    "answer": "variables and parameters with the same name.",
+    "hasCode": true,
+    "codeSample": "This refers to the current instance of a class, distinguishing between instance"
+  },
+  {
+    "id": 67,
+    "level": "Basic",
+    "question": "What are Java Generics?",
+    "answer": "interface to work with different types while avoiding runtime errors.",
+    "hasCode": true,
+    "codeSample": "Generics provide compile-time type safety by allowing a class, method, or"
+  },
+  {
+    "id": 68,
+    "level": "Basic",
+    "question": "What are access modifiers in Java?",
+    "answer": "● Default: Accessible within the same package. ● Protected: Accessible within the same package and subclasses. ● Public: Accessible from anywhere.",
+    "hasCode": true,
+    "codeSample": "● Private: Accessible only within the same class."
+  },
+  {
+    "id": 69,
+    "level": "Basic",
+    "question": "What is the purpose of the synchronized keyword?",
+    "answer": "Synchronized ensures that only one thread can execute a block of code or method at a time, preventing race conditions.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 70,
+    "level": "Basic",
+    "question": "What is a static method in Java?",
+    "answer": "● Cannot use this or super. ● Commonly used for utility methods (e.g., Math.pow()). } } Example.display(); // Call without creating an object",
+    "hasCode": true,
+    "codeSample": "A static method in Java belongs to the class, not instances. It can be called\nusing the class name without creating an object.\n● Declared using the static keyword.\n● Can access only static variables and methods directly.\nclass Example {\nstatic void display() {\nSystem.out.println(\"Static Method\");"
+  },
+  {
+    "id": 71,
+    "level": "Basic",
+    "question": "What are Java 8 Streams?",
+    "answer": "Java 8 Streams provides a functional programming approach to processing data efficiently. They allow operations like filtering, mapping, and reducing collections in a declarative and parallelizable way. ● Supports sequential (stream()) and parallel (parallelStream()) processing. ● Uses lazy evaluation for optimized execution. ● Common methods: filter(), map(), reduce(), collect(), forEach().",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 72,
+    "level": "Basic",
+    "question": "What is garbage collection in Java?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 73,
+    "level": "Basic",
+    "question": "Automatic Memory Management: Java's Garbage Collector (GC)",
+    "answer": "automatically reclaims memory by removing unused objects.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 74,
+    "level": "Basic",
+    "question": "Heap Memory Cleanup: GC works in the heap, where objects are",
+    "answer": "dynamically allocated.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 75,
+    "level": "Basic",
+    "question": "Identifies Unreachable Objects: Objects with no active references are",
+    "answer": "eligible for garbage collection.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 76,
+    "level": "Basic",
+    "question": "Prevents Memory Leaks: Helps manage memory efficiently and",
+    "answer": "avoids out-of-memory errors.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 77,
+    "level": "Basic",
+    "question": "No Manual Deallocation: Unlike languages like C/C++, Java does not",
+    "answer": "require explicit free() or delete().",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 78,
+    "level": "Basic",
+    "question": "Uses Mark and Sweep Algorithm: Identifies live objects (mark) and",
+    "answer": "removes dead ones (sweep).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 79,
+    "level": "Basic",
+    "question": "JVM Optimization for GC: JVM parameters like -Xms, -Xmx,",
+    "answer": "-XX:+UseG1GC help tune GC performance.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 80,
+    "level": "Basic",
+    "question": "What is the difference between implements and extends?",
+    "answer": "● Implements are used for interfaces. Intermediate Interview Questions:",
+    "hasCode": true,
+    "codeSample": "● Extends are used for class inheritance."
+  },
+  {
+    "id": 81,
+    "level": "Basic",
+    "question": "What is the purpose of the \"assert\" statement in Java?",
+    "answer": "The assert statement in Java is used to validate assumptions during development and debugging. It checks whether a given expression evaluates to true. If the condition is false, an AssertionError is thrown. Assertions are mainly used for debugging and testing purposes to detect logical errors early in the development process.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 82,
+    "level": "Basic",
+    "question": "What is the difference between ArrayList and LinkedList in",
+    "answer": "Java? ● ArrayList: A resizable array-based data structure that provides fast random access (O(1)) but slower insertions and deletions (O(n)) due to shifting elements. It is preferred when frequent access operations are needed. ● LinkedList: A doubly linked list implementation that allows efficient insertions and deletions (O(1)) but slower random access (O(n)). It is more suitable for scenarios with frequent modifications and dynamic resizing.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 83,
+    "level": "Basic",
+    "question": "What is the purpose of the hashCode() method in Java?",
+    "answer": "The hashCode() method generates a unique integer value (hash code) that represents an object’s contents. It is primarily used in hash-based collections like HashMap, HashSet, and Hashtable for efficient storage and retrieval. A properly implemented hashCode() ensures better performance in hashing-based operations.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 84,
+    "level": "Basic",
+    "question": "What is the purpose of the toString() method in Java?",
+    "answer": "The toString() method returns a string representation of an object, typically and object readability. When an object is printed or concatenated with a string, the toString() method is implicitly called. Developers often override it to provide meaningful output.",
+    "hasCode": true,
+    "codeSample": "including its class name and key attributes. It enhances debugging, logging,"
+  },
+  {
+    "id": 85,
+    "level": "Basic",
+    "question": "How is encapsulation achieved in Java?",
+    "answer": "maintains control over how data is accessed and modified. Getters and",
+    "hasCode": true,
+    "codeSample": "Encapsulation in Java is achieved using access modifiers (private, protected,\npublic) to restrict direct access to class members. It ensures data hiding and\nsetters are commonly used to enforce controlled access to private variables."
+  },
+  {
+    "id": 86,
+    "level": "Basic",
+    "question": "What are method references in Java?",
+    "answer": "Method references provide a shorthand way to refer to existing methods without executing them immediately. They improve code readability by methods. They are used with functional interfaces and written as Class::methodName.",
+    "hasCode": true,
+    "codeSample": "replacing lambda expressions with direct references to class or instance\nExample: System.out::println instead of x -> System.out.println(x)."
+  },
+  {
+    "id": 87,
+    "level": "Basic",
+    "question": "What are annotations in Java?",
+    "answer": "Annotations in Java are metadata tags used to provide additional information about code elements such as classes, methods, and variables. They start with @ (e.g., @Override, @Deprecated) and are used for configuration, code documentation, validation, and runtime processing. Annotations enhance code organization and facilitate frameworks like Spring and Hibernate.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 88,
+    "level": "Basic",
+    "question": "What is the BitSet class used for in Java?",
+    "answer": "provides efficient bitwise operations such as setting, clearing, flipping, and checking bits. It is used for memory-efficient handling of binary data, such as flags, filters, and permission settings.",
+    "hasCode": true,
+    "codeSample": "The BitSet class represents a sequence of bits that can grow dynamically. It"
+  },
+  {
+    "id": 89,
+    "level": "Basic",
+    "question": "What is a CyclicBarrier in Java?",
+    "answer": "A CyclicBarrier is a synchronization mechanism that allows multiple threads to wait at a common barrier point until all threads reach it. Once all participating threads arrive, they proceed together. It is useful in parallel programming scenarios where tasks must be synchronized before continuing execution.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 90,
+    "level": "Basic",
+    "question": "What are the types of JDBC statements in Java?",
+    "answer": "JDBC (Java Database Connectivity) provides three types of statements for database interaction: ● Statement: Executes simple SQL queries without parameters. ● PreparedStatement: Precompiled SQL statement with placeholders for parameters, improving performance and security. ● CallableStatement: Used for executing stored procedures in the database.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 91,
+    "level": "Basic",
+    "question": "What is the Java String Pool?",
+    "answer": "stores string literals in a common pool to avoid redundant allocations. When a new string literal is created, the JVM checks the pool first; if the string exists, it reuses the reference instead of creating a new object. This conserves memory and enhances performance. Example: // str1 will be stored in stack memory",
+    "hasCode": true,
+    "codeSample": "The Java String Pool is a memory optimization technique where the JVM\nString str1=\"Hello\";\n// \"Hello\" will be stored in String Pool"
+  },
+  {
+    "id": 92,
+    "level": "Basic",
+    "question": "What is the difference between Path and Classpath?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 93,
+    "level": "Basic",
+    "question": "Path specifies the location of system executables like Java and javac.",
+    "answer": "resources.",
+    "hasCode": true,
+    "codeSample": "Classpath specifies the location of Java class files, JARs, and"
+  },
+  {
+    "id": 94,
+    "level": "Basic",
+    "question": "Path is used by the operating system, while Classpath is used by the",
+    "answer": "JVM.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 95,
+    "level": "Basic",
+    "question": "The path is set via the PATH environment variable, whereas Classpath",
+    "answer": "is set using CLASSPATH or -cp option.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 96,
+    "level": "Basic",
+    "question": "Example: set PATH=C:\\Java\\bin (Path), set",
+    "answer": "CLASSPATH=C:\\libs\\myLib.jar (Classpath).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 97,
+    "level": "Basic",
+    "question": "What is the difference between Heap and Stack memory?",
+    "answer": "● Heap Memory: Stores objects and data that need to persist throughout the program. Managed by the JVM’s garbage collector. ● Stack Memory: Holds method call frames and local variables. It manages method execution and automatically deallocates memory when a method exits.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 98,
+    "level": "Basic",
+    "question": "Can we use String with a switch-case statement?",
+    "answer": "The switch works by computing the hashcode of the string and then comparing it. switch (fruit) { } Key Points: ● Case labels are case-sensitive (\"Apple\" ≠ \"apple\"). ● Less efficient than integer-based switches due to hashing.",
+    "hasCode": true,
+    "codeSample": "Yes, String can be used in a switch-case statement from Java 7 onwards.\nString fruit = \"Apple\";\ncase \"Apple\": System.out.println(\"It's an Apple!\"); break;\ncase \"Mango\": System.out.println(\"It's a Mango!\"); break;\ndefault: System.out.println(\"Unknown fruit\");\n● Uses String.hashCode() for comparison internally."
+  },
+  {
+    "id": 99,
+    "level": "Basic",
+    "question": "What are the different types of class loaders?",
+    "answer": "",
+    "hasCode": true,
+    "codeSample": "Java has three primary class loaders:"
+  },
+  {
+    "id": 100,
+    "level": "Basic",
+    "question": "Bootstrap ClassLoader – Loads core Java classes (e.g., rt.jar).",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 101,
+    "level": "Basic",
+    "question": "Extension ClassLoader – Loads classes from the JDK's extensions",
+    "answer": "directory ($JAVA_HOME/lib/ext).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 102,
+    "level": "Basic",
+    "question": "System (Application) ClassLoader – Loads application classes from the",
+    "answer": "classpath, configurable using -cp or -classpath.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 103,
+    "level": "Basic",
+    "question": "What is the difference between fail-fast and fail-safe iterators?",
+    "answer": "● Fail-fast iterators: Immediately throw a ConcurrentModificationException if a collection is modified while iterating. ● Fail-safe iterators: Operate on a cloned copy of the collection, allowing modifications without exceptions.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 104,
+    "level": "Basic",
+    "question": "What is a compile-time constant in Java?",
+    "answer": "A compile-time constant is a value assigned at the time of compilation and remains unchanged throughout execution. Example:",
+    "hasCode": true,
+    "codeSample": "static final int MAX_VALUE = 100;"
+  },
+  {
+    "id": 105,
+    "level": "Basic",
+    "question": "What is the difference between Map and Queue in Java?",
+    "answer": "● Map: Stores key-value pairs and allow fast retrieval based on keys (e.g., HashMap). ● Queue: Stores elements in a specific order (FIFO, Priority-based, etc.), designed for processing elements sequentially.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 106,
+    "level": "Basic",
+    "question": "What is the difference between LinkedHashMap and",
+    "answer": "PriorityQueue? ● LinkedHashMap: Maintains insertion order and maps keys to values. ● PriorityQueue: Orders elements based on priority (natural ordering or a custom comparator).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 107,
+    "level": "Basic",
+    "question": "What is a memory-mapped buffer in Java?",
+    "answer": "A memory-mapped buffer allows a file to be directly mapped into memory, improving I/O efficiency by enabling direct access to file contents. Useful for handling large files.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 108,
+    "level": "Basic",
+    "question": "What is the difference between notify() and notifyAll()?",
+    "answer": "● notify(): Wakes up one waiting thread. ● notifyAll(): Wakes up all waiting threads.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 109,
+    "level": "Basic",
+    "question": "What are the types of exceptions in Java?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 110,
+    "level": "Basic",
+    "question": "Checked Exceptions (e.g., IOException) – Must be handled at",
+    "answer": "compile-time.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 111,
+    "level": "Basic",
+    "question": "Unchecked Exceptions (e.g., NullPointerException) – Occurs at runtime",
+    "answer": "and doesn't require explicit handling.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 112,
+    "level": "Basic",
+    "question": "What is OutOfMemoryError?",
+    "answer": "● Error when JVM runs out of memory. ● Caused by memory leaks, large objects, or infinite loops.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 113,
+    "level": "Basic",
+    "question": "What is the difference between == and equals()?",
+    "answer": "● == compares references (memory addresses). ● equals() compares object content (must be overridden in custom classes).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 114,
+    "level": "Basic",
+    "question": "How can you concatenate multiple strings in Java?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 115,
+    "level": "Basic",
+    "question": "+ operator – Simple but creates new objects.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 116,
+    "level": "Basic",
+    "question": "concat() – Works with String.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 117,
+    "level": "Basic",
+    "question": "StringBuilder.append() – Efficient, recommended for multiple",
+    "answer": "concatenations.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 118,
+    "level": "Basic",
+    "question": "String.join() – Introduced in Java 8.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 119,
+    "level": "Basic",
+    "question": "What are the main differences between Array and Collection?",
+    "answer": "● Array: Fixed size, stores elements of the same type. ● Collection: Dynamic size, can store elements of different types (e.g., ArrayList, HashSet).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 120,
+    "level": "Basic",
+    "question": "What is BlockingQueue in Java?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 121,
+    "level": "Basic",
+    "question": "A thread-safe queue that blocks when empty/full.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 122,
+    "level": "Basic",
+    "question": "Used in producer-consumer patterns.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 123,
+    "level": "Basic",
+    "question": "Example: ArrayBlockingQueue, LinkedBlockingQueue.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 124,
+    "level": "Basic",
+    "question": "What is the difference between a process and a thread?",
+    "answer": "● Process: Independent execution unit with its own memory space. ● Thread: Lightweight unit within a process, sharing memory with other threads.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 125,
+    "level": "Basic",
+    "question": "What are the advantages of multithreading?",
+    "answer": "● Efficient CPU utilization ● Faster task execution ● Improved application responsiveness ● Better handling of I/O operations",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 126,
+    "level": "Basic",
+    "question": "What is context switching?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 127,
+    "level": "Basic",
+    "question": "The process of saving a thread’s state and switching to another.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 128,
+    "level": "Basic",
+    "question": "Happens in multi-threading and multitasking.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 129,
+    "level": "Basic",
+    "question": "Causes CPU overhead.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 130,
+    "level": "Basic",
+    "question": "What is the difference between Array and ArrayList?",
+    "answer": "● Array: Fixed-size, stores primitive types and objects. ● ArrayList: Dynamic-size, stores only objects, provides built-in resizing and utility methods.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 131,
+    "level": "Basic",
+    "question": "What is the purpose of the volatile keyword?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 132,
+    "level": "Basic",
+    "question": "Ensures visibility of shared variable updates across threads.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 133,
+    "level": "Basic",
+    "question": "Prevents instruction reordering.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 134,
+    "level": "Basic",
+    "question": "Used in multi-threading scenarios.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 135,
+    "level": "Basic",
+    "question": "Explain Java NIO.",
+    "answer": "Java NIO (New I/O) provides faster I/O operations using: ● Channels & Buffers for data transfer ● Non-blocking I/O for asynchronous processing ● Selectors for managing multiple channels with a single thread",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 136,
+    "level": "Basic",
+    "question": "Difference between String, StringBuilder, and StringBuffer?",
+    "answer": "● StringBuilder – Mutable, fast, not thread-safe. ● StringBuffer – Mutable, thread-safe (synchronized).",
+    "hasCode": true,
+    "codeSample": "● String – Immutable, slower for modifications."
+  },
+  {
+    "id": 137,
+    "level": "Basic",
+    "question": "Difference between Runnable and Callable?",
+    "answer": "● Runnable – No return value, cannot throw checked exceptions. ● Callable – Returns a value (Future<T>), and can throw checked exceptions.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 138,
+    "level": "Basic",
+    "question": "What is a checked exception in Java?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 139,
+    "level": "Basic",
+    "question": "Exceptions checked at compile-time.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 140,
+    "level": "Basic",
+    "question": "Must be handled using try-catch or throws.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 141,
+    "level": "Basic",
+    "question": "Examples: IOException, SQLException.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 142,
+    "level": "Basic",
+    "question": "Difference between static and final keywords?",
+    "answer": "inheritance.",
+    "hasCode": true,
+    "codeSample": "● Static – Belongs to the class, shared across instances.\n● Final – Makes variables constant, prevents method overriding & class"
+  },
+  {
+    "id": 143,
+    "level": "Basic",
+    "question": "What is an unchecked exception?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 144,
+    "level": "Basic",
+    "question": "Runtime exceptions that do not require handling (try-catch).",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 145,
+    "level": "Basic",
+    "question": "Examples: NullPointerException, ArrayIndexOutOfBoundsException.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 146,
+    "level": "Basic",
+    "question": "Occurs due to programming errors.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 147,
+    "level": "Basic",
+    "question": "Explain Java Lambda Expressions.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 148,
+    "level": "Basic",
+    "question": "Introduced in Java 8 to enable functional programming.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 149,
+    "level": "Basic",
+    "question": "Provides a concise way to write anonymous functions.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 150,
+    "level": "Basic",
+    "question": "Used with functional interfaces (Runnable, Comparator).",
+    "answer": "Example: (a, b) -> a + b",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 151,
+    "level": "Basic",
+    "question": "Purpose of the try-catch block?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 152,
+    "level": "Basic",
+    "question": "Handles runtime exceptions to prevent program crashes.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 153,
+    "level": "Basic",
+    "question": "Try contains risky code, and catch handles exceptions.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 154,
+    "level": "Basic",
+    "question": "Ensures graceful error handling.",
+    "answer": "Example:",
+    "hasCode": true,
+    "codeSample": "try { int x = 10 / 0; } catch (ArithmeticException e) {\nSystem.out.println(\"Error!\"); }"
+  },
+  {
+    "id": 155,
+    "level": "Basic",
+    "question": "Difference between Collection and Collections?",
+    "answer": "● Collection: Interface representing data structures (e.g., List, Set). searching).",
+    "hasCode": true,
+    "codeSample": "● Collections: A utility class for collection operations (e.g., sorting,"
+  },
+  {
+    "id": 156,
+    "level": "Basic",
+    "question": "Use of the finalize() method?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 157,
+    "level": "Basic",
+    "question": "Called by a Garbage Collector before an object is reclaimed.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 158,
+    "level": "Basic",
+    "question": "Used for cleanup operations (e.g., closing files, releasing resources).",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 159,
+    "level": "Basic",
+    "question": "Deprecated in Java 9 due to unpredictable behavior.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 160,
+    "level": "Basic",
+    "question": "Explain Java 8 Optional.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 161,
+    "level": "Basic",
+    "question": "A container object for handling null values safely.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 162,
+    "level": "Basic",
+    "question": "Helps avoid NullPointerException.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 163,
+    "level": "Basic",
+    "question": "Methods: of(), ofNullable(), isPresent(), orElse(), map().",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 164,
+    "level": "Basic",
+    "question": "What is the Java Collection Framework?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 165,
+    "level": "Basic",
+    "question": "A set of classes & interfaces for managing groups of objects.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 166,
+    "level": "Basic",
+    "question": "Includes List (ArrayList), Set (HashSet), Map (HashMap), Queue",
+    "answer": "(PriorityQueue), etc.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 167,
+    "level": "Basic",
+    "question": "Provides efficient data structures & algorithms for handling",
+    "answer": "collections.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 168,
+    "level": "Basic",
+    "question": "Explain Java 8 CompletableFuture.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 169,
+    "level": "Basic",
+    "question": "A non-blocking way to handle asynchronous programming.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 170,
+    "level": "Basic",
+    "question": "Supports callbacks (thenApply(), thenAccept()) and chaining",
+    "answer": "multiple tasks.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 171,
+    "level": "Basic",
+    "question": "Uses the ForkJoinPool for efficient execution.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 172,
+    "level": "Basic",
+    "question": "What is multithreading in Java?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 173,
+    "level": "Basic",
+    "question": "Allows parallel execution of multiple tasks (threads).",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 174,
+    "level": "Basic",
+    "question": "Improves CPU utilization & performance.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 175,
+    "level": "Basic",
+    "question": "Created using Thread class or Runnable interface.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 176,
+    "level": "Basic",
+    "question": "Managed using Executors, Fork/Join, and CompletableFuture.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 177,
+    "level": "Basic",
+    "question": "Purpose of the strictfp keyword?",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 178,
+    "level": "Basic",
+    "question": "Ensures consistent floating-point calculations across platforms.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 179,
+    "level": "Basic",
+    "question": "Enforces IEEE 754 standard for precision.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 180,
+    "level": "Basic",
+    "question": "Used with classes & methods but not variables.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 181,
+    "level": "Basic",
+    "question": "Difference between sleep() and wait()?",
+    "answer": "● sleep(): Pauses thread but retains lock. ● wait(): Releases lock and waits for notify().",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 182,
+    "level": "Basic",
+    "question": "Difference between LinkedHashSet and TreeSet?",
+    "answer": "● LinkedHashSet maintains insertion order, while TreeSet maintains sorted order (natural or custom comparator). ● LinkedHashSet uses a HashMap with a linked list, whereas TreeSet is based on a Red-Black Tree. ● LinkedHashSet has O(1) time complexity for add, remove, and contains, while TreeSet has O(log n) due to tree balancing. ● LinkedHashSet allows null elements, but TreeSet does not allow null (throws NullPointerException). ● LinkedHashSet is best for maintaining insertion order with fast lookups, while TreeSet is ideal for sorting unique elements and range queries.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 183,
+    "level": "Basic",
+    "question": "What is synchronization in Java?",
+    "answer": "Synchronization in Java is a mechanism that ensures thread safety by controlling access to shared resources in a multi-threaded environment. It prevents race conditions and ensures data consistency when multiple threads access a shared object. Java provides synchronization through the synchronized keyword, which can be applied at the method or block level to allow only one thread to execute a critical section at a time. Additionally, explicit locks (ReentrantLock), volatile variables, and atomic classes (AtomicInteger, ConcurrentHashMap) offer alternative ways to handle concurrency efficiently. While synchronization ensures safe execution, excessive use can lead to performance overhead due to thread blocking and context switching. Advanced Interview Questions:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 184,
+    "level": "Basic",
+    "question": "How does the JVM handle method overloading and",
+    "answer": "overriding internally? Method overloading is resolved at compile-time, where the compiler determines the method signature based on argument types. Method overriding, on the other hand, is resolved at runtime using dynamic method dispatch, where the JVM decides which method to invoke based on the actual object type.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 185,
+    "level": "Basic",
+    "question": "Explain Java's Non-blocking Algorithms and how they differ",
+    "answer": "from traditional blocking algorithms. Non-blocking algorithms allow multiple threads to operate on shared data without using locks, improving performance and avoiding issues like deadlocks. In contrast, traditional blocking algorithms use locks to synchronize access, potentially leading to contention and reduced concurrency.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 186,
+    "level": "Basic",
+    "question": "How can you create an immutable class in Java?",
+    "answer": "● Do not provide setters. ● Ensure deep copies of mutable fields in constructors and getters. ● Avoid exposing mutable references.",
+    "hasCode": true,
+    "codeSample": "To create an immutable class:\n● Declare the class as final.\n● Make all fields private and final."
+  },
+  {
+    "id": 187,
+    "level": "Basic",
+    "question": "Describe the Contract of hashCode() and equals() methods.",
+    "answer": "● If two objects are equal according to equals(), they must have the same hashCode(). ● However, two objects with the same hashCode() may not necessarily be equal. ● Properly overriding both methods ensures correct behavior in hash-based collections like HashMap and HashSet.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 188,
+    "level": "Basic",
+    "question": "What is Type Inference in Generics?",
+    "answer": "Inner Workings of ConcurrentHashMap ConcurrentHashMap in Java is a thread-safe, high-performance alternative to HashMap, optimized for concurrent access. How It Works:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 189,
+    "level": "Basic",
+    "question": "Segmented Locking (Java 7 and earlier) – The map was divided into",
+    "answer": "segments, reducing lock contention.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 190,
+    "level": "Basic",
+    "question": "CAS (Compare-And-Swap) & Fine-Grained Locking (Java 8+) –",
+    "answer": "Instead of segments, it uses locks at bucket level and CAS operations for updates.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 191,
+    "level": "Basic",
+    "question": "Bucket-Level Synchronization – Write operations lock only the",
+    "answer": "affected bucket, allowing parallel updates.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 192,
+    "level": "Basic",
+    "question": "No Lock for Reads – Most read operations (get()) are lock-free,",
+    "answer": "ensuring high performance.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 193,
+    "level": "Basic",
+    "question": "Improved Scalability – Reduces contention, making it efficient for",
+    "answer": "multi-threaded environments. Key Benefits: ✅ Faster than Collections.synchronizedMap() due to reduced locking. ✅ Supports high-concurrency scenarios like caching and real-time analytics. ✅ Atomic operations (putIfAbsent(), compute(), etc.) ensure thread safety.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 194,
+    "level": "Basic",
+    "question": "Explain the inner workings of ConcurrentHashMap.",
+    "answer": "Inner Workings of ConcurrentHashMap:ConcurrentHashMap in Java is a thread-safe, high-performance alternative to HashMap, optimized for concurrent access. How It Works:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 195,
+    "level": "Basic",
+    "question": "Segmented Locking (Java 7 and earlier) – The map was divided into",
+    "answer": "segments, reducing lock contention.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 196,
+    "level": "Basic",
+    "question": "CAS (Compare-And-Swap) & Fine-Grained Locking (Java 8+) –",
+    "answer": "Instead of segments, it uses locks at bucket level and CAS operations for updates.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 197,
+    "level": "Basic",
+    "question": "Bucket-Level Synchronization – Write operations lock only the",
+    "answer": "affected bucket, allowing parallel updates.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 198,
+    "level": "Basic",
+    "question": "No Lock for Reads – Most read operations (get()) are lock-free,",
+    "answer": "ensuring high performance.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 199,
+    "level": "Basic",
+    "question": "Improved Scalability – Reduces contention, making it efficient for",
+    "answer": "multi-threaded environments. Key Benefits: ✅ Faster than Collections.synchronizedMap() due to reduced locking. ✅ Supports high-concurrency scenarios like caching and real-time analytics. ✅ Atomic operations (putIfAbsent(), compute(), etc.) ensure thread safety.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 200,
+    "level": "Basic",
+    "question": "Describe the Java Memory Fence and its importance.",
+    "answer": "Java Memory Fence & Its Importance A Memory Fence (or Memory Barrier) in Java ensures proper ordering of memory operations in a multi-threaded environment, preventing reordering by the CPU or compiler. How It Works:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 201,
+    "level": "Basic",
+    "question": "Prevents Instruction Reordering – Ensures operations happen in the",
+    "answer": "expected sequence.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 202,
+    "level": "Basic",
+    "question": "Ensures Visibility Across Threads – Changes made by one thread",
+    "answer": "become visible to others.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 203,
+    "level": "Basic",
+    "question": "Used in Concurrency Primitives – Found in volatile, synchronized,",
+    "answer": "and Lock implementations. Why It's Important? ✅ Prevents data races & inconsistencies in multi-threaded applications. ✅ Ensures correct execution order in concurrent programming. ✅ Optimizes performance while maintaining thread safety.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 204,
+    "level": "Basic",
+    "question": "Explain the concept of False Sharing in Java.",
+    "answer": "False sharing occurs when multiple threads modify variables that reside in the same CPU cache line, causing unnecessary cache invalidations and performance degradation.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 205,
+    "level": "Basic",
+    "question": "How do you handle OutOfMemoryError in Java?",
+    "answer": "To handle OutOfMemoryError: ● Optimize memory usage and avoid memory leaks. ● Increase heap size using JVM options (-Xmx). ● Use efficient data structures. ● Employ garbage collection tuning strategies. ● Implement graceful degradation mechanisms.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 206,
+    "level": "Basic",
+    "question": "Describe Escape Analysis in Java optimizations.",
+    "answer": "Escape analysis is a compiler optimization technique that determines whether an object can be allocated on the stack instead of the heap, reducing memory allocation overhead and improving performance.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 207,
+    "level": "Basic",
+    "question": "Explain Thread Starvation and how to prevent it.",
+    "answer": "Thread starvation occurs when low-priority threads are indefinitely delayed due to high-priority threads monopolizing CPU time. It can be prevented by: ● Using fair locks (ReentrantLock with fairness parameter). ● Adjusting thread priorities carefully. ● Ensuring resource allocation is balanced.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 208,
+    "level": "Basic",
+    "question": "How does Class Data Sharing (CDS) work in JVM?",
+    "answer": "Class Data Sharing (CDS) is a JVM optimization technique that reduces across JVM instances. How It Works:",
+    "hasCode": true,
+    "codeSample": "startup time and memory usage by preloading and sharing class metadata"
+  },
+  {
+    "id": 209,
+    "level": "Basic",
+    "question": "CDS Archive Creation – During JVM execution, class metadata is",
+    "answer": "stored in a shared archive file.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 210,
+    "level": "Basic",
+    "question": "Faster Startup – On subsequent runs, JVM loads classes from the",
+    "answer": "precompiled archive, avoiding costly parsing.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 211,
+    "level": "Basic",
+    "question": "Memory Efficiency – Multiple JVM instances share the same metadata,",
+    "answer": "reducing RAM usage.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 212,
+    "level": "Basic",
+    "question": "Explain Java’s Thread-Local Allocation Buffers (TLAB).",
+    "answer": "Java’s Thread-Local Allocation Buffers (TLAB) Thread-Local Allocation Buffers (TLAB) is a JVM optimization that improves the Young Generation heap. How It Works:",
+    "hasCode": true,
+    "codeSample": "object allocation speed by providing each thread a private memory buffer in"
+  },
+  {
+    "id": 213,
+    "level": "Basic",
+    "question": "Each thread gets a small, preallocated space in the Eden space.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 214,
+    "level": "Basic",
+    "question": "Fast object allocation occurs within this space, avoiding",
+    "answer": "synchronization.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 215,
+    "level": "Basic",
+    "question": "When TLAB is full, objects spill over to the shared heap, triggering GC",
+    "answer": "if needed. Benefits: ✅ Faster Object Allocation – No locking required, reducing contention. ✅ Improved GC Performance – Most objects remain in Eden, reducing Old Gen promotion. ✅ Better Multi-Threading Efficiency – Each thread allocates independently.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 216,
+    "level": "Basic",
+    "question": "How does the Fork/Join Framework work?",
+    "answer": "The Fork/Join Framework (introduced in Java 7) is designed for parallel execution of tasks using a divide-and-conquer approach. How It Works:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 217,
+    "level": "Basic",
+    "question": "Task Splitting (fork()) – A task is split into smaller subtasks",
+    "answer": "recursively.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 218,
+    "level": "Basic",
+    "question": "Parallel Execution – The subtasks run in a ForkJoinPool, utilizing",
+    "answer": "multiple CPU cores.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 219,
+    "level": "Basic",
+    "question": "Task Joining (join()) – The results of subtasks are combined once",
+    "answer": "the computation is complete.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 220,
+    "level": "Basic",
+    "question": "Work Stealing – Idle threads steal tasks from busy threads, improving",
+    "answer": "efficiency.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 221,
+    "level": "Basic",
+    "question": "What is the difference between Pessimistic Locking and",
+    "answer": "Optimistic Locking? ● Pessimistic Locking: Locks resources throughout the transaction, preventing concurrent modifications. ● Optimistic Locking: Allows concurrent access but verifies data consistency before committing changes, reducing contention.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 222,
+    "level": "Basic",
+    "question": "Explain the inner workings of a Java Agent.",
+    "answer": "Java Agents use the java.lang.instrument package to modify bytecode at runtime or load-time for profiling, monitoring, or altering application behavior dynamically.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 223,
+    "level": "Basic",
+    "question": "Describe the uses of Java Compiler API.",
+    "answer": "Uses of Java Compiler API The Java Compiler API (javax.tools.JavaCompiler) allows programmatic compilation of Java code within applications. Key Uses:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 224,
+    "level": "Basic",
+    "question": "Dynamic Code Compilation – Compile Java code at runtime (e.g.,",
+    "answer": "scripting engines).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 225,
+    "level": "Basic",
+    "question": "Custom IDEs & Tools – Used in IDEs for syntax checking and",
+    "answer": "on-the-fly compilation.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 226,
+    "level": "Basic",
+    "question": "Code Generation Frameworks – Supports frameworks like annotation",
+    "answer": "processors.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 227,
+    "level": "Basic",
+    "question": "Plugin Systems – Enables plugins to compile and execute custom Java",
+    "answer": "code.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 228,
+    "level": "Basic",
+    "question": "Testing & Automation – Helps run dynamically generated test cases.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 229,
+    "level": "Basic",
+    "question": "What is the Principle of Locality, and how does it apply to",
+    "answer": "Java? The Principle of Locality states that programs tend to reuse the same set of memory locations frequently. Java optimizes cache utilization by keeping frequently accessed data close to the CPU.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 230,
+    "level": "Basic",
+    "question": "How does the G1 Garbage Collector work?",
+    "answer": "G1 GC divides the heap into regions and prioritizes collecting regions with the most garbage, improving performance and reducing pause times.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 231,
+    "level": "Basic",
+    "question": "Explain Polymorphic Inline Caching (PIC).",
+    "answer": "Polymorphic Inline Caching (PIC) in Java Polymorphic Inline Caching (PIC) is a JIT optimization technique that speeds up method dispatch in dynamically-typed and polymorphic code. How Does It Work?",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 232,
+    "level": "Basic",
+    "question": "Caches multiple method targets instead of looking them up every time.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 233,
+    "level": "Basic",
+    "question": "Reduces virtual method call overhead by optimizing frequently called",
+    "answer": "methods.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 234,
+    "level": "Basic",
+    "question": "Improves performance in polymorphic scenarios where multiple",
+    "answer": "subclasses override a method. Impact on Performance: ✅ Faster method dispatch than standard virtual calls. ✅ Reduces CPU cache misses by keeping method lookups efficient. ✅ Common in JVM JIT compilers like HotSpot.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 235,
+    "level": "Basic",
+    "question": "What is the difference between StampedLock and",
+    "answer": "ReentrantLock? Difference Between StampedLock and ReentrantLock",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 236,
+    "level": "Basic",
+    "question": "Locking Mechanism",
+    "answer": "○ StampedLock: Provides optimistic and pessimistic locking, improving read performance. ○ ReentrantLock: Traditional exclusive locking, allowing multiple reentrant acquisitions by the same thread.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 237,
+    "level": "Basic",
+    "question": "Read Performance",
+    "answer": "○ StampedLock: Supports optimistic reads without blocking, making it faster. ○ ReentrantLock: This does not support optimistic reads, and always requires acquiring a lock.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 238,
+    "level": "Basic",
+    "question": "Write Locking",
+    "answer": "○ StampedLock: Provides an exclusive write lock, invalidating optimistic read stamps. ○ ReentrantLock: Standard exclusive lock with thread reentrancy.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 239,
+    "level": "Basic",
+    "question": "Interruptibility",
+    "answer": "○ StampedLock: Write locks are not interruptible, making them less flexible in some cases. ○ ReentrantLock: Supports interruptible locking, useful for responsiveness.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 240,
+    "level": "Basic",
+    "question": "Use Case",
+    "answer": "○ StampedLock: Best for high-read, low-write scenarios (e.g., caches, data structures). ○ ReentrantLock: Suitable for general-purpose locking where fairness and reentrancy are needed.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 241,
+    "level": "Basic",
+    "question": "Explain the term \"Busy Spin\" in multi-threading.",
+    "answer": "Busy Spin in Multi-Threading Busy Spin is a technique where a thread continuously loops (spins) while waiting for a condition to be met, instead of sleeping or blocking. It helps reduce context switching overhead but wastes CPU cycles. Example: while (!conditionMet) { // Busy-wait (spinning) } When to Use? ✅ Low-latency systems (e.g., high-frequency trading) where thread wake-up delays are costly. ✅ Short wait times where context switching overhead is higher than spinning cost. Drawbacks: ❌ High CPU usage – Can degrade system performance. ❌ Inefficient for long waits – Better to use LockSupport.park() or blocking mechanisms.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 242,
+    "level": "Basic",
+    "question": "How can you implement a custom ClassLoader?",
+    "answer": "Create a subclass of ClassLoader and override methods like findClass(),",
+    "hasCode": true,
+    "codeSample": "loadClass(), and defineClass() to customize class loading behavior."
+  },
+  {
+    "id": 243,
+    "level": "Basic",
+    "question": "Describe Java JIT Compiler optimizations like Loop",
+    "answer": "Unrolling and Vectorization. The Java Just-In-Time (JIT) Compiler applies various optimizations to improve runtime performance: ● Loop Unrolling: Reduces the overhead of loop control (e.g., incrementing indices, checking conditions) by increasing the number of operations in the loop body, and reducing the number of iterations. ● Vectorization: Converts scalar operations into vector operations, allowing multiple data elements to be processed simultaneously using SIMD (Single Instruction, Multiple Data) instructions, significantly improving performance on modern CPUs.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 244,
+    "level": "Basic",
+    "question": "Explain the use of the jstack tool.",
+    "answer": "jstack is a Java utility that displays the stack traces of Java threads in a running JVM. It is useful for debugging, diagnosing deadlocks, and analyzing performance bottlenecks.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 245,
+    "level": "Basic",
+    "question": "Describe Java's Project Loom and its impact on concurrency.",
+    "answer": "Java's Project Loom & Its Impact on Concurrency Project Loom (introduced in Java 21) enhances concurrency by introducing virtual threads, which are lightweight, user-mode threads managed by the JVM. Impact on Concurrency:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 246,
+    "level": "Basic",
+    "question": "Massive Scalability – Supports millions of virtual threads vs. limited OS",
+    "answer": "threads.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 247,
+    "level": "Basic",
+    "question": "Simplifies Concurrency – Replaces complex ThreadPool management",
+    "answer": "with lightweight threading.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 248,
+    "level": "Basic",
+    "question": "Efficient Resource Utilization – Uses fewer system resources, reducing",
+    "answer": "context switching overhead.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 249,
+    "level": "Basic",
+    "question": "Better Performance for I/O Tasks – Ideal for high-throughput,",
+    "answer": "I/O-bound applications like web servers.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 250,
+    "level": "Basic",
+    "question": "Easy Migration – Works seamlessly with existing Java threading APIs.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 251,
+    "level": "Basic",
+    "question": "What is a Java Decompiler, and how can it be used securely?",
+    "answer": "Java Decompiler & Secure Usage Java source code, helping in debugging, reverse engineering, and learning from third-party libraries. Secure Usage of Java Decompilers: laws.",
+    "hasCode": true,
+    "codeSample": "A Java Decompiler converts compiled .class files back into readable"
+  },
+  {
+    "id": 252,
+    "level": "Basic",
+    "question": "Use for Debugging & Recovery – Retrieve lost source code from",
+    "answer": "compiled classes.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 253,
+    "level": "Basic",
+    "question": "Analyze Security Risks – Identify vulnerabilities in compiled",
+    "answer": "applications.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 254,
+    "level": "Basic",
+    "question": "Prevent Reverse Engineering – Use obfuscation tools (e.g.,",
+    "answer": "ProGuard) to protect code.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 255,
+    "level": "Basic",
+    "question": "Trusted Decompilers – Use reliable tools like JD-GUI, CFR, or",
+    "answer": "Fernflower to avoid malware risks.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 256,
+    "level": "Basic",
+    "question": "What are the challenges in implementing Distributed",
+    "answer": "Garbage Collection (DGC)? DGC is complex because it must manage memory across multiple JVMs. Challenges include: ● Tracking object references across distributed systems ● Handling network latency and failures ● Avoiding memory leaks and orphaned objects ● Minimizing performance overhead",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 257,
+    "level": "Basic",
+    "question": "Describe the impact of JVM flags on performance tuning.",
+    "answer": "Impact of JVM Flags on Performance Tuning JVM flags optimize memory, garbage collection (GC), and execution speed, directly affecting application performance.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 258,
+    "level": "Basic",
+    "question": "Heap Size Management",
+    "answer": "○ -Xms<size> & -Xmx<size>: Control initial & max heap size, preventing excessive GC.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 259,
+    "level": "Basic",
+    "question": "Garbage Collection (GC) Optimization",
+    "answer": "○ -XX:+UseG1GC, -XX:+UseZGC: Tune GC for low-latency or high-throughput apps.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 260,
+    "level": "Basic",
+    "question": "JIT Compilation",
+    "answer": "○ -XX:+TieredCompilation: Speeds up execution by optimizing method compilation.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 261,
+    "level": "Basic",
+    "question": "Thread & CPU Usage",
+    "answer": "○ -XX:ActiveProcessorCount=<N>: Controls CPU usage for better multi-threading.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 262,
+    "level": "Basic",
+    "question": "Logging & Debugging",
+    "answer": "○ -XX:+PrintGCDetails: Monitors GC activity, aiding performance tuning.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 263,
+    "level": "Basic",
+    "question": "What are Java Modules, and how do they enhance security",
+    "answer": "and maintainability? Java Modules (Introduced in Java 9) Java Modules (module-info.java) help organize code into self-contained, reusable units, improving security, maintainability, and performance. How Modules Enhance Security & Maintainability?",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 264,
+    "level": "Basic",
+    "question": "Encapsulation & Restricted Access",
+    "answer": "packages are accessible, preventing unintended usage.",
+    "hasCode": true,
+    "codeSample": "○ Unlike traditional public classes, only explicitly exported"
+  },
+  {
+    "id": 265,
+    "level": "Basic",
+    "question": "Explicit Dependencies",
+    "answer": "○ require keywords to ensure a module only uses necessary dependencies, avoiding classpath conflicts.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 266,
+    "level": "Basic",
+    "question": "Improved Maintainability",
+    "answer": "○ Large applications can be split into small, independent modules, making it easier to manage and scale.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 267,
+    "level": "Basic",
+    "question": "Reduced Attack Surface",
+    "answer": "○ Since internal classes are not exposed by default, security vulnerabilities due to unintended access are minimized.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 268,
+    "level": "Basic",
+    "question": "Faster Startup & Performance",
+    "answer": "○ JVM loads only required modules, improving startup time and reducing memory usage.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 269,
+    "level": "Basic",
+    "question": "Explain the concept of Java 8 parallelStream().",
+    "answer": "Java 8 parallelStream() Concept The parallelStream() method in Java 8 allows parallel processing of collections using the ForkJoin framework, improving performance on multi-core processors. Key Features:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 270,
+    "level": "Basic",
+    "question": "Splits data into multiple sub-tasks and processes them in parallel.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 271,
+    "level": "Basic",
+    "question": "Uses ForkJoinPool internally for task execution.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 272,
+    "level": "Basic",
+    "question": "Ideal for large data sets where parallelism improves efficiency.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 273,
+    "level": "Basic",
+    "question": "Order of execution is not guaranteed, unlike stream()",
+    "answer": "When to Use parallelStream()? ✅ CPU-intensive tasks (e.g., large computations, data processing). ✅ Processing large collections for better performance. ✅ Multi-core processors where parallel execution speeds up work. When to Avoid? ❌ Small datasets (overhead may reduce performance). ❌ Dependent tasks (race conditions can occur). ❌ Modifying shared resources (risk of inconsistent state).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 274,
+    "level": "Basic",
+    "question": "What is a deadlock in Java?",
+    "answer": "A deadlock occurs when two or more threads are indefinitely blocked, each waiting for a resource held by another. Example: ● Thread A locks Resource 1 and waits for Resource 2 ● Thread B locks Resource 2 and waits for Resource 1 Proper synchronization strategies, such as lock ordering or timeouts, help prevent deadlocks.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 275,
+    "level": "Basic",
+    "question": "What is the difference between Executor and",
+    "answer": "ExecutorService? Difference Between Executor and ExecutorService in Java",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 276,
+    "level": "Basic",
+    "question": "Definition",
+    "answer": "○ Executor: A simple interface for executing tasks asynchronously. ○ ExecutorService: A more advanced interface that extends Executor and provides additional control over thread execution.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 277,
+    "level": "Basic",
+    "question": "Functionality",
+    "answer": "○ Executor: Only has one method: execute(Runnable command), which runs a task asynchronously. ○ ExecutorService: Supports more methods like submit(), invokeAll(), shutdown(), and awaitTermination().",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 278,
+    "level": "Basic",
+    "question": "Task Handling",
+    "answer": "○ Executor: Just fires and forgets tasks without managing their completion. ○ ExecutorService: Returns Future<T> objects, allowing task tracking and results retrieval.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 279,
+    "level": "Basic",
+    "question": "Shutdown Control",
+    "answer": "○ Executor: Does not provide shutdown control. ○ ExecutorService: Provides methods like shutdown(), and shutdownNow() to gracefully stop tasks.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 280,
+    "level": "Basic",
+    "question": "What is the difference between HashMap and Hashtable?",
+    "answer": "Feature HashMap Hashtable Synchronization Not synchronized(not Synchronized(thread-safe) thread-safe) Null keys/values Allows one null key and Does not allow null keys or multiple null values. values. Performance Faster Slower due to synchronization",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 281,
+    "level": "Basic",
+    "question": "Explain Java 8 default methods in interfaces.",
+    "answer": "Java 8 introduced default methods in interfaces using the default keyword, allowing interfaces to have concrete method implementations without breaking existing classes. Key Features:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 282,
+    "level": "Basic",
+    "question": "Provides method implementation inside interfaces using default.",
+    "answer": "",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 283,
+    "level": "Basic",
+    "question": "Maintains backward compatibility without forcing all implementing",
+    "answer": "classes to override.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 284,
+    "level": "Basic",
+    "question": "Supports multiple inheritance of behavior, but avoids diamond",
+    "answer": "problem with explicit method resolution.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 285,
+    "level": "Basic",
+    "question": "What is the difference between wait() and notify()?",
+    "answer": "Difference Between wait() and notify() in Java",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 286,
+    "level": "Basic",
+    "question": "Purpose",
+    "answer": "○ wait(): Causes the current thread to release the lock and enter a waiting state. ○ notify(): Wakes up one waiting thread from the waiting state.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 287,
+    "level": "Basic",
+    "question": "Usage",
+    "answer": "○ wait(): Called when a thread needs to wait for a condition. ○ notify(): Called when a thread wants to signal a waiting thread to resume execution.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 288,
+    "level": "Basic",
+    "question": "Lock Requirement",
+    "answer": "○ Both wait() and notify() must be called inside a synchronized block on the same object monitor.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 289,
+    "level": "Basic",
+    "question": "Thread Behavior",
+    "answer": "○ wait(): The thread releases the lock and goes to the waiting queue. ○ notify(): The awakened thread must reacquire the lock before proceeding.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 290,
+    "level": "Basic",
+    "question": "What is the difference between Comparable and Comparator?",
+    "answer": "Comparable vs. Comparator in Java",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 291,
+    "level": "Basic",
+    "question": "Purpose",
+    "answer": "○ Comparable: Used for natural ordering of objects (e.g., sorting by ID). ○ Comparator: Used for custom ordering (e.g., sorting by name, age, etc.).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 292,
+    "level": "Basic",
+    "question": "Implementation",
+    "answer": "Comparable<T>). Comparator<T>).",
+    "hasCode": true,
+    "codeSample": "○ Comparable: Implemented by the class itself (implements\n○ Comparator: Implemented as a separate class (implements"
+  },
+  {
+    "id": 293,
+    "level": "Basic",
+    "question": "Method Used",
+    "answer": "○ Comparable: Overrides compareTo(T o). ○ Comparator: Overrides compare(T o1, T o2).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 294,
+    "level": "Basic",
+    "question": "Usage",
+    "answer": "○ Comparable: Used when a single sorting order is needed. ○ Comparator: Used when multiple sorting criteria are required.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 295,
+    "level": "Basic",
+    "question": "What is the transient keyword in Java?",
+    "answer": "Transient prevents a field from being serialized, meaning it will not be saved when an object is written to a file or transmitted over a network.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 296,
+    "level": "Basic",
+    "question": "What is the purpose of the instanceof operator?",
+    "answer": "Example: if (object instanceof MyClass) { // Do something }",
+    "hasCode": true,
+    "codeSample": "instanceof checks if an object is an instance of a specific class or subclass."
+  },
+  {
+    "id": 297,
+    "level": "Basic",
+    "question": "Explain the concept of lock-free programming in Java.",
+    "answer": "Lock-free programming in Java ensures thread-safe concurrency without using traditional locks (synchronized, ReentrantLock). Instead, it relies on atomic operations and Compare-And-Swap (CAS) to manage shared resources efficiently. How It Works:",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 298,
+    "level": "Basic",
+    "question": "Uses Atomic Classes – Java provides AtomicInteger, AtomicLong,",
+    "answer": "AtomicReference, etc., from java.util.concurrent.atomic.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 299,
+    "level": "Basic",
+    "question": "Relies on CAS (Compare-And-Swap) – Instead of locking, CAS",
+    "answer": "updates a value only if it hasn't changed, ensuring consistency.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 300,
+    "level": "Basic",
+    "question": "Avoids Blocking & Deadlocks – Threads keep retrying operations until",
+    "answer": "they succeed, improving performance.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 301,
+    "level": "Basic",
+    "question": "Optimized by Hardware – CAS operations leverage CPU-level",
+    "answer": "instructions for fast, low-overhead execution.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 302,
+    "level": "Basic",
+    "question": "Used in Concurrent Data Structures – ConcurrentHashMap,",
+    "answer": "ConcurrentLinkedQueue, and AtomicStampedReference use lock-free techniques.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 303,
+    "level": "Basic",
+    "question": "What is java.lang.reflect.Proxy used for?",
+    "answer": "Proxy dynamically creates objects implementing interfaces at runtime. It is widely used in AOP (Aspect-Oriented Programming) and frameworks like Spring.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 304,
+    "level": "Basic",
+    "question": "What are some advanced features of CompletableFuture in",
+    "answer": "Java? ● Chaining asynchronous tasks ● Combining multiple async computations ● Exception handling ● Timeouts and default values ● Custom executor control",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 305,
+    "level": "Basic",
+    "question": "What is ForkJoinPool, and how is it different from a regular",
+    "answer": "thread pool? ForkJoinPool (introduced in Java 7) is a specialized thread pool designed for parallel processing of recursive tasks using the work-stealing algorithm. It is part of the java.util.concurrent package. ForkJoinPool vs. Regular Thread Pool",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 306,
+    "level": "Basic",
+    "question": "Task Type",
+    "answer": "○ ForkJoinPool: Designed for divide-and-conquer tasks (RecursiveTask, RecursiveAction). ○ Regular Thread Pool: Executes independent Runnable/Callable tasks.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 307,
+    "level": "Basic",
+    "question": "Work Stealing",
+    "answer": "○ ForkJoinPool: Uses work-stealing (idle threads take tasks from busy threads). ○ Regular Thread Pool: No work-stealing; tasks are assigned to specific threads.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 308,
+    "level": "Basic",
+    "question": "Best Use Case",
+    "answer": "○ ForkJoinPool: Ideal for CPU-intensive, recursive parallel processing (e.g., sorting, tree traversal). ○ Regular Thread Pool: Suitable for I/O tasks, web servers, and background tasks.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 309,
+    "level": "Basic",
+    "question": "Task Splitting & Execution",
+    "answer": "○ ForkJoinPool: Splits large tasks into subtasks (fork() & join()). ○ Regular Thread Pool: No built-in task splitting, executes tasks independently.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 310,
+    "level": "Basic",
+    "question": "Performance Optimization",
+    "answer": "○ ForkJoinPool: Optimized for parallel execution using all available CPU cores. ○ Regular Thread Pool: Works well for asynchronous task execution but lacks parallel optimization.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 311,
+    "level": "Basic",
+    "question": "How does the Unsafe class work, and what are its use cases?",
+    "answer": "Unsafe Class in Java (sun.misc.Unsafe) memory access, off-heap allocation, and atomic operations. It bypasses standard Java safety checks, making it powerful but dangerous. Key Features: ● Memory manipulation (allocateMemory(), freeMemory(), putInt(), etc.). ● Bypass constructor calls (allocateInstance() to create objects without calling a constructor). ● CAS (Compare-And-Swap) operations for atomic variables (used in java.util.concurrent). ● Thread operations (park(), unpark(), getAndSetInt(), etc.). ● Class loading manipulation (defineClass(), defineAnonymousClass()). Use Cases: ● High-performance libraries (e.g., Netty, Cassandra). ● Off-heap memory storage (avoids GC overhead). ● Atomic operations (used in AtomicInteger, ConcurrentHashMap). ● Class and method hacking (modifying final fields, method handles).",
+    "hasCode": true,
+    "codeSample": "The Unsafe class provides low-level, unsafe operations such as direct"
+  },
+  {
+    "id": 312,
+    "level": "Basic",
+    "question": "What is PhantomReference in Java?",
+    "answer": "PhantomReference in Java PhantomReference (from java.lang.ref) is a special type of reference that allows post-mortem cleanup after an object is garbage collected. Unlike SoftReference and WeakReference, a PhantomReference is always null when accessed via get(). Key Features: ● Used for resource cleanup (e.g., deallocating native memory). ● Not automatically removed by GC; it is added to a ReferenceQueue instead. ● Ensures proper cleanup before memory is reclaimed.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 313,
+    "level": "Basic",
+    "question": "Explain the concept of MethodHandle in Java.",
+    "answer": "MethodHandle in Java MethodHandle (introduced in Java 7, java.lang.invoke) is a lightweight, faster alternative to reflection for dynamically invoking methods, constructors, and fields. It offers better performance and type safety compared to java.lang.reflect.Method. Key Points: ● More efficient than reflection (Method). methods. ● Type-safe (checked at compile time). ● Used internally in lambdas & invokedynamic for JVM optimizations. When to Use? ● When better performance than reflection is needed. ● For dynamic method invocation (e.g., lambda metafactories). ● In JVM internals and advanced frameworks.",
+    "hasCode": true,
+    "codeSample": "● Supports dynamic invocation of private, public, static, and instance"
+  },
+  {
+    "id": 314,
+    "level": "Basic",
+    "question": "What is the role of java.lang.instrument?",
+    "answer": "The java.lang.instrument package enables bytecode modification at runtime, used in Java agents for profiling, monitoring, and aspect-oriented programming.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 315,
+    "level": "Basic",
+    "question": "How does the Java Memory Model handle out-of-order",
+    "answer": "execution and memory visibility? ● Defines happens-before relationships for correct memory visibility ● Uses volatile and synchronized to enforce ordering ● Prevents compiler and CPU optimizations that may break concurrency semantics",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 316,
+    "level": "Basic",
+    "question": "What is the difference between ReentrantLock and",
+    "answer": "synchronized?",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 317,
+    "level": "Basic",
+    "question": "Synchronized is a built-in Java monitor lock, while ReentrantLock is",
+    "answer": "part of java.util.concurrent.locks with more flexibility.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 318,
+    "level": "Basic",
+    "question": "Synchronized acquires and releases the lock automatically, whereas",
+    "answer": "ReentrantLock requires explicit lock() and unlock().",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 319,
+    "level": "Basic",
+    "question": "synchronized does not support try-locking, but ReentrantLock allows",
+    "answer": "tryLock() and tryLock(timeout, TimeUnit).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 320,
+    "level": "Basic",
+    "question": "Synchronized is unfair (no guaranteed thread order), whereas",
+    "answer": "ReentrantLock can be fair (new ReentrantLock(true)) or unfair.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 321,
+    "level": "Basic",
+    "question": "Synchronized does not allow lock interruption, but ReentrantLock",
+    "answer": "supports lockInterruptibly() for better thread management.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 322,
+    "level": "Basic",
+    "question": "Synchronized uses wait() and notify(), while ReentrantLock provides",
+    "answer": "Condition variables for finer control over waiting threads.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 323,
+    "level": "Basic",
+    "question": "Synchronized is simpler and easier to use, while ReentrantLock is more",
+    "answer": "powerful but requires careful handling to avoid deadlocks.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 324,
+    "level": "Basic",
+    "question": "What is the difference between WeakReference and",
+    "answer": "SoftReference? Both WeakReference and SoftReference are part of Java's reference types in the java.lang.ref package, used to manage memory more efficiently by allowing objects to be garbage collected under specific conditions. Here’s the key difference between them: Garbage Collection Timing ● WeakReference: Reclaimed immediately when no strong references exist. ● SoftReference: Reclaimed only under memory pressure. Retention Policy ● WeakReference: Short-lived, discarded aggressively. ● SoftReference: Longer-lived, retained until JVM needs memory. Use Case ● WeakReference: Used for lookup tables, avoiding memory leaks (e.g., caches, listeners). ● SoftReference: Used for caching data that is expensive to reload (e.g., image caching, object pools). Garbage Collector Behavior ● WeakReference: GC clears weak references at the earliest opportunity. ● SoftReference: GC clears soft references only when memory is low. Likelihood of Being Collected ● WeakReference: Very high (almost immediate collection). ● SoftReference: Lower (kept until necessary to free memory)",
+    "hasCode": false,
+    "codeSample": ""
+  }
+]

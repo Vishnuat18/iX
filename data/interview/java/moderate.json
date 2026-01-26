@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "level": "Basic",
+    "question": "OOP Concepts",
+    "answer": "Java is based on Object-Oriented Programming. The main pillars are: • • Polymorphism: Same method, different behaviors. • Abstraction: Hide internal details, show only essential features. •",
+    "hasCode": true,
+    "codeSample": "Encapsulation: Bind data with code (class).\nInheritance: Reuse code from parent class."
+  },
+  {
+    "id": 2,
+    "level": "Basic",
+    "question": "Data Types and Variables",
+    "answer": "Variables are containers to store data. Java is strongly typed — you must declare the type. Use type casting to convert between types.",
+    "hasCode": true,
+    "codeSample": "Java supports primitive (int, char, boolean, etc.) and non-primitive\n(String, arrays) data types.\nExample: int age = 25;"
+  },
+  {
+    "id": 3,
+    "level": "Basic",
+    "question": "Control Flow Statements",
+    "answer": "Control statements manage program flow. if / if-else: Conditional execution. • switch: Multi-branch control. • for / while / do-while: Looping structures. • break: Exit loop early, continue: skip current iteration. •",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 4,
+    "level": "Basic",
+    "question": "Arrays and Strings",
+    "answer": "An array is a fixed-size collection of elements of the same type. Use methods like .length(), .charAt(), .equals(), etc. Use .equals() to compare values, not ==.",
+    "hasCode": true,
+    "codeSample": "Syntax: int[] arr = new int[5];\nA String is a sequence of characters and is immutable."
+  },
+  {
+    "id": 5,
+    "level": "Basic",
+    "question": "Constructors",
+    "answer": "Constructors are special methods to initialize objects. You can overload constructors with different parameters. Java provides a default constructor if none is written. Called automatically when you create an object.",
+    "hasCode": true,
+    "codeSample": "They have the same name as the class and no return type."
+  },
+  {
+    "id": 6,
+    "level": "Basic",
+    "question": "Inheritance",
+    "answer": "extends. Helps with code reusability and method overriding. Java supports single, multilevel, and hierarchical inheritance. Use super to access parent methods or constructors.",
+    "hasCode": true,
+    "codeSample": "Inheritance allows one class to reuse another class's code using\nThe child class inherits fields and methods of the parent class."
+  },
+  {
+    "id": 7,
+    "level": "Basic",
+    "question": "Polymorphism",
+    "answer": "Polymorphism means “many forms.” Compile-time (overloading): Same method name, different • parameters. Runtime (overriding): Subclass modifies parent method. • Enhances flexibility and readability. Helps in dynamic method dispatch (object-based behavior).",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 8,
+    "level": "Basic",
+    "question": "Abstraction",
+    "answer": "Abstraction hides complex internal logic and shows only important features. Achieved using abstract classes and interfaces. Interfaces provide full abstraction (Java 7 and earlier). Encourages clean and maintainable code.",
+    "hasCode": true,
+    "codeSample": "An abstract class may contain both abstract and regular methods."
+  },
+  {
+    "id": 9,
+    "level": "Basic",
+    "question": "Encapsulation",
+    "answer": "Protects data from unauthorized access. Improves modularity and maintainability. Supports data hiding and secure programming.",
+    "hasCode": true,
+    "codeSample": "Encapsulation binds data and code into a single unit (class).\nUse private access for fields and public getters/setters for access."
+  },
+  {
+    "id": 10,
+    "level": "Basic",
+    "question": "Exception Handling",
+    "answer": "Java uses exceptions to handle runtime errors gracefully. Keywords: try, catch, finally, throw, throws. Checked exceptions: handled at compile-time. • Unchecked exceptions: occur at runtime. • Avoids program crashes and allows error recovery.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 11,
+    "level": "Basic",
+    "question": "Multithreading",
+    "answer": "Java supports multithreading for concurrent execution. Thread methods: start(), run(), sleep(), join(). Use synchronization to avoid data conflicts. Improves performance in multi-core systems.",
+    "hasCode": true,
+    "codeSample": "Create threads using Thread class or Runnable interface."
+  },
+  {
+    "id": 12,
+    "level": "Basic",
+    "question": "Java Collections Framework",
+    "answer": "Collections are used to store and manipulate groups of data. Includes interfaces like List, Set, Map, and classes like ArrayList, HashSet, HashMap. Collections replace arrays for dynamic data handling. Supports searching, sorting, inserting, and deleting data efficiently. All classes are in java.util package.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 13,
+    "level": "Basic",
+    "question": "Wrapper Classes",
+    "answer": "Character, etc. Useful in collections that require objects. Supports autoboxing (primitive to object) and unboxing (object to primitive). Each primitive has a corresponding wrapper. Example: Integer num = 10;",
+    "hasCode": true,
+    "codeSample": "Wrapper classes convert primitives to objects: int → Integer, char →"
+  },
+  {
+    "id": 14,
+    "level": "Basic",
+    "question": "File Handling (I/O)",
+    "answer": "Java uses classes like File, FileReader, BufferedReader for file input. Use FileWriter, BufferedWriter for writing. I/O classes are in java.io package. Always handle file exceptions with try-catch. Supports reading text, binary files, and streams.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 15,
+    "level": "Basic",
+    "question": "Java 8 Features",
+    "answer": "Java 8 introduced modern programming features: Lambda expressions: Anonymous methods • Stream API: Functional-style data processing • Method references: Shorter syntax to call methods • Default methods: Method body in interfaces • Boosts code readability and conciseness.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 16,
+    "level": "Basic",
+    "question": "Access Modifiers",
+    "answer": "Java uses access modifiers to control visibility. • (default): within package • • • Helps with data hiding and design security.",
+    "hasCode": true,
+    "codeSample": "private: within class\nprotected: within package and subclasses\npublic: everywhere"
+  },
+  {
+    "id": 17,
+    "level": "Basic",
+    "question": "Static Keyword",
+    "answer": "Used for variables, methods, and blocks. Accessed using ClassName.staticMember. Useful for utility methods and constants. Reduces memory usage when shared across instances.",
+    "hasCode": true,
+    "codeSample": "static belongs to the class, not the object."
+  },
+  {
+    "id": 18,
+    "level": "Basic",
+    "question": "final Keyword",
+    "answer": "Used to declare constants, prevent method overriding or inheritance. final variable: value cannot change • final method: cannot be overridden • • Improves security and design stability.",
+    "hasCode": true,
+    "codeSample": "final class: cannot be extended"
+  },
+  {
+    "id": 19,
+    "level": "Basic",
+    "question": "this and super Keyword",
+    "answer": "this: Refers to the current object. Used to avoid variable name • conflicts. • members. Helpful in constructor chaining and method overriding.",
+    "hasCode": true,
+    "codeSample": "super: Refers to the parent class. Used to access parent"
+  },
+  {
+    "id": 20,
+    "level": "Basic",
+    "question": "Packages and Imports",
+    "answer": "Packages are used to group related classes. Use package to define, and import to access them. Java has built-in packages like java.util, java.io, etc. You can create your own packages for better organization.",
+    "hasCode": true,
+    "codeSample": "Helps in avoiding class name conflicts."
+  },
+  {
+    "id": 21,
+    "level": "Basic",
+    "question": "Interfaces vs Abstract Classes",
+    "answer": "Both are used to achieve abstraction in Java. Interface: All methods are abstract by default (till Java 7). Use interfaces when multiple inheritance is needed.",
+    "hasCode": true,
+    "codeSample": "Abstract class: Can have both abstract and non-abstract methods.\nA class can implement multiple interfaces but can extend only one\nabstract class."
+  },
+  {
+    "id": 22,
+    "level": "Basic",
+    "question": "Method Overloading and Overriding",
+    "answer": "Overloading: Same method name, different parameters • (compile-time polymorphism). Overriding: Subclass changes the behavior of superclass • method (runtime polymorphism). parent relationship. Java uses @Override annotation for clarity.",
+    "hasCode": true,
+    "codeSample": "Overloading happens in the same class, overriding in child-"
+  },
+  {
+    "id": 23,
+    "level": "Basic",
+    "question": "Anonymous Inner Class",
+    "answer": "time. Mostly used in event handling and functional interfaces. Declared using:",
+    "hasCode": true,
+    "codeSample": "An inner class without a name, defined and instantiated at the same\nRunnable r = new Runnable() { public void run() { ... } };"
+  },
+  {
+    "id": 24,
+    "level": "Basic",
+    "question": "Enum in Java",
+    "answer": "Enums are special classes to define constants. You can define methods and constructors in enums. Example: enum Day { MON, TUE, WED }",
+    "hasCode": true,
+    "codeSample": "They are more powerful than final static variables."
+  },
+  {
+    "id": 25,
+    "level": "Basic",
+    "question": "Varargs (Variable Arguments)",
+    "answer": "Allows a method to accept 0 or more arguments. Declared with ... syntax: Internally treated as an array. Only one varargs allowed per method.",
+    "hasCode": true,
+    "codeSample": "void print(String... names) { }"
+  },
+  {
+    "id": 26,
+    "level": "Basic",
+    "question": "Serialization and Deserialization",
+    "answer": "Serialization converts an object to a byte stream to save to a file or send over a network. Use ObjectOutputStream for serialization, ObjectInputStream for deserialization. Class must implement Serializable interface. transient keyword is used to skip fields during serialization.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 27,
+    "level": "Basic",
+    "question": "Singleton Design Pattern",
+    "answer": "Used for logging, configuration classes, etc. Typical implementation:",
+    "hasCode": true,
+    "codeSample": "Restricts the instantiation of a class to only one object.\nprivate static Singleton instance;\npublic static Singleton getInstance() { ... }"
+  },
+  {
+    "id": 28,
+    "level": "Basic",
+    "question": "Immutable Class",
+    "answer": "• Don't provide setters • Return copies of mutable objects •",
+    "hasCode": true,
+    "codeSample": "An immutable class’s state (data) cannot be changed once created.\nString is the best example.\nTo make a class immutable:\nMake fields final and private"
+  },
+  {
+    "id": 29,
+    "level": "Basic",
+    "question": "Java Annotations",
+    "answer": "Metadata that provides information to the compiler or runtime. Examples: @Override, @Deprecated, @SuppressWarnings Used heavily in frameworks like Spring, Hibernate. You can create your own custom annotations.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 30,
+    "level": "Basic",
+    "question": "Functional Interfaces",
+    "answer": "An interface with only one abstract method. Used with lambda expressions and method references. Examples: Runnable, Comparable, Predicate<T>. Declared with @FunctionalInterface annotation.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 31,
+    "level": "Basic",
+    "question": "Lambda Expressions",
+    "answer": "Introduced in Java 8 to make code concise. Syntax: (a, b) -> a + b Used to implement functional interfaces. Replaces anonymous inner classes in many cases.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 32,
+    "level": "Basic",
+    "question": "Method References",
+    "answer": "A shorter way to refer to a method. Syntax: ClassName::methodName Used with streams and lambda expressions.",
+    "hasCode": true,
+    "codeSample": "Example: System.out::println"
+  },
+  {
+    "id": 33,
+    "level": "Basic",
+    "question": "Streams API",
+    "answer": "Processes collections in a functional and pipeline style. Supports operations like filter(), map(), collect(), forEach() Introduced in Java 8, great for working with large data sets.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 34,
+    "level": "Basic",
+    "question": "Default and Static Methods in Interfaces",
+    "answer": "From Java 8 onwards: default: Methods with body inside interface. • • Helps in adding new methods to interfaces without breaking existing code.",
+    "hasCode": true,
+    "codeSample": "static: Belong to the interface, not instance."
+  },
+  {
+    "id": 35,
+    "level": "Basic",
+    "question": "JVM Architecture",
+    "answer": "JVM components: Class Loader • Memory Area (Heap, Stack, etc.) • Execution Engine • Garbage Collector • Responsible for executing Java bytecode on any machine.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 36,
+    "level": "Basic",
+    "question": "Garbage Collection",
+    "answer": "Java handles memory automatically using the Garbage Collector (GC). It removes unreferenced objects to free up memory. You can request GC using System.gc(), but it’s not guaranteed. Helps avoid memory leaks and crashes.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 37,
+    "level": "Basic",
+    "question": "JIT Compiler",
+    "answer": "Just-In-Time (JIT) compiler is part of JVM. It compiles bytecode into native machine code at runtime. Improves performance by reducing interpretation overhead.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 38,
+    "level": "Basic",
+    "question": "ClassLoader in Java",
+    "answer": "Loads classes into memory during runtime. Types: Bootstrap, Extension, Application ClassLoader. Enables dynamic loading of classes.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 39,
+    "level": "Basic",
+    "question": "Transient Keyword",
+    "answer": "Used to prevent fields from being serialized. Transient variables are skipped during object serialization. Useful for sensitive data like passwords.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 40,
+    "level": "Basic",
+    "question": "Volatile Keyword",
+    "answer": "Tells JVM that a variable may be changed by different threads. Ensures visibility of changes to variables across threads. Used in multithreaded environments.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 41,
+    "level": "Basic",
+    "question": "Reflection API",
+    "answer": "The Reflection API allows you to inspect and modify classes, methods, and fields at runtime. Used in frameworks (like Spring, Hibernate) for dependency injection and object inspection. Example: Class<?> c = Class.forName(\"MyClass\"); Method[] methods = c.getDeclaredMethods();",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 42,
+    "level": "Basic",
+    "question": "Java Memory Model (JMM)",
+    "answer": "Defines how threads interact through memory and what behaviors are allowed in multithreading. Ensures visibility, ordering, and atomicity of operations. Important for understanding volatile, synchronized, and thread safety.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 43,
+    "level": "Basic",
+    "question": "Thread Lifecycle",
+    "answer": "States: New → Runnable → Running → Blocked/Waiting → Terminated. Each thread goes through these states managed by the JVM. Understanding lifecycle helps debug performance and concurrency issues.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 44,
+    "level": "Basic",
+    "question": "Thread Safety and Synchronization",
+    "answer": "Ensures that shared data is accessed by only one thread at a time. Use synchronized, ReentrantLock, and atomic classes. Avoids race conditions and inconsistent data.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 45,
+    "level": "Basic",
+    "question": "Executor Framework",
+    "answer": "Provides thread pool management (ExecutorService) for better multithreading. Avoids manually creating threads. Supports Callable, Future, and task scheduling.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 46,
+    "level": "Basic",
+    "question": "Java Generics",
+    "answer": "Allows you to write type-safe, reusable code. Supports compile-time checks and eliminates type casting.",
+    "hasCode": true,
+    "codeSample": "Example: List<String> instead of List."
+  },
+  {
+    "id": 47,
+    "level": "Basic",
+    "question": "Wildcard in Generics (?)",
+    "answer": "Used when the exact type is unknown. <? extends T>: accepts T or its subclasses. • <? super T>: accepts T or its superclasses. • Enhances flexibility in generic methods/classes.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 48,
+    "level": "Basic",
+    "question": "Java Modules (Java 9+)",
+    "answer": "Modularizes large Java applications. Introduced module-info.java for defining dependencies. Improves encapsulation and reduces startup time.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 49,
+    "level": "Basic",
+    "question": "Optional Class (Java 8)",
+    "answer": "A container for possibly-null values to avoid NullPointerException. Methods: isPresent(), ifPresent(), orElse(), map(). Example:",
+    "hasCode": true,
+    "codeSample": "Optional<String> name = Optional.ofNullable(null);"
+  },
+  {
+    "id": 50,
+    "level": "Basic",
+    "question": "Comparable vs Comparator",
+    "answer": "Both are used to sort objects. • Comparator: external custom sorting (compare()). • Allows sorting by multiple fields dynamically.",
+    "hasCode": true,
+    "codeSample": "Comparable: implemented in the class itself (compareTo())."
+  },
+  {
+    "id": 51,
+    "level": "Basic",
+    "question": "Annotations Processing (APT)",
+    "answer": "Used to process custom annotations at compile time. Helps generate code, configuration files, etc. Frameworks like Lombok and Dagger use it heavily.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 52,
+    "level": "Basic",
+    "question": "Java Records (Java 14+)",
+    "answer": "A compact syntax for immutable data classes. Auto-generates constructors, getters, toString(), equals(), hashCode(). Example:",
+    "hasCode": true,
+    "codeSample": "record Person(String name, int age) { }"
+  },
+  {
+    "id": 53,
+    "level": "Basic",
+    "question": "Pattern Matching (Java 16+)",
+    "answer": "Simplifies instanceof checks and type casting. Example: }",
+    "hasCode": true,
+    "codeSample": "if (obj instanceof String s) {\nSystem.out.println(s.length());"
+  },
+  {
+    "id": 54,
+    "level": "Basic",
+    "question": "Sealed Classes (Java 17)",
+    "answer": "Example:",
+    "hasCode": true,
+    "codeSample": "Restricts which classes can extend or implement a class/interface.\nImproves control over class hierarchies.\nsealed class Shape permits Circle, Square { }"
+  },
+  {
+    "id": 55,
+    "level": "Basic",
+    "question": "Memory Leaks in Java",
+    "answer": "Memory that is no longer needed but not collected by GC. Use profiling tools like VisualVM or JProfiler to detect leaks.",
+    "hasCode": true,
+    "codeSample": "Common in long-lived collections, listeners, static fields."
+  },
+  {
+    "id": 56,
+    "level": "Basic",
+    "question": "Class.forName vs newInstance",
+    "answer": "• .newInstance() creates object using default constructor. • Useful for dynamic loading in frameworks and JDBC drivers.",
+    "hasCode": true,
+    "codeSample": "Class.forName() loads class at runtime."
+  },
+  {
+    "id": 57,
+    "level": "Basic",
+    "question": "Java WeakReference & SoftReference",
+    "answer": "Used in caching and memory-sensitive applications. WeakReference: collected eagerly • SoftReference: collected only when memory is low • Helps in implementing custom memory management strategies.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 58,
+    "level": "Basic",
+    "question": "Proxy Classes (Dynamic Proxy)",
+    "answer": "Creates objects at runtime that implement interfaces. Used in AOP (Aspect-Oriented Programming), like Spring. Implemented via java.lang.reflect.Proxy.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 59,
+    "level": "Basic",
+    "question": "JDBC Architecture",
+    "answer": "Used to connect Java to relational databases. Consists of DriverManager, Connection, Statement, ResultSet. Supports prepared statements and batch processing.",
+    "hasCode": false,
+    "codeSample": ""
+  },
+  {
+    "id": 60,
+    "level": "Basic",
+    "question": "Java Native Interface (JNI)",
+    "answer": "Allows Java to call C/C++ native code. Used in performance-sensitive operations and legacy systems. Requires writing native libraries using javah and .dll or .so files.",
+    "hasCode": false,
+    "codeSample": ""
+  }
+]

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterviewPrepX | Quiz</title>
+    <link rel="stylesheet" href="../css/quiz.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <h2 id="pageTitle">Quiz</h2>
+        <div id="timer"></div>
+    </header>
+
+    <div class="quiz-container">
+
+        <div class="question-box">
+            <p id="questionText"></p>
+            <div id="options"></div>
+        </div>
+
+        <div class="palette-box">
+            <h3>Questions</h3>
+            <div id="palette"></div>
+        </div>
+
+    </div>
+
+    <div class="quiz-footer">
+        <button onclick="prevQuestion()">Previous</button>
+        <button onclick="nextQuestion()">Next</button>
+        <button onclick="submitQuiz()">Submit</button>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+
+</html>

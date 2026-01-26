@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterviewPrepX | Java Interview</title>
+    <link rel="stylesheet" href="../css/interview.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <button onclick="goBack()">←</button>
+        <h2 id="pageTitle">Java Interview</h2>
+    </header>
+
+    <div class="slide-container">
+
+        <div id="slide">
+
+            <div class="meta">
+                <span id="level"></span>
+                <span id="counter"></span>
+            </div>
+
+            <h3 id="question"></h3>
+
+            <div id="answer"></div>
+
+            <button id="tryBtn" class="try-btn" onclick="openEditor()" style="display:none">
+                Try it out
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="nav-buttons">
+        <button onclick="prev()">Previous</button>
+        <button onclick="next()">Next</button>
+    </div>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/interview.js"></script>
+</body>
+
+</html>

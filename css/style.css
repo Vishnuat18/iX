@@ -1,0 +1,398 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    color: goldenrod;
+}
+
+/* ===== Header ===== */
+.header {
+    text-align: center;
+    padding: 20px 15px;
+    background: #1e293b;
+    color: white;
+}
+
+.header h1,
+.header h2 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.header p {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ===== Domain Cards ===== */
+.domains {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+}
+
+.domain-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.domain-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+}
+
+.domain-card h3 {
+    font-size: 1rem;
+}
+
+.domain-card:active {
+    transform: scale(0.97);
+}
+
+/* ===== Features Section ===== */
+.features {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.feature-card button {
+    margin-top: 14px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.feature-card button:active {
+    background: #1d4ed8;
+}
+
+.highlight {
+    border: 2px solid #2563eb;
+}
+
+/* ===== Tablet ===== */
+@media (min-width: 600px) {
+    .domains {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 1024px) {
+    .domains {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 40px;
+    }
+
+    .features {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 40px;
+    }
+
+    .domain-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f172a;
+    padding: 12px 16px;
+    color: white;
+}
+
+.nav-brand {
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: none;
+    gap: 18px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.nav-toggle {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+/* Desktop Nav */
+@media (min-width: 768px) {
+    .nav-menu {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+}
+
+/* ===== Breadcrumbs ===== */
+.breadcrumb-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #e5e7eb;
+    font-size: 0.85rem;
+}
+
+.breadcrumbs span {
+    color: #374151;
+}
+
+.breadcrumbs span::after {
+    content: " / ";
+}
+
+.breadcrumbs span:last-child::after {
+    content: "";
+}
+
+.back-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* ===== Top Bar ===== */
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #0f172a;
+    color: white;
+}
+
+.app-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.hamburger {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* ===== Drawer ===== */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #020617;
+    color: white;
+    z-index: 1000;
+    transition: left 0.3s ease;
+}
+
+.drawer.open {
+    left: 0;
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: #020617;
+    border-bottom: 1px solid #1e293b;
+}
+
+.drawer-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.drawer-menu a {
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.drawer-menu a:hover {
+    background: #1e293b;
+}
+
+/* ===== Overlay ===== */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 999;
+}
+
+.overlay.show {
+    display: block;
+}
+
+.subdomains {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+}
+
+@media (min-width: 600px) {
+    .subdomains {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .subdomains {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===== Learn Page ===== */
+.learn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+.learn-topics {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.learn-topics div {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.learn-topics div:hover,
+.learn-topics .active {
+    background: #e0e7ff;
+}
+
+.learn-content {
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.learn-content h2 {
+    margin-bottom: 8px;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .learn-container {
+        flex-direction: row;
+    }
+
+    .learn-topics {
+        width: 260px;
+    }
+
+    .learn-content {
+        flex: 1;
+    }
+}
+
+/* ===== CLICKABLE POINTERS ===== */
+button,
+.feature-card,
+.domain-card,
+.palette-grid button,
+.options label {
+    cursor: pointer;
+}
+
+/* ===== HOVER FEEDBACK ===== */
+.feature-card:hover,
+.domain-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Quiz option hover */
+.options label:hover {
+    background: #eef2ff;
+}
+
+.feature-card {
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  transition: 0.2s;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
