@@ -1,0 +1,1265 @@
+{
+    "topic": "Node.js Environment",
+    "sets": [
+        {
+            "setId": "node_1",
+            "title": "Set 1: Node.js Basics",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "Node.js is?",
+                    "options": [
+                        "JS Runtime Env",
+                        "Language",
+                        "Framework",
+                        "DB"
+                    ],
+                    "correct": 0,
+                    "explanation": "Built on Chrome V8."
+                },
+                {
+                    "id": 2,
+                    "text": "V8 Engine?",
+                    "options": [
+                        "Google JS Engine",
+                        "Car",
+                        "Database",
+                        "Server"
+                    ],
+                    "correct": 0,
+                    "explanation": "Executes JS."
+                },
+                {
+                    "id": 3,
+                    "text": "Node.js architecture?",
+                    "options": [
+                        "Single Threaded Event Loop",
+                        "Multi-threaded",
+                        "Block",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Non-blocking I/O."
+                },
+                {
+                    "id": 4,
+                    "text": "npm stands for?",
+                    "options": [
+                        "Node Package Manager",
+                        "Node Program Module",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Registry."
+                },
+                {
+                    "id": 5,
+                    "text": "CommonJS module syntax?",
+                    "options": [
+                        "require/module.exports",
+                        "import/export",
+                        "include",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard in Node."
+                },
+                {
+                    "id": 6,
+                    "text": "Global object in Node?",
+                    "options": [
+                        "global",
+                        "window",
+                        "document",
+                        "root"
+                    ],
+                    "correct": 0,
+                    "explanation": "No window."
+                },
+                {
+                    "id": 7,
+                    "text": "REPL stands for?",
+                    "options": [
+                        "Read Eval Print Loop",
+                        "Repeat",
+                        "Read",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Interactive shell."
+                },
+                {
+                    "id": 8,
+                    "text": "Core module example?",
+                    "options": [
+                        "fs, http, path",
+                        "react",
+                        "vue",
+                        "axios"
+                    ],
+                    "correct": 0,
+                    "explanation": "Built-in."
+                },
+                {
+                    "id": 9,
+                    "text": "package.json?",
+                    "options": [
+                        "Project manifest",
+                        "Code",
+                        "Style",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dependencies/Scripts."
+                },
+                {
+                    "id": 10,
+                    "text": "node_modules?",
+                    "options": [
+                        "Installed dependencies",
+                        "Source",
+                        "Config",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Folder."
+                }
+            ]
+        },
+        {
+            "setId": "node_2",
+            "title": "Set 2: Modules & NPS",
+            "questions": [
+                {
+                    "id": 11,
+                    "text": "Install package globally?",
+                    "options": [
+                        "-g flag",
+                        "--save",
+                        "--dev",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "System wide."
+                },
+                {
+                    "id": 12,
+                    "text": "DevDependency?",
+                    "options": [
+                        "--save-dev",
+                        "-D",
+                        "Both",
+                        "None"
+                    ],
+                    "correct": 2,
+                    "explanation": "Development only."
+                },
+                {
+                    "id": 13,
+                    "text": "package-lock.json?",
+                    "options": [
+                        "Exact version tree",
+                        "Lock",
+                        "Security",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reproducible builds."
+                },
+                {
+                    "id": 14,
+                    "text": "Update npm?",
+                    "options": [
+                        "npm install npm@latest -g",
+                        "update",
+                        "upgrade",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Self update."
+                },
+                {
+                    "id": 15,
+                    "text": "Uninstall package?",
+                    "options": [
+                        "npm uninstall",
+                        "remove",
+                        "delete",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Removes from modules."
+                },
+                {
+                    "id": 16,
+                    "text": "Semantic Versioning?",
+                    "options": [
+                        "Major.Minor.Patch",
+                        "1.2.3",
+                        "v1",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Versioning standard."
+                },
+                {
+                    "id": 17,
+                    "text": "npx?",
+                    "options": [
+                        "Node Package Execute",
+                        "npm x",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Run binaries."
+                },
+                {
+                    "id": 18,
+                    "text": "Path module join?",
+                    "options": [
+                        "path.join()",
+                        "concat",
+                        "add",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "OS agnostic."
+                },
+                {
+                    "id": 19,
+                    "text": "__dirname?",
+                    "options": [
+                        "Current directory path",
+                        "Filename",
+                        "Root",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Absolute path."
+                },
+                {
+                    "id": 20,
+                    "text": "__filename?",
+                    "options": [
+                        "Current file path",
+                        "Dir",
+                        "Root",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Includes filename."
+                }
+            ]
+        },
+        {
+            "setId": "node_3",
+            "title": "Set 3: Event Loop",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Event Loop purpose?",
+                    "options": [
+                        "Handles async callbacks",
+                        "Loops data",
+                        "Sorting",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concurrency model."
+                },
+                {
+                    "id": 22,
+                    "text": "Phases order?",
+                    "options": [
+                        "Timers, IO, Check, Close",
+                        "Random",
+                        "One",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "libuv phases."
+                },
+                {
+                    "id": 23,
+                    "text": "process.nextTick()?",
+                    "options": [
+                        "Runs before next loop",
+                        "After",
+                        "Never",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "High priority."
+                },
+                {
+                    "id": 24,
+                    "text": "setImmediate()?",
+                    "options": [
+                        "Check phase",
+                        "Timers",
+                        "Idle",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "After I/O."
+                },
+                {
+                    "id": 25,
+                    "text": "setTimeout(fn, 0)?",
+                    "options": [
+                        "Timers phase (next loop)",
+                        "Immediate",
+                        "Now",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Minimum delay."
+                },
+                {
+                    "id": 26,
+                    "text": "Blocking the loop?",
+                    "options": [
+                        "Heavy computation",
+                        "Async",
+                        "I/O",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Freezes server."
+                },
+                {
+                    "id": 27,
+                    "text": "libuv?",
+                    "options": [
+                        "C library for Async I/O",
+                        "JS lib",
+                        "DB",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Underlies the loop."
+                },
+                {
+                    "id": 28,
+                    "text": "Thread Pool usage?",
+                    "options": [
+                        "FS, Crypto, DNS",
+                        "Network",
+                        "JS",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Worker threads."
+                },
+                {
+                    "id": 29,
+                    "text": "Concurrency in Node?",
+                    "options": [
+                        "Asynchronous Non-blocking",
+                        "Threads",
+                        "Parallel",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Single thread magic."
+                },
+                {
+                    "id": 30,
+                    "text": "Don't block the loop!",
+                    "options": [
+                        "Golden rule",
+                        "Suggestion",
+                        "Wrong",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Keep it fast."
+                }
+            ]
+        },
+        {
+            "setId": "node_4",
+            "title": "Set 4: File System",
+            "questions": [
+                {
+                    "id": 31,
+                    "text": "Module for files?",
+                    "options": [
+                        "fs",
+                        "file",
+                        "io",
+                        "data"
+                    ],
+                    "correct": 0,
+                    "explanation": "File System."
+                },
+                {
+                    "id": 32,
+                    "text": "Async read?",
+                    "options": [
+                        "fs.readFile()",
+                        "read()",
+                        "open()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Callback/Promise."
+                },
+                {
+                    "id": 33,
+                    "text": "Sync read?",
+                    "options": [
+                        "fs.readFileSync()",
+                        "sync()",
+                        "read()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Blocks execution."
+                },
+                {
+                    "id": 34,
+                    "text": "Write file?",
+                    "options": [
+                        "fs.writeFile()",
+                        "save()",
+                        "create()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Overwrites."
+                },
+                {
+                    "id": 35,
+                    "text": "Append file?",
+                    "options": [
+                        "fs.appendFile()",
+                        "add()",
+                        "push()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Adds to end."
+                },
+                {
+                    "id": 36,
+                    "text": "Delete file?",
+                    "options": [
+                        "fs.unlink()",
+                        "delete()",
+                        "remove()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unlinks name."
+                },
+                {
+                    "id": 37,
+                    "text": "Rename file?",
+                    "options": [
+                        "fs.rename()",
+                        "move()",
+                        "name()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Also moves."
+                },
+                {
+                    "id": 38,
+                    "text": "Check existence?",
+                    "options": [
+                        "fs.existsSync() / access",
+                        "has()",
+                        "check()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Verify path."
+                },
+                {
+                    "id": 39,
+                    "text": "Streams vs Buffer?",
+                    "options": [
+                        "Chunk vs Whole",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Memory efficiency."
+                },
+                {
+                    "id": 40,
+                    "text": "fs.promises?",
+                    "options": [
+                        "Promise based API",
+                        "Callback",
+                        "Sync",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Modern usage."
+                }
+            ]
+        },
+        {
+            "setId": "node_5",
+            "title": "Set 5: HTTP & Events",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Create server?",
+                    "options": [
+                        "http.createServer()",
+                        "new Server()",
+                        "init()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Basic server."
+                },
+                {
+                    "id": 42,
+                    "text": "Listen port?",
+                    "options": [
+                        "server.listen(port)",
+                        "start()",
+                        "run()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Binds port."
+                },
+                {
+                    "id": 43,
+                    "text": "EventEmitter class?",
+                    "options": [
+                        "events module",
+                        "emit",
+                        "signal",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Core of implementation."
+                },
+                {
+                    "id": 44,
+                    "text": "Emit event?",
+                    "options": [
+                        "emit('name')",
+                        "trigger",
+                        "fire",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sends signal."
+                },
+                {
+                    "id": 45,
+                    "text": "Handle event?",
+                    "options": [
+                        "on('name', cb)",
+                        "listen",
+                        "catch",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Registers listener."
+                },
+                {
+                    "id": 46,
+                    "text": "Run once listener?",
+                    "options": [
+                        "once()",
+                        "one()",
+                        "single()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Auto removes."
+                },
+                {
+                    "id": 47,
+                    "text": "Remove listener?",
+                    "options": [
+                        "removeListener()",
+                        "off()",
+                        "delete()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cleanup."
+                },
+                {
+                    "id": 48,
+                    "text": "Max listeners warning?",
+                    "options": [
+                        "prevent memory leaks",
+                        "error",
+                        "stop",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Default 10."
+                },
+                {
+                    "id": 49,
+                    "text": "Req/Res objects?",
+                    "options": [
+                        "IncomingMessage / ServerResponse",
+                        "In/Out",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stream based."
+                },
+                {
+                    "id": 50,
+                    "text": "Status codes?",
+                    "options": [
+                        "res.statusCode = 200",
+                        "set()",
+                        "code()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "HTTP protocol."
+                }
+            ]
+        },
+        {
+            "setId": "node_6",
+            "title": "Set 6: Streams & Buffers",
+            "questions": [
+                {
+                    "id": 51,
+                    "text": "What is a Buffer?",
+                    "options": [
+                        "Raw binary data",
+                        "String",
+                        "Array",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fixed size."
+                },
+                {
+                    "id": 52,
+                    "text": "Create buffer?",
+                    "options": [
+                        "Buffer.from()",
+                        "new Buffer()",
+                        "make()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Allocates memory."
+                },
+                {
+                    "id": 53,
+                    "text": "Stream types?",
+                    "options": [
+                        "Readable, Writable, Duplex, Transform",
+                        "In/Out",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "4 types."
+                },
+                {
+                    "id": 54,
+                    "text": "Pipe method?",
+                    "options": [
+                        "read.pipe(write)",
+                        "connect",
+                        "link",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Connects streams."
+                },
+                {
+                    "id": 55,
+                    "text": "Backpressure?",
+                    "options": [
+                        "Data buildup in buffer",
+                        "Error",
+                        "Stop",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Consumer slow."
+                },
+                {
+                    "id": 56,
+                    "text": "Transform stream?",
+                    "options": [
+                        "Modifies data while passing",
+                        "Zip",
+                        "Encrypt",
+                        "All"
+                    ],
+                    "correct": 3,
+                    "explanation": "e.g. Compression."
+                },
+                {
+                    "id": 57,
+                    "text": "Events in streams?",
+                    "options": [
+                        "data, end, error",
+                        "start, stop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lifecycle."
+                },
+                {
+                    "id": 58,
+                    "text": "Paused vs Flowing?",
+                    "options": [
+                        "Modes of readable stream",
+                        "Fast/Slow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Data consumption."
+                },
+                {
+                    "id": 59,
+                    "text": "Zlib module?",
+                    "options": [
+                        "Compression",
+                        "Zip",
+                        "Files",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Gzip/Deflate."
+                },
+                {
+                    "id": 60,
+                    "text": "Chaining streams?",
+                    "options": [
+                        "src.pipe(z).pipe(dest)",
+                        "chain()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Processing pipeline."
+                }
+            ]
+        },
+        {
+            "setId": "node_7",
+            "title": "Set 7: Process & OS",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Process object?",
+                    "options": [
+                        "Current Node process",
+                        "OS",
+                        "Task",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Global info."
+                },
+                {
+                    "id": 62,
+                    "text": "Environment variables?",
+                    "options": [
+                        "process.env",
+                        "env",
+                        "vars",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Configuration."
+                },
+                {
+                    "id": 63,
+                    "text": "Command line args?",
+                    "options": [
+                        "process.argv",
+                        "args",
+                        "cmd",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Arguments vector."
+                },
+                {
+                    "id": 64,
+                    "text": "Exit process?",
+                    "options": [
+                        "process.exit()",
+                        "stop()",
+                        "kill()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Terminates."
+                },
+                {
+                    "id": 65,
+                    "text": "Current working dir?",
+                    "options": [
+                        "process.cwd()",
+                        "pwd",
+                        "dir",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Runtime path."
+                },
+                {
+                    "id": 66,
+                    "text": "OS module?",
+                    "options": [
+                        "Operating System info",
+                        "File",
+                        "Net",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "CPUs, Mem, etc."
+                },
+                {
+                    "id": 67,
+                    "text": "CPU info?",
+                    "options": [
+                        "os.cpus()",
+                        "cpu",
+                        "proc",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cores info."
+                },
+                {
+                    "id": 68,
+                    "text": "Free memory?",
+                    "options": [
+                        "os.freemem()",
+                        "mem",
+                        "ram",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Available RAM."
+                },
+                {
+                    "id": 69,
+                    "text": "Platform?",
+                    "options": [
+                        "os.platform()",
+                        "win/linux",
+                        "type",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "OS type."
+                },
+                {
+                    "id": 70,
+                    "text": "Uptime?",
+                    "options": [
+                        "os.uptime()",
+                        "time",
+                        "clock",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Seconds running."
+                }
+            ]
+        },
+        {
+            "setId": "node_8",
+            "title": "Set 8: Child Processes",
+            "questions": [
+                {
+                    "id": 71,
+                    "text": "Child Process module?",
+                    "options": [
+                        "Run external commands",
+                        "Kids",
+                        "Sub",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Spawn new proc."
+                },
+                {
+                    "id": 72,
+                    "text": "spawn() vs exec()?",
+                    "options": [
+                        "Stream vs Buffer",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Memory usage."
+                },
+                {
+                    "id": 73,
+                    "text": "fork() method?",
+                    "options": [
+                        "New Node instance",
+                        "Copy",
+                        "Cut",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "IPC channel enabled."
+                },
+                {
+                    "id": 74,
+                    "text": "IPC?",
+                    "options": [
+                        "Inter Process Communication",
+                        "Internet",
+                        "Protocol",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Messaging."
+                },
+                {
+                    "id": 75,
+                    "text": "Cluster module?",
+                    "options": [
+                        "Load balancing (Multi-core)",
+                        "Group",
+                        "Set",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scaling."
+                },
+                {
+                    "id": 76,
+                    "text": "Worker Threads?",
+                    "options": [
+                        "Parallel JS execution",
+                        "UI",
+                        "Bg",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "CPU intensive tasks."
+                },
+                {
+                    "id": 77,
+                    "text": "ExecFile?",
+                    "options": [
+                        "Run file directly",
+                        "Script",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Safer than exec."
+                },
+                {
+                    "id": 78,
+                    "text": "Killing process?",
+                    "options": [
+                        "kill()",
+                        "stop()",
+                        "end()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Signal."
+                },
+                {
+                    "id": 79,
+                    "text": "Detached process?",
+                    "options": [
+                        "Runs independent of parent",
+                        "Attached",
+                        "Dead",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Background."
+                },
+                {
+                    "id": 80,
+                    "text": "Stdio options?",
+                    "options": [
+                        "pipe, ignore, inherit",
+                        "in, out",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "I/O config."
+                }
+            ]
+        },
+        {
+            "setId": "node_9",
+            "title": "Set 9: Error & Debug",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Unhandled Rejection?",
+                    "options": [
+                        "Promise failed no catch",
+                        "Error",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Event."
+                },
+                {
+                    "id": 82,
+                    "text": "Uncaught Exception?",
+                    "options": [
+                        "Crash app",
+                        "Log",
+                        "Ignore",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fatal error."
+                },
+                {
+                    "id": 83,
+                    "text": "Debugger?",
+                    "options": [
+                        "node inspect",
+                        "log",
+                        "print",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "CLI debugger."
+                },
+                {
+                    "id": 84,
+                    "text": "Console trace?",
+                    "options": [
+                        "console.trace()",
+                        "stack()",
+                        "where()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stack trace."
+                },
+                {
+                    "id": 85,
+                    "text": "Memory usage?",
+                    "options": [
+                        "process.memoryUsage()",
+                        "ram",
+                        "size",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Heap stats."
+                },
+                {
+                    "id": 86,
+                    "text": "Performance hooks?",
+                    "options": [
+                        "perf_hooks module",
+                        "time",
+                        "speed",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Measurement."
+                },
+                {
+                    "id": 87,
+                    "text": "Assert module?",
+                    "options": [
+                        "Testing assertions",
+                        "Verify",
+                        "Check",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Invariants."
+                },
+                {
+                    "id": 88,
+                    "text": "Util module?",
+                    "options": [
+                        "Utilities (promisify)",
+                        "Tools",
+                        "Help",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Helpers."
+                },
+                {
+                    "id": 89,
+                    "text": "Debug log env?",
+                    "options": [
+                        "NODE_DEBUG",
+                        "DEBUG",
+                        "LOG",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Module specific."
+                },
+                {
+                    "id": 90,
+                    "text": "Exit code 1?",
+                    "options": [
+                        "Error",
+                        "Success",
+                        "Wait",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Failure."
+                }
+            ]
+        },
+        {
+            "setId": "node_10",
+            "title": "Set 10: Security & Best Practices",
+            "questions": [
+                {
+                    "id": 91,
+                    "text": "Helmet middleware?",
+                    "options": [
+                        "Secure HTTP headers",
+                        "Armor",
+                        "Protect",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Express/Node sec."
+                },
+                {
+                    "id": 92,
+                    "text": "Crypto module?",
+                    "options": [
+                        "Encryption/Hashing",
+                        "Currency",
+                        "Money",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Built-in."
+                },
+                {
+                    "id": 93,
+                    "text": "Input validation?",
+                    "options": [
+                        "Joi/Validator",
+                        "Check",
+                        "Trust",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Never trust input."
+                },
+                {
+                    "id": 94,
+                    "text": "Rate limiting?",
+                    "options": [
+                        "Prevent DoS",
+                        "Speed up",
+                        "Slow",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Traffic control."
+                },
+                {
+                    "id": 95,
+                    "text": "CORS?",
+                    "options": [
+                        "Cross Origin Resource Sharing",
+                        "Route",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access control."
+                },
+                {
+                    "id": 96,
+                    "text": "PM2?",
+                    "options": [
+                        "Process Manager",
+                        "Time",
+                        "Project",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Production runner."
+                },
+                {
+                    "id": 97,
+                    "text": "Environment config?",
+                    "options": [
+                        "dotenv",
+                        "conf",
+                        "setting",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": ".env files."
+                },
+                {
+                    "id": 98,
+                    "text": "Don't run as Root!",
+                    "options": [
+                        "Security risk",
+                        "Fast",
+                        "Good",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Least privilege."
+                },
+                {
+                    "id": 99,
+                    "text": "Audit dependencies?",
+                    "options": [
+                        "npm audit",
+                        "scan",
+                        "check",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Vulnerability check."
+                },
+                {
+                    "id": 100,
+                    "text": "Compression?",
+                    "options": [
+                        "gzip/brotli",
+                        "zip",
+                        "small",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Save bandwidth."
+                }
+            ]
+        }
+    ]
+}

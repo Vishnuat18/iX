@@ -1,0 +1,45 @@
+/* Global Back Button Style - Reverted to solid design */
+.btn-back-global {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-back-global:hover {
+    background: #252526;
+    border-color: #555;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-back-global i {
+    font-size: 0.9rem;
+}
+
+/* Sub-header Container */
+.sub-header {
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-top: none;
+    /* Separator line is on the header border-bottom */
+}
+
+/* Position adjustment for mobile */
+@media (max-width: 768px) {
+    .btn-back-global {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}

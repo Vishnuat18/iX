@@ -1,0 +1,169 @@
+/* iX Platform - Dedicated Mobile Optimization Styles */
+@media (max-width: 768px) {
+    :root {
+        --header-height: 60px;
+        --bottom-nav-height: 70px;
+    }
+
+    body {
+        padding-top: var(--header-height);
+        padding-bottom: var(--bottom-nav-height);
+        /* Space for bottom nav */
+    }
+
+    /* Compact Header */
+    header {
+        height: var(--header-height);
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .xp-badge {
+        padding: 5px 10px !important;
+        gap: 5px !important;
+    }
+
+    .xp-badge span:first-child {
+        display: none;
+        /* Hide "Score:" label to save space */
+    }
+
+    .xp-badge span#userScoreInHeader {
+        font-size: 1rem !important;
+    }
+
+    /* Navigation - Transition to Bottom Bar */
+    .main-nav {
+        display: none !important;
+        /* Hide original top nav */
+    }
+
+    /* Bottom Navigation Bar (App-like) */
+    .mobile-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: var(--bottom-nav-height);
+        background: rgba(11, 11, 20, 0.95);
+        backdrop-filter: blur(20px);
+        border-top: 1px solid var(--glass-border);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .mobile-nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.75rem;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-nav-item i {
+        font-size: 1.2rem;
+    }
+
+    .mobile-nav-item.active {
+        color: var(--accent-primary);
+    }
+
+    /* Grid Adjustments */
+    .pillar-grid,
+    .stats-grid,
+    .grid,
+    .categories .grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 20px 15px !important;
+    }
+
+    .pillar-card {
+        min-height: 250px !important;
+        padding: 25px !important;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem !important;
+    }
+
+    .hero p {
+        font-size: 1rem !important;
+    }
+
+    /* Stats Breakdown on Home */
+    #statsBreakdown {
+        gap: 10px !important;
+        padding: 0 10px;
+    }
+
+    #statsBreakdown .glass-panel {
+        flex: 1;
+        min-width: 100px !important;
+        padding: 10px !important;
+    }
+
+    /* Shared Solving & Debug Layout (stacked for mobile) */
+    .main-container,
+    .main-layout {
+        flex-direction: column !important;
+        height: auto !important;
+        overflow-y: auto !important;
+    }
+
+    .left-panel,
+    .right-panel,
+    .prob-panel,
+    .editor-panel {
+        width: 100% !important;
+        height: auto !important;
+        border-right: none !important;
+        overflow: visible !important;
+    }
+
+    .left-panel,
+    .prob-panel {
+        max-height: 40vh;
+        overflow-y: auto;
+        border-bottom: 1px solid var(--glass-border);
+        padding: 20px !important;
+    }
+
+    .right-panel,
+    .editor-panel {
+        height: 60vh !important;
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .action-bar {
+        padding: 10px !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+
+    .btn-run,
+    .btn-submit,
+    .btn-tool,
+    .btn-debug {
+        padding: 8px 15px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Hide redundant elements */
+    .ai-chat-bubble {
+        bottom: calc(var(--bottom-nav-height) + 20px) !important;
+        right: 20px !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+}

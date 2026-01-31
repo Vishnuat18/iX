@@ -1,0 +1,1265 @@
+{
+    "topic": "CSS Styling",
+    "sets": [
+        {
+            "setId": "css_1",
+            "title": "Set 1: CSS Basics",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "CSS stands for?",
+                    "options": [
+                        "Cascading Style Sheets",
+                        "Creative Style System",
+                        "Computer Style Sheets",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Styles web pages."
+                },
+                {
+                    "id": 2,
+                    "text": "Class selector symbol?",
+                    "options": [
+                        ".",
+                        "#",
+                        "*",
+                        "@"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dot for class."
+                },
+                {
+                    "id": 3,
+                    "text": "ID selector symbol?",
+                    "options": [
+                        ".",
+                        "#",
+                        "*",
+                        "&"
+                    ],
+                    "correct": 1,
+                    "explanation": "Hash for ID."
+                },
+                {
+                    "id": 4,
+                    "text": "Change text color?",
+                    "options": [
+                        "color:",
+                        "text-color:",
+                        "font-color:",
+                        "fg-color:"
+                    ],
+                    "correct": 0,
+                    "explanation": "color property."
+                },
+                {
+                    "id": 5,
+                    "text": "Box Model components?",
+                    "options": [
+                        "Content, Padding, Border, Margin",
+                        "Content, Size, Color, Border",
+                        "Margin, Padding, Header, Footer",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard box model."
+                },
+                {
+                    "id": 6,
+                    "text": "Make text bold?",
+                    "options": [
+                        "font-weight: bold",
+                        "text-decoration: bold",
+                        "font-style: bold",
+                        "bold: true"
+                    ],
+                    "correct": 0,
+                    "explanation": "font-weight."
+                },
+                {
+                    "id": 7,
+                    "text": "External CSS link?",
+                    "options": [
+                        "<link rel='stylesheet'>",
+                        "<style src=''>",
+                        "<css>",
+                        "<script>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Link tag."
+                },
+                {
+                    "id": 8,
+                    "text": "Select all elements?",
+                    "options": [
+                        "*",
+                        "all",
+                        "body",
+                        "root"
+                    ],
+                    "correct": 0,
+                    "explanation": "Universal selector."
+                },
+                {
+                    "id": 9,
+                    "text": "Comment in CSS?",
+                    "options": [
+                        "/* */",
+                        "//",
+                        "<!-- -->",
+                        "#"
+                    ],
+                    "correct": 0,
+                    "explanation": "C-style comment."
+                },
+                {
+                    "id": 10,
+                    "text": "Highest specificity?",
+                    "options": [
+                        "ID",
+                        "Class",
+                        "Tag",
+                        "Universal"
+                    ],
+                    "correct": 0,
+                    "explanation": "ID is stronger."
+                }
+            ]
+        },
+        {
+            "setId": "css_2",
+            "title": "Set 2: Layout & Positioning",
+            "questions": [
+                {
+                    "id": 11,
+                    "text": "Default position value?",
+                    "options": [
+                        "static",
+                        "relative",
+                        "absolute",
+                        "fixed"
+                    ],
+                    "correct": 0,
+                    "explanation": "Normal flow."
+                },
+                {
+                    "id": 12,
+                    "text": "Position relative to viewport?",
+                    "options": [
+                        "fixed",
+                        "absolute",
+                        "sticky",
+                        "relative"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stays on scroll."
+                },
+                {
+                    "id": 13,
+                    "text": "Float property values?",
+                    "options": [
+                        "left, right, none",
+                        "up, down",
+                        "center",
+                        "middle"
+                    ],
+                    "correct": 0,
+                    "explanation": "Text wrapping."
+                },
+                {
+                    "id": 14,
+                    "text": "Clear floats?",
+                    "options": [
+                        "clear: both",
+                        "float: none",
+                        "stop: float",
+                        "clean"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fix layout."
+                },
+                {
+                    "id": 15,
+                    "text": "Center block element?",
+                    "options": [
+                        "margin: 0 auto",
+                        "text-align: center",
+                        "align: center",
+                        "center"
+                    ],
+                    "correct": 0,
+                    "explanation": "Horizontal center."
+                },
+                {
+                    "id": 16,
+                    "text": "Hide element taking space?",
+                    "options": [
+                        "visibility: hidden",
+                        "display: none",
+                        "opacity: 0",
+                        "hide"
+                    ],
+                    "correct": 0,
+                    "explanation": "Specific visibility."
+                },
+                {
+                    "id": 17,
+                    "text": "Remove from flow?",
+                    "options": [
+                        "display: none",
+                        "visibility: hidden",
+                        "opacity: 0",
+                        "color: transparent"
+                    ],
+                    "correct": 0,
+                    "explanation": "No space taken."
+                },
+                {
+                    "id": 18,
+                    "text": "Overlap elements?",
+                    "options": [
+                        "z-index",
+                        "stack",
+                        "layer",
+                        "level"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stack order."
+                },
+                {
+                    "id": 19,
+                    "text": "Inline-block behaves like?",
+                    "options": [
+                        "Inline flow, Block sizing",
+                        "Block flow",
+                        "Inline sizing",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hybrid."
+                },
+                {
+                    "id": 20,
+                    "text": "Overflow hidden?",
+                    "options": [
+                        "Clips content",
+                        "Scrolls",
+                        "Shows all",
+                        "Resizes"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hides excess."
+                }
+            ]
+        },
+        {
+            "setId": "css_3",
+            "title": "Set 3: Typography & Fonts",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Font family fallback?",
+                    "options": [
+                        "Comma separated list",
+                        "Space",
+                        "Plus",
+                        "Pipe"
+                    ],
+                    "correct": 0,
+                    "explanation": "Arial, sans-serif."
+                },
+                {
+                    "id": 22,
+                    "text": "Italic text?",
+                    "options": [
+                        "font-style: italic",
+                        "text-style: italic",
+                        "font: italic",
+                        "slant"
+                    ],
+                    "correct": 0,
+                    "explanation": "Formatting."
+                },
+                {
+                    "id": 23,
+                    "text": "Uppercase transform?",
+                    "options": [
+                        "text-transform: uppercase",
+                        "font-case: upper",
+                        "text: caps",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Visual caps."
+                },
+                {
+                    "id": 24,
+                    "text": "Line height?",
+                    "options": [
+                        "Vertical space between lines",
+                        "Letter space",
+                        "Word space",
+                        "Width"
+                    ],
+                    "correct": 0,
+                    "explanation": "Spacing."
+                },
+                {
+                    "id": 25,
+                    "text": "Letter spacing?",
+                    "options": [
+                        "Tracking",
+                        "Kerning",
+                        "Leading",
+                        "Padding"
+                    ],
+                    "correct": 0,
+                    "explanation": "Space between chars."
+                },
+                {
+                    "id": 26,
+                    "text": "Font size unit 'em'?",
+                    "options": [
+                        "Relative to parent",
+                        "Relative to root",
+                        "Pixels",
+                        "Inches"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scaling."
+                },
+                {
+                    "id": 27,
+                    "text": "Google Fonts import?",
+                    "options": [
+                        "@import or <link>",
+                        "Script",
+                        "Download",
+                        "Copy"
+                    ],
+                    "correct": 0,
+                    "explanation": "Web fonts."
+                },
+                {
+                    "id": 28,
+                    "text": "Text shadow?",
+                    "options": [
+                        "x y blur color",
+                        "color x y",
+                        "blur color",
+                        "size color"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shadow effect."
+                },
+                {
+                    "id": 29,
+                    "text": "Remove underline?",
+                    "options": [
+                        "text-decoration: none",
+                        "underline: no",
+                        "style: plain",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Links default."
+                },
+                {
+                    "id": 30,
+                    "text": "Web safe fonts?",
+                    "options": [
+                        "Arial, Verdana, Times",
+                        "Custom",
+                        "Downloaded",
+                        "SVG"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pre-installed."
+                }
+            ]
+        },
+        {
+            "setId": "css_4",
+            "title": "Set 4: Colors & Backgrounds",
+            "questions": [
+                {
+                    "id": 31,
+                    "text": "Hex color code length?",
+                    "options": [
+                        "6 or 3",
+                        "8",
+                        "4",
+                        "5"
+                    ],
+                    "correct": 0,
+                    "explanation": "#RRGGBB."
+                },
+                {
+                    "id": 32,
+                    "text": "RGB format?",
+                    "options": [
+                        "rgb(r, g, b)",
+                        "color()",
+                        "#rgb",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "0-255 values."
+                },
+                {
+                    "id": 33,
+                    "text": "RGBA 'A' stands for?",
+                    "options": [
+                        "Alpha (Opacity)",
+                        "Aqua",
+                        "All",
+                        "Angle"
+                    ],
+                    "correct": 0,
+                    "explanation": "Transparency."
+                },
+                {
+                    "id": 34,
+                    "text": "HSL stands for?",
+                    "options": [
+                        "Hue Saturation Lightness",
+                        "High Saturation Low",
+                        "Hue Shade Light",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Color model."
+                },
+                {
+                    "id": 35,
+                    "text": "Background image?",
+                    "options": [
+                        "background-image: url()",
+                        "bg-img:",
+                        "src:",
+                        "image:"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sets bg."
+                },
+                {
+                    "id": 36,
+                    "text": "Repeat background?",
+                    "options": [
+                        "background-repeat",
+                        "repeat",
+                        "tile",
+                        "loop"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tiling."
+                },
+                {
+                    "id": 37,
+                    "text": "Gradient syntax?",
+                    "options": [
+                        "linear-gradient()",
+                        "color-fade()",
+                        "mix()",
+                        "grade()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Smooth transition."
+                },
+                {
+                    "id": 38,
+                    "text": "Background size cover?",
+                    "options": [
+                        "Fills container",
+                        "Shows full image",
+                        "Stretches",
+                        "Repeats"
+                    ],
+                    "correct": 0,
+                    "explanation": "Covers area."
+                },
+                {
+                    "id": 39,
+                    "text": "Opacity vs RGBA?",
+                    "options": [
+                        "Opacity affects children",
+                        "RGBA affects children",
+                        "Same",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Opacity inherits."
+                },
+                {
+                    "id": 40,
+                    "text": "Transparent keyword?",
+                    "options": [
+                        "Fully transparent",
+                        "White",
+                        "Black",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No color."
+                }
+            ]
+        },
+        {
+            "setId": "css_5",
+            "title": "Set 5: Flexbox",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Activate Flexbox?",
+                    "options": [
+                        "display: flex",
+                        "display: box",
+                        "flex: on",
+                        "layout: flex"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flex context."
+                },
+                {
+                    "id": 42,
+                    "text": "Main axis direction?",
+                    "options": [
+                        "flex-direction",
+                        "orient",
+                        "flow",
+                        "dir"
+                    ],
+                    "correct": 0,
+                    "explanation": "Row or Column."
+                },
+                {
+                    "id": 43,
+                    "text": "Align along main axis?",
+                    "options": [
+                        "justify-content",
+                        "align-items",
+                        "align-content",
+                        "devide"
+                    ],
+                    "correct": 0,
+                    "explanation": "Spreading."
+                },
+                {
+                    "id": 44,
+                    "text": "Align along cross axis?",
+                    "options": [
+                        "align-items",
+                        "justify-content",
+                        "center",
+                        "middle"
+                    ],
+                    "correct": 0,
+                    "explanation": "Perpendicular."
+                },
+                {
+                    "id": 45,
+                    "text": "Wrap items?",
+                    "options": [
+                        "flex-wrap",
+                        "wrap",
+                        "break",
+                        "line"
+                    ],
+                    "correct": 0,
+                    "explanation": "Multilines."
+                },
+                {
+                    "id": 46,
+                    "text": "Grow factor?",
+                    "options": [
+                        "flex-grow",
+                        "grow",
+                        "expand",
+                        "scale"
+                    ],
+                    "correct": 0,
+                    "explanation": "Taking space."
+                },
+                {
+                    "id": 47,
+                    "text": "Shrink factor?",
+                    "options": [
+                        "flex-shrink",
+                        "reduce",
+                        "small",
+                        "less"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reducing space."
+                },
+                {
+                    "id": 48,
+                    "text": "Short hand flex?",
+                    "options": [
+                        "grow shrink basis",
+                        "dir wrap",
+                        "align justify",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "flex: 1 1 auto."
+                },
+                {
+                    "id": 49,
+                    "text": "Center perfectly?",
+                    "options": [
+                        "justify-center & align-center",
+                        "margin: auto",
+                        "both",
+                        "None"
+                    ],
+                    "correct": 2,
+                    "explanation": "Famous layout hack."
+                },
+                {
+                    "id": 50,
+                    "text": "Order property?",
+                    "options": [
+                        "Reorder items",
+                        "Sort A-Z",
+                        "Count",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Visual order."
+                }
+            ]
+        },
+        {
+            "setId": "css_6",
+            "title": "Set 6: CSS Grid",
+            "questions": [
+                {
+                    "id": 51,
+                    "text": "Activate Grid?",
+                    "options": [
+                        "display: grid",
+                        "display: table",
+                        "grid: true",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Grid context."
+                },
+                {
+                    "id": 52,
+                    "text": "Define columns?",
+                    "options": [
+                        "grid-template-columns",
+                        "cols",
+                        "column-width",
+                        "grid-cols"
+                    ],
+                    "correct": 0,
+                    "explanation": "Track sizing."
+                },
+                {
+                    "id": 53,
+                    "text": "Fraction unit?",
+                    "options": [
+                        "fr",
+                        "fx",
+                        "ft",
+                        "%"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fraction of free space."
+                },
+                {
+                    "id": 54,
+                    "text": "Gap between cells?",
+                    "options": [
+                        "gap",
+                        "margin",
+                        "padding",
+                        "space"
+                    ],
+                    "correct": 0,
+                    "explanation": "Gutter."
+                },
+                {
+                    "id": 55,
+                    "text": "Span columns?",
+                    "options": [
+                        "grid-column: span 2",
+                        "colspan",
+                        "merge",
+                        "wide"
+                    ],
+                    "correct": 0,
+                    "explanation": "Taking multiple tracks."
+                },
+                {
+                    "id": 56,
+                    "text": "Grid vs Flex?",
+                    "options": [
+                        "2D vs 1D",
+                        "Same",
+                        "Grid is older",
+                        "Flex is 3D"
+                    ],
+                    "correct": 0,
+                    "explanation": "Grid handles rows & cols."
+                },
+                {
+                    "id": 57,
+                    "text": "Named grid areas?",
+                    "options": [
+                        "grid-template-areas",
+                        "names",
+                        "map",
+                        "zone"
+                    ],
+                    "correct": 0,
+                    "explanation": "Layout map."
+                },
+                {
+                    "id": 58,
+                    "text": "Start/End lines?",
+                    "options": [
+                        "1-based index",
+                        "0-based",
+                        "Named",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Grid lines."
+                },
+                {
+                    "id": 59,
+                    "text": "Auto fit vs Auto fill?",
+                    "options": [
+                        "Dynamic repetition",
+                        "Static",
+                        "Color",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Responsive tracks."
+                },
+                {
+                    "id": 60,
+                    "text": "Justify items in grid?",
+                    "options": [
+                        "Horizontal alignment",
+                        "Vertical",
+                        "Both",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "In cell."
+                }
+            ]
+        },
+        {
+            "setId": "css_7",
+            "title": "Set 7: Responsive Design",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Media Query?",
+                    "options": [
+                        "@media",
+                        "#responsive",
+                        "screen",
+                        "mobile"
+                    ],
+                    "correct": 0,
+                    "explanation": "Conditional styles."
+                },
+                {
+                    "id": 62,
+                    "text": "Breakpoint?",
+                    "options": [
+                        "Width trigger",
+                        "Error",
+                        "Pause",
+                        "Stop"
+                    ],
+                    "correct": 0,
+                    "explanation": "Screen width."
+                },
+                {
+                    "id": 63,
+                    "text": "Mobile First?",
+                    "options": [
+                        "Design small first",
+                        "Design desktop first",
+                        "App only",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Progressive enhancement."
+                },
+                {
+                    "id": 64,
+                    "text": "Viewport meta?",
+                    "options": [
+                        "width=device-width",
+                        "scale=1",
+                        "Both",
+                        "None"
+                    ],
+                    "correct": 2,
+                    "explanation": "Essential for mobile."
+                },
+                {
+                    "id": 65,
+                    "text": "Max-width vs Width?",
+                    "options": [
+                        "Constrains but shrinks",
+                        "Rigid",
+                        "Minimum",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fluidity."
+                },
+                {
+                    "id": 66,
+                    "text": "Rem vs Px?",
+                    "options": [
+                        "Scalable vs Fixed",
+                        "Same",
+                        "Colors",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "A11y friendly."
+                },
+                {
+                    "id": 67,
+                    "text": "Percent width?",
+                    "options": [
+                        "Relative to parent",
+                        "Fixed",
+                        "Screen",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fluid."
+                },
+                {
+                    "id": 68,
+                    "text": "VH/VW units?",
+                    "options": [
+                        "Viewport Height/Width",
+                        "Video",
+                        "Virtual",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Screen percentage."
+                },
+                {
+                    "id": 69,
+                    "text": "Common breakpoint?",
+                    "options": [
+                        "768px (Tablet)",
+                        "10px",
+                        "10000px",
+                        "0"
+                    ],
+                    "correct": 0,
+                    "explanation": "iPad portrait."
+                },
+                {
+                    "id": 70,
+                    "text": "Orientation query?",
+                    "options": [
+                        "landscape/portrait",
+                        "flat/tall",
+                        "box",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Device rotation."
+                }
+            ]
+        },
+        {
+            "setId": "css_8",
+            "title": "Set 8: Animation & Transition",
+            "questions": [
+                {
+                    "id": 71,
+                    "text": "Transition property?",
+                    "options": [
+                        "Smooth change",
+                        "Jump",
+                        "Slide",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Interpolation."
+                },
+                {
+                    "id": 72,
+                    "text": "Keyframes rule?",
+                    "options": [
+                        "@keyframes",
+                        "&motion",
+                        "#animate",
+                        "key"
+                    ],
+                    "correct": 0,
+                    "explanation": "Animation steps."
+                },
+                {
+                    "id": 73,
+                    "text": "Animation duration?",
+                    "options": [
+                        "Time to complete",
+                        "Delay",
+                        "Count",
+                        "Speed"
+                    ],
+                    "correct": 0,
+                    "explanation": "Seconds/ms."
+                },
+                {
+                    "id": 74,
+                    "text": "Easing function?",
+                    "options": [
+                        "ease-in-out",
+                        "jump",
+                        "stop",
+                        "go"
+                    ],
+                    "correct": 0,
+                    "explanation": "Acceleration curve."
+                },
+                {
+                    "id": 75,
+                    "text": "Infinite loop?",
+                    "options": [
+                        "iteration-count: infinite",
+                        "loop: true",
+                        "forever",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Never stops."
+                },
+                {
+                    "id": 76,
+                    "text": "Transform: rotate?",
+                    "options": [
+                        "Spins element",
+                        "Moves",
+                        "Scales",
+                        "Scews"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rotation degrees."
+                },
+                {
+                    "id": 77,
+                    "text": "Transform: scale?",
+                    "options": [
+                        "Resizes",
+                        "Moves",
+                        "Rotates",
+                        "Hides"
+                    ],
+                    "correct": 0,
+                    "explanation": "Zoom."
+                },
+                {
+                    "id": 78,
+                    "text": "3D transform?",
+                    "options": [
+                        "perspective",
+                        "flat",
+                        "2d",
+                        "print"
+                    ],
+                    "correct": 0,
+                    "explanation": "Depth."
+                },
+                {
+                    "id": 79,
+                    "text": "Delay animation?",
+                    "options": [
+                        "animation-delay",
+                        "wait",
+                        "pause",
+                        "stop"
+                    ],
+                    "correct": 0,
+                    "explanation": "Start later."
+                },
+                {
+                    "id": 80,
+                    "text": "Hardware acceleration?",
+                    "options": [
+                        "translate3d",
+                        "color",
+                        "margin",
+                        "padding"
+                    ],
+                    "correct": 0,
+                    "explanation": "GPU usage."
+                }
+            ]
+        },
+        {
+            "setId": "css_9",
+            "title": "Set 9: Preprocessors & Methodology",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "SASS is?",
+                    "options": [
+                        "CSS Preprocessor",
+                        "JS Library",
+                        "HTML",
+                        "DB"
+                    ],
+                    "correct": 0,
+                    "explanation": "Syntactically Awesome."
+                },
+                {
+                    "id": 82,
+                    "text": "SASS Variable?",
+                    "options": [
+                        "$var",
+                        "@var",
+                        "--var",
+                        "#var"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dollar sign."
+                },
+                {
+                    "id": 83,
+                    "text": "Nesting in SASS?",
+                    "options": [
+                        "Selector inside selector",
+                        "Grid",
+                        "Table",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hierarchy."
+                },
+                {
+                    "id": 84,
+                    "text": "BEM stands for?",
+                    "options": [
+                        "Block Element Modifier",
+                        "Big Element Move",
+                        "Basic",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Naming convention."
+                },
+                {
+                    "id": 85,
+                    "text": "CSS Modules?",
+                    "options": [
+                        "Scoped CSS",
+                        "Global",
+                        "SASS",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Local scope."
+                },
+                {
+                    "id": 86,
+                    "text": "Tailwind is?",
+                    "options": [
+                        "Utility-first framework",
+                        "Component",
+                        "SASS",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Class based."
+                },
+                {
+                    "id": 87,
+                    "text": "Bootstrap is?",
+                    "options": [
+                        "Component framework",
+                        "Language",
+                        "Browsers",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prebuilt UI."
+                },
+                {
+                    "id": 88,
+                    "text": "Reset CSS?",
+                    "options": [
+                        "Normalize defaults",
+                        "Delete CSS",
+                        "Reload",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cross-browser consistency."
+                },
+                {
+                    "id": 89,
+                    "text": "Variable in standard CSS?",
+                    "options": [
+                        "--var-name",
+                        "$var",
+                        "@var",
+                        "var"
+                    ],
+                    "correct": 0,
+                    "explanation": "Custom properties."
+                },
+                {
+                    "id": 90,
+                    "text": "Access CSS var?",
+                    "options": [
+                        "var(--name)",
+                        "$name",
+                        "get(name)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Function."
+                }
+            ]
+        },
+        {
+            "setId": "css_10",
+            "title": "Set 10: Advanced & Modern",
+            "questions": [
+                {
+                    "id": 91,
+                    "text": "Pseudo-element ::before?",
+                    "options": [
+                        "Inserts content before",
+                        "Selects prev",
+                        "Hides",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cosmetic content."
+                },
+                {
+                    "id": 92,
+                    "text": "Calc() function?",
+                    "options": [
+                        "Math in CSS",
+                        "Calculator",
+                        "Date",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dynamic width."
+                },
+                {
+                    "id": 93,
+                    "text": "Object-fit?",
+                    "options": [
+                        "Image aspect ratio",
+                        "Objects",
+                        "JSON",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cover/Contain."
+                },
+                {
+                    "id": 94,
+                    "text": "Filter property?",
+                    "options": [
+                        "Blur, Grayscale, etc.",
+                        "Search",
+                        "Sort",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Visual effects."
+                },
+                {
+                    "id": 95,
+                    "text": "Pointer-events: none?",
+                    "options": [
+                        "Click-through",
+                        "Hide",
+                        "Show",
+                        "Stop"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ignores mouse."
+                },
+                {
+                    "id": 96,
+                    "text": "Sticky positioning?",
+                    "options": [
+                        "Toggles relative/fixed",
+                        "Glue",
+                        "Top",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scroll effect."
+                },
+                {
+                    "id": 97,
+                    "text": "Aspect-ratio property?",
+                    "options": [
+                        "width/height ratio",
+                        "Screen",
+                        "Video",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Box Dimensions."
+                },
+                {
+                    "id": 98,
+                    "text": "Will-change?",
+                    "options": [
+                        "Performance hint",
+                        "Future",
+                        "Promise",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimize rendering."
+                },
+                {
+                    "id": 99,
+                    "text": "Is(): selector?",
+                    "options": [
+                        "Matches any in list",
+                        "Question",
+                        "Check",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Simplifies selectors."
+                },
+                {
+                    "id": 100,
+                    "text": "Subgrid?",
+                    "options": [
+                        "Grid inside grid items",
+                        "Subway",
+                        "Under",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inherits tracks."
+                }
+            ]
+        }
+    ]
+}

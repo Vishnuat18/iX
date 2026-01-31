@@ -1,0 +1,1235 @@
+{
+    "topic": "Structured Query Language",
+    "sets": [
+        {
+            "setId": "sql_1",
+            "title": "Set 1: SQL Basics",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "SQL stands for?",
+                    "options": [
+                        "Structured Query Language",
+                        "Simple",
+                        "Standard",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "ISO standard."
+                },
+                {
+                    "id": 2,
+                    "text": "RDBMS?",
+                    "options": [
+                        "Relational DBMS",
+                        "Real",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tables."
+                },
+                {
+                    "id": 3,
+                    "text": "Retrieve data?",
+                    "options": [
+                        "SELECT",
+                        "GET",
+                        "FETCH",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Query."
+                },
+                {
+                    "id": 4,
+                    "text": "Show all columns?",
+                    "options": [
+                        "SELECT *",
+                        "ALL",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Wildcard."
+                },
+                {
+                    "id": 5,
+                    "text": "Unique values?",
+                    "options": [
+                        "DISTINCT",
+                        "UNIQUE",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Filter dupes."
+                },
+                {
+                    "id": 6,
+                    "text": "Filter rows?",
+                    "options": [
+                        "WHERE",
+                        "FILTER",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Condition."
+                },
+                {
+                    "id": 7,
+                    "text": "Sort results?",
+                    "options": [
+                        "ORDER BY",
+                        "SORT",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sequence."
+                },
+                {
+                    "id": 8,
+                    "text": "Pattern match?",
+                    "options": [
+                        "LIKE",
+                        "MATCH",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Regex light."
+                },
+                {
+                    "id": 9,
+                    "text": "Insert row?",
+                    "options": [
+                        "INSERT INTO",
+                        "ADD",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Create."
+                },
+                {
+                    "id": 10,
+                    "text": "Update data?",
+                    "options": [
+                        "UPDATE table SET",
+                        "CHANGE",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Modify."
+                },
+                {
+                    "id": 11,
+                    "text": "Delete row?",
+                    "options": [
+                        "DELETE FROM",
+                        "REMOVE",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Remove."
+                },
+                {
+                    "id": 12,
+                    "text": "Empty table?",
+                    "options": [
+                        "TRUNCATE",
+                        "DELETE",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fast clean."
+                },
+                {
+                    "id": 13,
+                    "text": "Delete table?",
+                    "options": [
+                        "DROP",
+                        "DELETE",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Schema."
+                },
+                {
+                    "id": 14,
+                    "text": "Create table?",
+                    "options": [
+                        "CREATE TABLE",
+                        "MAKE",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DDL."
+                },
+                {
+                    "id": 15,
+                    "text": "Add column?",
+                    "options": [
+                        "ALTER TABLE ADD",
+                        "INSERT",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Structure."
+                },
+                {
+                    "id": 16,
+                    "text": "SQL comment?",
+                    "options": [
+                        "--",
+                        "//",
+                        "#",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dash dash."
+                },
+                {
+                    "id": 17,
+                    "text": "AND operator?",
+                    "options": [
+                        "Both true",
+                        "One",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logic."
+                },
+                {
+                    "id": 18,
+                    "text": "OR operator?",
+                    "options": [
+                        "At least one true",
+                        "Both",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logic."
+                },
+                {
+                    "id": 19,
+                    "text": "NOT operator?",
+                    "options": [
+                        "Negates",
+                        "Invert",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logic."
+                },
+                {
+                    "id": 20,
+                    "text": "Null check?",
+                    "options": [
+                        "IS NULL",
+                        "= NULL",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Special."
+                }
+            ]
+        },
+        {
+            "setId": "sql_2",
+            "title": "Set 2: Functions & Grouping",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Count rows?",
+                    "options": [
+                        "COUNT(*)",
+                        "SUM",
+                        "NUM",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Aggregate."
+                },
+                {
+                    "id": 22,
+                    "text": "Sum column?",
+                    "options": [
+                        "SUM()",
+                        "ADD",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Total."
+                },
+                {
+                    "id": 23,
+                    "text": "Average?",
+                    "options": [
+                        "AVG()",
+                        "MEAN",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mean."
+                },
+                {
+                    "id": 24,
+                    "text": "Min value?",
+                    "options": [
+                        "MIN()",
+                        "LOW",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lowest."
+                },
+                {
+                    "id": 25,
+                    "text": "Max value?",
+                    "options": [
+                        "MAX()",
+                        "HIGH",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Highest."
+                },
+                {
+                    "id": 26,
+                    "text": "Group rows?",
+                    "options": [
+                        "GROUP BY",
+                        "CLUSTER",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Buckets."
+                },
+                {
+                    "id": 27,
+                    "text": "Filter groups?",
+                    "options": [
+                        "HAVING",
+                        "WHERE",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Post-aggregation."
+                },
+                {
+                    "id": 28,
+                    "text": "Top N records?",
+                    "options": [
+                        "LIMIT or TOP",
+                        "HEAD",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pagination."
+                },
+                {
+                    "id": 29,
+                    "text": "String concat?",
+                    "options": [
+                        "CONCAT() or ||",
+                        "ADD",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Join strings."
+                },
+                {
+                    "id": 30,
+                    "text": "Uppercase?",
+                    "options": [
+                        "UPPER()",
+                        "CAPS",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Text."
+                },
+                {
+                    "id": 31,
+                    "text": "Lowercase?",
+                    "options": [
+                        "LOWER()",
+                        "SMALL",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Text."
+                },
+                {
+                    "id": 32,
+                    "text": "Length of string?",
+                    "options": [
+                        "LENGTH() / LEN()",
+                        "SIZE",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Count chars."
+                },
+                {
+                    "id": 33,
+                    "text": "Current date?",
+                    "options": [
+                        "NOW() / SYSDATE / GETDATE",
+                        "TODAY",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Time."
+                },
+                {
+                    "id": 34,
+                    "text": "Round number?",
+                    "options": [
+                        "ROUND()",
+                        "FLOOR",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Math."
+                },
+                {
+                    "id": 35,
+                    "text": "Alias column?",
+                    "options": [
+                        "AS",
+                        "NAME",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rename."
+                },
+                {
+                    "id": 36,
+                    "text": "Between range?",
+                    "options": [
+                        "BETWEEN x AND y",
+                        "IN",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inclusive."
+                },
+                {
+                    "id": 37,
+                    "text": "In list?",
+                    "options": [
+                        "IN (a, b, c)",
+                        "LIST",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Set."
+                },
+                {
+                    "id": 38,
+                    "text": "Coalesce?",
+                    "options": [
+                        "First non-null",
+                        "Null",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fallback."
+                },
+                {
+                    "id": 39,
+                    "text": "String subset?",
+                    "options": [
+                        "SUBSTRING()",
+                        "PART",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Extract."
+                },
+                {
+                    "id": 40,
+                    "text": "Trim space?",
+                    "options": [
+                        "TRIM()",
+                        "CUT",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Clean."
+                }
+            ]
+        },
+        {
+            "setId": "sql_3",
+            "title": "Set 3: Joins & Subqueries",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Inner Join?",
+                    "options": [
+                        "Matches in both",
+                        "Left",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Intersection."
+                },
+                {
+                    "id": 42,
+                    "text": "Left Join?",
+                    "options": [
+                        "All left, matching right",
+                        "Inner",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Preserve left."
+                },
+                {
+                    "id": 43,
+                    "text": "Right Join?",
+                    "options": [
+                        "All right, matching left",
+                        "Inner",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Preserve right."
+                },
+                {
+                    "id": 44,
+                    "text": "Full Join?",
+                    "options": [
+                        "All from both",
+                        "Union",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Both sides."
+                },
+                {
+                    "id": 45,
+                    "text": "Cross Join?",
+                    "options": [
+                        "Cartesian product",
+                        "X",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "All combos."
+                },
+                {
+                    "id": 46,
+                    "text": "Self Join?",
+                    "options": [
+                        "Join table to self",
+                        "Solo",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hierarchy."
+                },
+                {
+                    "id": 47,
+                    "text": "Union?",
+                    "options": [
+                        "Combine results unique",
+                        "Add",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Set op."
+                },
+                {
+                    "id": 48,
+                    "text": "Union All?",
+                    "options": [
+                        "Combine with duplicates",
+                        "Union",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Faster."
+                },
+                {
+                    "id": 49,
+                    "text": "Intersect?",
+                    "options": [
+                        "Common rows",
+                        "Join",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Overlap."
+                },
+                {
+                    "id": 50,
+                    "text": "Except / Minus?",
+                    "options": [
+                        "Difference",
+                        "Sub",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Remove."
+                },
+                {
+                    "id": 51,
+                    "text": "Subquery?",
+                    "options": [
+                        "Query inside query",
+                        "Child",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Nested."
+                },
+                {
+                    "id": 52,
+                    "text": "Exists?",
+                    "options": [
+                        "True if subquery returns row",
+                        "Has",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Check."
+                },
+                {
+                    "id": 53,
+                    "text": "Any?",
+                    "options": [
+                        "Compare to any in set",
+                        "Some",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Quantifier."
+                },
+                {
+                    "id": 54,
+                    "text": "All?",
+                    "options": [
+                        "Compare to all in set",
+                        "Every",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Quantifier."
+                },
+                {
+                    "id": 55,
+                    "text": "Correlated subquery?",
+                    "options": [
+                        "Uses outer query value",
+                        "Linked",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Row by row."
+                },
+                {
+                    "id": 56,
+                    "text": "View?",
+                    "options": [
+                        "Saved query result",
+                        "Table",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Virtual."
+                },
+                {
+                    "id": 57,
+                    "text": "CTE?",
+                    "options": [
+                        "Common Table Expression (WITH)",
+                        "Temp",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Readable."
+                },
+                {
+                    "id": 58,
+                    "text": "Derived Table?",
+                    "options": [
+                        "Subquery in FROM",
+                        "Source",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inline view."
+                },
+                {
+                    "id": 59,
+                    "text": "Recursive CTE?",
+                    "options": [
+                        "Call itself",
+                        "Loop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tree walk."
+                },
+                {
+                    "id": 60,
+                    "text": "Single row subquery?",
+                    "options": [
+                        "Returns 1 row",
+                        "List",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scalar."
+                }
+            ]
+        },
+        {
+            "setId": "sql_4",
+            "title": "Set 4: Constraints & Keys",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Constraint?",
+                    "options": [
+                        "Rule on data",
+                        "Limit",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Integrity."
+                },
+                {
+                    "id": 62,
+                    "text": "Primary Key?",
+                    "options": [
+                        "Unique and Not Null",
+                        "Key",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Identity."
+                },
+                {
+                    "id": 63,
+                    "text": "Foreign Key?",
+                    "options": [
+                        "Reference other table",
+                        "Link",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Relation."
+                },
+                {
+                    "id": 64,
+                    "text": "Unique Key?",
+                    "options": [
+                        "No duplicates, Null allowed",
+                        "PK",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Distinct."
+                },
+                {
+                    "id": 65,
+                    "text": "Not Null?",
+                    "options": [
+                        "Must have value",
+                        "Empty",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Required."
+                },
+                {
+                    "id": 66,
+                    "text": "Check?",
+                    "options": [
+                        "Validates condition",
+                        "Test",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logic."
+                },
+                {
+                    "id": 67,
+                    "text": "Default?",
+                    "options": [
+                        "Value if missing",
+                        "Base",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fallback."
+                },
+                {
+                    "id": 68,
+                    "text": "Index?",
+                    "options": [
+                        "Optimizes lookup",
+                        "Book",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Speed."
+                },
+                {
+                    "id": 69,
+                    "text": "Auto Increment?",
+                    "options": [
+                        "Auto ID gen",
+                        "Plus",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sequence."
+                },
+                {
+                    "id": 70,
+                    "text": "Composite Key?",
+                    "options": [
+                        "Multi-column key",
+                        "Mix",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Combination."
+                },
+                {
+                    "id": 71,
+                    "text": "Drop Constraint?",
+                    "options": [
+                        "Remove rule",
+                        "Delete",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Alter."
+                },
+                {
+                    "id": 72,
+                    "text": "Cascade Delete?",
+                    "options": [
+                        "Delete children when parent dies",
+                        "Flow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Maintenance."
+                },
+                {
+                    "id": 73,
+                    "text": "Candidate Key?",
+                    "options": [
+                        "Potential PK",
+                        "Nominee",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unique."
+                },
+                {
+                    "id": 74,
+                    "text": "Super Key?",
+                    "options": [
+                        "Superset of CK",
+                        "Big",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Identifier."
+                },
+                {
+                    "id": 75,
+                    "text": "Surrogate Key?",
+                    "options": [
+                        "Artificial PK (ID)",
+                        "Real",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Internal."
+                },
+                {
+                    "id": 76,
+                    "text": "Natural Key?",
+                    "options": [
+                        "Real world ID (SSN)",
+                        "Fake",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Business."
+                },
+                {
+                    "id": 77,
+                    "text": "Referential Integrity?",
+                    "options": [
+                        "FK validity",
+                        "Trust",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cnsistency."
+                },
+                {
+                    "id": 78,
+                    "text": "Clustered Index?",
+                    "options": [
+                        "Physical sort order",
+                        "Group",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "One per table."
+                },
+                {
+                    "id": 79,
+                    "text": "Non-Clustered?",
+                    "options": [
+                        "Logical pointer",
+                        "Separate",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Many."
+                },
+                {
+                    "id": 80,
+                    "text": "Cardinality?",
+                    "options": [
+                        "Uniqueness",
+                        "Count",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Selectivity."
+                }
+            ]
+        },
+        {
+            "setId": "sql_5",
+            "title": "Set 5: Advanced & Txn",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Transaction?",
+                    "options": [
+                        "Unit of work",
+                        "Sale",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "ACID."
+                },
+                {
+                    "id": 82,
+                    "text": "Commit?",
+                    "options": [
+                        "Save changes",
+                        "Do",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Finalize."
+                },
+                {
+                    "id": 83,
+                    "text": "Rollback?",
+                    "options": [
+                        "Undo changes",
+                        "Back",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Revert."
+                },
+                {
+                    "id": 84,
+                    "text": "Savepoint?",
+                    "options": [
+                        "Intermediate marker",
+                        "Spot",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Partial rollback."
+                },
+                {
+                    "id": 85,
+                    "text": "ACID?",
+                    "options": [
+                        "Atomicity, Consistency, Isolation, Durability",
+                        "Base",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Properties."
+                },
+                {
+                    "id": 86,
+                    "text": "Isolation Level?",
+                    "options": [
+                        "Read Committed etc",
+                        "Level",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concurrency."
+                },
+                {
+                    "id": 87,
+                    "text": "Stored Procedure?",
+                    "options": [
+                        "Saved code in DB",
+                        "Script",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logic."
+                },
+                {
+                    "id": 88,
+                    "text": "Trigger?",
+                    "options": [
+                        "Auto execution on event",
+                        "Gun",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hook."
+                },
+                {
+                    "id": 89,
+                    "text": "Cursor?",
+                    "options": [
+                        "Row by row processing",
+                        "Pointer",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Iterator."
+                },
+                {
+                    "id": 90,
+                    "text": "Case statement?",
+                    "options": [
+                        "If-Then-Else logic",
+                        "Switch",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Conditional."
+                },
+                {
+                    "id": 91,
+                    "text": "Pivot?",
+                    "options": [
+                        "Rotate rows to cols",
+                        "Turn",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Report."
+                },
+                {
+                    "id": 92,
+                    "text": "Window Function?",
+                    "options": [
+                        "Calculation across set (Over)",
+                        "Glass",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ranking."
+                },
+                {
+                    "id": 93,
+                    "text": "Rank()?",
+                    "options": [
+                        "Ranking with gaps",
+                        "Order",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Window."
+                },
+                {
+                    "id": 94,
+                    "text": "Dense_Rank()?",
+                    "options": [
+                        "Ranking no gaps",
+                        "Thick",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Window."
+                },
+                {
+                    "id": 95,
+                    "text": "Row_Number()?",
+                    "options": [
+                        "Sequential integer",
+                        "Index",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unique."
+                },
+                {
+                    "id": 96,
+                    "text": "SQL Injection?",
+                    "options": [
+                        "Security vulnerability",
+                        "Needle",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Attack."
+                },
+                {
+                    "id": 97,
+                    "text": "Normalization?",
+                    "options": [
+                        "Organizing to reduce redundancy",
+                        "Normal",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Design."
+                },
+                {
+                    "id": 98,
+                    "text": "Denormalization?",
+                    "options": [
+                        "Adding redundancy for speed",
+                        "Fast",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Read opt."
+                },
+                {
+                    "id": 99,
+                    "text": "Schema?",
+                    "options": [
+                        "Database structure",
+                        "Plan",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Container."
+                },
+                {
+                    "id": 100,
+                    "text": "T-SQL / PL/SQL?",
+                    "options": [
+                        "Procedural extensions",
+                        "SQL",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "MS/Oracle."
+                }
+            ]
+        }
+    ]
+}

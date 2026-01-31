@@ -1,0 +1,1235 @@
+{
+    "topic": "DSA Intermediate",
+    "sets": [
+        {
+            "setId": "dsa_int_1",
+            "title": "Set 1: Linked Lists",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "Linked List vs Array?",
+                    "options": [
+                        "Dynamic size vs Fixed",
+                        "Same",
+                        "Array is dynamic",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Memory alloc."
+                },
+                {
+                    "id": 2,
+                    "text": "Singly Linked List node?",
+                    "options": [
+                        "Data + Next ptr",
+                        "Data + Prev",
+                        "Data",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Structure."
+                },
+                {
+                    "id": 3,
+                    "text": "Doubly Linked List?",
+                    "options": [
+                        "Next + Prev ptrs",
+                        "Single",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bidirectional."
+                },
+                {
+                    "id": 4,
+                    "text": "Circular Linked List?",
+                    "options": [
+                        "Last points to first",
+                        "Loop",
+                        "Circle",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ring."
+                },
+                {
+                    "id": 5,
+                    "text": "Insert at head?",
+                    "options": [
+                        "O(1)",
+                        "O(n)",
+                        "O(log n)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Update head ptr."
+                },
+                {
+                    "id": 6,
+                    "text": "Access n-th element?",
+                    "options": [
+                        "O(n)",
+                        "O(1)",
+                        "O(log n)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Traversal."
+                },
+                {
+                    "id": 7,
+                    "text": "Delete node given ptr (not tail)?",
+                    "options": [
+                        "O(1) with logical copy",
+                        "O(n)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Copy next data."
+                },
+                {
+                    "id": 8,
+                    "text": "Reverse Linked List?",
+                    "options": [
+                        "Iterative/Recursive",
+                        "Swap",
+                        "Sort",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Change pointers."
+                },
+                {
+                    "id": 9,
+                    "text": "Detect Cycle?",
+                    "options": [
+                        "Floyd's Cycle Finding (Tortoise/Hare)",
+                        "Run",
+                        "See",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Slow/Fast ptr."
+                },
+                {
+                    "id": 10,
+                    "text": "Find Middle?",
+                    "options": [
+                        "Fast moves 2x, Slow 1x",
+                        "Count",
+                        "Measure",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "One pass."
+                },
+                {
+                    "id": 11,
+                    "text": "Merge two sorted lists?",
+                    "options": [
+                        "O(n+m)",
+                        "O(n*m)",
+                        "O(1)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Zipper."
+                },
+                {
+                    "id": 12,
+                    "text": "Intersection point?",
+                    "options": [
+                        "Difference in length method",
+                        "Hash",
+                        "All",
+                        "None"
+                    ],
+                    "correct": 2,
+                    "explanation": "Y shape."
+                },
+                {
+                    "id": 13,
+                    "text": "Palindrome List?",
+                    "options": [
+                        "Reverse half and compare",
+                        "String",
+                        "Check",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(n)."
+                },
+                {
+                    "id": 14,
+                    "text": "Memory Overhead?",
+                    "options": [
+                        "Pointer storage",
+                        "None",
+                        "Less",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Extra per node."
+                },
+                {
+                    "id": 15,
+                    "text": "Cache friendliness?",
+                    "options": [
+                        "Poor (non-contiguous)",
+                        "Good",
+                        "Best",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "vs Arrays."
+                },
+                {
+                    "id": 16,
+                    "text": "Sentinel Node?",
+                    "options": [
+                        "Dummy head/tail",
+                        "Guard",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Simplify edge cases."
+                },
+                {
+                    "id": 17,
+                    "text": "Clone list with random ptr?",
+                    "options": [
+                        "Interweave / Hash",
+                        "Copy",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hard problem."
+                },
+                {
+                    "id": 18,
+                    "text": "Flatten multilevel list?",
+                    "options": [
+                        "DFS interaction",
+                        "Flat",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Structure."
+                },
+                {
+                    "id": 19,
+                    "text": "XOR Linked List?",
+                    "options": [
+                        "Memory efficient doubly linked",
+                        "XOR",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bitwise."
+                },
+                {
+                    "id": 20,
+                    "text": "Josephus Problem?",
+                    "options": [
+                        "Circular list application",
+                        "Game",
+                        "History",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Elimination."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_int_2",
+            "title": "Set 2: Stacks",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Stack Property?",
+                    "options": [
+                        "LIFO (Last In First Out)",
+                        "FIFO",
+                        "Random",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pile."
+                },
+                {
+                    "id": 22,
+                    "text": "Push operation?",
+                    "options": [
+                        "Add to top",
+                        "Remove",
+                        "Peek",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Insert."
+                },
+                {
+                    "id": 23,
+                    "text": "Pop operation?",
+                    "options": [
+                        "Remove from top",
+                        "Add",
+                        "Look",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Delete."
+                },
+                {
+                    "id": 24,
+                    "text": "Peek/Top?",
+                    "options": [
+                        "View top without removal",
+                        "Pop",
+                        "Push",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inspect."
+                },
+                {
+                    "id": 25,
+                    "text": "Overflow?",
+                    "options": [
+                        "Push to full stack",
+                        "Pop",
+                        "Empty",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Error."
+                },
+                {
+                    "id": 26,
+                    "text": "Underflow?",
+                    "options": [
+                        "Pop empty stack",
+                        "Full",
+                        "Push",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Error."
+                },
+                {
+                    "id": 27,
+                    "text": "Complexity of operations?",
+                    "options": [
+                        "O(1)",
+                        "O(n)",
+                        "O(log n)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Constant."
+                },
+                {
+                    "id": 28,
+                    "text": "Balanced Parentheses?",
+                    "options": [
+                        "Stack application",
+                        "Queue",
+                        "List",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Matching."
+                },
+                {
+                    "id": 29,
+                    "text": "Infix to Postfix?",
+                    "options": [
+                        "Algorithm using Stack",
+                        "Convert",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Expression parsing."
+                },
+                {
+                    "id": 30,
+                    "text": "Postfix Evaluation?",
+                    "options": [
+                        "Stack based calc",
+                        "Math",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "RPN."
+                },
+                {
+                    "id": 31,
+                    "text": "Function Call Stack?",
+                    "options": [
+                        "Recursion implementation",
+                        "Heap",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "System stack."
+                },
+                {
+                    "id": 32,
+                    "text": "Min Stack?",
+                    "options": [
+                        "Get min in O(1)",
+                        "Small",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Aux stack."
+                },
+                {
+                    "id": 33,
+                    "text": "Stack using Queues?",
+                    "options": [
+                        "2 Queues required",
+                        "1",
+                        "3",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Implementation."
+                },
+                {
+                    "id": 34,
+                    "text": "Stock Span Problem?",
+                    "options": [
+                        "Stack application",
+                        "Finance",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Previous greater."
+                },
+                {
+                    "id": 35,
+                    "text": "Next Greater Element?",
+                    "options": [
+                        "Right side first larger",
+                        "Next",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Monotonic stack."
+                },
+                {
+                    "id": 36,
+                    "text": "Largest Rectangle Histogram?",
+                    "options": [
+                        "Stack solution O(n)",
+                        "Queue",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Area."
+                },
+                {
+                    "id": 37,
+                    "text": "Implement Stack using Array?",
+                    "options": [
+                        "Fixed size / Dynamic",
+                        "LL",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Backing store."
+                },
+                {
+                    "id": 38,
+                    "text": "Implement Stack using LL?",
+                    "options": [
+                        "Dynamic size",
+                        "Array",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Head as top."
+                },
+                {
+                    "id": 39,
+                    "text": "Reverse string using stack?",
+                    "options": [
+                        "Push all, Pop all",
+                        "Swap",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "LIFO order."
+                },
+                {
+                    "id": 40,
+                    "text": "Undo mechanism?",
+                    "options": [
+                        "Stack usage",
+                        "Queue",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ctrl+Z."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_int_3",
+            "title": "Set 3: Queues",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Queue Property?",
+                    "options": [
+                        "FIFO (First In First Out)",
+                        "LIFO",
+                        "FILO",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Line."
+                },
+                {
+                    "id": 42,
+                    "text": "Enqueue?",
+                    "options": [
+                        "Add to rear",
+                        "Front",
+                        "Remove",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Insert."
+                },
+                {
+                    "id": 43,
+                    "text": "Dequeue?",
+                    "options": [
+                        "Remove from front",
+                        "Rear",
+                        "Add",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Delete."
+                },
+                {
+                    "id": 44,
+                    "text": "Front/Rear pointers?",
+                    "options": [
+                        "Track ends",
+                        "Middle",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "State."
+                },
+                {
+                    "id": 45,
+                    "text": "Complexity?",
+                    "options": [
+                        "O(1)",
+                        "O(n)",
+                        "O(log n)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 46,
+                    "text": "Circular Queue?",
+                    "options": [
+                        "Uses array space efficiently",
+                        "Loop",
+                        "Disc",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Modulo arithmetic."
+                },
+                {
+                    "id": 47,
+                    "text": "Queue using Stacks?",
+                    "options": [
+                        "2 Stacks",
+                        "1",
+                        "3",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Enqueue/Dequeue cost."
+                },
+                {
+                    "id": 48,
+                    "text": "Deque?",
+                    "options": [
+                        "Double Ended Queue",
+                        "Deck",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Insert/Del both ends."
+                },
+                {
+                    "id": 49,
+                    "text": "Priority Queue?",
+                    "options": [
+                        "Ordered by priority",
+                        "FIFO",
+                        "LIFO",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Min/Max."
+                },
+                {
+                    "id": 50,
+                    "text": "BFS usage?",
+                    "options": [
+                        "Queue",
+                        "Stack",
+                        "List",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Level order."
+                },
+                {
+                    "id": 51,
+                    "text": "Level Order Traversal?",
+                    "options": [
+                        "Tree BFS",
+                        "DFS",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Queue app."
+                },
+                {
+                    "id": 52,
+                    "text": "Operating System Queues?",
+                    "options": [
+                        "Job/Ready queue",
+                        "Stack",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scheduling."
+                },
+                {
+                    "id": 53,
+                    "text": "Sliding Window Maximum?",
+                    "options": [
+                        "Deque O(n)",
+                        "Heap",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Monotonic Deque."
+                },
+                {
+                    "id": 54,
+                    "text": "Printer Spooling?",
+                    "options": [
+                        "Queue application",
+                        "Stack",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Jobs."
+                },
+                {
+                    "id": 55,
+                    "text": "LRU Cache implementation?",
+                    "options": [
+                        "Queue/Doubly LL + Map",
+                        "Stack",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Least Recently Used."
+                },
+                {
+                    "id": 56,
+                    "text": "Blocking Queue?",
+                    "options": [
+                        "Waits if empty/full",
+                        "Stop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concurrency."
+                },
+                {
+                    "id": 57,
+                    "text": "Josephus using Queue?",
+                    "options": [
+                        "Rotate and remove",
+                        "Math",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Simulation."
+                },
+                {
+                    "id": 58,
+                    "text": "Array implementation issue?",
+                    "options": [
+                        "Size fix / Shift",
+                        "Slow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Use circular."
+                },
+                {
+                    "id": 59,
+                    "text": "LL implementation?",
+                    "options": [
+                        "Dynamic",
+                        "Static",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Enqueue tail, Dequeue head."
+                },
+                {
+                    "id": 60,
+                    "text": "Rotting Oranges?",
+                    "options": [
+                        "Multi-source BFS",
+                        "Fruit",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Grid BFS."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_int_4",
+            "title": "Set 4: Advanced Sorting",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Merge Sort?",
+                    "options": [
+                        "Divide and Conquer O(nlogn)",
+                        "n^2",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stable."
+                },
+                {
+                    "id": 62,
+                    "text": "Quick Sort?",
+                    "options": [
+                        "Divide and Conquer O(nlogn) avg",
+                        "n^2",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "In-place."
+                },
+                {
+                    "id": 63,
+                    "text": "Quick Sort worst case?",
+                    "options": [
+                        "O(n^2) - bad pivot",
+                        "O(n)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rare."
+                },
+                {
+                    "id": 64,
+                    "text": "Merge Sort Space?",
+                    "options": [
+                        "O(n) auxiliary",
+                        "O(1)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Not in-place."
+                },
+                {
+                    "id": 65,
+                    "text": "Pivot element?",
+                    "options": [
+                        "Partitioning reference",
+                        "Center",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Quick Sort."
+                },
+                {
+                    "id": 66,
+                    "text": "Heap Sort?",
+                    "options": [
+                        "Based on Heap Data Structure",
+                        "Stack",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(n log n)."
+                },
+                {
+                    "id": 67,
+                    "text": "Stable sorting examples?",
+                    "options": [
+                        "Merge, Insertion, Bubble",
+                        "Quick",
+                        "Heap",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Order kept."
+                },
+                {
+                    "id": 68,
+                    "text": "Unstable sorting?",
+                    "options": [
+                        "Quick, Heap, Selection",
+                        "Merge",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Order lost."
+                },
+                {
+                    "id": 69,
+                    "text": "Divide and Conquer example?",
+                    "options": [
+                        "Merge/Quick",
+                        "Bubble",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Strategy."
+                },
+                {
+                    "id": 70,
+                    "text": "Randomized Quick Sort?",
+                    "options": [
+                        "Avoids O(n^2) mostly",
+                        "Slow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Random pivot."
+                },
+                {
+                    "id": 71,
+                    "text": "Counting Sort?",
+                    "options": [
+                        "O(n+k) non-comparison",
+                        "O(nlogn)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Integers."
+                },
+                {
+                    "id": 72,
+                    "text": "Radix Sort?",
+                    "options": [
+                        "Digit by digit",
+                        "Root",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "LSD/MSD."
+                },
+                {
+                    "id": 73,
+                    "text": "Bucket Sort?",
+                    "options": [
+                        "Distribute to buckets",
+                        "Pail",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Uniform dist."
+                },
+                {
+                    "id": 74,
+                    "text": "Timsort?",
+                    "options": [
+                        "Hybrid Merge/Insertion",
+                        "Tim",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Python/Java default."
+                },
+                {
+                    "id": 75,
+                    "text": "Partition algorithm?",
+                    "options": [
+                        "Rearrange around pivot",
+                        "Split",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lomuto/Hoare."
+                },
+                {
+                    "id": 76,
+                    "text": "Sorting linked list?",
+                    "options": [
+                        "Merge sort preferred",
+                        "Quick",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access pattern."
+                },
+                {
+                    "id": 77,
+                    "text": "Best sort for small arrays?",
+                    "options": [
+                        "Insertion Sort",
+                        "Merge",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Low constant."
+                },
+                {
+                    "id": 78,
+                    "text": "External Sorting?",
+                    "options": [
+                        "Data too big for RAM",
+                        "Out",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Disk based."
+                },
+                {
+                    "id": 79,
+                    "text": "Inversion count?",
+                    "options": [
+                        "Measure of sortedness",
+                        "Reverse",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Merge sort mod."
+                },
+                {
+                    "id": 80,
+                    "text": "K-th Smallest element?",
+                    "options": [
+                        "QuickSelect",
+                        "Sort",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(n) avg."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_int_5",
+            "title": "Set 5: Heaps",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Heap data structure?",
+                    "options": [
+                        "Complete Binary Tree",
+                        "List",
+                        "Array",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Property."
+                },
+                {
+                    "id": 82,
+                    "text": "Max Heap Property?",
+                    "options": [
+                        "Parent >= Children",
+                        "Child >= Parent",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Root is max."
+                },
+                {
+                    "id": 83,
+                    "text": "Min Heap Property?",
+                    "options": [
+                        "Parent <= Children",
+                        "Max",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Root is min."
+                },
+                {
+                    "id": 84,
+                    "text": "Array representation?",
+                    "options": [
+                        "i, 2i+1, 2i+2",
+                        "Next",
+                        "Ptr",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Index math."
+                },
+                {
+                    "id": 85,
+                    "text": "Insert complexity?",
+                    "options": [
+                        "O(log n)",
+                        "O(1)",
+                        "O(n)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Heapify up."
+                },
+                {
+                    "id": 86,
+                    "text": "Delete max/min?",
+                    "options": [
+                        "O(log n)",
+                        "O(1)",
+                        "O(n)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Heapify down."
+                },
+                {
+                    "id": 87,
+                    "text": "Heapify complexity?",
+                    "options": [
+                        "O(n) to build",
+                        "O(nlogn)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimized build."
+                },
+                {
+                    "id": 88,
+                    "text": "Get Max/Min?",
+                    "options": [
+                        "O(1)",
+                        "O(log n)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Root."
+                },
+                {
+                    "id": 89,
+                    "text": "Priority Queue impl?",
+                    "options": [
+                        "Heap",
+                        "Array",
+                        "List",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 90,
+                    "text": "K-th Largest Element?",
+                    "options": [
+                        "Min Heap size k",
+                        "Sort",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Efficient."
+                },
+                {
+                    "id": 91,
+                    "text": "Merge K Sorted Lists?",
+                    "options": [
+                        "Min Heap",
+                        "Sort all",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "N log K."
+                },
+                {
+                    "id": 92,
+                    "text": "Median of Stream?",
+                    "options": [
+                        "Two Heaps (Min/Max)",
+                        "Sort",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Balance."
+                },
+                {
+                    "id": 93,
+                    "text": "Heap vs BST?",
+                    "options": [
+                        "Heap is not ordered like BST",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Search structure."
+                },
+                {
+                    "id": 94,
+                    "text": "Sift Up / Swim?",
+                    "options": [
+                        "Fix heap property up",
+                        "Float",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Insert."
+                },
+                {
+                    "id": 95,
+                    "text": "Sift Down / Sink?",
+                    "options": [
+                        "Fix heap property down",
+                        "Sink",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Delete."
+                },
+                {
+                    "id": 96,
+                    "text": "Complete Binary Tree?",
+                    "options": [
+                        "Filled left to right",
+                        "Full",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Heap shape."
+                },
+                {
+                    "id": 97,
+                    "text": "Extract Max?",
+                    "options": [
+                        "Swap root/last, remove, sink",
+                        "Pop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Steps."
+                },
+                {
+                    "id": 98,
+                    "text": "Connect Ropes cost?",
+                    "options": [
+                        "Huffman coding / Min Heap",
+                        "Knot",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Greedy."
+                },
+                {
+                    "id": 99,
+                    "text": "Smallest range in K lists?",
+                    "options": [
+                        "Heap application",
+                        "Sort",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tracking."
+                },
+                {
+                    "id": 100,
+                    "text": "Dijkstra's Algo?",
+                    "options": [
+                        "Uses Priority Queue",
+                        "Stack",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shortest path."
+                }
+            ]
+        }
+    ]
+}

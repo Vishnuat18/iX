@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings | iX Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/back-button.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .profile-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .avatar-edit {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            cursor: pointer;
+        }
+
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-secondary);
+            background: #222;
+        }
+
+        .avatar-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .avatar-edit:hover .avatar-overlay {
+            opacity: 1;
+        }
+
+        .form-section h3 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #aaa;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #444;
+            border-radius: 6px;
+            color: #fff;
+        }
+
+        .btn-save {
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .btn-logout {
+            background: transparent;
+            border: 1px solid #ff6b6b;
+            color: #ff6b6b;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .btn-logout:hover {
+            background: rgba(255, 107, 107, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-module">
+        <div class="header-left">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <span class="separator">/</span>
+                <span class="current">Profile</span>
+            </div>
+        </div>
+
+        <div class="header-right" style="gap: 25px;">
+            <div class="xp-badge" id="headerXP"
+                style="display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.3); padding: 8px 15px; border-radius: 8px; border: 1px solid var(--accent-primary);">
+                <span style="color: var(--accent-primary); font-weight: bold; font-size: 0.9rem;">Score:</span>
+                <span id="userScoreInHeader" style="font-size: 1.1rem; font-weight: 900; color: #fff;">0</span>
+            </div>
+            <div class="logo">iX <span style="font-weight:300">Platform</span></div>
+        </div>
+    </header>
+
+    <div class="sub-header">
+        <a href="index.html" class="btn-back-global">
+            <i class="fas fa-chevron-left"></i> <span>Back</span>
+        </a>
+    </div>
+
+    <div class="profile-container">
+        <div class="profile-card">
+            <div style="display: flex; justify-content: flex-end; gap: 10px; margin-bottom: 20px;">
+                <button class="btn-premium" onclick="window.location.href='dashboard.html'"
+                    style="padding: 10px 20px; font-size: 0.9rem; background: rgba(0, 242, 255, 0.1); border: 1px solid var(--accent-primary);">
+                    <i class="fas fa-chart-line"></i> Dashboard
+                </button>
+                <button class="btn-logout" onclick="Auth.logout()">Logout</button>
+            </div>
+            <div class="profile-header">
+                <div class="avatar-edit" onclick="document.getElementById('fileInput').click()">
+                    <img id="avatarPreview" src="" class="avatar-img"
+                        onerror="this.src='https://ui-avatars.com/api/?name=User&background=random'">
+                    <div class="avatar-overlay">
+                        <i class="fas fa-camera" style="color:#fff; font-size:1.5rem"></i>
+                    </div>
+                </div>
+                <input type="file" id="fileInput" hidden accept="image/*">
+
+                <div>
+                    <h2 id="displayName" style="color:#fff; margin-bottom:5px">User</h2>
+                    <p id="displayEmail" style="color:#888;">user@example.com</p>
+                </div>
+            </div>
+
+            <form id="profileForm">
+                <div class="form-section"
+                    style="margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+                    <h3>Career & Education</h3>
+                    <div class="form-group">
+                        <label class="form-label">Education</label>
+                        <input type="text" id="education" class="form-input" disabled
+                            style="background: rgba(255,255,255,0.05);">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Main Goal</label>
+                        <textarea id="goal" class="form-input" disabled
+                            style="min-height: 80px; background: rgba(255,255,255,0.05);"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Skills</label>
+                        <div id="skillsContainer" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                            <!-- Injected by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: right; margin-top:30px;">
+                    <button type="button" class="btn-save" onclick="window.location.href='onboarding.html'">Edit
+                        Profile</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="problems/index.html" class="mobile-nav-item">
+            <i class="fas fa-code"></i>
+            <span>Coding</span>
+        </a>
+        <a href="quiz_landing.html" class="mobile-nav-item">
+            <i class="fas fa-brain"></i>
+            <span>Quiz</span>
+        </a>
+        <a href="community.html" class="mobile-nav-item">
+            <i class="fas fa-users"></i>
+            <span>iX Link</span>
+        </a>
+        <a href="profile.html" class="mobile-nav-item active">
+            <i class="fas fa-user-circle"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        Auth.requireAuth();
+        const user = Auth.getUser();
+
+        // Populate Header Score
+        const scores = Auth.getScores();
+        const scoreEl = document.getElementById('userScoreInHeader');
+        if (scoreEl) scoreEl.innerText = scores.total;
+
+        // Populate Dashboard Stats
+        document.getElementById('statXP').innerText = user.points || 0;
+        document.getElementById('statSolved').innerText = (user.solvedProblems || []).length;
+
+        // Calculate Rank
+        const rankBadge = document.getElementById('userRank');
+        const points = user.points || 0;
+        if (points > 5000) {
+            rankBadge.innerText = 'Grandmaster';
+            rankBadge.style.background = 'linear-gradient(90deg, #ffd700, #ff8c00)';
+        } else if (points > 2000) {
+            rankBadge.innerText = 'Expert';
+            rankBadge.style.background = 'linear-gradient(90deg, #bd00ff, #00f2ff)';
+        } else if (points > 500) {
+            rankBadge.innerText = 'Specialist';
+            rankBadge.style.background = 'linear-gradient(90deg, #00f2ff, #00ff9d)';
+        } else {
+            rankBadge.innerText = 'Novice';
+            rankBadge.style.background = 'linear-gradient(90deg, #888, #444)';
+        }
+        // Populate Details
+        if (user.education) document.getElementById('education').innerText = user.education;
+        if (user.goal) document.getElementById('goal').innerText = user.goal;
+
+        const skillsContainer = document.getElementById('skillsContainer');
+        if (user.skills && user.skills.length > 0) {
+            skillsContainer.innerHTML = user.skills.map(skill => `
+                <span class="skill-tag">${skill}</span>
+            `).join('');
+        } else {
+            skillsContainer.innerHTML = '<span style="color: #444; font-style: italic; font-size:0.9rem;">Arsenal empty. Start learning!</span>';
+        }
+
+        const avatarImg = document.getElementById('avatarPreview');
+        if (user.avatar) {
+            avatarImg.src = user.avatar;
+        } else {
+            avatarImg.src = `https://ui-avatars.com/api/?name=${user.username}&background=2d2d2d&color=fff`;
+        }
+
+        // Handle Image Upload
+        document.getElementById('fileInput').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            // Size check (max 2MB)
+            if (file.size > 2 * 1024 * 1024) {
+                Swal.fire('Error', 'Image size must be less than 2MB', 'error');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (event) {
+                const base64 = event.target.result;
+
+                // Update UI
+                avatarImg.src = base64;
+
+                // Update Local Storage
+                if (Auth.updateProfile({ avatar: base64 })) {
+                    Swal.fire({
+                        title: 'Updated!',
+                        text: 'Profile picture saved.',
+                        icon: 'success',
+                        background: '#1e1e1e',
+                        color: '#fff',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                }
+            };
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+
+</html>

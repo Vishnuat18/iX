@@ -1,0 +1,1265 @@
+{
+    "topic": "Express.js Framework",
+    "sets": [
+        {
+            "setId": "express_1",
+            "title": "Set 1: Express Basics",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "Express is?",
+                    "options": [
+                        "Web framework for Node",
+                        "DB",
+                        "Language",
+                        "UI"
+                    ],
+                    "correct": 0,
+                    "explanation": "Minimalist."
+                },
+                {
+                    "id": 2,
+                    "text": "Initialize app?",
+                    "options": [
+                        "const app = express()",
+                        "new Express()",
+                        "start()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Factory function."
+                },
+                {
+                    "id": 3,
+                    "text": "Start server?",
+                    "options": [
+                        "app.listen()",
+                        "start()",
+                        "run()",
+                        "go()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Binds port."
+                },
+                {
+                    "id": 4,
+                    "text": "Routing method?",
+                    "options": [
+                        "app.get()",
+                        "route()",
+                        "path()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "HTTP verb."
+                },
+                {
+                    "id": 5,
+                    "text": "Callback signature?",
+                    "options": [
+                        "(req, res, next)",
+                        "(a, b)",
+                        "()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Middleware pattern."
+                },
+                {
+                    "id": 6,
+                    "text": "Send text response?",
+                    "options": [
+                        "res.send()",
+                        "return",
+                        "print",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Auto content-type."
+                },
+                {
+                    "id": 7,
+                    "text": "Send JSON?",
+                    "options": [
+                        "res.json()",
+                        "res.send()",
+                        "Both",
+                        "None"
+                    ],
+                    "correct": 2,
+                    "explanation": "Both work."
+                },
+                {
+                    "id": 8,
+                    "text": "Static files?",
+                    "options": [
+                        "express.static()",
+                        "file()",
+                        "host()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Serve assets."
+                },
+                {
+                    "id": 9,
+                    "text": "What is Middleware?",
+                    "options": [
+                        "Function with access to req/res",
+                        "Middle",
+                        "Wire",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Processing pipeline."
+                },
+                {
+                    "id": 10,
+                    "text": "Next function?",
+                    "options": [
+                        "Pass control to next middleware",
+                        "Stop",
+                        "Skip",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flow control."
+                }
+            ]
+        },
+        {
+            "setId": "express_2",
+            "title": "Set 2: Routing",
+            "questions": [
+                {
+                    "id": 11,
+                    "text": "Route parameter?",
+                    "options": [
+                        "/user/:id",
+                        "/user/id",
+                        "/user?id",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dynamic segment."
+                },
+                {
+                    "id": 12,
+                    "text": "Access param?",
+                    "options": [
+                        "req.params.id",
+                        "req.id",
+                        "req.query",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Parsed params."
+                },
+                {
+                    "id": 13,
+                    "text": "Query string?",
+                    "options": [
+                        "req.query",
+                        "req.search",
+                        "req.param",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "?key=val."
+                },
+                {
+                    "id": 14,
+                    "text": "Route handlers chain?",
+                    "options": [
+                        "app.get(path, cb1, cb2)",
+                        "Chain",
+                        "List",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Multiple callbacks."
+                },
+                {
+                    "id": 15,
+                    "text": "Router class?",
+                    "options": [
+                        "express.Router()",
+                        "new Route()",
+                        "Map",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Modular routes."
+                },
+                {
+                    "id": 16,
+                    "text": "Mount router?",
+                    "options": [
+                        "app.use('/path', router)",
+                        "mount()",
+                        "add()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sub-app."
+                },
+                {
+                    "id": 17,
+                    "text": "Route chaining?",
+                    "options": [
+                        "app.route().get().post()",
+                        "chain()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Clean syntax."
+                },
+                {
+                    "id": 18,
+                    "text": "Wildcard route?",
+                    "options": [
+                        "*",
+                        "all",
+                        "any",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Matches everything."
+                },
+                {
+                    "id": 19,
+                    "text": "RegEx in routes?",
+                    "options": [
+                        "Supported",
+                        "No",
+                        "Maybe",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flexible matching."
+                },
+                {
+                    "id": 20,
+                    "text": "Method all?",
+                    "options": [
+                        "Matches any HTTP method",
+                        "Get only",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Middleware."
+                }
+            ]
+        },
+        {
+            "setId": "express_3",
+            "title": "Set 3: Requests & Responses",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Access body?",
+                    "options": [
+                        "req.body",
+                        "req.data",
+                        "req.input",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Needs parser."
+                },
+                {
+                    "id": 22,
+                    "text": "Body parser middleware?",
+                    "options": [
+                        "express.json()",
+                        "body()",
+                        "parse()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Built-in now."
+                },
+                {
+                    "id": 23,
+                    "text": "Set status?",
+                    "options": [
+                        "res.status(404)",
+                        "res.code()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Chainable."
+                },
+                {
+                    "id": 24,
+                    "text": "Set header?",
+                    "options": [
+                        "res.set() / res.header()",
+                        "head()",
+                        "meta()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Response header."
+                },
+                {
+                    "id": 25,
+                    "text": "Redirect?",
+                    "options": [
+                        "res.redirect()",
+                        "go()",
+                        "move()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "302 default."
+                },
+                {
+                    "id": 26,
+                    "text": "Download file?",
+                    "options": [
+                        "res.download()",
+                        "send()",
+                        "file()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prompt save."
+                },
+                {
+                    "id": 27,
+                    "text": "Cookies access?",
+                    "options": [
+                        "req.cookies",
+                        "req.cookie",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Needs cookie-parser."
+                },
+                {
+                    "id": 28,
+                    "text": "Signed cookies?",
+                    "options": [
+                        "req.signedCookies",
+                        "secure",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tamper proof."
+                },
+                {
+                    "id": 29,
+                    "text": "Client IP?",
+                    "options": [
+                        "req.ip",
+                        "addr",
+                        "loc",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Remote address."
+                },
+                {
+                    "id": 30,
+                    "text": "End response?",
+                    "options": [
+                        "res.end()",
+                        "stop()",
+                        "finish()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Without data."
+                }
+            ]
+        },
+        {
+            "setId": "express_4",
+            "title": "Set 4: Middleware",
+            "questions": [
+                {
+                    "id": 31,
+                    "text": "App level middleware?",
+                    "options": [
+                        "app.use()",
+                        "global()",
+                        "all()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Runs for all."
+                },
+                {
+                    "id": 32,
+                    "text": "Error handling signature?",
+                    "options": [
+                        "(err, req, res, next)",
+                        "3 args",
+                        "2 args",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "4 arguments."
+                },
+                {
+                    "id": 33,
+                    "text": "Built-in middleware?",
+                    "options": [
+                        "static, json, urlencoded",
+                        "None",
+                        "All",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Express 4+."
+                },
+                {
+                    "id": 34,
+                    "text": "Third party?",
+                    "options": [
+                        "morgan, cors, helmet",
+                        "None",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "NPM modules."
+                },
+                {
+                    "id": 35,
+                    "text": "Router level?",
+                    "options": [
+                        "router.use()",
+                        "sub()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scoped."
+                },
+                {
+                    "id": 36,
+                    "text": "Logging middleware?",
+                    "options": [
+                        "Morgan",
+                        "Log",
+                        "Print",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "HTTP logger."
+                },
+                {
+                    "id": 37,
+                    "text": "Order matters?",
+                    "options": [
+                        "Yes, sequential",
+                        "No, parallel",
+                        "Random",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Down the stack."
+                },
+                {
+                    "id": 38,
+                    "text": "Skip remaining?",
+                    "options": [
+                        "next('route')",
+                        "skip()",
+                        "jump()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Go to next route."
+                },
+                {
+                    "id": 39,
+                    "text": "Configurable middleware?",
+                    "options": [
+                        "Return function (closure)",
+                        "Object",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Factory pattern."
+                },
+                {
+                    "id": 40,
+                    "text": "CORS middleware?",
+                    "options": [
+                        "cors()",
+                        "cross()",
+                        "allow()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access control."
+                }
+            ]
+        },
+        {
+            "setId": "express_5",
+            "title": "Set 5: Template Engines",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "What is a template engine?",
+                    "options": [
+                        "Generates HTML from data",
+                        "DB",
+                        "CSS",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Server side rendering."
+                },
+                {
+                    "id": 42,
+                    "text": "Popular engines?",
+                    "options": [
+                        "Pug, EJS, Handlebars",
+                        "React",
+                        "Vue",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Express supports many."
+                },
+                {
+                    "id": 43,
+                    "text": "Set engine?",
+                    "options": [
+                        "app.set('view engine', 'pug')",
+                        "use()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Configuration."
+                },
+                {
+                    "id": 44,
+                    "text": "Render view?",
+                    "options": [
+                        "res.render('view', data)",
+                        "show()",
+                        "display()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Compiles template."
+                },
+                {
+                    "id": 45,
+                    "text": "Data injection?",
+                    "options": [
+                        "Pass object as 2nd arg",
+                        "Global",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Locals."
+                },
+                {
+                    "id": 46,
+                    "text": "Partials?",
+                    "options": [
+                        "Reusable chunks (header/footer)",
+                        "Parts",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Includes."
+                },
+                {
+                    "id": 47,
+                    "text": "Layouts?",
+                    "options": [
+                        "Wrapper templates",
+                        "CSS",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Structure."
+                },
+                {
+                    "id": 48,
+                    "text": "Pug syntax?",
+                    "options": [
+                        "Indentation based, no tags",
+                        "HTML",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Minimalist."
+                },
+                {
+                    "id": 49,
+                    "text": "EJS tags?",
+                    "options": [
+                        "<%= %>",
+                        "{{ }}",
+                        "[[ ]]",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Embedded JS."
+                },
+                {
+                    "id": 50,
+                    "text": "Views directory?",
+                    "options": [
+                        "./views",
+                        "./templates",
+                        "./html",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Default."
+                }
+            ]
+        },
+        {
+            "setId": "express_6",
+            "title": "Set 6: API Development",
+            "questions": [
+                {
+                    "id": 51,
+                    "text": "REST API?",
+                    "options": [
+                        "Representational State Transfer",
+                        "Resting",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Architecture."
+                },
+                {
+                    "id": 52,
+                    "text": "CRUD map?",
+                    "options": [
+                        "POST, GET, PUT, DELETE",
+                        "Create...",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Methods."
+                },
+                {
+                    "id": 53,
+                    "text": "Status 201?",
+                    "options": [
+                        "Created",
+                        "OK",
+                        "Found",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Post success."
+                },
+                {
+                    "id": 54,
+                    "text": "Status 204?",
+                    "options": [
+                        "No Content",
+                        "Empty",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Delete success."
+                },
+                {
+                    "id": 55,
+                    "text": "Status 400?",
+                    "options": [
+                        "Bad Request",
+                        "Error",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Client error."
+                },
+                {
+                    "id": 56,
+                    "text": "Status 401 vs 403?",
+                    "options": [
+                        "Unauthenticated vs Unauthorized",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Login vs Perms."
+                },
+                {
+                    "id": 57,
+                    "text": "Status 500?",
+                    "options": [
+                        "Internal Server Error",
+                        "Crash",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Server fail."
+                },
+                {
+                    "id": 58,
+                    "text": "Route grouping?",
+                    "options": [
+                        "Router()",
+                        "Group()",
+                        "Coll()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prefix paths."
+                },
+                {
+                    "id": 59,
+                    "text": "Version API?",
+                    "options": [
+                        "/api/v1/...",
+                        "Header",
+                        "Both",
+                        "None"
+                    ],
+                    "correct": 2,
+                    "explanation": "Best practice."
+                },
+                {
+                    "id": 60,
+                    "text": "Paginate?",
+                    "options": [
+                        "Limit and Offset",
+                        "Page",
+                        "Split",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Chunk data."
+                }
+            ]
+        },
+        {
+            "setId": "express_7",
+            "title": "Set 7: Database Integration",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Connect DB?",
+                    "options": [
+                        "Driver / ORM",
+                        "Inside express",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "External lib."
+                },
+                {
+                    "id": 62,
+                    "text": "Mongoose?",
+                    "options": [
+                        "ODM for MongoDB",
+                        "SQL",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Schema based."
+                },
+                {
+                    "id": 63,
+                    "text": "Sequelize?",
+                    "options": [
+                        "ORM for SQL",
+                        "Mongo",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Promises."
+                },
+                {
+                    "id": 64,
+                    "text": "Model?",
+                    "options": [
+                        "Data structure/Schema",
+                        "View",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Representation."
+                },
+                {
+                    "id": 65,
+                    "text": "Controller?",
+                    "options": [
+                        "Logic handler",
+                        "Route",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "MVC part."
+                },
+                {
+                    "id": 66,
+                    "text": "Async handlers?",
+                    "options": [
+                        "Use async/await + try/catch",
+                        "Callbacks",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Modern pattern."
+                },
+                {
+                    "id": 67,
+                    "text": "Environment vars?",
+                    "options": [
+                        "DB_URI in .env",
+                        "Hardcode",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Security."
+                },
+                {
+                    "id": 68,
+                    "text": "Connection pool?",
+                    "options": [
+                        "Reuse connections",
+                        "Swim",
+                        "Queue",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance."
+                },
+                {
+                    "id": 69,
+                    "text": "Seeding?",
+                    "options": [
+                        "Populating initial data",
+                        "Growing",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dev/Test."
+                },
+                {
+                    "id": 70,
+                    "text": "Migration?",
+                    "options": [
+                        "Version control for DB",
+                        "Moving",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Schema changes."
+                }
+            ]
+        },
+        {
+            "setId": "express_8",
+            "title": "Set 8: Security",
+            "questions": [
+                {
+                    "id": 71,
+                    "text": "Helmet?",
+                    "options": [
+                        "Sets secure headers",
+                        "Cap",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Essential."
+                },
+                {
+                    "id": 72,
+                    "text": "Rate Limit?",
+                    "options": [
+                        "express-rate-limit",
+                        "Slow",
+                        "Stop",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DoS protection."
+                },
+                {
+                    "id": 73,
+                    "text": "CSRF Protection?",
+                    "options": [
+                        "csurf middleware",
+                        "Token",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Form security."
+                },
+                {
+                    "id": 74,
+                    "text": "Sanitization?",
+                    "options": [
+                        "Clean input",
+                        "Wash",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prevent injection."
+                },
+                {
+                    "id": 75,
+                    "text": "Validate input?",
+                    "options": [
+                        "express-validator",
+                        "Check",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ensure type."
+                },
+                {
+                    "id": 76,
+                    "text": "HTTPS?",
+                    "options": [
+                        "TLS/SSL",
+                        "Secure",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Encryption."
+                },
+                {
+                    "id": 77,
+                    "text": "JWT?",
+                    "options": [
+                        "Stateless Auth",
+                        "Session",
+                        "Cookie",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Token."
+                },
+                {
+                    "id": 78,
+                    "text": "Session store?",
+                    "options": [
+                        "Redis/DB (Not memory)",
+                        "Memory",
+                        "File",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Production."
+                },
+                {
+                    "id": 79,
+                    "text": "Hide stack trace?",
+                    "options": [
+                        "NODE_ENV=production",
+                        "Hide",
+                        "Delete",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Info leak."
+                },
+                {
+                    "id": 80,
+                    "text": "NoSQL Injection?",
+                    "options": [
+                        "Sanitize Mongo queries",
+                        "SQL",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "$ operators."
+                }
+            ]
+        },
+        {
+            "setId": "express_9",
+            "title": "Set 9: File Upload & Streams",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Upload middleware?",
+                    "options": [
+                        "Multer",
+                        "Upload",
+                        "File",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Multipart/form-data."
+                },
+                {
+                    "id": 82,
+                    "text": "Multipart form?",
+                    "options": [
+                        "enctype attribute",
+                        "Type",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "For files."
+                },
+                {
+                    "id": 83,
+                    "text": "Storage options?",
+                    "options": [
+                        "Disk or Memory",
+                        "Cloud",
+                        "DB",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Multer config."
+                },
+                {
+                    "id": 84,
+                    "text": "Stream response?",
+                    "options": [
+                        "pipe to res",
+                        "send",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Large files."
+                },
+                {
+                    "id": 85,
+                    "text": "Content-Type?",
+                    "options": [
+                        "MIME type",
+                        "Name",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Header."
+                },
+                {
+                    "id": 86,
+                    "text": "Content-Disposition?",
+                    "options": [
+                        "Attachment (Download)",
+                        "Inline",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Filename."
+                },
+                {
+                    "id": 87,
+                    "text": "Limit file size?",
+                    "options": [
+                        "limits option",
+                        "Size",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Security."
+                },
+                {
+                    "id": 88,
+                    "text": "Validate file type?",
+                    "options": [
+                        "Check mime/ext",
+                        "Look",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Filter."
+                },
+                {
+                    "id": 89,
+                    "text": "Buffer?",
+                    "options": [
+                        "Raw data",
+                        "String",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Memory."
+                },
+                {
+                    "id": 90,
+                    "text": "Cloud storage?",
+                    "options": [
+                        "AWS S3, Cloudinary",
+                        "Disk",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scalable."
+                }
+            ]
+        },
+        {
+            "setId": "express_10",
+            "title": "Set 10: Testing & Deployment",
+            "questions": [
+                {
+                    "id": 91,
+                    "text": "Integration test tool?",
+                    "options": [
+                        "Supertest",
+                        "Test",
+                        "Check",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "HTTP assertions."
+                },
+                {
+                    "id": 92,
+                    "text": "Test runner?",
+                    "options": [
+                        "Jest / Mocha",
+                        "Run",
+                        "Do",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Framework."
+                },
+                {
+                    "id": 93,
+                    "text": "Mocking?",
+                    "options": [
+                        "Fake DB/Service",
+                        "Copy",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Isolation."
+                },
+                {
+                    "id": 94,
+                    "text": "CI/CD?",
+                    "options": [
+                        "Pipeline",
+                        "Pipe",
+                        "Line",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Automation."
+                },
+                {
+                    "id": 95,
+                    "text": "Process manager?",
+                    "options": [
+                        "PM2",
+                        "Start",
+                        "Run",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Keep alive."
+                },
+                {
+                    "id": 96,
+                    "text": "Reverse Proxy?",
+                    "options": [
+                        "Nginx",
+                        "Apache",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "In front of Node."
+                },
+                {
+                    "id": 97,
+                    "text": "Logging?",
+                    "options": [
+                        "Winston / Morgan",
+                        "Log",
+                        "Print",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Production logs."
+                },
+                {
+                    "id": 98,
+                    "text": "Cluster mode?",
+                    "options": [
+                        "Use all cores",
+                        "One",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance."
+                },
+                {
+                    "id": 99,
+                    "text": "Memory leak detection?",
+                    "options": [
+                        "Heap dump / Profiler",
+                        "Look",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Debugging."
+                },
+                {
+                    "id": 100,
+                    "text": "Health check?",
+                    "options": [
+                        "/health route",
+                        "Ping",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Monitoring."
+                }
+            ]
+        }
+    ]
+}

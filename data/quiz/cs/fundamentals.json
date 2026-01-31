@@ -1,0 +1,257 @@
+{
+    "topic": "Fundamentals of Computer",
+    "sets": [
+        {
+            "setId": "cs_fund_1",
+            "title": "Set 1: Computer Basics",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "Brain of the computer?",
+                    "options": [
+                        "RAM",
+                        "CPU",
+                        "HDD",
+                        "GPU"
+                    ],
+                    "correct": 1,
+                    "explanation": "Central Processing Unit."
+                },
+                {
+                    "id": 2,
+                    "text": "1 Byte = ?",
+                    "options": [
+                        "4 bits",
+                        "8 bits",
+                        "16 bits",
+                        "32 bits"
+                    ],
+                    "correct": 1,
+                    "explanation": "8 bits make a byte."
+                },
+                {
+                    "id": 3,
+                    "text": "Volatile Memory?",
+                    "options": [
+                        "ROM",
+                        "HDD",
+                        "RAM",
+                        "SSD"
+                    ],
+                    "correct": 2,
+                    "explanation": "Data is lost when power is off."
+                },
+                {
+                    "id": 4,
+                    "text": "Input device?",
+                    "options": [
+                        "Monitor",
+                        "Printer",
+                        "Keyboard",
+                        "Speaker"
+                    ],
+                    "correct": 2,
+                    "explanation": "Sends data to computer."
+                },
+                {
+                    "id": 5,
+                    "text": "Binary system base?",
+                    "options": [
+                        "10",
+                        "8",
+                        "2",
+                        "16"
+                    ],
+                    "correct": 2,
+                    "explanation": "0 and 1."
+                },
+                {
+                    "id": 6,
+                    "text": "BIOS stands for?",
+                    "options": [
+                        "Basic Input Output System",
+                        "Binary Input Output System",
+                        "Basic Internal OS",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Firmware used during booting."
+                },
+                {
+                    "id": 7,
+                    "text": "GUI stands for?",
+                    "options": [
+                        "Graphical User Interface",
+                        "General User Interface",
+                        "Global User Interface",
+                        "Gaming UI"
+                    ],
+                    "correct": 0,
+                    "explanation": "Visual way to interact."
+                },
+                {
+                    "id": 8,
+                    "text": "Smallest unit of storage?",
+                    "options": [
+                        "Byte",
+                        "Bit",
+                        "Nibble",
+                        "KB"
+                    ],
+                    "correct": 1,
+                    "explanation": "Binary Digit (0 or 1)."
+                },
+                {
+                    "id": 9,
+                    "text": "Software type of OS?",
+                    "options": [
+                        "Application",
+                        "System",
+                        "Utility",
+                        "Malware"
+                    ],
+                    "correct": 1,
+                    "explanation": "System software manages hardware."
+                },
+                {
+                    "id": 10,
+                    "text": "SSD vs HDD speed?",
+                    "options": [
+                        "SSD is faster",
+                        "HDD is faster",
+                        "Same",
+                        "Depends on RAM"
+                    ],
+                    "correct": 0,
+                    "explanation": "SSD has no moving parts."
+                }
+            ]
+        },
+        {
+            "setId": "cs_fund_2",
+            "title": "Set 2: History & Hardware",
+            "questions": [
+                {
+                    "id": 11,
+                    "text": "Father of Computer?",
+                    "options": [
+                        "Alan Turing",
+                        "Charles Babbage",
+                        "Bill Gates",
+                        "Steve Jobs"
+                    ],
+                    "correct": 1,
+                    "explanation": "Designed Analytical Engine."
+                },
+                {
+                    "id": 12,
+                    "text": "First generation computers used?",
+                    "options": [
+                        "Transistors",
+                        "Vacuum Tubes",
+                        "ICs",
+                        "Microprocessors"
+                    ],
+                    "correct": 1,
+                    "explanation": "Vacuum tubes were used."
+                },
+                {
+                    "id": 13,
+                    "text": "IC stands for?",
+                    "options": [
+                        "Internal Circuit",
+                        "Integrated Circuit",
+                        "Intel Circuit",
+                        "Image Code"
+                    ],
+                    "correct": 1,
+                    "explanation": "Chip with many components."
+                },
+                {
+                    "id": 14,
+                    "text": "Example of Utility Software?",
+                    "options": [
+                        "Windows",
+                        "Antivirus",
+                        "Word",
+                        "Chrome"
+                    ],
+                    "correct": 1,
+                    "explanation": "Maintains system health."
+                },
+                {
+                    "id": 15,
+                    "text": "Cache memory is located:",
+                    "options": [
+                        "In HDD",
+                        "Between CPU and RAM",
+                        "In Keyboard",
+                        "In Monitor"
+                    ],
+                    "correct": 1,
+                    "explanation": "Faster access than RAM."
+                },
+                {
+                    "id": 16,
+                    "text": "Speed of CPU measured in?",
+                    "options": [
+                        "GB",
+                        "Hz (GHz)",
+                        "Mbps",
+                        "RPM"
+                    ],
+                    "correct": 1,
+                    "explanation": "Clock cycles per second."
+                },
+                {
+                    "id": 17,
+                    "text": "Output device?",
+                    "options": [
+                        "Mouse",
+                        "Scanner",
+                        "Plotter",
+                        "Mic"
+                    ],
+                    "correct": 2,
+                    "explanation": "Prints vector graphics."
+                },
+                {
+                    "id": 18,
+                    "text": "Firmware is stored in?",
+                    "options": [
+                        "RAM",
+                        "ROM",
+                        "Cache",
+                        "Register"
+                    ],
+                    "correct": 1,
+                    "explanation": "Read Only Memory."
+                },
+                {
+                    "id": 19,
+                    "text": "ASCII code is?",
+                    "options": [
+                        "7-bit",
+                        "8-bit",
+                        "16-bit",
+                        "32-bit"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard uses 7 bits."
+                },
+                {
+                    "id": 20,
+                    "text": "Motherboard is?",
+                    "options": [
+                        "Circuit Board",
+                        "Power Supply",
+                        "Storage",
+                        "Screen"
+                    ],
+                    "correct": 0,
+                    "explanation": "Main connecting board."
+                }
+            ]
+        }
+    ]
+}

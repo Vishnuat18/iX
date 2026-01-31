@@ -1,0 +1,646 @@
+Problem 81: Inheritance Types
+Statement: Demonstrate single, multilevel, hierarchical inheritance.
+Test Cases:
+1.	Parent access
+2.	Child access
+3.	Multilevel access
+4.	Hierarchical access
+5.	Method visibility
+6.	No multiple inheritance
+7.	Correct outputs
+8.	Constructors chained
+9.	super usage
+10.	Valid execution
+________________________________________
+Problem 82: Abstract Class
+Statement: Implement abstract class and method.
+Test Cases:
+1.	Abstract method overridden
+2.	Object via subclass
+3.	Cannot instantiate abstract
+4.	Correct output
+5.	Runtime polymorphism
+6.	Method access
+7.	Valid syntax
+8.	Edge values
+9.	No errors
+10.	Clean run
+________________________________________
+Problem 83: Interface Implementation
+Statement: Implement interface and override methods.
+Test Cases: Similar to abstract class (10 checks).
+________________________________________
+Problem 84: Encapsulation
+Statement: Use private fields with getters/setters.
+Test Cases:
+1.	Private access
+2.	Getter returns value
+3.	Setter sets value
+4.	No direct access
+5.	Validation works
+6.	Default values
+7.	Multiple objects
+8.	Correct output
+9.	No error
+10.	Secure design
+________________________________________
+Problem 85: Polymorphism
+Statement: Demonstrate runtime polymorphism.
+Test Cases:
+1.	Parent reference
+2.	Child object
+3.	Method override
+4.	Dynamic binding
+5.	Correct output
+6.	No cast issues
+7.	Multiple children
+8.	Base method accessible
+9.	Clean run
+10.	No ambiguity
+________________________________________
+Problem 86: Static Keyword
+Statement: Demonstrate static variable/method behavior.
+Test Cases:
+1.	Shared variable
+2.	Class-level access
+3.	Object access
+4.	Value increment
+5.	No instance dependency
+6.	Memory shared
+7.	Output correct
+8.	Multiple objects
+9.	Clean run
+10.	No error
+________________________________________
+Problem 87: this and super Keyword
+Statement: Demonstrate usage of this and super.
+Test Cases:
+1.	this refers current
+2.	super refers parent
+3.	Constructor chaining
+4.	Variable shadowing
+5.	Method override access
+6.	Output valid
+7.	No ambiguity
+8.	Clean run
+9.	Correct values
+10.	No error
+________________________________________
+Problem 88: Try-Catch-Finally
+Statement: Handle exception using try-catch-finally.
+Test Cases:
+1.	Exception thrown
+2.	Catch executed
+3.	Finally executed
+4.	No crash
+5.	Multiple runs
+6.	Proper message
+7.	Runtime safety
+8.	Clean output
+9.	No resource leak
+10.	Passes
+________________________________________
+Problem 89: Throw and Throws
+Statement: Demonstrate throw and throws.
+Test Cases:
+1.	Exception thrown manually
+2.	Method signature uses throws
+3.	Caught properly
+4.	Message correct
+5.	Program safe
+6.	No crash
+7.	Checked exception
+8.	Unchecked exception
+9.	Clean run
+10.	Valid output
+________________________________________
+Problem 90: Custom Exception
+Statement: Create and use custom exception.
+Sample Output:
+Custom error message printed.
+Test Cases:
+1.	Custom class created
+2.	Extends Exception
+3.	Thrown correctly
+4.	Caught correctly
+5.	Message shown
+6.	Invalid input tested
+7.	Valid input passes
+8.	No runtime error
+9.	Clean execution
+10.	Follows standards
+
+Problem 91: Read Data from a File
+Statement: Read and print all lines from a text file.
+Sample Input:
+input.txt
+Hello
+World
+Sample Output:
+Hello
+World
+Test Cases:
+1.	File exists with text
+2.	Empty file → no output
+3.	Single-line file
+4.	Multi-line file
+5.	File with spaces
+6.	File with numbers
+7.	File with symbols
+8.	Large file
+9.	File not found → handled
+10.	File closed properly
+________________________________________
+Problem 92: Write Data to a File
+Statement: Write a string to a file.
+Sample Input:
+"Hello File"
+Sample Output:
+File contains Hello File
+Test Cases:
+1.	Write simple text
+2.	Overwrite file
+3.	Append mode
+4.	Empty string
+5.	Special characters
+6.	Numbers
+7.	Large text
+8.	File created if absent
+9.	File closed
+10.	No IO exception
+________________________________________
+Problem 93: Count Words in a File
+Statement: Count total words in a text file.
+Sample Input:
+Hello World Java
+Sample Output:
+3
+Test Cases:
+1.	Empty file → 0
+2.	One word
+3.	Multiple spaces
+4.	Newlines
+5.	Tabs
+6.	Symbols ignored
+7.	Mixed case
+8.	Large file
+9.	Trailing spaces
+10.	Leading spaces
+________________________________________
+Problem 94: Copy File Content
+Statement: Copy content from one file to another.
+Sample Input:
+input.txt → output.txt
+Sample Output:
+Content copied successfully
+Test Cases:
+1.	Normal file
+2.	Empty file
+3.	Large file
+4.	Binary-safe copy
+5.	Source missing
+6.	Destination created
+7.	Overwrite existing
+8.	Permissions handled
+9.	Streams closed
+10.	Exact match
+________________________________________
+Problem 95: ArrayList Operations
+Statement: Demonstrate add, remove, iterate.
+Sample Output:
+Elements printed correctly
+Test Cases:
+1.	Add elements
+2.	Remove element
+3.	Iterate using loop
+4.	Iterate using iterator
+5.	Empty list
+6.	Duplicate values
+7.	Null handling
+8.	Size check
+9.	Clear list
+10.	No exception
+________________________________________
+Problem 96: LinkedList Operations
+Statement: Demonstrate addFirst, addLast, remove.
+Sample Output:
+Correct list order
+Test Cases:
+1.	AddFirst
+2.	AddLast
+3.	RemoveFirst
+4.	RemoveLast
+5.	Empty list
+6.	Single element
+7.	Duplicate values
+8.	Iteration
+9.	Size check
+10.	No error
+________________________________________
+Problem 97: HashSet and TreeSet
+Statement: Demonstrate uniqueness and sorting.
+Sample Output:
+HashSet unordered, TreeSet sorted
+Test Cases:
+1.	Duplicate removal
+2.	Sorted TreeSet
+3.	Empty set
+4.	Null handling
+5.	Integer set
+6.	String set
+7.	Mixed inserts
+8.	Size check
+9.	Iteration
+10.	No exception
+________________________________________
+Problem 98: HashMap and TreeMap
+Statement: Demonstrate key-value storage and sorting.
+Sample Output:
+TreeMap sorted by keys
+Test Cases:
+1.	Insert values
+2.	Duplicate key overwrite
+3.	Retrieve value
+4.	Remove key
+5.	Empty map
+6.	Null key (HashMap)
+7.	TreeMap ordering
+8.	Iterate entries
+9.	Size check
+10.	No error
+________________________________________
+Problem 99: Iterate HashMap
+Statement: Iterate using entrySet, keySet, values.
+Sample Output:
+All keys and values printed
+Test Cases:
+1.	entrySet loop
+2.	keySet loop
+3.	values loop
+4.	Empty map
+5.	Single entry
+6.	Multiple entries
+7.	Correct output
+8.	No modification error
+9.	Order independent
+10.	Clean run
+________________________________________
+Problem 100: Sort Collection
+Statement: Sort a list using Collections.sort.
+Sample Input:
+[5,3,1]
+Sample Output:
+[1,3,5]
+Test Cases:
+1.	Empty list
+2.	Single element
+3.	Already sorted
+4.	Reverse sorted
+5.	Duplicates
+6.	Negative numbers
+7.	Large list
+8.	Reverse order sort
+9.	Stable sort
+10.	No error
+________________________________________
+Problem 101: Array ↔ List Conversion
+Statement: Convert array to list and list to array.
+Sample Output:
+Conversion successful
+Test Cases:
+1.	String array
+2.	Integer array
+3.	Empty array
+4.	List to array
+5.	Preserve order
+6.	Size match
+7.	Null handling
+8.	Immutable list check
+9.	Dynamic list
+10.	No exception
+________________________________________
+Problem 102: Frequency Using HashMap
+Statement: Count frequency of elements.
+Sample Input:
+[1,2,2,3]
+Sample Output:
+{1=1,2=2,3=1}
+Test Cases:
+1.	Empty array
+2.	Single element
+3.	All same
+4.	Mixed values
+5.	Negative numbers
+6.	Large input
+7.	String input
+8.	Case sensitive
+9.	Correct counts
+10.	No error
+________________________________________
+Problem 103: Create Thread Using Thread Class
+Statement: Create thread by extending Thread.
+Sample Output:
+Thread executed
+Test Cases:
+1.	Thread starts
+2.	run() executed
+3.	Multiple threads
+4.	join usage
+5.	No deadlock
+6.	Output printed
+7.	Independent execution
+8.	Clean termination
+9.	No exception
+10.	Thread-safe
+________________________________________
+Problem 104: Create Thread Using Runnable
+Statement: Create thread using Runnable.
+Test Cases: Same validation as Problem 103 (10 checks)
+________________________________________
+Problem 105: Synchronization
+Statement: Synchronize method to avoid race condition.
+Sample Output:
+Correct final count
+Test Cases:
+1.	Shared variable
+2.	Multiple threads
+3.	No race condition
+4.	Correct count
+5.	join used
+6.	Method synchronized
+7.	No deadlock
+8.	Repeat runs stable
+9.	Output correct
+10.	Thread-safe
+________________________________________
+Problem 106: Inter-thread Communication
+Statement: Use wait() and notify().
+Sample Output:
+Produced then consumed
+Test Cases:
+1.	wait invoked
+2.	notify invoked
+3.	No busy waiting
+4.	Correct order
+5.	Shared object
+6.	Thread safety
+7.	No deadlock
+8.	Proper signaling
+9.	Clean exit
+10.	Stable output
+________________________________________
+Problem 107: Producer–Consumer Problem
+Statement: Implement producer-consumer using blocking queue.
+Sample Output:
+Produced X, Consumed X
+Test Cases:
+1.	Producer runs
+2.	Consumer runs
+3.	Blocking works
+4.	Queue size honored
+5.	No data loss
+6.	Multiple items
+7.	Thread-safe
+8.	join used
+9.	Clean termination
+10.	No exception
+________________________________________
+Problem 108: Deadlock Example
+Statement: Demonstrate deadlock scenario.
+Sample Output:
+Program enters deadlock (intentional)
+Test Cases:
+1.	Two locks
+2.	Circular wait
+3.	Threads blocked
+4.	Demonstration clear
+5.	Comments explain
+6.	No resolution code
+7.	Reproducible
+8.	No compilation error
+9.	Proper structure
+10.	Educational purpose
+________________________________________
+Problem 109: Thread Pool
+Statement: Use ExecutorService to manage threads.
+Sample Output:
+Tasks executed
+Test Cases:
+1.	Pool created
+2.	Tasks submitted
+3.	Threads reused
+4.	Shutdown called
+5.	Multiple tasks
+6.	No leak
+7.	Proper output
+8.	Exceptions handled
+9.	Performance stable
+10.	Clean exit
+________________________________________
+Problem 110: Lambda Expressions
+Statement: Use lambda for functional interface.
+Sample Output:
+Correct computation
+Test Cases:
+1.	Lambda syntax valid
+2.	Functional interface
+3.	Correct result
+4.	Multiple lambdas
+5.	No boilerplate
+6.	Clean code
+7.	No error
+8.	Type inference
+9.	Reusable
+10.	Correct output
+________________________________________
+Problem 111: Functional Interfaces
+Statement: Use Predicate, Function, Consumer.
+Test Cases:
+1.	Predicate test
+2.	Function apply
+3.	Consumer accept
+4.	Combined usage
+5.	Stream compatibility
+6.	No exception
+7.	Correct logic
+8.	Clean output
+9.	Edge cases
+10.	Valid execution
+________________________________________
+Problem 112: Streams API
+Statement: Use filter, map, reduce, collect.
+Sample Output:
+Correct processed result
+Test Cases:
+1.	Filter works
+2.	Map transforms
+3.	Reduce aggregates
+4.	Collect to list
+5.	Empty stream
+6.	Parallel stream
+7.	No mutation
+8.	Correct output
+9.	Large list
+10.	No error
+________________________________________
+Problem 113: Method References
+Statement: Use method references instead of lambda.
+Test Cases:
+1.	Static method
+2.	Instance method
+3.	Constructor reference
+4.	List forEach
+5.	Clean syntax
+6.	Correct output
+7.	No ambiguity
+8.	Compile success
+9.	Runtime success
+10.	Best practice
+________________________________________
+Problem 114: Optional Class
+Statement: Use Optional to avoid NullPointerException.
+Sample Output:
+Default value returned
+Test Cases:
+1.	Optional.of
+2.	Optional.empty
+3.	orElse
+4.	orElseGet
+5.	ifPresent
+6.	No NPE
+7.	Null handling
+8.	Clean output
+9.	Valid logic
+10.	Correct use
+________________________________________
+Problem 115: Singleton Design Pattern
+Statement: Implement thread-safe Singleton.
+Sample Output:
+Same instance returned
+Test Cases:
+1.	Single instance
+2.	Private constructor
+3.	Lazy init
+4.	Thread-safe
+5.	Double-check locking
+6.	Multiple calls
+7.	Same reference
+8.	No reflection break
+9.	Serializable safe
+10.	Clean design
+________________________________________
+Problem 116: LRU Cache
+Statement: Implement LRU cache using LinkedHashMap.
+Sample Output:
+Least recently used removed
+Test Cases:
+1.	Capacity respected
+2.	Oldest removed
+3.	Access updates order
+4.	Insert works
+5.	Retrieve works
+6.	Over capacity eviction
+7.	Correct keys
+8.	Thread-safe note
+9.	Clean output
+10.	No error
+________________________________________
+Problem 117: Library Management System
+Statement: Manage books (add, issue, list).
+Sample Output:
+Book issued status updated
+Test Cases:
+1.	Add book
+2.	Issue book
+3.	Duplicate add
+4.	Issue unavailable
+5.	List books
+6.	Status correct
+7.	Map usage
+8.	No error
+9.	Clean output
+10.	Functional flow
+________________________________________
+Problem 118: Banking System
+Statement: Deposit, withdraw, check balance.
+Sample Output:
+Correct balance shown
+Test Cases:
+1.	Deposit
+2.	Withdraw valid
+3.	Withdraw invalid
+4.	Balance correct
+5.	Synchronization
+6.	Multiple operations
+7.	No negative balance
+8.	Thread-safe
+9.	Clean output
+10.	No error
+________________________________________
+Problem 119: Employee Management System
+Statement: Store and retrieve employee details.
+Sample Output:
+Employee printed
+Test Cases:
+1.	Add employee
+2.	Retrieve employee
+3.	Invalid ID
+4.	Duplicate ID
+5.	Map usage
+6.	Multiple employees
+7.	Correct output
+8.	No error
+9.	Clean code
+10.	Functional
+________________________________________
+Problem 120: Student Management System
+Statement: Store and retrieve student details.
+Test Cases: Same as Employee system (10 checks)
+________________________________________
+Problem 121: Try-With-Resources
+Statement: Auto-close resources using try-with-resources.
+Test Cases:
+1.	Resource opened
+2.	Resource closed
+3.	Exception handled
+4.	Cleaner than finally
+5.	No leak
+6.	File IO works
+7.	DB simulation
+8.	Clean output
+9.	Safe execution
+10.	Best practice
+________________________________________
+Problem 122: Balanced Parentheses
+Statement: Check if parentheses are balanced using Stack.
+Sample Input:
+{[()]}
+Sample Output:
+true
+Test Cases:
+1.	{} → true
+2.	[] → true
+3.	() → true
+4.	{[()]} → true
+5.	{[(])} → false
+6.	( → false
+7.	"" → true
+8.	(()()) → true
+9.	())( → false
+10.	{[} → false
+________________________________________
+Problem 123: Mini System Integration Test
+Statement: Integrate multiple modules and verify execution.
+Sample Output:
+System runs successfully
+Test Cases:
+1.	All modules compile
+2.	Entry point exists
+3.	No runtime error
+4.	Data flows correctly
+5.	OOPS applied
+6.	Collections used
+7.	Threads safe
+8.	IO works
+9.	Clean output
+10.	Submission ready

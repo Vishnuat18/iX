@@ -1,0 +1,1235 @@
+{
+    "topic": "Java Fullstack",
+    "sets": [
+        {
+            "setId": "java_fs_1",
+            "title": "Set 1: Core Java & OOP",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "JVM stands for?",
+                    "options": [
+                        "Java Virtual Machine",
+                        "Visual",
+                        "Mobile",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Runtime."
+                },
+                {
+                    "id": 2,
+                    "text": "Bytecode?",
+                    "options": [
+                        "Intermediate code (.class)",
+                        "Machine",
+                        "Source",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Portable."
+                },
+                {
+                    "id": 3,
+                    "text": "JDK vs JRE?",
+                    "options": [
+                        "Dev Kit vs Runtime Env",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tools."
+                },
+                {
+                    "id": 4,
+                    "text": "Access modifiers?",
+                    "options": [
+                        "Public, Private, Protected, Default",
+                        "Open",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scope."
+                },
+                {
+                    "id": 5,
+                    "text": "Static keyword?",
+                    "options": [
+                        "Belongs to Class",
+                        "Object",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shared."
+                },
+                {
+                    "id": 6,
+                    "text": "Final keyword?",
+                    "options": [
+                        "Constant/Cannot override",
+                        "Last",
+                        "stop",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Immutability."
+                },
+                {
+                    "id": 7,
+                    "text": "Interface vs Abstract Class?",
+                    "options": [
+                        "Impl methods (Java 8+) vs State",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Contract."
+                },
+                {
+                    "id": 8,
+                    "text": "String Pool?",
+                    "options": [
+                        "Memory for strings",
+                        "Water",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimization."
+                },
+                {
+                    "id": 9,
+                    "text": "Exception Handling?",
+                    "options": [
+                        "Try, Catch, Finally",
+                        "If Else",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Robustness."
+                },
+                {
+                    "id": 10,
+                    "text": "Checked vs Unchecked?",
+                    "options": [
+                        "Compile time vs Runtime",
+                        "Good/Bad",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Types."
+                },
+                {
+                    "id": 11,
+                    "text": "Collections Framework?",
+                    "options": [
+                        "List, Set, Map",
+                        "Array",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Data structures."
+                },
+                {
+                    "id": 12,
+                    "text": "ArrayList vs LinkedList?",
+                    "options": [
+                        "Array backed vs Node backed",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance."
+                },
+                {
+                    "id": 13,
+                    "text": "HashMap works how?",
+                    "options": [
+                        "Hashing and Buckets",
+                        "List",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Key-Value."
+                },
+                {
+                    "id": 14,
+                    "text": "Multithreading?",
+                    "options": [
+                        "Thread class / Runnable",
+                        "Process",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concurrency."
+                },
+                {
+                    "id": 15,
+                    "text": "Synchronized?",
+                    "options": [
+                        "Thread safety lock",
+                        "Time",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mutex."
+                },
+                {
+                    "id": 16,
+                    "text": "Garbage Collection?",
+                    "options": [
+                        "Auto memory management",
+                        "Bin",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Daemon."
+                },
+                {
+                    "id": 17,
+                    "text": "Java 8 Features?",
+                    "options": [
+                        "Lambdas, Streams",
+                        "Var",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Functional."
+                },
+                {
+                    "id": 18,
+                    "text": "Stream API?",
+                    "options": [
+                        "Pipeline processing",
+                        "Video",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Functional ops."
+                },
+                {
+                    "id": 19,
+                    "text": "Optional class?",
+                    "options": [
+                        "Avoid NullPointer",
+                        "Choice",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Wrapper."
+                },
+                {
+                    "id": 20,
+                    "text": "Maven/Gradle?",
+                    "options": [
+                        "Build tools",
+                        "Code",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dependency mgmt."
+                }
+            ]
+        },
+        {
+            "setId": "java_fs_2",
+            "title": "Set 2: JDBC & Servlets",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "JDBC?",
+                    "options": [
+                        "Java Database Connectivity",
+                        "Data",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "SQL API."
+                },
+                {
+                    "id": 22,
+                    "text": "Driver Manager?",
+                    "options": [
+                        "Manages DB drivers",
+                        "Car",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Connection factory."
+                },
+                {
+                    "id": 23,
+                    "text": "Statement vs PreparedStatement?",
+                    "options": [
+                        "Compiled vs Precompiled (Secure)",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "SQL Injection."
+                },
+                {
+                    "id": 24,
+                    "text": "ResultSet?",
+                    "options": [
+                        "Query data container",
+                        "Result",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cursor."
+                },
+                {
+                    "id": 25,
+                    "text": "Connection Pool?",
+                    "options": [
+                        "Reuse connections (HikariCP)",
+                        "Swim",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Perf."
+                },
+                {
+                    "id": 26,
+                    "text": "Servlet?",
+                    "options": [
+                        "Java Web Component",
+                        "Server",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "HTTP handler."
+                },
+                {
+                    "id": 27,
+                    "text": "Servlet Lifecycle?",
+                    "options": [
+                        "Init, Service, Destroy",
+                        "Start, Run",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Phases."
+                },
+                {
+                    "id": 28,
+                    "text": "doGet vs doPost?",
+                    "options": [
+                        "HTTP methods",
+                        "Action",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Handling."
+                },
+                {
+                    "id": 29,
+                    "text": "web.xml?",
+                    "options": [
+                        "Deployment Descriptor",
+                        "Code",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Config."
+                },
+                {
+                    "id": 30,
+                    "text": "JSP?",
+                    "options": [
+                        "Java Server Pages",
+                        "Script",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "View layer."
+                },
+                {
+                    "id": 31,
+                    "text": "JSTL?",
+                    "options": [
+                        "Standard Tag Library",
+                        "Tag",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logic in view."
+                },
+                {
+                    "id": 32,
+                    "text": "Request Dispatcher?",
+                    "options": [
+                        "Forward/Include",
+                        "Send",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Routing."
+                },
+                {
+                    "id": 33,
+                    "text": "Session Management?",
+                    "options": [
+                        "HttpSession, Cookies",
+                        "Map",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "State."
+                },
+                {
+                    "id": 34,
+                    "text": "Filter?",
+                    "options": [
+                        "Intercept requests",
+                        "Clean",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Middleware."
+                },
+                {
+                    "id": 35,
+                    "text": "Listener?",
+                    "options": [
+                        "Event handling",
+                        "Ear",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Observer."
+                },
+                {
+                    "id": 36,
+                    "text": "Scope?",
+                    "options": [
+                        "Request, Session, Application",
+                        "View",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lifecycle."
+                },
+                {
+                    "id": 37,
+                    "text": "Tomcat?",
+                    "options": [
+                        "Servlet Container",
+                        "Cat",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Server."
+                },
+                {
+                    "id": 38,
+                    "text": "WAR file?",
+                    "options": [
+                        "Web Archive",
+                        "Battle",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Deployable."
+                },
+                {
+                    "id": 39,
+                    "text": "MVC pattern?",
+                    "options": [
+                        "Model View Controller",
+                        "Code",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Architecture."
+                },
+                {
+                    "id": 40,
+                    "text": "GenericServlet vs HttpServlet?",
+                    "options": [
+                        "Protocol independent vs HTTP",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inheritance."
+                }
+            ]
+        },
+        {
+            "setId": "java_fs_3",
+            "title": "Set 3: Spring Boot Basics",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Spring Framework?",
+                    "options": [
+                        "Enterprise Java Standard",
+                        "Season",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "IoC container."
+                },
+                {
+                    "id": 42,
+                    "text": "IoC?",
+                    "options": [
+                        "Inversion of Control",
+                        "Chip",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dependency injection."
+                },
+                {
+                    "id": 43,
+                    "text": "Dependency Injection?",
+                    "options": [
+                        "Wiring beans",
+                        "Shot",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Decoupling."
+                },
+                {
+                    "id": 44,
+                    "text": "Spring Boot?",
+                    "options": [
+                        "Convention over configuration",
+                        "Shoe",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rapid Dev."
+                },
+                {
+                    "id": 45,
+                    "text": "@SpringBootApplication?",
+                    "options": [
+                        "Config+EnableAuto+Scan",
+                        "Start",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Main annotation."
+                },
+                {
+                    "id": 46,
+                    "text": "Embedded Server?",
+                    "options": [
+                        "Tomcat inside JAR",
+                        "None",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standalone."
+                },
+                {
+                    "id": 47,
+                    "text": "POM.xml?",
+                    "options": [
+                        "Mven Config",
+                        "Apple",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Project Object Model."
+                },
+                {
+                    "id": 48,
+                    "text": "@Component?",
+                    "options": [
+                        "Managed Bean",
+                        "Part",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stereotype."
+                },
+                {
+                    "id": 49,
+                    "text": "@Autowired?",
+                    "options": [
+                        "Inject dependency",
+                        "Auto",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Wiring."
+                },
+                {
+                    "id": 50,
+                    "text": "@RestController?",
+                    "options": [
+                        "Controller + ResponseBody",
+                        "Rest",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "API."
+                },
+                {
+                    "id": 51,
+                    "text": "@RequestMapping?",
+                    "options": [
+                        "Map URL to method",
+                        "Road",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Routing."
+                },
+                {
+                    "id": 52,
+                    "text": "application.properties?",
+                    "options": [
+                        "Configuration file",
+                        "Settings",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Key-value."
+                },
+                {
+                    "id": 53,
+                    "text": "Spring Starter?",
+                    "options": [
+                        "Dependency bundle",
+                        "Key",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Simplified deps."
+                },
+                {
+                    "id": 54,
+                    "text": "Actuator?",
+                    "options": [
+                        "Monitoring endpoints",
+                        "Actor",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Health/Metrics."
+                },
+                {
+                    "id": 55,
+                    "text": "Profiles?",
+                    "options": [
+                        "Env specific config",
+                        "Face",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dev/Prod."
+                },
+                {
+                    "id": 56,
+                    "text": "Bean Lifecycle?",
+                    "options": [
+                        "Instantiate, Prop, Init, Destroy",
+                        "Life",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Managed."
+                },
+                {
+                    "id": 57,
+                    "text": "@Service?",
+                    "options": [
+                        "Business Logic",
+                        "Server",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Component specialization."
+                },
+                {
+                    "id": 58,
+                    "text": "@Repository?",
+                    "options": [
+                        "DAO Layer / Ex translation",
+                        "Repo",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Component specialization."
+                },
+                {
+                    "id": 59,
+                    "text": "Cons of XML config?",
+                    "options": [
+                        "Verbose",
+                        "Flexible",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Annotations preferred."
+                },
+                {
+                    "id": 60,
+                    "text": "Singleton Scope?",
+                    "options": [
+                        "One instance per container",
+                        "Single",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Default."
+                }
+            ]
+        },
+        {
+            "setId": "java_fs_4",
+            "title": "Set 4: JPA & Hibernate",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "ORM?",
+                    "options": [
+                        "Object Relational Mapping",
+                        "Map",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Object to Table."
+                },
+                {
+                    "id": 62,
+                    "text": "JPA?",
+                    "options": [
+                        "Java Persistence API (Spec)",
+                        "Interface",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 63,
+                    "text": "Hibernate?",
+                    "options": [
+                        "JPA Implementation",
+                        "Sleep",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Library."
+                },
+                {
+                    "id": 64,
+                    "text": "@Entity?",
+                    "options": [
+                        "Marks class as table",
+                        "Ghost",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mapping."
+                },
+                {
+                    "id": 65,
+                    "text": "@Id?",
+                    "options": [
+                        "Primary Key",
+                        "Identity",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unique."
+                },
+                {
+                    "id": 66,
+                    "text": "@GeneratedValue?",
+                    "options": [
+                        "Auto Increment strategy",
+                        "Gen",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "ID creation."
+                },
+                {
+                    "id": 67,
+                    "text": "Spring Data JPA?",
+                    "options": [
+                        "Reduces boilerplate (Repo interface)",
+                        "Data",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Magic."
+                },
+                {
+                    "id": 68,
+                    "text": "JpaRepository?",
+                    "options": [
+                        "Interface with CRUD methods",
+                        "Repo",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 69,
+                    "text": "JPQL?",
+                    "options": [
+                        "JPA Query Language (Entity based)",
+                        "SQL",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Object query."
+                },
+                {
+                    "id": 70,
+                    "text": "@OneToMany?",
+                    "options": [
+                        "Relationship",
+                        "Count",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mapping."
+                },
+                {
+                    "id": 71,
+                    "text": "Lazy Loading?",
+                    "options": [
+                        "Load on access",
+                        "Slow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance."
+                },
+                {
+                    "id": 72,
+                    "text": "Eager Loading?",
+                    "options": [
+                        "Load immediately (Join)",
+                        "Fast",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "N+1 prevention."
+                },
+                {
+                    "id": 73,
+                    "text": "Session Factory?",
+                    "options": [
+                        "Hibernate entry point",
+                        "Factory",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Heavyweight."
+                },
+                {
+                    "id": 74,
+                    "text": "EntityManager?",
+                    "options": [
+                        "JPA Interface",
+                        "Manager",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Operations."
+                },
+                {
+                    "id": 75,
+                    "text": "@Transactional?",
+                    "options": [
+                        "ACID scope",
+                        "Trans",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Transaction mgmt."
+                },
+                {
+                    "id": 76,
+                    "text": "CascadeType?",
+                    "options": [
+                        "Propagate ops",
+                        "Flow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Parent/Child."
+                },
+                {
+                    "id": 77,
+                    "text": "Criteria API?",
+                    "options": [
+                        "Type-safe dynamic queries",
+                        "Crit",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Programmatic."
+                },
+                {
+                    "id": 78,
+                    "text": "Native Query?",
+                    "options": [
+                        "Raw SQL",
+                        "Wild",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "@Query(native=true)."
+                },
+                {
+                    "id": 79,
+                    "text": "Persistence Context?",
+                    "options": [
+                        "L1 Cache",
+                        "Place",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Managed state."
+                },
+                {
+                    "id": 80,
+                    "text": "Dirty Checking?",
+                    "options": [
+                        "Auto update modified entities",
+                        "Audit",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Feature."
+                }
+            ]
+        },
+        {
+            "setId": "java_fs_5",
+            "title": "Set 5: Spring Security & Microservices",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Spring Security?",
+                    "options": [
+                        "AuthN and AuthZ framework",
+                        "Lock",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Securing apps."
+                },
+                {
+                    "id": 82,
+                    "text": "Authentication?",
+                    "options": [
+                        "Who are you",
+                        "Verify",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Login."
+                },
+                {
+                    "id": 83,
+                    "text": "Authorization?",
+                    "options": [
+                        "What can you do",
+                        "Role",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access."
+                },
+                {
+                    "id": 84,
+                    "text": "Security Filter Chain?",
+                    "options": [
+                        "Interceptors",
+                        "Chain",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Architecture."
+                },
+                {
+                    "id": 85,
+                    "text": "Principal?",
+                    "options": [
+                        "Logged in user",
+                        "School",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Identity."
+                },
+                {
+                    "id": 86,
+                    "text": "JWT?",
+                    "options": [
+                        "Stateless Token",
+                        "Cookie",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "JSON Web Token."
+                },
+                {
+                    "id": 87,
+                    "text": "OAuth2?",
+                    "options": [
+                        "Delegated Authorization",
+                        "Auth",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Social Login."
+                },
+                {
+                    "id": 88,
+                    "text": "@PreAuthorize?",
+                    "options": [
+                        "Method security",
+                        "Before",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Annotation."
+                },
+                {
+                    "id": 89,
+                    "text": "Microservices?",
+                    "options": [
+                        "Decoupled small services",
+                        "Tiny",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Architecture."
+                },
+                {
+                    "id": 90,
+                    "text": "Service Discovery?",
+                    "options": [
+                        "Eureka / Consul",
+                        "Find",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Registry."
+                },
+                {
+                    "id": 91,
+                    "text": "API Gateway?",
+                    "options": [
+                        "Entry point (Zuul/Gateway)",
+                        "Door",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Routing."
+                },
+                {
+                    "id": 92,
+                    "text": "Circuit Breaker?",
+                    "options": [
+                        "Resilience pattern (Resilience4j)",
+                        "Switch",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fault tolerance."
+                },
+                {
+                    "id": 93,
+                    "text": "Config Server?",
+                    "options": [
+                        "Centralized config",
+                        "Hub",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Git backed."
+                },
+                {
+                    "id": 94,
+                    "text": "Feign Client?",
+                    "options": [
+                        "Declarative REST client",
+                        "Fake",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "HTTP."
+                },
+                {
+                    "id": 95,
+                    "text": "Distributed Tracing?",
+                    "options": [
+                        "Zipkin / Sleuth",
+                        "Trace",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Debug."
+                },
+                {
+                    "id": 96,
+                    "text": "Docker?",
+                    "options": [
+                        "Containerization",
+                        "Ship",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Deployment."
+                },
+                {
+                    "id": 97,
+                    "text": "Kubernetes?",
+                    "options": [
+                        "Orchestration",
+                        "Space",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Management."
+                },
+                {
+                    "id": 98,
+                    "text": "REST vs SOAP?",
+                    "options": [
+                        "JSON vs XML",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Protocol."
+                },
+                {
+                    "id": 99,
+                    "text": "BCrypt?",
+                    "options": [
+                        "Password hashing",
+                        "Ciphter",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Security."
+                },
+                {
+                    "id": 100,
+                    "text": "CORS in Spring?",
+                    "options": [
+                        "@CrossOrigin",
+                        "Cross",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Browser security."
+                }
+            ]
+        }
+    ]
+}

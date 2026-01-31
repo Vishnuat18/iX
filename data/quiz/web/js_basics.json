@@ -1,0 +1,1265 @@
+{
+    "topic": "JavaScript Basics",
+    "sets": [
+        {
+            "setId": "js_basic_1",
+            "title": "Set 1: Syntax & Variables",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "Declare block-scoped variable?",
+                    "options": [
+                        "let",
+                        "var",
+                        "int",
+                        "dim"
+                    ],
+                    "correct": 0,
+                    "explanation": "let and const are block scoped."
+                },
+                {
+                    "id": 2,
+                    "text": "Equality without type conversion?",
+                    "options": [
+                        "===",
+                        "==",
+                        "=",
+                        "equals()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Strict equality."
+                },
+                {
+                    "id": 3,
+                    "text": "Output: console.log(typeof [])?",
+                    "options": [
+                        "object",
+                        "array",
+                        "list",
+                        "null"
+                    ],
+                    "correct": 0,
+                    "explanation": "Arrays are objects in JS."
+                },
+                {
+                    "id": 4,
+                    "text": "Not a Number?",
+                    "options": [
+                        "NaN",
+                        "Null",
+                        "Undefined",
+                        "Error"
+                    ],
+                    "correct": 0,
+                    "explanation": "NaN property."
+                },
+                {
+                    "id": 5,
+                    "text": "Function declaration?",
+                    "options": [
+                        "function myFunc() {}",
+                        "def myFunc()",
+                        "func myFunc()",
+                        "void myFunc()"
+                    ],
+                    "correct": 0,
+                    "explanation": "function keyword."
+                },
+                {
+                    "id": 6,
+                    "text": "Pop up box?",
+                    "options": [
+                        "alert()",
+                        "msg()",
+                        "popup()",
+                        "display()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Browser alert."
+                },
+                {
+                    "id": 7,
+                    "text": "Convert string to int?",
+                    "options": [
+                        "parseInt()",
+                        "Integer.parse()",
+                        "toInt()",
+                        "cast()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Global function."
+                },
+                {
+                    "id": 8,
+                    "text": "Comment?",
+                    "options": [
+                        "//",
+                        "<!-- -->",
+                        "#",
+                        "'"
+                    ],
+                    "correct": 0,
+                    "explanation": "Double slash."
+                },
+                {
+                    "id": 9,
+                    "text": "Object property access?",
+                    "options": [
+                        "Dot or Bracket",
+                        "Dot only",
+                        "Bracket only",
+                        "Arrow"
+                    ],
+                    "correct": 0,
+                    "explanation": "obj.prop or obj['prop']."
+                },
+                {
+                    "id": 10,
+                    "text": "Is JS case sensitive?",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Only variables",
+                        "Only functions"
+                    ],
+                    "correct": 0,
+                    "explanation": "It is case sensitive."
+                }
+            ]
+        },
+        {
+            "setId": "js_basic_2",
+            "title": "Set 2: DOM & Events",
+            "questions": [
+                {
+                    "id": 11,
+                    "text": "Get element by ID?",
+                    "options": [
+                        "getElementById",
+                        "selectID",
+                        "queryID",
+                        "getID"
+                    ],
+                    "correct": 0,
+                    "explanation": "document.getElementById()."
+                },
+                {
+                    "id": 12,
+                    "text": "Change HTML content?",
+                    "options": [
+                        "innerHTML",
+                        "value",
+                        "content",
+                        "text"
+                    ],
+                    "correct": 0,
+                    "explanation": ".innerHTML property."
+                },
+                {
+                    "id": 13,
+                    "text": "Event on button click?",
+                    "options": [
+                        "onclick",
+                        "onpress",
+                        "onpush",
+                        "onhit"
+                    ],
+                    "correct": 0,
+                    "explanation": "Click event."
+                },
+                {
+                    "id": 14,
+                    "text": "Add event listener?",
+                    "options": [
+                        "addEventListener()",
+                        "attachEvent()",
+                        "listen()",
+                        "on()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard method."
+                },
+                {
+                    "id": 15,
+                    "text": "Prevent default behavior?",
+                    "options": [
+                        "e.preventDefault()",
+                        "e.stop()",
+                        "e.cancel()",
+                        "return false"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stops form submission etc."
+                },
+                {
+                    "id": 16,
+                    "text": "Change style prop?",
+                    "options": [
+                        "element.style.color",
+                        "element.css.color",
+                        "element.color",
+                        "style(color)"
+                    ],
+                    "correct": 0,
+                    "explanation": "Style object."
+                },
+                {
+                    "id": 17,
+                    "text": "JSON parse string?",
+                    "options": [
+                        "JSON.parse()",
+                        "JSON.stringify()",
+                        "JSON.toObj()",
+                        "JSON.read()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Decodes JSON string."
+                },
+                {
+                    "id": 18,
+                    "text": "Timer function?",
+                    "options": [
+                        "setTimeout()",
+                        "wait()",
+                        "delay()",
+                        "sleep()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Executes after delay."
+                },
+                {
+                    "id": 19,
+                    "text": "Console print?",
+                    "options": [
+                        "console.log()",
+                        "print()",
+                        "system.out",
+                        "log()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Debug output."
+                },
+                {
+                    "id": 20,
+                    "text": "Query Selector All returns?",
+                    "options": [
+                        "NodeList",
+                        "Array",
+                        "HTMLCollection",
+                        "String"
+                    ],
+                    "correct": 0,
+                    "explanation": "List of nodes."
+                }
+            ]
+        },
+        {
+            "setId": "js_basic_3",
+            "title": "Set 3: Arrays & Loops",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Add to end of array?",
+                    "options": [
+                        "push()",
+                        "add()",
+                        "insert()",
+                        "append()"
+                    ],
+                    "correct": 0,
+                    "explanation": "push method."
+                },
+                {
+                    "id": 22,
+                    "text": "Remove last element?",
+                    "options": [
+                        "pop()",
+                        "remove()",
+                        "last()",
+                        "delete()"
+                    ],
+                    "correct": 0,
+                    "explanation": "pop method."
+                },
+                {
+                    "id": 23,
+                    "text": "Add to start of array?",
+                    "options": [
+                        "unshift()",
+                        "shift()",
+                        "prepend()",
+                        "start()"
+                    ],
+                    "correct": 0,
+                    "explanation": "unshift method."
+                },
+                {
+                    "id": 24,
+                    "text": "Remove first element?",
+                    "options": [
+                        "shift()",
+                        "unshift()",
+                        "pop()",
+                        "remove()"
+                    ],
+                    "correct": 0,
+                    "explanation": "shift method."
+                },
+                {
+                    "id": 25,
+                    "text": "Loop through array?",
+                    "options": [
+                        "for loop / forEach",
+                        "loop()",
+                        "iterate()",
+                        "cycle()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard loops."
+                },
+                {
+                    "id": 26,
+                    "text": "Get array length?",
+                    "options": [
+                        ".length",
+                        ".size",
+                        ".count",
+                        ".total"
+                    ],
+                    "correct": 0,
+                    "explanation": "Length property."
+                },
+                {
+                    "id": 27,
+                    "text": "Splicing allows?",
+                    "options": [
+                        "Add/Remove at index",
+                        "Sort",
+                        "Join",
+                        "Filter"
+                    ],
+                    "correct": 0,
+                    "explanation": "Modifies in place."
+                },
+                {
+                    "id": 28,
+                    "text": "Join array into string?",
+                    "options": [
+                        "join()",
+                        "concat()",
+                        "string()",
+                        "merge()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Creates string."
+                },
+                {
+                    "id": 29,
+                    "text": "Reverse array?",
+                    "options": [
+                        "reverse()",
+                        "invert()",
+                        "back()",
+                        "flip()"
+                    ],
+                    "correct": 0,
+                    "explanation": "In-place."
+                },
+                {
+                    "id": 30,
+                    "text": "Sort array?",
+                    "options": [
+                        "sort()",
+                        "order()",
+                        "arrange()",
+                        "group()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Alphabetical sort."
+                }
+            ]
+        },
+        {
+            "setId": "js_basic_4",
+            "title": "Set 4: Functions & Scope",
+            "questions": [
+                {
+                    "id": 31,
+                    "text": "Return value?",
+                    "options": [
+                        "return keyword",
+                        "output",
+                        "send",
+                        "result"
+                    ],
+                    "correct": 0,
+                    "explanation": "Exits function."
+                },
+                {
+                    "id": 32,
+                    "text": "Global variable?",
+                    "options": [
+                        "Declared outside function",
+                        "Inside if",
+                        "Static",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Accessible everywhere."
+                },
+                {
+                    "id": 33,
+                    "text": "Local variable?",
+                    "options": [
+                        "Inside function",
+                        "Outside",
+                        "Global",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Function scope."
+                },
+                {
+                    "id": 34,
+                    "text": "Hoisting?",
+                    "options": [
+                        "Declarations to top",
+                        "Lifting code",
+                        "Error",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "JS behavior."
+                },
+                {
+                    "id": 35,
+                    "text": "Arguments object?",
+                    "options": [
+                        "Array-like of args",
+                        "List",
+                        "Map",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "In non-arrow funcs."
+                },
+                {
+                    "id": 36,
+                    "text": "Default parameters?",
+                    "options": [
+                        "param = val",
+                        "param : val",
+                        "def param",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "ES6."
+                },
+                {
+                    "id": 37,
+                    "text": "Arrow function?",
+                    "options": [
+                        "() => {}",
+                        "->",
+                        "=>",
+                        "fun"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concise syntax."
+                },
+                {
+                    "id": 38,
+                    "text": "IIFE?",
+                    "options": [
+                        "Immediately Invoked Function Expression",
+                        "Internal...",
+                        "Interface...",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Runs at definition."
+                },
+                {
+                    "id": 39,
+                    "text": "Callback function?",
+                    "options": [
+                        "Passed as argument",
+                        "Called back",
+                        "Phone",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Async pattern."
+                },
+                {
+                    "id": 40,
+                    "text": "Pure function?",
+                    "options": [
+                        "No side effects",
+                        "Clean code",
+                        "Void",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Deterministic."
+                }
+            ]
+        },
+        {
+            "setId": "js_basic_5",
+            "title": "Set 5: Objects & JSON",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Object literal syntax?",
+                    "options": [
+                        "{}",
+                        "[]",
+                        "()",
+                        "<>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Curly braces."
+                },
+                {
+                    "id": 42,
+                    "text": "Key-value pair?",
+                    "options": [
+                        "key: value",
+                        "key = value",
+                        "key -> value",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Property definition."
+                },
+                {
+                    "id": 43,
+                    "text": "Valid JSON key?",
+                    "options": [
+                        "Must be double quoted",
+                        "Single quote",
+                        "No quote",
+                        "Any"
+                    ],
+                    "correct": 0,
+                    "explanation": "String requirement."
+                },
+                {
+                    "id": 44,
+                    "text": "Access non-existent prop?",
+                    "options": [
+                        "undefined",
+                        "null",
+                        "error",
+                        "false"
+                    ],
+                    "correct": 0,
+                    "explanation": "Does not crash."
+                },
+                {
+                    "id": 45,
+                    "text": "Delete property?",
+                    "options": [
+                        "delete obj.prop",
+                        "remove obj.prop",
+                        "obj.prop = null",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "delete operator."
+                },
+                {
+                    "id": 46,
+                    "text": "Check if key exists?",
+                    "options": [
+                        "'key' in obj",
+                        "obj.has('key')",
+                        "exists(key)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "in operator."
+                },
+                {
+                    "id": 47,
+                    "text": "Convert Obj to String?",
+                    "options": [
+                        "JSON.stringify()",
+                        "toString()",
+                        "parse()",
+                        "Code"
+                    ],
+                    "correct": 0,
+                    "explanation": "Serialization."
+                },
+                {
+                    "id": 48,
+                    "text": "This keyword refers to?",
+                    "options": [
+                        "Owner object",
+                        "Global",
+                        "Function",
+                        "Nothing"
+                    ],
+                    "correct": 0,
+                    "explanation": "Context dependent."
+                },
+                {
+                    "id": 49,
+                    "text": "Object methods?",
+                    "options": [
+                        "Functions in properties",
+                        "Vars",
+                        "Strings",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Behavior."
+                },
+                {
+                    "id": 50,
+                    "text": "Constructor function?",
+                    "options": [
+                        "Creates objects",
+                        "Deletes",
+                        "Edits",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Used with new."
+                }
+            ]
+        },
+        {
+            "setId": "js_basic_6",
+            "title": "Set 6: Strings & regex",
+            "questions": [
+                {
+                    "id": 51,
+                    "text": "String length?",
+                    "options": [
+                        ".length",
+                        ".size",
+                        ".len",
+                        "count()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Property."
+                },
+                {
+                    "id": 52,
+                    "text": "Find position of substr?",
+                    "options": [
+                        "indexOf()",
+                        "find()",
+                        "search()",
+                        "locate()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Returns index."
+                },
+                {
+                    "id": 53,
+                    "text": "Extract part of string?",
+                    "options": [
+                        "slice()",
+                        "cut()",
+                        "part()",
+                        "divide()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Substring."
+                },
+                {
+                    "id": 54,
+                    "text": "Replace content?",
+                    "options": [
+                        "replace()",
+                        "swap()",
+                        "change()",
+                        "update()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Replace first."
+                },
+                {
+                    "id": 55,
+                    "text": "Upper case?",
+                    "options": [
+                        "toUpperCase()",
+                        "toUpper()",
+                        "caps()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Transform."
+                },
+                {
+                    "id": 56,
+                    "text": "Trim whitespace?",
+                    "options": [
+                        "trim()",
+                        "clean()",
+                        "strip()",
+                        "cut()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Both ends."
+                },
+                {
+                    "id": 57,
+                    "text": "Character at index?",
+                    "options": [
+                        "charAt()",
+                        "get()",
+                        "char()",
+                        "at()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Zero based."
+                },
+                {
+                    "id": 58,
+                    "text": "Split into array?",
+                    "options": [
+                        "split()",
+                        "array()",
+                        "list()",
+                        "separate()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Delimiter based."
+                },
+                {
+                    "id": 59,
+                    "text": "Template Literal?",
+                    "options": [
+                        "Backticks `",
+                        "Quotes",
+                        "Double Quotes",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Multiline strings."
+                },
+                {
+                    "id": 60,
+                    "text": "Interpolation syntax?",
+                    "options": [
+                        "${var}",
+                        "#{var}",
+                        "{{var}}",
+                        "(var)"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inside backticks."
+                }
+            ]
+        },
+        {
+            "setId": "js_basic_7",
+            "title": "Set 7: Dates & Math",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Create Date object?",
+                    "options": [
+                        "new Date()",
+                        "Date()",
+                        "now()",
+                        "time()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Current time."
+                },
+                {
+                    "id": 62,
+                    "text": "Get Year?",
+                    "options": [
+                        "getFullYear()",
+                        "getYear()",
+                        "year()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "4 digits."
+                },
+                {
+                    "id": 63,
+                    "text": "Get Month index?",
+                    "options": [
+                        "0-11",
+                        "1-12",
+                        "Jan-Dec",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Zero based."
+                },
+                {
+                    "id": 64,
+                    "text": "Math PI?",
+                    "options": [
+                        "Math.PI",
+                        "pi",
+                        "3.14",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Constant."
+                },
+                {
+                    "id": 65,
+                    "text": "Round to nearest?",
+                    "options": [
+                        "Math.round()",
+                        "floor()",
+                        "ceil()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard rounding."
+                },
+                {
+                    "id": 66,
+                    "text": "Round down?",
+                    "options": [
+                        "Math.floor()",
+                        "down()",
+                        "low()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Floor."
+                },
+                {
+                    "id": 67,
+                    "text": "Round up?",
+                    "options": [
+                        "Math.ceil()",
+                        "up()",
+                        "high()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ceiling."
+                },
+                {
+                    "id": 68,
+                    "text": "Square root?",
+                    "options": [
+                        "Math.sqrt()",
+                        "root()",
+                        "sq()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Root."
+                },
+                {
+                    "id": 69,
+                    "text": "Random number?",
+                    "options": [
+                        "Math.random()",
+                        "rand()",
+                        "RND",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "0 to 1."
+                },
+                {
+                    "id": 70,
+                    "text": "Absolute value?",
+                    "options": [
+                        "Math.abs()",
+                        "absolute()",
+                        "val()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Positive."
+                }
+            ]
+        },
+        {
+            "setId": "js_basic_8",
+            "title": "Set 8: Window & BOM",
+            "questions": [
+                {
+                    "id": 71,
+                    "text": "BOM stands for?",
+                    "options": [
+                        "Browser Object Model",
+                        "Basic Object...",
+                        "Browser Oriented...",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Interact with browser."
+                },
+                {
+                    "id": 72,
+                    "text": "Create simple confirmation?",
+                    "options": [
+                        "confirm()",
+                        "ask()",
+                        "verify()",
+                        "check()"
+                    ],
+                    "correct": 0,
+                    "explanation": "OK/Cancel."
+                },
+                {
+                    "id": 73,
+                    "text": "User input prompt?",
+                    "options": [
+                        "prompt()",
+                        "input()",
+                        "get()",
+                        "ask()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Input field."
+                },
+                {
+                    "id": 74,
+                    "text": "Open new window?",
+                    "options": [
+                        "window.open()",
+                        "new()",
+                        "tab()",
+                        "go()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Popup/Tab."
+                },
+                {
+                    "id": 75,
+                    "text": "Close window?",
+                    "options": [
+                        "window.close()",
+                        "exit()",
+                        "kill()",
+                        "stop()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Closes tab."
+                },
+                {
+                    "id": 76,
+                    "text": "Current URL?",
+                    "options": [
+                        "window.location.href",
+                        "url",
+                        "path",
+                        "link"
+                    ],
+                    "correct": 0,
+                    "explanation": "Address bar."
+                },
+                {
+                    "id": 77,
+                    "text": "Browser history back?",
+                    "options": [
+                        "history.back()",
+                        "prev()",
+                        "return()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Go back."
+                },
+                {
+                    "id": 78,
+                    "text": "Reload page?",
+                    "options": [
+                        "location.reload()",
+                        "refresh()",
+                        "f5()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Refresh."
+                },
+                {
+                    "id": 79,
+                    "text": "Screen width?",
+                    "options": [
+                        "screen.width",
+                        "window.width",
+                        "monitor",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Device screen."
+                },
+                {
+                    "id": 80,
+                    "text": "Navigator object?",
+                    "options": [
+                        "Browser info",
+                        "Map",
+                        "Location",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "User agent, OS."
+                }
+            ]
+        },
+        {
+            "setId": "js_basic_9",
+            "title": "Set 9: Error Handling",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Try block contents?",
+                    "options": [
+                        "Code that might error",
+                        "Error handling",
+                        "Cleanup",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Safe execution."
+                },
+                {
+                    "id": 82,
+                    "text": "Catch block?",
+                    "options": [
+                        "Handles error from try",
+                        "Start",
+                        "End",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Recovers."
+                },
+                {
+                    "id": 83,
+                    "text": "Finally block?",
+                    "options": [
+                        "Runs regardless of error",
+                        "Only success",
+                        "Only fail",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cleanup."
+                },
+                {
+                    "id": 84,
+                    "text": "Throw custom error?",
+                    "options": [
+                        "throw 'Error'",
+                        "raise",
+                        "error",
+                        "exception"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stops execution."
+                },
+                {
+                    "id": 85,
+                    "text": "Error object property?",
+                    "options": [
+                        ".message",
+                        ".text",
+                        ".info",
+                        ".content"
+                    ],
+                    "correct": 0,
+                    "explanation": "Description."
+                },
+                {
+                    "id": 86,
+                    "text": "ReferenceError?",
+                    "options": [
+                        "Variable not defined",
+                        "Syntax",
+                        "Type",
+                        "Range"
+                    ],
+                    "correct": 0,
+                    "explanation": "Missing var."
+                },
+                {
+                    "id": 87,
+                    "text": "TypeError?",
+                    "options": [
+                        "Value is wrong type",
+                        "Spelling",
+                        "Logic",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Method missing."
+                },
+                {
+                    "id": 88,
+                    "text": "SyntaxError?",
+                    "options": [
+                        "Code structure wrong",
+                        "Logic",
+                        "Run",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Parsing failed."
+                },
+                {
+                    "id": 89,
+                    "text": "Debugger keyword?",
+                    "options": [
+                        "Stops execution if tool open",
+                        "Prints",
+                        "Logs",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Breakpoint."
+                },
+                {
+                    "id": 90,
+                    "text": "Strict mode catches?",
+                    "options": [
+                        "Silent errors",
+                        "Logic",
+                        "UI",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Enforces rules."
+                }
+            ]
+        },
+        {
+            "setId": "js_basic_10",
+            "title": "Set 10: Logic & Types",
+            "questions": [
+                {
+                    "id": 91,
+                    "text": "AND operator?",
+                    "options": [
+                        "&&",
+                        "&",
+                        "and",
+                        "||"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logical AND."
+                },
+                {
+                    "id": 92,
+                    "text": "OR operator?",
+                    "options": [
+                        "||",
+                        "|",
+                        "or",
+                        "&&"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logical OR."
+                },
+                {
+                    "id": 93,
+                    "text": "NOT operator?",
+                    "options": [
+                        "!",
+                        "not",
+                        "~",
+                        "-"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inverts boolean."
+                },
+                {
+                    "id": 94,
+                    "text": "Ternary operator?",
+                    "options": [
+                        "cond ? true : false",
+                        "if else",
+                        "??",
+                        "::"
+                    ],
+                    "correct": 0,
+                    "explanation": "Short check."
+                },
+                {
+                    "id": 95,
+                    "text": "Nullish coalescing?",
+                    "options": [
+                        "??",
+                        "||",
+                        "&&",
+                        "??"
+                    ],
+                    "correct": 0,
+                    "explanation": "Checks null/undefined."
+                },
+                {
+                    "id": 96,
+                    "text": "Falsy values include?",
+                    "options": [
+                        "0, '', null, undefined",
+                        "1",
+                        "true",
+                        "[]"
+                    ],
+                    "correct": 0,
+                    "explanation": "Evaluate to false."
+                },
+                {
+                    "id": 97,
+                    "text": "Truthy values?",
+                    "options": [
+                        "Everything not falsy",
+                        "Only true",
+                        "1",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Most things."
+                },
+                {
+                    "id": 98,
+                    "text": "Type coercion?",
+                    "options": [
+                        "Auto conversion",
+                        "Manual",
+                        "Strict",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Weak typing."
+                },
+                {
+                    "id": 99,
+                    "text": "Infinity value?",
+                    "options": [
+                        "Number > limit",
+                        "Loop",
+                        "String",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Too big."
+                },
+                {
+                    "id": 100,
+                    "text": "typeof null?",
+                    "options": [
+                        "object",
+                        "null",
+                        "undefined",
+                        "number"
+                    ],
+                    "correct": 0,
+                    "explanation": "Historic bug."
+                }
+            ]
+        }
+    ]
+}

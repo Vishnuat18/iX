@@ -1,0 +1,2465 @@
+{
+    "topic": "Python Fullstack",
+    "sets": [
+        {
+            "setId": "pfs_1",
+            "title": "Set 1: Flask Basics",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "Flask is?",
+                    "options": [
+                        "Microframework",
+                        "Full stack",
+                        "DB",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Minimal."
+                },
+                {
+                    "id": 2,
+                    "text": "Route decorator?",
+                    "options": [
+                        "@app.route('/')",
+                        "@path",
+                        "@url",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mapping."
+                },
+                {
+                    "id": 3,
+                    "text": "Jinja2?",
+                    "options": [
+                        "Templating engine",
+                        "DB",
+                        "Server",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Views."
+                },
+                {
+                    "id": 4,
+                    "text": "Variable in template?",
+                    "options": [
+                        "{{ var }}",
+                        "{% var %}",
+                        "<var>",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Print."
+                },
+                {
+                    "id": 5,
+                    "text": "Control flow in template?",
+                    "options": [
+                        "{% if %}",
+                        "{{ if }}",
+                        "<if>",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logic."
+                },
+                {
+                    "id": 6,
+                    "text": "Request object?",
+                    "options": [
+                        "Global flask.request",
+                        "Args",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Context."
+                },
+                {
+                    "id": 7,
+                    "text": "flask.g?",
+                    "options": [
+                        "Global storage per req",
+                        "Google",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Context."
+                },
+                {
+                    "id": 8,
+                    "text": "Blueprints?",
+                    "options": [
+                        "Modularity/Components",
+                        "Plans",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scale."
+                },
+                {
+                    "id": 9,
+                    "text": "Application Factory?",
+                    "options": [
+                        "Function returning app",
+                        "Fact",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pattern."
+                },
+                {
+                    "id": 10,
+                    "text": "Session?",
+                    "options": [
+                        "Client side signed cookie",
+                        "Server",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Storage."
+                },
+                {
+                    "id": 11,
+                    "text": "Flash messages?",
+                    "options": [
+                        "One-time notifications",
+                        "Light",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "UI."
+                },
+                {
+                    "id": 12,
+                    "text": "Flask-WTF?",
+                    "options": [
+                        "Form handling",
+                        "What",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Extension."
+                },
+                {
+                    "id": 13,
+                    "text": "SQLAlchemy in Flask?",
+                    "options": [
+                        "Flask-SQLAlchemy",
+                        "Raw",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ext."
+                },
+                {
+                    "id": 14,
+                    "text": "Before request?",
+                    "options": [
+                        "@app.before_request",
+                        "Pre",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hook."
+                },
+                {
+                    "id": 15,
+                    "text": "Teardown context?",
+                    "options": [
+                        "Cleanup after req",
+                        "Tear",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lifecycle."
+                },
+                {
+                    "id": 16,
+                    "text": "Static files?",
+                    "options": [
+                        "/static folder",
+                        "Assets",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Serve."
+                },
+                {
+                    "id": 17,
+                    "text": "Debug mode?",
+                    "options": [
+                        "Auto reload/Debugger",
+                        "Bug",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dev."
+                },
+                {
+                    "id": 18,
+                    "text": "Restful extension?",
+                    "options": [
+                        "Flask-RESTful",
+                        "Rest",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "API."
+                },
+                {
+                    "id": 19,
+                    "text": "jsonify?",
+                    "options": [
+                        "Return JSON response",
+                        "Json",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Helper."
+                },
+                {
+                    "id": 20,
+                    "text": "Werkzeug?",
+                    "options": [
+                        "WSGI toolkit util",
+                        "Work",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Core."
+                }
+            ]
+        },
+        {
+            "setId": "pfs_2",
+            "title": "Set 2: Django Core",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Django is?",
+                    "options": [
+                        "Batteries included",
+                        "Micro",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Full stack."
+                },
+                {
+                    "id": 22,
+                    "text": "MVT?",
+                    "options": [
+                        "Model View Template",
+                        "MVC",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Arch."
+                },
+                {
+                    "id": 23,
+                    "text": "manage.py?",
+                    "options": [
+                        "CLI utility",
+                        "Manager",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tool."
+                },
+                {
+                    "id": 24,
+                    "text": "App vs Project?",
+                    "options": [
+                        "App is module, Project is collection",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Structure."
+                },
+                {
+                    "id": 25,
+                    "text": "settings.py?",
+                    "options": [
+                        "Config",
+                        "Set",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Global."
+                },
+                {
+                    "id": 26,
+                    "text": "urls.py?",
+                    "options": [
+                        "URL Dispatcher",
+                        "Link",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Routing."
+                },
+                {
+                    "id": 27,
+                    "text": "Model class?",
+                    "options": [
+                        "models.Model",
+                        "Class",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DB map."
+                },
+                {
+                    "id": 28,
+                    "text": "Migration?",
+                    "options": [
+                        "DB schema change",
+                        "Move",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Version."
+                },
+                {
+                    "id": 29,
+                    "text": "makemigrations?",
+                    "options": [
+                        "Create migration file",
+                        "Make",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prep."
+                },
+                {
+                    "id": 30,
+                    "text": "migrate?",
+                    "options": [
+                        "Apply to DB",
+                        "Run",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Exec."
+                },
+                {
+                    "id": 31,
+                    "text": "Admin interface?",
+                    "options": [
+                        "Built-in CRUD UI",
+                        "Admin",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Feature."
+                },
+                {
+                    "id": 32,
+                    "text": "ORM?",
+                    "options": [
+                        "Object Relational Mapper",
+                        "Map",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Query."
+                },
+                {
+                    "id": 33,
+                    "text": "QuerySet?",
+                    "options": [
+                        "Database records list",
+                        "Set",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lazy."
+                },
+                {
+                    "id": 34,
+                    "text": "Template inheritance?",
+                    "options": [
+                        "{% extends %}",
+                        "Inherit",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DRY."
+                },
+                {
+                    "id": 35,
+                    "text": "Context processor?",
+                    "options": [
+                        "Global template vars",
+                        "Ctx",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inject."
+                },
+                {
+                    "id": 36,
+                    "text": "Middleware?",
+                    "options": [
+                        "Req/Resp hooks",
+                        "Mid",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pipeline."
+                },
+                {
+                    "id": 37,
+                    "text": "Signals?",
+                    "options": [
+                        "Event system",
+                        "Signal",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Decouple."
+                },
+                {
+                    "id": 38,
+                    "text": "Forms?",
+                    "options": [
+                        "Validation & Rendering",
+                        "Input",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "User input."
+                },
+                {
+                    "id": 39,
+                    "text": "ModelForm?",
+                    "options": [
+                        "Form from Model",
+                        "Auto",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shortcut."
+                },
+                {
+                    "id": 40,
+                    "text": "WSGI?",
+                    "options": [
+                        "Web Server Gateway Interface",
+                        "Web",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Std."
+                }
+            ]
+        },
+        {
+            "setId": "pfs_3",
+            "title": "Set 3: Django Advanced",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "CBV vs FBV?",
+                    "options": [
+                        "Class vs Function Views",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Style."
+                },
+                {
+                    "id": 42,
+                    "text": "Generic Views?",
+                    "options": [
+                        "Pre-built patterns (ListView)",
+                        "Gen",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Speed."
+                },
+                {
+                    "id": 43,
+                    "text": "Mixin?",
+                    "options": [
+                        "Multiple inheritance helper",
+                        "Mix",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Compose."
+                },
+                {
+                    "id": 44,
+                    "text": "DRF?",
+                    "options": [
+                        "Django Rest Framework",
+                        "API",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Library."
+                },
+                {
+                    "id": 45,
+                    "text": "Serializer?",
+                    "options": [
+                        "Complex type to native Python",
+                        "Serial",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "JSON."
+                },
+                {
+                    "id": 46,
+                    "text": "ModelSerializer?",
+                    "options": [
+                        "Auto serializer from model",
+                        "Auto",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fast."
+                },
+                {
+                    "id": 47,
+                    "text": "ViewSets?",
+                    "options": [
+                        "Combine logic (CRUD)",
+                        "Set",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DRY API."
+                },
+                {
+                    "id": 48,
+                    "text": "Routers?",
+                    "options": [
+                        "Auto URL config for ViewSets",
+                        "Route",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Url."
+                },
+                {
+                    "id": 49,
+                    "text": "Auth backends?",
+                    "options": [
+                        "Custom logic",
+                        "Back",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flex."
+                },
+                {
+                    "id": 50,
+                    "text": "User model?",
+                    "options": [
+                        "AbstractBaseUser vs AbstractUser",
+                        "User",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Extend."
+                },
+                {
+                    "id": 51,
+                    "text": "Static vs Media?",
+                    "options": [
+                        "Assets vs User Uploads",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Storage."
+                },
+                {
+                    "id": 52,
+                    "text": "F expressions?",
+                    "options": [
+                        "DB level reference",
+                        "F",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Atomic."
+                },
+                {
+                    "id": 53,
+                    "text": "Q objects?",
+                    "options": [
+                        "Complex lookups (OR)",
+                        "Q",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Query."
+                },
+                {
+                    "id": 54,
+                    "text": "select_related?",
+                    "options": [
+                        "SQL Join (FK)",
+                        "Join",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Perf."
+                },
+                {
+                    "id": 55,
+                    "text": "prefetch_related?",
+                    "options": [
+                        "Separate lookup (M2M)",
+                        "Fetch",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Perf."
+                },
+                {
+                    "id": 56,
+                    "text": "Managers?",
+                    "options": [
+                        "Table level operations",
+                        "Boss",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Objects."
+                },
+                {
+                    "id": 57,
+                    "text": "Management commands?",
+                    "options": [
+                        "Custom CLI scripts",
+                        "Cmd",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Task."
+                },
+                {
+                    "id": 58,
+                    "text": "Caching?",
+                    "options": [
+                        "Redis/Memcached backend",
+                        "Cache",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Speed."
+                },
+                {
+                    "id": 59,
+                    "text": "Channels?",
+                    "options": [
+                        "WebSockets intro Django",
+                        "Chan",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Async."
+                },
+                {
+                    "id": 60,
+                    "text": "ASGI?",
+                    "options": [
+                        "Async WSGI",
+                        "Async",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "NextGen."
+                }
+            ]
+        },
+        {
+            "setId": "pfs_4",
+            "title": "Set 4: FastAPI",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "FastAPI is?",
+                    "options": [
+                        "Modern, Fast, Async",
+                        "Old",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Starlette."
+                },
+                {
+                    "id": 62,
+                    "text": "Pydantic?",
+                    "options": [
+                        "Data validation",
+                        "Py",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Models."
+                },
+                {
+                    "id": 63,
+                    "text": "Type Hints?",
+                    "options": [
+                        "Required for FastAPI",
+                        "Hint",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Core."
+                },
+                {
+                    "id": 64,
+                    "text": "Async/Await?",
+                    "options": [
+                        "Native support",
+                        "No",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Conc."
+                },
+                {
+                    "id": 65,
+                    "text": "Docs?",
+                    "options": [
+                        "Auto Swagger UI",
+                        "Doc",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Magic."
+                },
+                {
+                    "id": 66,
+                    "text": "Uvicorn?",
+                    "options": [
+                        "ASGI Server",
+                        "Uni",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Run."
+                },
+                {
+                    "id": 67,
+                    "text": "Dependency Inj?",
+                    "options": [
+                        "Depends()",
+                        "Inj",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Powerful."
+                },
+                {
+                    "id": 68,
+                    "text": "Path params?",
+                    "options": [
+                        "Func args",
+                        "Path",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Auto."
+                },
+                {
+                    "id": 69,
+                    "text": "Query params?",
+                    "options": [
+                        "Func args (defaults)",
+                        "Query",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Auto."
+                },
+                {
+                    "id": 70,
+                    "text": "Body?",
+                    "options": [
+                        "Pydantic model",
+                        "Body",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "JSON."
+                },
+                {
+                    "id": 71,
+                    "text": "Response Model?",
+                    "options": [
+                        "Output schema",
+                        "Resp",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Filter."
+                },
+                {
+                    "id": 72,
+                    "text": "Security?",
+                    "options": [
+                        "OAuth2 integrated",
+                        "Sec",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Util."
+                },
+                {
+                    "id": 73,
+                    "text": "Middleware?",
+                    "options": [
+                        "Starlette Middleware",
+                        "Mid",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Layer."
+                },
+                {
+                    "id": 74,
+                    "text": "Background Tasks?",
+                    "options": [
+                        "BackgroundTasks class",
+                        "Back",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Simple."
+                },
+                {
+                    "id": 75,
+                    "text": "Events?",
+                    "options": [
+                        "Startup/Shutdown",
+                        "Event",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hook."
+                },
+                {
+                    "id": 76,
+                    "text": "Routers?",
+                    "options": [
+                        "APIRouter",
+                        "Route",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Split."
+                },
+                {
+                    "id": 77,
+                    "text": "Testing?",
+                    "options": [
+                        "TestClient",
+                        "Test",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pytest."
+                },
+                {
+                    "id": 78,
+                    "text": "WebSockets?",
+                    "options": [
+                        "Supported",
+                        "No",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Realtime."
+                },
+                {
+                    "id": 79,
+                    "text": "CORS?",
+                    "options": [
+                        "CORSMiddleware",
+                        "Cross",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Config."
+                },
+                {
+                    "id": 80,
+                    "text": "Performance?",
+                    "options": [
+                        "Comparable to NodeJS/Go",
+                        "Slow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fast."
+                }
+            ]
+        },
+        {
+            "setId": "pfs_5",
+            "title": "Set 5: Async & Celery",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Celery?",
+                    "options": [
+                        "Distributed Task Queue",
+                        "Veg",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Async."
+                },
+                {
+                    "id": 82,
+                    "text": "Broker?",
+                    "options": [
+                        "Message transport (Redis/Rabbit)",
+                        "Brok",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Queue."
+                },
+                {
+                    "id": 83,
+                    "text": "Backend?",
+                    "options": [
+                        "Result storage",
+                        "Back",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Store."
+                },
+                {
+                    "id": 84,
+                    "text": "Task?",
+                    "options": [
+                        "@app.task",
+                        "Do",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unit."
+                },
+                {
+                    "id": 85,
+                    "text": "Worker?",
+                    "options": [
+                        "Process executing tasks",
+                        "Work",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Consumer."
+                },
+                {
+                    "id": 86,
+                    "text": "Beat?",
+                    "options": [
+                        "Scheduler",
+                        "Music",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cron."
+                },
+                {
+                    "id": 87,
+                    "text": "Asyncio?",
+                    "options": [
+                        "Concurrent programming",
+                        "Sync",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lib."
+                },
+                {
+                    "id": 88,
+                    "text": "Event Loop?",
+                    "options": [
+                        "Core of asyncio",
+                        "Loop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Driver."
+                },
+                {
+                    "id": 89,
+                    "text": "Coroutine?",
+                    "options": [
+                        "Awaitable func",
+                        "Sub",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Async def."
+                },
+                {
+                    "id": 90,
+                    "text": "Task (Asyncio)?",
+                    "options": [
+                        "Wrapped coroutine",
+                        "Task",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Future."
+                },
+                {
+                    "id": 91,
+                    "text": "Redis as Broker?",
+                    "options": [
+                        "Fast, simple",
+                        "No",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Popular."
+                },
+                {
+                    "id": 92,
+                    "text": "RabbitMQ?",
+                    "options": [
+                        "Robust broker",
+                        "Bunny",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Enterprise."
+                },
+                {
+                    "id": 93,
+                    "text": "Flower?",
+                    "options": [
+                        "Celery monitoring",
+                        "Plant",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "UI."
+                },
+                {
+                    "id": 94,
+                    "text": "Aiohttp?",
+                    "options": [
+                        "Async HTTP Client/Server",
+                        "Web",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lib."
+                },
+                {
+                    "id": 95,
+                    "text": "Retry policy?",
+                    "options": [
+                        "On failure logic",
+                        "Try",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Resilient."
+                },
+                {
+                    "id": 96,
+                    "text": "Eta/Countdown?",
+                    "options": [
+                        "Delayed execution",
+                        "Timer",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Schedule."
+                },
+                {
+                    "id": 97,
+                    "text": "Canvas?",
+                    "options": [
+                        "Workflows (Chain, Group)",
+                        "Art",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flow."
+                },
+                {
+                    "id": 98,
+                    "text": "Prefetch limit?",
+                    "options": [
+                        "Optimize worker load",
+                        "Lim",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tuning."
+                },
+                {
+                    "id": 99,
+                    "text": "Serialization?",
+                    "options": [
+                        "Pickle/JSON",
+                        "Data",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Format."
+                },
+                {
+                    "id": 100,
+                    "text": "Rate limiting?",
+                    "options": [
+                        "Control flow",
+                        "Rate",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Throttle."
+                }
+            ]
+        },
+        {
+            "setId": "pfs_6",
+            "title": "Set 6: Testing & QA",
+            "questions": [
+                {
+                    "id": 101,
+                    "text": "Pytest?",
+                    "options": [
+                        "Testing framework",
+                        "Test",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Popular."
+                },
+                {
+                    "id": 102,
+                    "text": "Fixture?",
+                    "options": [
+                        "Setup code/Data",
+                        "Fix",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inject."
+                },
+                {
+                    "id": 103,
+                    "text": "conftest.py?",
+                    "options": [
+                        "Shared fixtures",
+                        "Conf",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scope."
+                },
+                {
+                    "id": 104,
+                    "text": "Parametrize?",
+                    "options": [
+                        "Run multiple inputs",
+                        "Param",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DRY."
+                },
+                {
+                    "id": 105,
+                    "text": "Mocking?",
+                    "options": [
+                        "unittest.mock / pytest-mock",
+                        "Fake",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Isolate."
+                },
+                {
+                    "id": 106,
+                    "text": "Coverage?",
+                    "options": [
+                        "pytest-cov",
+                        "Cov",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Metric."
+                },
+                {
+                    "id": 107,
+                    "text": "Tox?",
+                    "options": [
+                        "Env testing automation",
+                        "Poison",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Matrix."
+                },
+                {
+                    "id": 108,
+                    "text": "UnitTest?",
+                    "options": [
+                        "Std lib module",
+                        "Unit",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Classic."
+                },
+                {
+                    "id": 109,
+                    "text": "Integration Test?",
+                    "options": [
+                        "DB/API connected",
+                        "Int",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flow."
+                },
+                {
+                    "id": 110,
+                    "text": "Factory Boy?",
+                    "options": [
+                        "Data generator",
+                        "Fact",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fixtures."
+                },
+                {
+                    "id": 111,
+                    "text": "Faker?",
+                    "options": [
+                        "Fake data lib",
+                        "Fake",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Data."
+                },
+                {
+                    "id": 112,
+                    "text": "Selenium?",
+                    "options": [
+                        "Browser automation",
+                        "Web",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "E2E."
+                },
+                {
+                    "id": 113,
+                    "text": "Linting?",
+                    "options": [
+                        "Static analysis",
+                        "Lint",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Quality."
+                },
+                {
+                    "id": 114,
+                    "text": "Mypy?",
+                    "options": [
+                        "Type checker",
+                        "Type",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Static."
+                },
+                {
+                    "id": 115,
+                    "text": "CI Integration?",
+                    "options": [
+                        "GitHub Actions/GitLab",
+                        "CI",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Auto."
+                },
+                {
+                    "id": 116,
+                    "text": "Assertion?",
+                    "options": [
+                        "assert x == y",
+                        "Check",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Verify."
+                },
+                {
+                    "id": 117,
+                    "text": "Monkeypatch?",
+                    "options": [
+                        "Dynamic attribute mod",
+                        "Patch",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pytest."
+                },
+                {
+                    "id": 118,
+                    "text": "Doctest?",
+                    "options": [
+                        "Test in docstrings",
+                        "Doc",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Simple."
+                },
+                {
+                    "id": 119,
+                    "text": "Locust?",
+                    "options": [
+                        "Load testing",
+                        "Bug",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Perf."
+                },
+                {
+                    "id": 120,
+                    "text": "Black/Isort?",
+                    "options": [
+                        "Formatters",
+                        "Style",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Clean."
+                }
+            ]
+        },
+        {
+            "setId": "pfs_7",
+            "title": "Set 7: Database & ORM",
+            "questions": [
+                {
+                    "id": 121,
+                    "text": "SQLAlchemy?",
+                    "options": [
+                        "Powerful ORM",
+                        "SQL",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Core."
+                },
+                {
+                    "id": 122,
+                    "text": "Session?",
+                    "options": [
+                        "DB transaction scope",
+                        "Sess",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Handle."
+                },
+                {
+                    "id": 123,
+                    "text": "Model?",
+                    "options": [
+                        "Declarative Base",
+                        "Mod",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Table."
+                },
+                {
+                    "id": 124,
+                    "text": "Alembic?",
+                    "options": [
+                        "Migrations for SQLAlchemy",
+                        "Mig",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Version."
+                },
+                {
+                    "id": 125,
+                    "text": "Relationship?",
+                    "options": [
+                        "1-N, N-N",
+                        "Rel",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Link."
+                },
+                {
+                    "id": 126,
+                    "text": "Lazy loading?",
+                    "options": [
+                        "Default in SQLA",
+                        "Lazy",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Perf."
+                },
+                {
+                    "id": 127,
+                    "text": "Eager loading?",
+                    "options": [
+                        "joinedload()",
+                        "Eager",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Join."
+                },
+                {
+                    "id": 128,
+                    "text": "Core vs ORM?",
+                    "options": [
+                        "SQL builder vs Objects",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Layers."
+                },
+                {
+                    "id": 129,
+                    "text": "Filter?",
+                    "options": [
+                        ".filter()",
+                        "Search",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Where."
+                },
+                {
+                    "id": 130,
+                    "text": "Query?",
+                    "options": [
+                        "SELECT construct",
+                        "Ask",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Read."
+                },
+                {
+                    "id": 131,
+                    "text": "Commit/Rollback?",
+                    "options": [
+                        "Transaction control",
+                        "Tx",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "ACID."
+                },
+                {
+                    "id": 132,
+                    "text": "Postgres driver?",
+                    "options": [
+                        "psycopg2",
+                        "pg",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Conn."
+                },
+                {
+                    "id": 133,
+                    "text": "Async ORM?",
+                    "options": [
+                        "Tortoise / SQLModel / AsyncPG",
+                        "Future",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Modern."
+                },
+                {
+                    "id": 134,
+                    "text": "Tortoise ORM?",
+                    "options": [
+                        "Async inspired by Django",
+                        "Turtle",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Async."
+                },
+                {
+                    "id": 135,
+                    "text": "Peewee?",
+                    "options": [
+                        "Lightweight ORM",
+                        "Small",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Simple."
+                },
+                {
+                    "id": 136,
+                    "text": "PonyORM?",
+                    "options": [
+                        "Generator query syntax",
+                        "Horse",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unique."
+                },
+                {
+                    "id": 137,
+                    "text": "MongoEngine?",
+                    "options": [
+                        "ODM for Mongo",
+                        "Mongo",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "NoSQL."
+                },
+                {
+                    "id": 138,
+                    "text": "Motor?",
+                    "options": [
+                        "Async Mongo Driver",
+                        "Engine",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Async."
+                },
+                {
+                    "id": 139,
+                    "text": "Connection Pool?",
+                    "options": [
+                        "Manage DB cxns",
+                        "Pool",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Resource."
+                },
+                {
+                    "id": 140,
+                    "text": "N+1 Problem?",
+                    "options": [
+                        "Loading loop issue",
+                        "Math",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Perf."
+                }
+            ]
+        },
+        {
+            "setId": "pfs_8",
+            "title": "Set 8: Deployment & DevOps",
+            "questions": [
+                {
+                    "id": 141,
+                    "text": "Gunicorn?",
+                    "options": [
+                        "WSGI HTTP Server",
+                        "Gun",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prod."
+                },
+                {
+                    "id": 142,
+                    "text": "Nginx?",
+                    "options": [
+                        "Reverse Proxy",
+                        "Web",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Front."
+                },
+                {
+                    "id": 143,
+                    "text": "Docker?",
+                    "options": [
+                        "Containerization",
+                        "Whale",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Std."
+                },
+                {
+                    "id": 144,
+                    "text": "Docker Compose?",
+                    "options": [
+                        "Multi-container orchestration",
+                        "Comp",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Local."
+                },
+                {
+                    "id": 145,
+                    "text": "Supervisor?",
+                    "options": [
+                        "Process manager",
+                        "Super",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Control."
+                },
+                {
+                    "id": 146,
+                    "text": "Systemd?",
+                    "options": [
+                        "Linux service manager",
+                        "Sys",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "OS."
+                },
+                {
+                    "id": 147,
+                    "text": "WSGI vs ASGI?",
+                    "options": [
+                        "Sync vs Async",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Interface."
+                },
+                {
+                    "id": 148,
+                    "text": "Heroku?",
+                    "options": [
+                        "PaaS",
+                        "Hero",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Easy."
+                },
+                {
+                    "id": 149,
+                    "text": "Procfile?",
+                    "options": [
+                        "Heroku start command",
+                        "Proc",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Config."
+                },
+                {
+                    "id": 150,
+                    "text": "Environment Vars?",
+                    "options": [
+                        "Config secrets (.env)",
+                        "Env",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Security."
+                },
+                {
+                    "id": 151,
+                    "text": "Poetry?",
+                    "options": [
+                        "Dependency Manager",
+                        "Poem",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Modern."
+                },
+                {
+                    "id": 152,
+                    "text": "Pipenv?",
+                    "options": [
+                        "Pip + Virtualenv",
+                        "Pip",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tool."
+                },
+                {
+                    "id": 153,
+                    "text": "requirements.txt?",
+                    "options": [
+                        "List of packages",
+                        "Req",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Std."
+                },
+                {
+                    "id": 154,
+                    "text": "AWS Lambda (Python)?",
+                    "options": [
+                        "Serverless handler",
+                        "Func",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cloud."
+                },
+                {
+                    "id": 155,
+                    "text": "Zappa?",
+                    "options": [
+                        "Deploy Python to Lambda",
+                        "Frank",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tool."
+                },
+                {
+                    "id": 156,
+                    "text": "Sentry?",
+                    "options": [
+                        "Error tracking",
+                        "Guard",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Monitor."
+                },
+                {
+                    "id": 157,
+                    "text": "New Relic?",
+                    "options": [
+                        "APM",
+                        "New",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Perf."
+                },
+                {
+                    "id": 158,
+                    "text": "Log rotation?",
+                    "options": [
+                        "Manage log files",
+                        "Spin",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ops."
+                },
+                {
+                    "id": 159,
+                    "text": "Structuring?",
+                    "options": [
+                        "Package layout",
+                        "Struct",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Clean."
+                },
+                {
+                    "id": 160,
+                    "text": "uWSGI?",
+                    "options": [
+                        "App Server",
+                        "Micro",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Alt."
+                }
+            ]
+        },
+        {
+            "setId": "pfs_9",
+            "title": "Set 9: Security",
+            "questions": [
+                {
+                    "id": 161,
+                    "text": "SQL Injection?",
+                    "options": [
+                        "Malicious SQL query",
+                        "Inj",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sanitize."
+                },
+                {
+                    "id": 162,
+                    "text": "XSS?",
+                    "options": [
+                        "Cross Site Scripting",
+                        "Script",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Escape."
+                },
+                {
+                    "id": 163,
+                    "text": "CSRF?",
+                    "options": [
+                        "Request Forgery",
+                        "Fake",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Token."
+                },
+                {
+                    "id": 164,
+                    "text": "Hash passwords?",
+                    "options": [
+                        "Always (Argon2/BCrypt)",
+                        "Plain",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Safe."
+                },
+                {
+                    "id": 165,
+                    "text": "Passlib?",
+                    "options": [
+                        "Hashing library",
+                        "Lib",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tool."
+                },
+                {
+                    "id": 166,
+                    "text": "JWT?",
+                    "options": [
+                        "Stateless Token",
+                        "Auth",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "API."
+                },
+                {
+                    "id": 167,
+                    "text": "Session Cookie?",
+                    "options": [
+                        "Secure, HttpOnly",
+                        "Cook",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flags."
+                },
+                {
+                    "id": 168,
+                    "text": "Dependency scan?",
+                    "options": [
+                        "Check CVEs",
+                        "Scan",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Safety."
+                },
+                {
+                    "id": 169,
+                    "text": "Bandit?",
+                    "options": [
+                        "Security linter",
+                        "Robber",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Check."
+                },
+                {
+                    "id": 170,
+                    "text": "HTTPS?",
+                    "options": [
+                        "TLS Encryption",
+                        "Lock",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Transport."
+                },
+                {
+                    "id": 171,
+                    "text": "Rate Limiting?",
+                    "options": [
+                        "Prevent DDoS",
+                        "Limit",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access."
+                },
+                {
+                    "id": 172,
+                    "text": "Input Validation?",
+                    "options": [
+                        "Don't trust user",
+                        "Valid",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rule 1."
+                },
+                {
+                    "id": 173,
+                    "text": "Clickjacking?",
+                    "options": [
+                        "Iframe attack",
+                        "Click",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Header."
+                },
+                {
+                    "id": 174,
+                    "text": "Secrets management?",
+                    "options": [
+                        "Don't commit to git",
+                        "Secret",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Env."
+                },
+                {
+                    "id": 175,
+                    "text": "Debug=False?",
+                    "options": [
+                        "In production",
+                        "True",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Vital."
+                },
+                {
+                    "id": 176,
+                    "text": "Allowed Hosts?",
+                    "options": [
+                        "Whitelist domain",
+                        "Host",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Django."
+                },
+                {
+                    "id": 177,
+                    "text": "CORS Headers?",
+                    "options": [
+                        "Control origin access",
+                        "Head",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Browser."
+                },
+                {
+                    "id": 178,
+                    "text": "User Roles?",
+                    "options": [
+                        "RBAC",
+                        "Role",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "AuthZ."
+                },
+                {
+                    "id": 179,
+                    "text": "OAuth?",
+                    "options": [
+                        "Third party login",
+                        "Auth",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flow."
+                },
+                {
+                    "id": 180,
+                    "text": "LetsEncrypt?",
+                    "options": [
+                        "Free SSL Certs",
+                        "Let",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cert."
+                }
+            ]
+        },
+        {
+            "setId": "pfs_10",
+            "title": "Set 10: Best Practices",
+            "questions": [
+                {
+                    "id": 181,
+                    "text": "Virtual Environments?",
+                    "options": [
+                        "Isolate projects",
+                        "Virt",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hygiene."
+                },
+                {
+                    "id": 182,
+                    "text": "Type Hinting?",
+                    "options": [
+                        "Modern Python",
+                        "Hint",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Clarity."
+                },
+                {
+                    "id": 183,
+                    "text": "Documentation?",
+                    "options": [
+                        "Sphinx/MkDocs",
+                        "Doc",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Read."
+                },
+                {
+                    "id": 184,
+                    "text": "Logging?",
+                    "options": [
+                        "Not print statements",
+                        "Log",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ops."
+                },
+                {
+                    "id": 185,
+                    "text": "Code Style?",
+                    "options": [
+                        "PEP8",
+                        "Style",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Std."
+                },
+                {
+                    "id": 186,
+                    "text": "Refactoring?",
+                    "options": [
+                        "Continuous improvement",
+                        "Ref",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Debt."
+                },
+                {
+                    "id": 187,
+                    "text": "SOLID?",
+                    "options": [
+                        "Principles",
+                        "Hard",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Design."
+                },
+                {
+                    "id": 188,
+                    "text": "Design Patterns?",
+                    "options": [
+                        "Singleton, Factory...",
+                        "Art",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Soln."
+                },
+                {
+                    "id": 189,
+                    "text": "12 Factor App?",
+                    "options": [
+                        "Methodology",
+                        "12",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cloud."
+                },
+                {
+                    "id": 190,
+                    "text": "Code Review?",
+                    "options": [
+                        "Peer check",
+                        "Rev",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Quality."
+                },
+                {
+                    "id": 191,
+                    "text": "Git Flow?",
+                    "options": [
+                        "Branching strategy",
+                        "Flow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "VCS."
+                },
+                {
+                    "id": 192,
+                    "text": "Semantic Versioning?",
+                    "options": [
+                        "Major.Minor.Patch",
+                        "Sem",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ver."
+                },
+                {
+                    "id": 193,
+                    "text": "Changelog?",
+                    "options": [
+                        "Track changes",
+                        "Log",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hist."
+                },
+                {
+                    "id": 194,
+                    "text": "Readme?",
+                    "options": [
+                        "Entry point doc",
+                        "Read",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Intro."
+                },
+                {
+                    "id": 195,
+                    "text": "License?",
+                    "options": [
+                        "Legal usage",
+                        "Law",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rights."
+                },
+                {
+                    "id": 196,
+                    "text": "Contributing.md?",
+                    "options": [
+                        "Guide for devs",
+                        "Contrib",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Open src."
+                },
+                {
+                    "id": 197,
+                    "text": "Makefile?",
+                    "options": [
+                        "Shortcut commands",
+                        "Make",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Script."
+                },
+                {
+                    "id": 198,
+                    "text": "Pre-commit hooks?",
+                    "options": [
+                        "Auto checks",
+                        "Hook",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lint."
+                },
+                {
+                    "id": 199,
+                    "text": "Profiling?",
+                    "options": [
+                        "cProfile to find bottlenecks",
+                        "Profile",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Perf."
+                },
+                {
+                    "id": 200,
+                    "text": "Keep learning?",
+                    "options": [
+                        "Always",
+                        "Never",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Life."
+                }
+            ]
+        }
+    ]
+}

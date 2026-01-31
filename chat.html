@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iX Chat | Real-Time Connect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/back-button.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- Back Button -->
+    <a href="index.html" class="btn-back-global" style="top: 20px; left: 20px;">
+        <i class="fas fa-chevron-left"></i> <span>Home</span>
+    </a>
+
+    <!-- Debug Switcher -->
+    <!-- Back Button -->
+    <a href="index.html" class="btn-back-global" style="top: 20px; left: 20px;">
+        <i class="fas fa-chevron-left"></i> <span>Home</span>
+    </a>
+
+    <div class="chat-app-container">
+        <!-- Sidebar -->
+        <div class="chat-sidebar">
+            <div class="chat-sidebar-header">
+                <div class="user-block">
+                    <div class="my-avatar" id="myAvatarDisplay">U</div>
+                    <div>
+                        <div style="font-weight:bold; font-size:1.1rem;" id="myUserName">User</div>
+                        <div style="font-size:0.8rem; color:#aaa; font-family:monospace;" id="myUserID">ID: ...</div>
+                    </div>
+                </div>
+                <div class="sidebar-actions">
+                    <i class="fas fa-user-plus" onclick="openAddFriend()" title="Add Friend"></i>
+                    <i class="fas fa-cog" title="Settings"></i>
+                </div>
+            </div>
+
+            <div class="tab-bar">
+                <div class="tab active" onclick="switchTab('chats')">Chats</div>
+                <div class="tab" onclick="switchTab('requests')">Requests <span id="reqBadge" class="badge"
+                        style="display:none; background:var(--neon-purple); padding:2px 6px; border-radius:10px; font-size:0.7rem;">0</span>
+                </div>
+            </div>
+
+            <div class="chat-list" id="chatList">
+                <!-- JS Injected -->
+            </div>
+            <div class="chat-list" id="requestList" style="display:none;">
+                <!-- JS Injected -->
+            </div>
+        </div>
+
+        <!-- Main Chat -->
+        <div class="chat-main" id="chatMain">
+            <!-- Empty State -->
+            <div id="emptyState"
+                style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; text-align:center;">
+                <div style="font-size: 4rem; color: rgba(255,255,255,0.1); margin-bottom: 20px;">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h2 style="color: #fff; margin-bottom: 10px;">iX Neural Link</h2>
+                <p style="color: #888;">Select a contact to establish secure connection.</p>
+            </div>
+
+            <!-- Active Chat -->
+            <div id="activeChat" style="display:none; flex-direction:column; height:100%;">
+                <div class="chat-header">
+                    <div style="display:flex; align-items:center; gap:15px;">
+                        <div class="chat-item-avatar" id="headerAvatar" style="background:#555;">U</div>
+                        <div>
+                            <div style="font-weight:bold; font-size:1.1rem;" id="headerName">User</div>
+                            <div
+                                style="font-size:0.8rem; color:var(--neon-blue); display:flex; align-items:center; gap:5px;">
+                                <span
+                                    style="display:block; width:6px; height:6px; background:var(--neon-blue); border-radius:50%; box-shadow:0 0 5px var(--neon-blue);"></span>
+                                Online
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone" style="color:#aaa; cursor:pointer; margin-right:20px;"></i>
+                        <i class="fas fa-video" style="color:#aaa; cursor:pointer;"></i>
+                    </div>
+                </div>
+
+                <div class="chat-body" id="msgContainer">
+                    <!-- Messages -->
+                </div>
+
+                <div class="chat-input-wrapper">
+                    <i class="fas fa-plus" style="color:#888; font-size:1.2rem; cursor:pointer;"></i>
+                    <input type="text" class="chat-input" id="msgInput" placeholder="Type a message...">
+                    <button class="btn-send" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="problems/index.html" class="mobile-nav-item">
+            <i class="fas fa-code"></i>
+            <span>Coding</span>
+        </a>
+        <a href="quiz_landing.html" class="mobile-nav-item">
+            <i class="fas fa-brain"></i>
+            <span>Quiz</span>
+        </a>
+        <a href="community.html" class="mobile-nav-item">
+            <i class="fas fa-users"></i>
+            <span>iX Link</span>
+        </a>
+        <a href="profile.html" class="mobile-nav-item">
+            <i class="fas fa-user-circle"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/admin-bot.js"></script>
+    <script>
+        // --- REAL-TIME LOGIC ---
+
+        // 1. User Identity Management
+        let currentUser = Auth.getUser();
+        if (!currentUser) window.location.href = 'login.html';
+
+        // Consistent User ID check
+        let myID = currentUser.id || 'IX-' + simpleHash(currentUser.username);
+
+        function simpleHash(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charCodeAt(i);
+                hash = (hash << 5) - hash + char;
+                hash = hash & hash;
+            }
+            return Math.abs(hash).toString().substring(0, 6);
+        }
+
+        // Display Info
+        document.getElementById('myUserName').innerText = currentUser.username;
+        document.getElementById('myUserID').innerText = 'ID: ' + myID;
+        document.getElementById('myAvatarDisplay').innerText = currentUser.username[0].toUpperCase();
+
+        // 2. Data Loading
+        function getGlobalDB() {
+            return JSON.parse(localStorage.getItem('ix_global_db') || '{"requests":[], "messages":[]}');
+        }
+
+        function saveGlobalDB(db) {
+            localStorage.setItem('ix_global_db', JSON.stringify(db));
+        }
+
+        let contactList = []; // Local "Friends"
+        let activeChatId = null;
+
+        function loadContacts() {
+            // "Friends" are stored per user
+            const key = `ix_friends_${currentUser.username}`;
+            contactList = JSON.parse(localStorage.getItem(key) || '[]');
+
+            // --- ADMIN BOT AUTO ADD ---
+            const adminExists = contactList.find(c => c.id === AdminBot.ID);
+            if (!adminExists) {
+                contactList.unshift({
+                    id: AdminBot.ID,
+                    name: AdminBot.Name,
+                    status: 'accepted',
+                    isBot: true
+                });
+                saveContacts();
+
+                // Send Welcome Message if needed
+                setTimeout(() => {
+                    const db = getGlobalDB();
+                    const hasWelcome = db.messages.some(m => m.from === AdminBot.ID && m.to === myID);
+                    if (!hasWelcome) {
+                        db.messages.push({
+                            id: Date.now(), from: AdminBot.ID, to: myID,
+                            text: "Welcome to the iX Platform! I'm the owner. How can I assist you today?",
+                            time: Date.now()
+                        });
+                        saveGlobalDB(db);
+                        if (activeChatId === AdminBot.ID) renderMessages(AdminBot.ID);
+                    }
+                }, 1000);
+            }
+
+            renderSidebar();
+        }
+
+        // 3. Sync Listeners
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'ix_global_db') {
+                processIncomingUpdates();
+            }
+        });
+
+        setInterval(() => {
+            processIncomingUpdates();
+        }, 1000);
+
+        function processIncomingUpdates() {
+            const db = getGlobalDB();
+            let changed = false;
+
+            const myReqs = db.requests.filter(r => r.to === myID && r.status === 'pending');
+            myReqs.forEach(req => {
+                if (!contactList.find(c => c.id === req.from)) {
+                    contactList.push({
+                        id: req.from,
+                        name: req.fromName,
+                        status: 'pending'
+                    });
+                    changed = true;
+                }
+            });
+
+            if (activeChatId) renderMessages(activeChatId);
+
+            if (changed) {
+                saveContacts();
+                renderSidebar();
+                Auth.checkNotifications();
+            }
+        }
+
+        function saveContacts() {
+            localStorage.setItem(`ix_friends_${currentUser.username}`, JSON.stringify(contactList));
+        }
+
+        // 4. Rendering
+        function renderSidebar() {
+            const chatList = document.getElementById('chatList');
+            const reqList = document.getElementById('requestList');
+            chatList.innerHTML = '';
+            reqList.innerHTML = '';
+
+            let reqCount = 0;
+
+            contactList.forEach(c => {
+                if (c.status === 'accepted') {
+                    const el = document.createElement('div');
+                    el.className = `chat-item ${activeChatId === c.id ? 'active' : ''}`;
+                    el.onclick = () => openChat(c.id);
+
+                    let avatar = c.name[0];
+                    let style = '';
+                    if (c.id === AdminBot.ID) {
+                        avatar = AdminBot.Avatar;
+                        style = 'background: linear-gradient(135deg, #ffd700, #ffaa00); color: #000;';
+                    }
+
+                    el.innerHTML = `
+                        <div class="chat-item-avatar" style="${style}">${avatar}</div>
+                        <div class="chat-item-info">
+                            <div class="chat-name">${c.name} ${c.id === AdminBot.ID ? '<i class="fas fa-check-circle" style="color:#00aaff; font-size:0.8rem;"></i>' : ''}</div>
+                            <div class="chat-preview">Tap to chat</div>
+                        </div>
+                    `;
+                    chatList.appendChild(el);
+                } else {
+                    reqCount++;
+                    const el = document.createElement('div');
+                    el.className = 'chat-item';
+                    el.style.cursor = 'default';
+                    el.innerHTML = `
+                         <div class="chat-item-avatar" style="background:#444;">?</div>
+                        <div class="chat-item-info">
+                            <div class="chat-name">${c.id}</div>
+                            <div style="font-size:0.8rem; color:var(--neon-purple);">Request received</div>
+                            <div style="margin-top:5px; display:flex; gap:10px;">
+                                <button onclick="acceptReq('${c.id}')" style="background:var(--neon-blue); border:none; padding:4px 10px; border-radius:4px; font-weight:bold; cursor:pointer;">Accept</button>
+                            </div>
+                        </div>
+                    `;
+                    reqList.appendChild(el);
+                }
+            });
+
+            const badge = document.getElementById('reqBadge');
+            if (reqCount > 0) {
+                badge.innerText = reqCount;
+                badge.style.display = 'inline-block';
+            } else {
+                badge.style.display = 'none';
+            }
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            if (tab === 'chats') {
+                document.querySelector('.tab:nth-child(1)').classList.add('active');
+                document.getElementById('chatList').style.display = 'block';
+                document.getElementById('requestList').style.display = 'none';
+            } else {
+                document.querySelector('.tab:nth-child(2)').classList.add('active');
+                document.getElementById('chatList').style.display = 'none';
+                document.getElementById('requestList').style.display = 'block';
+            }
+        }
+
+        // 5. Actions
+        function openAddFriend() {
+            Swal.fire({
+                title: 'Add Friend',
+                input: 'text',
+                inputPlaceholder: 'Enter Friend ID (e.g., IX-1234)',
+                background: '#111', color: '#fff',
+                showCancelButton: true
+            }).then((res) => {
+                if (res.isConfirmed && res.value) {
+                    const targetId = res.value.trim();
+                    if (targetId === myID) return Swal.fire('Error', 'Cannot add self', 'error');
+
+                    const db = getGlobalDB();
+                    db.requests.push({
+                        from: myID,
+                        fromName: currentUser.username,
+                        to: targetId,
+                        status: 'pending',
+                        time: Date.now()
+                    });
+                    saveGlobalDB(db);
+
+                    Swal.fire('Sent', `Request sent to ${targetId}`, 'success');
+                }
+            });
+        }
+
+        function acceptReq(id) {
+            const c = contactList.find(x => x.id === id);
+            if (c) {
+                c.status = 'accepted';
+                saveContacts();
+                renderSidebar();
+                switchTab('chats');
+            }
+        }
+
+        function openChat(id) {
+            activeChatId = id;
+            const c = contactList.find(x => x.id === id);
+
+            document.getElementById('emptyState').style.display = 'none';
+            document.getElementById('activeChat').style.display = 'flex';
+            document.getElementById('headerName').innerText = c.name;
+
+            if (id === AdminBot.ID) {
+                document.getElementById('headerAvatar').innerText = AdminBot.Avatar;
+                document.getElementById('headerAvatar').style.background = 'linear-gradient(135deg, #ffd700, #ffaa00)';
+                document.getElementById('headerAvatar').style.color = '#000';
+            } else {
+                document.getElementById('headerAvatar').innerText = c.name[0];
+                document.getElementById('headerAvatar').style.background = '#555';
+                document.getElementById('headerAvatar').style.color = '#fff';
+            }
+
+            renderMessages(id);
+            renderSidebar();
+        }
+
+        function renderMessages(peerId) {
+            const container = document.getElementById('msgContainer');
+            container.innerHTML = '';
+
+            const db = getGlobalDB();
+            const msgs = db.messages.filter(m =>
+                (m.from === myID && m.to === peerId) ||
+                (m.from === peerId && m.to === myID)
+            );
+
+            msgs.sort((a, b) => a.time - b.time);
+
+            msgs.forEach(m => {
+                const type = m.from === myID ? 'msg-out' : 'msg-in';
+                const date = new Date(m.time);
+                const timeStr = date.getHours() + ':' + String(date.getMinutes()).padStart(2, '0');
+
+                const div = document.createElement('div');
+                div.className = `msg ${type}`;
+                div.innerHTML = `
+                    ${m.text}
+                    <span class="msg-time">${timeStr}</span>
+                 `;
+                container.appendChild(div);
+            });
+
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function sendMessage() {
+            if (!activeChatId) return;
+            const input = document.getElementById('msgInput');
+            const txt = input.value.trim();
+            if (!txt) return;
+
+            const db = getGlobalDB();
+            db.messages.push({
+                id: Date.now() + Math.random(),
+                from: myID,
+                to: activeChatId,
+                text: txt,
+                time: Date.now()
+            });
+            saveGlobalDB(db);
+
+            input.value = '';
+            renderMessages(activeChatId);
+
+            // --- BOT REPLY LOGIC ---
+            if (activeChatId === AdminBot.ID) {
+                setTimeout(() => {
+                    const reply = AdminBot.getReply(txt);
+                    const dbNow = getGlobalDB();
+                    dbNow.messages.push({
+                        id: Date.now() + Math.random(),
+                        from: AdminBot.ID,
+                        to: myID,
+                        text: reply,
+                        time: Date.now()
+                    });
+                    saveGlobalDB(dbNow);
+                    renderMessages(activeChatId);
+                }, 1000 + Math.random() * 1000); // Realistic delay 1-2s
+            }
+        }
+
+        // Enter key
+        document.getElementById('msgInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // Init
+        loadContacts();
+
+    </script>
+</body>
+
+</html>

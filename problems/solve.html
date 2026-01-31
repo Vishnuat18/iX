@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solve Problem | iX Platform</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/back-button.css">
+    <!-- SweetAlert2 for Popups -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Tesseract.js for OCR -->
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js'></script>
+    <style>
+        body {
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            padding: 15px 40px;
+            height: 70px;
+        }
+
+        .main-container {
+            flex: 1;
+            display: flex;
+            height: calc(100vh - 70px);
+        }
+
+        .left-panel {
+            width: 40%;
+            padding: 30px;
+            overflow-y: auto;
+            border-right: 1px solid var(--glass-border);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right-panel {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            background: #1e1e1e;
+            /* Monaco bg */
+        }
+
+        .editor-container {
+            flex: 2;
+            position: relative;
+        }
+
+        .output-container {
+            flex: 1;
+            background: #111;
+            border-top: 1px solid #333;
+            color: #ccc;
+            padding: 15px;
+            font-family: monospace;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .output-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        #editor {
+            width: 100%;
+            height: 100%;
+        }
+
+        .action-bar {
+            padding: 10px 20px;
+            background: #252526;
+            display: flex;
+            gap: 10px;
+            border-bottom: 1px solid #333;
+            align-items: center;
+        }
+
+        .btn-run {
+            background: #444;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-run:hover {
+            background: #555;
+        }
+
+        .btn-submit {
+            background: var(--accent-success);
+            color: #000;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-submit:hover {
+            opacity: 0.9;
+        }
+
+        .bg-success {
+            background: rgba(0, 255, 157, 0.2);
+            border: 1px solid #00ff9d;
+            padding: 10px;
+            border-radius: 5px;
+            color: #00ff9d;
+            display: none;
+            margin-top: 10px;
+        }
+
+        /* Render HTML output */
+        #iframe-output {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: white;
+            display: none;
+            /* hidden unless web problem */
+        }
+
+        #console-output {
+            white-space: pre-wrap;
+        }
+
+        .editor-container {
+            /* Adjusted height done inline or via JS, but ensured flex grow */
+            flex: 1;
+            position: relative;
+        }
+
+        .editor-toolbar {
+            background: #252526;
+            padding: 5px 10px;
+            display: flex;
+            gap: 5px;
+            border-bottom: 1px solid #333;
+            align-items: center;
+        }
+
+        .editor-toolbar button {
+            background: transparent;
+            border: none;
+            color: #ccc;
+            padding: 5px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+
+
+        .editor-toolbar button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .toolbar-separator {
+            width: 1px;
+            height: 18px;
+            background: #444;
+            margin: 0 5px;
+        }
+
+        .btn-submit:disabled {
+            background: #444;
+            color: #888;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .timer-widget {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid #333;
+        }
+
+        .timer-display {
+            font-family: monospace;
+            font-size: 1.1rem;
+            color: var(--accent-primary);
+            font-weight: bold;
+        }
+
+        .timer-input {
+            width: 50px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #555;
+            color: #fff;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .timer-btn {
+            background: none;
+            border: none;
+            color: #888;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .timer-btn:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-module" style="padding: 0 5%;">
+        <div class="header-left">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a>
+                <span class="separator">/</span>
+                <a href="index.html">Problems</a>
+                <span class="separator">/</span>
+                <span class="current">Solve</span>
+            </div>
+        </div>
+        <div class="header-right" style="gap: 25px;">
+            <div class="xp-badge" id="headerXP"
+                style="display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.3); padding: 8px 15px; border-radius: 8px; border: 1px solid var(--accent-primary);">
+                <span style="color: var(--accent-primary); font-weight: bold; font-size: 0.9rem;">Score:</span>
+                <span id="userScore" style="font-size: 1.1rem; font-weight: 900; color: #fff;">0</span>
+            </div>
+            <div class="logo">iX <span style="font-weight:300">Platform</span></div>
+        </div>
+    </header>
+
+    <div class="sub-header">
+        <a href="index.html" class="btn-back-global">
+            <i class="fas fa-chevron-left"></i> <span>Back to Problems</span>
+        </a>
+    </div>
+
+    <style>
+        .lang-dropdown {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border: 1px solid #444;
+            padding: 5px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        /* Improved Toolbar Buttons */
+        .btn-tool {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: #2d2d2d;
+            border: 1px solid #444;
+            border-radius: 4px;
+            color: #ccc;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .btn-tool:hover {
+            background: #383838;
+            border-color: #666;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-tool:active {
+            transform: translateY(0);
+        }
+
+        .btn-tool:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-compile {
+            color: #61afef;
+            border-color: rgba(97, 175, 239, 0.3);
+        }
+
+        .btn-execute {
+            color: #98c379;
+            border-color: rgba(152, 195, 121, 0.3);
+        }
+
+        .btn-verify {
+            color: #e5c07b;
+            border-color: rgba(229, 192, 123, 0.3);
+        }
+
+        .btn-submit {
+            color: #abb2bf;
+            border-color: #4b5263;
+        }
+
+        .btn-submit:not(:disabled) {
+            background: #2c3e50;
+            color: #fff;
+            border-color: #61afef;
+        }
+
+        /* Test Result UI Styles */
+        .test-results-container {
+            display: none;
+            /* Hidden by default */
+            flex-direction: column;
+            height: 100%;
+            background: #1e1e1e;
+        }
+
+        .test-stats {
+            padding: 15px;
+            background: #252526;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .test-stats h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .test-tabs {
+            display: flex;
+            overflow-x: auto;
+            background: #2d2d2d;
+            padding: 5px 10px;
+            gap: 5px;
+            border-bottom: 1px solid #333;
+        }
+
+        .test-tab {
+            padding: 5px 12px;
+            border-radius: 4px;
+            background: #333;
+            color: #aaa;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+        }
+
+        .test-tab.active {
+            background: #444;
+            color: #fff;
+            border: 1px solid #555;
+        }
+
+        .test-tab.success {
+            color: #00ff9d;
+        }
+
+        .test-tab.fail {
+            color: #ff6b6b;
+        }
+
+        .test-detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .test-detail-table th {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #444;
+            background: #252526;
+            color: #fff;
+        }
+
+        .test-detail-table td {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            vertical-align: top;
+            font-family: monospace;
+        }
+
+        .status-badge {
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .status-pass {
+            background: rgba(0, 255, 157, 0.1);
+            color: #00ff9d;
+            border: 1px solid rgba(0, 255, 157, 0.3);
+        }
+
+        .status-fail {
+            background: rgba(255, 107, 107, 0.1);
+            color: #ff6b6b;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+
+
+        .lang-dropdown:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .lang-dropdown option {
+            background: #252526;
+            color: #fff;
+        }
+
+        /* Calculator Widget */
+        #calc-widget {
+            position: absolute;
+            top: 100px;
+            right: 20px;
+            width: 320px;
+            /* Widened for Scientific */
+            background: #252526;
+            border: 1px solid #444;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1000;
+        }
+
+        #calc-header {
+            padding: 10px;
+            background: #333;
+            cursor: grab;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        #calc-display {
+            width: 100%;
+            height: 50px;
+            background: #111;
+            color: #00ff9d;
+            border: none;
+            padding: 10px;
+            text-align: right;
+            font-size: 1.5rem;
+            font-family: monospace;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            /* 5 Columns */
+            gap: 5px;
+            padding: 10px;
+        }
+
+        .calc-btn {
+            padding: 10px 5px;
+            border: none;
+            background: #444;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .calc-btn:hover {
+            background: #555;
+        }
+
+        .calc-btn.op {
+            background: var(--accent-secondary);
+            color: #000;
+        }
+
+        .calc-btn.sci {
+            background: #2c3e50;
+            color: #aeb6bf;
+            font-size: 0.8rem;
+        }
+
+        .calc-btn.sci:hover {
+            background: #34495e;
+            color: #fff;
+        }
+
+        .calc-btn.eq {
+            background: var(--accent-success);
+            color: #000;
+            grid-column: span 2;
+        }
+    </style>
+
+    <div class="main-container">
+        <!-- Left: Description -->
+        <div class="left-panel glass-panel" style="border-radius: 0; background: rgba(0,0,0,0.2);">
+            <div style="margin-bottom: 20px;">
+                <a href="index.html" style="color: #aaa; font-size: 0.9rem;"><i class="fas fa-arrow-left"></i>
+                    Problems</a>
+            </div>
+            <h1 id="prob-title" style="margin-bottom: 15px; font-size: 2rem;">Loading Title...</h1>
+            <span id="prob-diff" class="difficulty-badge" style="width: fit-content; margin-bottom: 20px;">Easy</span>
+            <span id="prob-cat" style="color: var(--accent-secondary); margin-left: 10px; font-size: 0.9rem;"></span>
+
+            <div id="prob-desc" style="line-height: 1.7; color: #ddd;">
+                Loading description...
+            </div>
+
+            <div id="success-msg" class="bg-success">
+                <i class="fas fa-check-circle"></i> Problem Completed!
+            </div>
+        </div>
+
+        <!-- Right: Editor & Output -->
+        <div class="right-panel">
+            <div class="action-bar">
+                <!-- Top Left: Execution Controls -->
+                <div style="display:flex; gap: 10px;">
+                    <button onclick="compileCode()" class="btn-tool btn-compile"><i class="fas fa-cogs"></i>
+                        Compile</button>
+                    <button onclick="executeCode()" class="btn-tool btn-execute"><i class="fas fa-play"></i>
+                        Execute</button>
+                    <button onclick="verifyCode()" class="btn-tool btn-verify"><i class="fas fa-flask"></i>
+                        Verify</button>
+                    <button id="toolbar-submit-btn" onclick="submitCode()" class="btn-tool btn-submit" disabled><i
+                            class="fas fa-cloud-upload-alt"></i> Submit</button>
+                </div>
+
+                <div style="flex:1"></div>
+                <div class="timer-widget">
+                    <i class="fas fa-stopwatch" style="color:#666"></i>
+                    <input type="number" id="timerInput" class="timer-input" placeholder="Min" min="1" max="120">
+                    <span id="timerDisplay" class="timer-display" style="display:none">00:00</span>
+                    <button id="timerBtn" class="timer-btn" onclick="toggleTimer()"><i class="fas fa-play"></i></button>
+                    <button id="timerReset" class="timer-btn" onclick="resetTimer()" style="display:none"><i
+                            class="fas fa-undo"></i></button>
+                </div>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="editor-toolbar">
+                <div class="toolbar-group">
+                    <select id="language-select" class="lang-dropdown">
+                        <option value="java">Java (JDK 15)</option>
+                        <option value="python">Python 3.10</option>
+                        <option value="c">C (GCC 10)</option>
+                        <option value="cpp">C++ (GCC 10)</option>
+                        <option value="js">JavaScript (Node 18)</option>
+                    </select>
+                </div>
+                <div class="toolbar-separator"></div>
+                <div class="toolbar-group">
+                    <button class="btn-tool" title="Scan Code (OCR)" onclick="triggerOCR()"
+                        style="color:var(--accent-primary);">
+                        <i class="fas fa-camera"></i> Scan
+                    </button>
+                    <button class="btn-tool" title="Calculator" onclick="toggleCalc()"
+                        style="color:var(--accent-secondary);">
+                        <i class="fas fa-calculator"></i> Calc
+                    </button>
+                </div>
+                <div style="flex:1;"></div>
+                <div class="toolbar-group">
+                    <button onclick="editorTrigger('undo')" title="Undo (Ctrl+Z)"><i class="fas fa-undo"></i></button>
+                    <button onclick="editorTrigger('redo')" title="Redo (Ctrl+Y)"><i class="fas fa-redo"></i></button>
+                </div>
+                <div class="toolbar-separator"></div>
+                <!-- Standard Tools -->
+                <div class="toolbar-group">
+                    <button onclick="editorTrigger('find')" title="Find (Ctrl+F)"><i class="fas fa-search"></i></button>
+                    <button onclick="editorTrigger('replace')" title="Replace (Ctrl+H)"><i
+                            class="fas fa-sync-alt"></i></button>
+                    <button onclick="editorTrigger('goto')" title="Go to Line (Ctrl+G)"><i
+                            class="fas fa-list-ol"></i></button>
+                </div>
+                <div class="toolbar-separator"></div>
+                <div class="toolbar-group">
+                    <button onclick="saveCodeManual()" title="Save (Ctrl+S)"><i class="fas fa-save"></i></button>
+                </div>
+            </div>
+
+            <div class="editor-container" style="height: calc(100% - 300px);">
+                <div id="editor"></div>
+            </div>
+
+            <div class="output-container" id="output-pane">
+                <div class="output-header">
+                    <span>Output / Console</span>
+                    <div style="display:flex; gap:10px; align-items:center;">
+                        <input type="checkbox" id="use-custom-input" onchange="toggleCustomInput()">
+                        <label for="use-custom-input"
+                            style="font-size:0.85rem; cursor:pointer; color:#aaa; user-select:none;">Custom
+                            Input</label>
+                        <span id="status-text">Ready</span>
+                    </div>
+                </div>
+                <div id="custom-input-container"
+                    style="display:none; padding:10px; border-bottom:1px solid #333; background:#1e1e1e;">
+                    <textarea id="custom-input-text" placeholder="Enter input here..."
+                        style="width:100%; height:60px; background:#111; border:1px solid #444; color:#fff; font-family:monospace; padding:5px; resize:none;"></textarea>
+                </div>
+                <pre id="console-output"></pre>
+                <iframe id="iframe-output"></iframe>
+
+                <!-- NEW Test Results Table View -->
+                <div id="test-results-view" class="test-results-container">
+                    <div class="test-stats">
+                        <div>
+                            <span style="color:#aaa;">Number of Testcases:</span> <strong id="total-tests-count"
+                                style="color:#fff;">0</strong>
+                        </div>
+                        <div>
+                            <span style="color:#aaa;">Pass Percentage:</span> <strong id="pass-percentage"
+                                style="color:#fff;">0%</strong>
+                        </div>
+                    </div>
+
+                    <div id="test-tabs-list" class="test-tabs">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div style="flex:1; overflow-y:auto; padding:10px;">
+                        <table class="test-detail-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 80px;">Status</th>
+                                    <th>Input</th>
+                                    <th>Expected Output</th>
+                                    <th>Obtained Output</th>
+                                    <th>Differences</th>
+                                </tr>
+                            </thead>
+                            <tbody id="test-table-body">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+    <!-- Calculator Widget -->
+    <div id="calc-widget">
+        <div id="calc-header">
+            <span style="font-size:0.9rem; font-weight:bold; color:#ccc;">Scientific Calc</span>
+            <i class="fas fa-times" style="cursor:pointer; color:#888;" onclick="toggleCalc()"></i>
+        </div>
+        <input type="text" id="calc-display" readonly>
+        <div class="calc-grid">
+            <!-- Row 1 -->
+            <button class="calc-btn sci" onclick="calcAppend('sin(')">sin</button>
+            <button class="calc-btn sci" onclick="calcAppend('cos(')">cos</button>
+            <button class="calc-btn sci" onclick="calcAppend('tan(')">tan</button>
+            <button class="calc-btn op" onclick="calcClear()">C</button>
+            <button class="calc-btn op" onclick="calcBackspace()"><i class="fas fa-backspace"></i></button>
+
+            <!-- Row 2 -->
+            <button class="calc-btn sci" onclick="calcAppend('log(')">log</button>
+            <button class="calc-btn sci" onclick="calcAppend('ln(')">ln</button>
+            <button class="calc-btn sci" onclick="calcAppend('^')">^</button>
+            <button class="calc-btn op" onclick="calcAppend('(')">(</button>
+            <button class="calc-btn op" onclick="calcAppend(')')">)</button>
+
+            <!-- Row 3 -->
+            <button class="calc-btn sci" onclick="calcAppend('√(')">√</button>
+            <button class="calc-btn" onclick="calcAppend('7')">7</button>
+            <button class="calc-btn" onclick="calcAppend('8')">8</button>
+            <button class="calc-btn" onclick="calcAppend('9')">9</button>
+            <button class="calc-btn op" onclick="calcAppend('/')">/</button>
+
+            <!-- Row 4 -->
+            <button class="calc-btn sci" onclick="calcAppend('π')">π</button>
+            <button class="calc-btn" onclick="calcAppend('4')">4</button>
+            <button class="calc-btn" onclick="calcAppend('5')">5</button>
+            <button class="calc-btn" onclick="calcAppend('6')">6</button>
+            <button class="calc-btn op" onclick="calcAppend('*')">*</button>
+
+            <!-- Row 5 -->
+            <button class="calc-btn sci" onclick="calcAppend('e')">e</button>
+            <button class="calc-btn" onclick="calcAppend('1')">1</button>
+            <button class="calc-btn" onclick="calcAppend('2')">2</button>
+            <button class="calc-btn" onclick="calcAppend('3')">3</button>
+            <button class="calc-btn op" onclick="calcAppend('-')">-</button>
+
+            <!-- Row 6 -->
+            <button class="calc-btn sci" onclick="calcAppend('.')">.</button>
+            <button class="calc-btn" onclick="calcAppend('0')">0</button>
+            <button class="calc-btn eq" onclick="calcSolve()">=</button>
+            <button class="calc-btn op" onclick="calcAppend('+')">+</button>
+        </div>
+    </div>
+
+    <!-- OCR File Input -->
+    <input type="file" id="ocrInput" hidden accept="image/*">
+
+    <!-- Auth Module -->
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="../index.html" class="mobile-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="index.html" class="mobile-nav-item active">
+            <i class="fas fa-code"></i>
+            <span>Coding</span>
+        </a>
+        <a href="../quiz_landing.html" class="mobile-nav-item">
+            <i class="fas fa-brain"></i>
+            <span>Quiz</span>
+        </a>
+        <a href="../community.html" class="mobile-nav-item">
+            <i class="fas fa-users"></i>
+            <span>iX Link</span>
+        </a>
+        <a href="../profile.html" class="mobile-nav-item">
+            <i class="fas fa-user-circle"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+
+    <script src="../js/auth.js"></script>
+
+    <!-- Load Monaco Editor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.38.0/min/vs/loader.min.js"></script>
+
+    <script>
+        // Global State
+        let currentProblem = null;
+        let ixEditor = null;
+        let timerInterval = null;
+        let timeLeft = 0;
+        let testsPassed = false; // Track pass state for submit guard
+        let currentTestResults = []; // Store detailed results
+        let currentTestIndex = 0;
+
+        function initIntelliSense() {
+            if (typeof monaco === 'undefined') return;
+            monaco.languages.registerCompletionItemProvider('javascript', {
+                provideCompletionItems: () => {
+                    var suggestions = [
+                        { label: 'console', kind: monaco.languages.CompletionItemKind.Keyword, insertText: 'console' },
+                        { label: 'log', kind: monaco.languages.CompletionItemKind.Method, insertText: 'log' },
+                        { label: 'alert', kind: monaco.languages.CompletionItemKind.Method, insertText: 'alert' }
+                    ];
+                    return { suggestions: suggestions };
+                }
+            });
+        }
+
+        function editorTrigger(action) {
+            if (!ixEditor) return;
+            ixEditor.focus();
+
+            switch (action) {
+                case 'undo': ixEditor.trigger('keyboard', 'undo'); break;
+                case 'redo': ixEditor.trigger('keyboard', 'redo'); break;
+                case 'find': ixEditor.trigger('keyboard', 'actions.find'); break;
+                case 'replace': ixEditor.trigger('keyboard', 'editor.action.startFindReplaceAction'); break;
+                case 'goto': ixEditor.trigger('keyboard', 'editor.action.gotoLine'); break;
+                case 'selectAll': ixEditor.trigger('keyboard', 'editor.action.selectAll'); break;
+            }
+        }
+
+        function saveCodeManual() {
+            if (!ixEditor) return;
+            const code = ixEditor.getValue();
+            const lang = document.getElementById('language-select').value;
+            const codeKey = `code_${probId}_${lang}`;
+            localStorage.setItem(codeKey, code);
+
+            const btn = document.querySelector('button[title="Save (Ctrl+S)"] i');
+            const originalClass = btn.className;
+            btn.className = "fas fa-check";
+            btn.style.color = "#00ff9d";
+            setTimeout(() => {
+                btn.className = originalClass;
+                btn.style.color = "";
+            }, 1000);
+        }
+
+        function toggleCustomInput() {
+            const isChecked = document.getElementById('use-custom-input').checked;
+            document.getElementById('custom-input-container').style.display = isChecked ? 'block' : 'none';
+        }
+
+        // Helper to toggle timer
+
+
+        // Init happens below, we just insert these helpers.
+
+
+        // Calculator Logic
+        // Calculator Logic
+        function toggleCalc() {
+            const widget = document.getElementById('calc-widget');
+            widget.style.display = widget.style.display === 'block' ? 'none' : 'block';
+        }
+        function calcAppend(val) { document.getElementById('calc-display').value += val; }
+
+        function calcClear() { document.getElementById('calc-display').value = ''; }
+
+        function calcBackspace() {
+            const display = document.getElementById('calc-display');
+            display.value = display.value.slice(0, -1);
+        }
+
+        function calcSolve() {
+            let expr = document.getElementById('calc-display').value;
+
+            // Allow Power Operator ^
+            expr = expr.replace(/\^/g, '**');
+
+            // Replace math functions with JS Math counterparts
+            expr = expr.replace(/sin\(/g, 'Math.sin(');
+            expr = expr.replace(/cos\(/g, 'Math.cos(');
+            expr = expr.replace(/tan\(/g, 'Math.tan(');
+            expr = expr.replace(/log\(/g, 'Math.log10('); // log base 10
+            expr = expr.replace(/ln\(/g, 'Math.log(');    // natural log
+            expr = expr.replace(/√\(/g, 'Math.sqrt(');
+            expr = expr.replace(/π/g, 'Math.PI');
+            expr = expr.replace(/e/g, 'Math.E');
+
+            try {
+                // Check for security? (Enhancement: limit characters)
+                // Evaluate
+                const res = eval(expr);
+
+                // Formatting (max 8 decimals if float)
+                if (!Number.isInteger(res)) {
+                    document.getElementById('calc-display').value = parseFloat(res.toFixed(8));
+                } else {
+                    document.getElementById('calc-display').value = res;
+                }
+            } catch (e) {
+                document.getElementById('calc-display').value = 'Error';
+            }
+        }
+        // Draggable Logic
+        const calcHeader = document.getElementById('calc-header');
+        const calcWidget = document.getElementById('calc-widget');
+        let isDragging = false, offset = { x: 0, y: 0 };
+
+        calcHeader.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offset.x = e.clientX - calcWidget.offsetLeft;
+            offset.y = e.clientY - calcWidget.offsetTop;
+        });
+        document.addEventListener('mouseup', () => isDragging = false);
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging) {
+                calcWidget.style.left = (e.clientX - offset.x) + 'px';
+                calcWidget.style.top = (e.clientY - offset.y) + 'px';
+            }
+        });
+
+        // OCR Logic
+        function triggerOCR() {
+            document.getElementById('ocrInput').click();
+        }
+
+        document.getElementById('ocrInput').addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            Swal.fire({
+                title: 'Scanning Code...',
+                text: 'Processing image text (Neural Net)',
+                allowOutsideClick: false,
+                didOpen: () => Swal.showLoading(),
+                background: '#1e1e1e',
+                color: '#fff'
+            });
+
+            try {
+                const { data: { text } } = await Tesseract.recognize(file, 'eng');
+
+                Swal.close();
+                if (ixEditor) {
+                    ixEditor.setValue(ixEditor.getValue() + "\n\n// Scanned Code:\n" + text);
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Scan Complete',
+                        text: 'Code appended to editor.',
+                        background: '#1e1e1e',
+                        color: '#fff'
+                    });
+                }
+            } catch (err) {
+                Swal.fire('Error', 'Failed to scan image.', 'error');
+            }
+        });
+
+        function toggleTimer() {
+            const input = document.getElementById('timerInput');
+            const display = document.getElementById('timerDisplay');
+            const btn = document.getElementById('timerBtn');
+            const resetBtn = document.getElementById('timerReset');
+
+            if (timerInterval) {
+                // Stop Timer
+                clearInterval(timerInterval);
+                timerInterval = null;
+                btn.innerHTML = '<i class="fas fa-play"></i>';
+                return;
+            }
+
+            // Start Timer
+            if (timeLeft === 0) {
+                const mins = parseInt(input.value);
+                if (!mins || mins <= 0) return Swal.fire('Invalid Time', 'Please enter valid minutes.', 'warning');
+                timeLeft = mins * 60;
+                input.style.display = 'none';
+                display.style.display = 'block';
+                resetBtn.style.display = 'inline-block';
+            }
+
+            btn.innerHTML = '<i class="fas fa-pause"></i>';
+            updateTimerDisplay();
+
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                    Swal.fire({
+                        title: "Time's Up!",
+                        text: "Great focus session. Take a break or continue solving.",
+                        icon: "info",
+                        background: "#1e1e1e",
+                        color: "#fff"
+                    });
+                    btn.innerHTML = '<i class="fas fa-play"></i>';
+                }
+            }, 1000);
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            timeLeft = 0;
+
+            document.getElementById('timerInput').style.display = 'block';
+            document.getElementById('timerDisplay').style.display = 'none';
+            document.getElementById('timerBtn').innerHTML = '<i class="fas fa-play"></i>';
+            document.getElementById('timerReset').style.display = 'none';
+        }
+
+        function updateTimerDisplay() {
+            const m = Math.floor(timeLeft / 60);
+            const s = timeLeft % 60;
+            document.getElementById('timerDisplay').innerText = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        }
+
+        // Init Layout
+        const urlParams = new URLSearchParams(window.location.search);
+        const probId = parseInt(urlParams.get('id'));
+
+
+        // Load Problem Data
+        async function init() {
+            // 1. Enforce Login
+            Auth.requireAuth();
+            const user = Auth.getUser();
+            if (!user) return; // Auth.requireAuth will handle redirect
+
+            // 2. Populate User Identity & Score
+            const scoreEl = document.getElementById('userScore');
+            if (scoreEl) scoreEl.innerText = user.stats ? (user.stats.quizScore || 0) : 0;
+
+            // 3. Load Problem Data
+            try {
+                const res = await fetch('../data/problems.json');
+                if (!res.ok) throw new Error("Failed to fetch problems database.");
+                const problems = await res.json();
+                currentProblem = problems.find(p => p.id === probId);
+
+                if (!currentProblem) {
+                    Swal.fire({
+                        title: 'Problem Not Found',
+                        text: 'The requested problem could not be found.',
+                        icon: 'error',
+                        background: '#1e1e1e',
+                        color: '#fff'
+                    }).then(() => window.location.href = 'index.html');
+                    return;
+                }
+
+                renderProblemUI();
+                initMonaco();
+
+                // 4. Initial Button State
+                const subBtn = document.getElementById('toolbar-submit-btn');
+                if (subBtn) {
+                    subBtn.disabled = true;
+                    subBtn.style.cursor = 'not-allowed';
+                    subBtn.style.color = '#5c6370';
+                }
+
+            } catch (err) {
+                console.error("Init Error:", err);
+                Swal.fire({
+                    title: 'Loading Error',
+                    text: 'Failed to load problem data: ' + err.message,
+                    icon: 'error',
+                    confirmButtonText: 'Go Back',
+                    background: '#1e1e1e',
+                    color: '#fff'
+                }).then(() => window.location.href = 'index.html');
+            }
+        }
+
+        const starterTemplates = {
+            java: `public class Main {\n    public static void main(String[] args) {\n        // Write your code here\n        System.out.println("Hello World");\n    }\n}`,
+            python: `import sys\n\ndef solve():\n    # Tip: Use input().split() for space-separated values\n    # Example for Sum of Two Numbers:\n    # line = input() # reads "2 3"\n    # a, b = map(int, line.split())\n    # print(a + b)\n\n    # Write your code here\n    print("Hello World")\n\nif __name__ == "__main__":\n    solve()`,
+            c: `#include <stdio.h>\n\nint main() {\n    // Write your code here\n    printf("Hello World");\n    return 0;\n}`,
+            cpp: `#include <iostream>\n\nint main() {\n    // Write your code here\n    std::cout << "Hello World";\n    return 0;\n}`,
+            js: `// Write your code here\nconsole.log("Hello World");`
+        };
+
+        function renderProblemUI() {
+            document.getElementById('prob-title').innerText = currentProblem.title;
+            document.getElementById('prob-desc').innerHTML = currentProblem.description;
+            document.title = `${currentProblem.title} | iX Code`;
+
+            const badge = document.getElementById('prob-diff');
+            badge.innerText = currentProblem.difficulty;
+            badge.className = `difficulty-badge diff-${currentProblem.difficulty}`;
+
+            document.getElementById('prob-cat').innerText = currentProblem.subcategory || currentProblem.category;
+
+            // Set initial language from problem or default to Java
+            const initialLang = currentProblem.language || 'java';
+            const langSelect = document.getElementById('language-select');
+
+            // Auto-Generate Sample I/O from Test Cases if available
+            let descHtml = currentProblem.description;
+            if (currentProblem.testCases && currentProblem.testCases.length > 0) {
+                const sample = currentProblem.testCases[0];
+                descHtml += `
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+                        <h4 style="color: #ccc; margin-bottom: 10px;">Sample Case</h4>
+                        <div style="background: #111; padding: 10px; border-radius: 6px; font-family: monospace; font-size: 0.9rem;">
+                            <div style="margin-bottom: 8px;"><span style="color: #888;">Input:</span> <span style="color: #00ff9d;">${sample.input || "(No Input)"}</span></div>
+                            <div style="display:flex; gap: 10px;">
+                                <span style="color: #888;">Output:</span> 
+                                <pre style="margin: 0; color: #ebdf93; white-space: pre-wrap; font-family: inherit;">${sample.output}</pre>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            document.getElementById('prob-desc').innerHTML = descHtml;
+
+            // If the problem dictates a specific web lang (html/css), might want to lock it or handle differently
+            // But for now, we just select it if it exists in dropdown, else default
+            if (['html', 'css'].includes(initialLang)) {
+                if (langSelect.querySelector(`option[value="${initialLang}"]`)) {
+                    langSelect.value = initialLang;
+                }
+            } else {
+                // Fix: Dropdown values are 'js', 'java' etc. Map full names to short codes if needed.
+                const validValues = ['java', 'python', 'c', 'cpp', 'js'];
+                let targetVal = initialLang;
+                if (initialLang === 'javascript') targetVal = 'js';
+
+                if (validValues.includes(targetVal)) {
+                    langSelect.value = targetVal;
+                } else {
+                    langSelect.value = 'java'; // Fallback
+                }
+            }
+
+            if (['html', 'css'].includes(currentProblem.language)) {
+                document.getElementById('iframe-output').style.display = 'block';
+                document.getElementById('console-output').style.display = 'none';
+            }
+
+            // Check if solved
+            const user = Auth.getUser();
+            if (user && user.solvedProblems && user.solvedProblems.includes(probId)) {
+                document.getElementById('success-msg').style.display = 'block';
+            }
+        }
+
+        function initMonaco() {
+            require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.38.0/min/vs' } });
+            require(['vs/editor/editor.main'], function () {
+
+                // Get selected language
+                const langSelect = document.getElementById('language-select');
+                let monacoLang = langSelect.value; // Should be 'java', 'js', etc.
+
+                // Load code for this specific language
+                const codeKey = `code_${probId}_${monacoLang}`;
+                const saved = localStorage.getItem(codeKey);
+
+                // Determine starter code
+                let code = saved;
+                if (!code) {
+                    // Use problem starter if languages match
+                    // Normalize for comparison: problem might say 'javascript', dropdown says 'js'
+                    const probLang = currentProblem.language === 'javascript' ? 'js' : currentProblem.language;
+
+                    if (probLang === monacoLang) {
+                        code = currentProblem.starterCode;
+                    } else {
+                        code = starterTemplates[monacoLang] || "// Write your code here";
+                    }
+                }
+
+                // Global editor instance - assignment to global let ixEditor
+                ixEditor = monaco.editor.create(document.getElementById('editor'), {
+                    value: code,
+                    language: monacoLang === 'js' ? 'javascript' : monacoLang, // Monaco needs 'javascript'
+                    theme: 'vs-dark',
+                    automaticLayout: true,
+                    minimap: { enabled: true },
+                    fontSize: 14,
+                    contextmenu: false,
+                });
+
+                // Activate IntelliSense
+                initIntelliSense();
+
+                // Language Change Listener
+                langSelect.addEventListener('change', (e) => {
+                    const newLang = e.target.value; // 'js', 'java'...
+                    const newModelLang = newLang === 'js' ? 'javascript' : newLang; // for Monaco & Templates
+
+                    // Save current code before switching
+                    localStorage.setItem(`code_${probId}_${monacoLang}`, ixEditor.getValue());
+
+                    monacoLang = newLang; // Update current tracker
+
+                    // Load new code
+                    const newKey = `code_${probId}_${newLang}`;
+                    const existingCode = localStorage.getItem(newKey);
+
+                    let nextCode = existingCode;
+                    if (!nextCode) {
+                        const probLang = currentProblem.language === 'javascript' ? 'js' : currentProblem.language;
+                        if (probLang === newLang) {
+                            nextCode = currentProblem.starterCode;
+                        } else {
+                            nextCode = starterTemplates[newLang] || "// Write your code here";
+                        }
+                    }
+
+                    // Update Editor
+                    monaco.editor.setModelLanguage(ixEditor.getModel(), newModelLang);
+                    ixEditor.setValue(nextCode);
+                });
+
+
+                ixEditor.onDidChangeModelContent(() => {
+                    localStorage.setItem(`code_${probId}_${monacoLang}`, ixEditor.getValue());
+                });
+            });
+        }
+
+
+        async function executeWithPiston(lang, code, input) {
+            // Map our lang codes to Piston
+            const langMap = {
+                'java': { language: 'java', version: '15.0.2' },
+                'python': { language: 'python', version: '3.10.0' },
+                'c': { language: 'c', version: '10.2.0' },
+                'cpp': { language: 'cpp', version: '10.2.0' },
+                'javascript': { language: 'javascript', version: '18.15.0' },
+                'js': { language: 'javascript', version: '18.15.0' }
+            };
+
+            const config = langMap[lang];
+            if (!config) return { error: "Language not supported by compiler API." };
+
+            try {
+                const response = await fetch('https://emkc.org/api/v2/piston/execute', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        language: config.language,
+                        version: config.version,
+                        files: [{ content: code }],
+                        stdin: input
+                    })
+                });
+                return await response.json();
+            } catch (e) {
+                return { error: "Compiler API Network Error: " + e.message };
+            }
+        }
+
+
+
+        // 1. COMPILE (Syntax Check)
+        async function compileCode() {
+            try {
+                if (!ixEditor) throw new Error("Editor not initialized.");
+                const code = ixEditor.getValue();
+                const lang = document.getElementById('language-select').value;
+                const outputEl = document.getElementById('console-output');
+                const statusEl = document.getElementById('status-text');
+
+                // Toggle Views
+                document.getElementById('console-output').style.display = 'block';
+                document.getElementById('test-results-view').style.display = 'none';
+
+                statusEl.innerText = "Compiling...";
+                outputEl.innerText = "Checking syntax...";
+
+                if (!code || code.trim().length < 10) {
+                    outputEl.innerText = "> Error: Code is too short or empty.";
+                    statusEl.innerText = "Error";
+                    return;
+                }
+
+                // Call Piston with empty input just to check compile status
+                const result = await executeWithPiston(lang, code, "");
+
+                if (result.error) {
+                    outputEl.innerText = "> API Error: " + result.error;
+                    statusEl.innerText = "API Failed";
+                } else if (result.run && result.run.stderr) {
+                    const err = result.run.stderr;
+                    const isRuntime = err.includes("Exception in thread") || err.includes("Traceback (most recent call last)") || err.includes("RuntimeError");
+
+                    if (isRuntime) {
+                        outputEl.innerText = `> Compilation Successful ✅\n> (Runtime Warning: The code crashed during the dry run, likely because it expects input but 'Compile' sends none. This is normal.)\n\n> Runtime Log:\n${err}`;
+                        statusEl.innerText = "Compiled";
+                        statusEl.style.color = "var(--accent-info)";
+                    } else {
+                        outputEl.innerText = `> Compilation/Syntax Error:\n${err}`;
+                        statusEl.innerText = "Syntax Error";
+                        statusEl.style.color = "var(--accent-danger)";
+                    }
+                } else {
+                    outputEl.innerText = `> Compilation Successful.\n> Ready to Execute or Verify.`;
+                    statusEl.innerText = "Compiled";
+                    statusEl.style.color = "var(--accent-info)";
+                }
+            } catch (err) {
+                console.error("Compile Error:", err);
+                Swal.fire('Error', 'Failed to compile: ' + err.message, 'error');
+            }
+        }
+
+        // 2. EXECUTE (Custom Input)
+        async function executeCode() {
+            try {
+                if (!ixEditor) throw new Error("Editor not initialized.");
+                const code = ixEditor.getValue();
+                const lang = document.getElementById('language-select').value;
+                const outputEl = document.getElementById('console-output');
+                const statusEl = document.getElementById('status-text');
+
+                // Toggle Views
+                document.getElementById('console-output').style.display = 'block';
+                document.getElementById('test-results-view').style.display = 'none';
+
+                // Ensure custom input is visible/used
+                const customInputFn = document.getElementById('custom-input-text');
+                const inputVal = customInputFn ? customInputFn.value : "";
+
+                statusEl.innerText = "Executing...";
+                outputEl.innerText = "Running with custom input...";
+
+                const result = await executeWithPiston(lang, code, inputVal);
+
+                if (result.error) {
+                    outputEl.innerText = "> API Error: " + result.error;
+                    statusEl.innerText = "Error";
+                } else if (result.run) {
+                    if (result.run.stderr) {
+                        outputEl.innerText = `> Error:\n${result.run.stderr}`;
+                        statusEl.innerText = "Runtime Error";
+                        statusEl.style.color = "var(--accent-danger)";
+                    } else {
+                        outputEl.innerText = `> Input:\n${inputVal}\n\n> Output:\n${result.run.stdout}`;
+                        statusEl.innerText = "Executed";
+                        statusEl.style.color = "var(--accent-success)";
+                    }
+                }
+            } catch (err) {
+                console.error("Execute Error:", err);
+                Swal.fire('Error', 'Execution failed: ' + err.message, 'error');
+            }
+        }
+
+        // 3. VERIFY (Run All Test Cases)
+        async function verifyCode() {
+            try {
+                if (!ixEditor) throw new Error("Editor not initialized.");
+                const code = ixEditor.getValue();
+                const lang = document.getElementById('language-select').value;
+                const statsEl = document.getElementById('status-text');
+
+                if (!currentProblem.testCases || currentProblem.testCases.length === 0) {
+                    alert("No test cases defined.");
+                    testsPassed = true;
+                    enableSubmit();
+                    return;
+                }
+
+                statsEl.innerText = "Verifying...";
+
+                // Reset Results
+                currentTestResults = [];
+                let passedCount = 0;
+
+                // Show Table View, Hide Console
+                document.getElementById('console-output').style.display = 'none';
+                document.getElementById('test-results-view').style.display = 'flex';
+                document.getElementById('test-table-body').innerHTML = '<tr><td colspan="5">Running Tests...</td></tr>';
+                document.getElementById('test-tabs-list').innerHTML = '';
+
+                for (let i = 0; i < currentProblem.testCases.length; i++) {
+                    const tc = currentProblem.testCases[i];
+                    const result = await executeWithPiston(lang, code, tc.input);
+
+                    let status = 'fail';
+                    let actual = '';
+                    let diff = '';
+
+                    if (result.run && !result.run.stderr) {
+                        actual = result.run.stdout.trim();
+                        const expected = tc.output.trim();
+
+                        if (actual == expected) {
+                            status = 'pass';
+                            passedCount++;
+                        } else {
+                            diff = `Expected: "${expected}", Got: "${actual}"`;
+                        }
+                    } else if (result.run && result.run.stderr) {
+                        actual = result.run.stderr;
+                        status = 'error';
+
+                        // Friendly Hint for Python EOFError
+                        if (lang === 'python' && actual.includes('EOFError: EOF when reading a line')) {
+                            diff = "HINT: Your code tried to read a line but reached the end of input. If the problem has multiple values on one line (like '2 3'), use a single input().split() instead of calling input() twice.";
+                        }
+                    } else {
+                        actual = "API Error";
+                        status = 'error';
+                    }
+
+                    currentTestResults.push({
+                        id: i,
+                        input: tc.input,
+                        expected: tc.output,
+                        actual: actual,
+                        status: status,
+                        diff: diff
+                    });
+                }
+
+                // Render Final Results
+                renderTestResults(passedCount);
+
+                if (passedCount === currentProblem.testCases.length) {
+                    statsEl.innerText = "Verified";
+                    statsEl.style.color = "var(--accent-success)";
+                    testsPassed = true;
+                    enableSubmit();
+                } else {
+                    statsEl.innerText = "Failed";
+                    statsEl.style.color = "var(--accent-danger)";
+                    testsPassed = false;
+                    disableSubmit();
+                }
+            } catch (err) {
+                console.error("Verify Error:", err);
+                Swal.fire('Error', 'Verification failed: ' + err.message, 'error');
+            }
+        }
+
+        function renderTestResults(passedCount) {
+            const total = currentTestResults.length;
+            const percentage = Math.round((passedCount / total) * 100);
+
+            document.getElementById('total-tests-count').innerText = total;
+            document.getElementById('pass-percentage').innerText = `${percentage}%`;
+            document.getElementById('pass-percentage').style.color = percentage === 100 ? '#00ff9d' : '#ff6b6b';
+
+            // Render Tabs
+            const tabsContainer = document.getElementById('test-tabs-list');
+            tabsContainer.innerHTML = '';
+
+            currentTestResults.forEach((res, index) => {
+                const tab = document.createElement('div');
+                tab.className = `test-tab ${res.status === 'pass' ? 'success' : 'fail'}`;
+                tab.innerHTML = `${res.status === 'pass' ? '✔' : '✘'} T${index + 1}`;
+                tab.onclick = () => showTestCase(index);
+                tabsContainer.appendChild(tab);
+            });
+
+            // Show first failed or first test
+            const firstFail = currentTestResults.findIndex(r => r.status !== 'pass');
+            showTestCase(firstFail !== -1 ? firstFail : 0);
+        }
+
+        function showTestCase(index) {
+            if (index < 0 || index >= currentTestResults.length) return;
+            currentTestIndex = index;
+
+            // Highlight Tab
+            const tabs = document.querySelectorAll('.test-tab');
+            tabs.forEach((t, i) => {
+                if (i === index) t.classList.add('active');
+                else t.classList.remove('active');
+            });
+
+            const res = currentTestResults[index];
+            const tbody = document.getElementById('test-table-body');
+
+            let statusBadge = '';
+            if (res.status === 'pass') statusBadge = '<span class="status-badge status-pass">Pass</span>';
+            else statusBadge = '<span class="status-badge status-fail">Fail</span>';
+
+            // Construct Diff (Highlighting could be fancy, but simple text for now)
+
+            tbody.innerHTML = `
+        <tr>
+            <td>${statusBadge}</td>
+            <td><pre style="margin:0; white-space:pre-wrap;">${res.input}</pre></td>
+            <td><pre style="margin:0; white-space:pre-wrap;">${res.expected}</pre></td>
+            <td><pre style="margin:0; white-space:pre-wrap;">${res.actual}</pre></td>
+            <td><pre style="margin:0; white-space:pre-wrap; color:#aaa;">${res.diff || '-'}</pre></td>
+        </tr>
+    `;
+        }
+
+        function enableSubmit() {
+            const btn = document.getElementById('toolbar-submit-btn');
+            if (btn) {
+                btn.disabled = false;
+                btn.style.cursor = 'pointer';
+                btn.style.color = '#00ff9d'; // Active color
+                btn.title = "Submit Solution";
+            }
+        }
+
+        function disableSubmit() {
+            const btn = document.getElementById('toolbar-submit-btn');
+            if (btn) {
+                btn.disabled = true;
+                btn.style.cursor = 'not-allowed';
+                btn.style.color = '#5c6370';
+            }
+        }
+
+        // 4. SUBMIT
+        function submitCode() {
+            if (!testsPassed) {
+                Swal.fire('Locked', 'You must verify and pass all test cases first.', 'warning');
+                return;
+            }
+            markSolved();
+        }
+        function markSolved() {
+            // 2. Calculate Points
+            let points = 5; // Easy
+            if (currentProblem.difficulty === "Medium") points = 10;
+            if (currentProblem.difficulty === "Hard") points = 20;
+
+            // 1. Mark as Solved in User Profile with Points
+            const isNewSolve = Auth.markProblemSolved(probId, points);
+
+            // 2. Update UI Score
+            const scores = Auth.getScores();
+            const scoreEl = document.getElementById('userScore');
+            if (scoreEl) scoreEl.innerText = scores.total;
+
+            if (!isNewSolve) {
+                // Already Solved UI
+                document.getElementById('success-msg').style.display = 'block';
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Already Solved',
+                    text: 'You have already earned points for this problem.',
+                    background: '#1e1e1e',
+                    color: '#fff'
+                });
+                return;
+            }
+
+            // 3. Success UI
+            document.getElementById('success-msg').style.display = 'block';
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Problem Solved! 🎉',
+                text: `Correct! You have earned progress.`,
+                background: '#1e1e1e',
+                color: '#fff',
+                timer: 3000
+            });
+        }
+
+
+        // Initial Score Sync
+        const initialScores = Auth.getScores();
+        const scoreBadge = document.getElementById('userScore');
+        if (scoreBadge) scoreBadge.innerText = initialScores.total;
+
+        init();
+    </script>
+</body>
+
+</html>

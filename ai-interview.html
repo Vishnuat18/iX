@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mock Interview | iX Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ai-interview.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-container" id="appContainer">
+
+        <!-- PHASE 1: SETUP -->
+        <div id="setupPhase" class="phase-container">
+            <header class="interview-header-v3">
+                <div class="breadcrumb-nav">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="active-crumb">Mock Interview</span>
+                </div>
+                <div class="logo-right">
+                    <div class="logo-icon-small"><i class="fas fa-brain"></i></div>
+                    <span class="logo-text">iX Platform</span>
+                </div>
+                <button class="close-header-btn" onclick="location.href='index.html'"><i
+                        class="fas fa-times"></i></button>
+            </header>
+
+            <div class="setup-layout-premium">
+                <div class="setup-progress-sidebar">
+                    <div class="step-indicator active" id="step1-pill">
+                        <div class="pill-number">1</div>
+                        <div class="pill-label">Domain & Role</div>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step-indicator" id="step2-pill">
+                        <div class="pill-number">2</div>
+                        <div class="pill-label">Interviewer</div>
+                    </div>
+                </div>
+
+                <div class="setup-main-stage">
+                    <div class="stage-section" id="stage1">
+                        <div class="section-title">
+                            <span class="badge-accent">Step 01</span>
+                            <h2>Define Your Career Path</h2>
+                            <p>Select the domain and specific role you want to practice for.</p>
+                        </div>
+
+                        <div class="selection-box-premium">
+                            <div class="premium-input">
+                                <label><i class="fas fa-layer-group"></i> Domain</label>
+                                <select id="domainSelect" class="ultra-select" onchange="updateSetupRoles()">
+                                    <option value="">Select a Domain</option>
+                                    <option value="software">Software Engineering</option>
+                                    <option value="data">Data Science & AI</option>
+                                    <option value="design">Product Design</option>
+                                    <option value="management">Product Management</option>
+                                </select>
+                            </div>
+
+                            <div class="premium-input">
+                                <label><i class="fas fa-briefcase"></i> Target Role</label>
+                                <select id="roleSelect" class="ultra-select" disabled onchange="validateSetup()">
+                                    <option value="">Select Domain First</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stage-section" id="stage2">
+                        <div class="section-title">
+                            <span class="badge-accent">Step 02</span>
+                            <h2>Select Your Interviewer</h2>
+                            <p>Each interviewer has a unique personality and difficulty level.</p>
+                        </div>
+
+                        <div class="interviewer-grid-premium">
+                            <div class="interviewer-card-v2" onclick="selectSetupInterviewer('james', this)">
+                                <div class="card-status-dot"></div>
+                                <img src="assets/interviewer.png" alt="James">
+                                <div class="card-meta">
+                                    <h3>James Wilson</h3>
+                                    <span class="role-tag">Senior Tech Lead</span>
+                                    <p class="desc-text">Direct, technical focus, expects high-quality code logic.</p>
+                                </div>
+                            </div>
+
+                            <div class="interviewer-card-v2" onclick="selectSetupInterviewer('sarah', this)">
+                                <div class="card-status-dot"></div>
+                                <img src="assets/interviewer_woman.png" alt="Sarah">
+                                <div class="card-meta">
+                                    <h3>Sarah Chen</h3>
+                                    <span class="role-tag">Global HR Manager</span>
+                                    <p class="desc-text">Empathetic, values soft skills and behavioral fit.</p>
+                                </div>
+                            </div>
+
+                            <div class="interviewer-card-v2" onclick="selectSetupInterviewer('robert', this)">
+                                <div class="card-status-dot"></div>
+                                <img src="assets/interviewer_old_man.png" alt="Robert">
+                                <div class="card-meta">
+                                    <h3>Dr. Robert</h3>
+                                    <span class="role-tag">Staff Engineering Director</span>
+                                    <p class="desc-text">Strategic, deep architectural inquiries, very calm.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="setup-controls">
+                        <button id="startInterviewBtn" class="premium-action-btn" disabled
+                            onclick="transitionToPhase2()">
+                            Initialize Interview Protocol <i class="fas fa-bolt-lightning"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHASE 2: LIVE INTERVIEW -->
+        <div id="interviewPhase" class="phase-container" style="display: none;">
+            <header class="interview-header-v3">
+                <div class="breadcrumb-nav">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="active-crumb">Live Session</span>
+                </div>
+                <div class="logo-right">
+                    <div class="logo-icon-small"><i class="fas fa-brain"></i></div>
+                    <span class="logo-text">iX Platform</span>
+                </div>
+                <div class="header-controls">
+                    <div class="status-indicator">
+                        <span class="dot"></span> Live
+                    </div>
+                    <button class="close-header-btn" onclick="terminateSession()"><i class="fas fa-times"></i></button>
+                </div>
+            </header>
+
+            <main class="interview-grid-3">
+                <!-- Column 1: Interviewer Feed -->
+                <div class="interviewer-panel">
+                    <div class="feed-box">
+                        <video id="interviewerVideo" class="main-feed-video" loop muted playsinline
+                            style="display: none;"></video>
+                        <div id="talkingHead" class="talking-head-container">
+                            <img id="interviewerSprite" class="interviewer-sprite" src="assets/interviewer.png"
+                                alt="Interviewer">
+                        </div>
+                        <div id="userPreview" class="user-preview-pip">
+                            <video id="userLocalVideo" autoplay muted playsinline></video>
+                            <div class="pip-label">You</div>
+                        </div>
+                        <div class="feed-overlay">
+                            <div class="overlay-btns">
+                                <button class="circle-btn active" onclick="toggleMedia('video', this)"
+                                    title="Toggle Interviewer Video"><i class="fas fa-video"></i></button>
+                                <button class="circle-btn active" onclick="toggleMedia('audio', this)"
+                                    title="Toggle Interviewer Mic"><i class="fas fa-microphone"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="interviewer-info">
+                        <p id="interviewerTitle">Technical HR Lead</p>
+                    </div>
+                </div>
+
+                <!-- Column 2: Chat Interaction -->
+                <div class="chat-panel">
+                    <div class="chat-header-small">
+                        <span>Interview Chat</span>
+                    </div>
+                    <div class="chat-messages" id="chatMessages"></div>
+                    <div class="chat-controls">
+                        <div class="input-wrapper">
+                            <input type="text" id="userInput" placeholder="Type your answer here...">
+                            <button id="userVideoBtn" class="action-icon-btn" title="Toggle My Camera"
+                                onclick="toggleUserCamera(this)">
+                                <i class="fas fa-video-slash"></i>
+                            </button>
+                            <button id="voiceBtn" class="action-icon-btn" title="Voice Input">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <button id="sendBtn" class="action-icon-btn primary" title="Send Message">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Real-time Review -->
+                <aside class="review-panel">
+                    <div class="panel-header">
+                        <h3>Performance Review</h3>
+                    </div>
+
+                    <div class="review-scroll">
+                        <div class="metric-card">
+                            <div class="metric-label">Grammar Mistakes</div>
+                            <div class="metric-value danger" id="grammarCount">0</div>
+                            <div class="mistake-log" id="grammarDetails">No mistakes yet.</div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-label">Relevance</div>
+                            <div class="metric-value warning" id="relevanceScore">N/A</div>
+                            <div class="metric-hint">AI analyzing response context...</div>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-label">Confidence & Behavior</div>
+                            <div class="metric-value" id="behaviorCount">0</div>
+                            <div class="metric-hint">Tracking interaction speed & tone</div>
+                        </div>
+                    </div>
+
+                    <div class="panel-footer">
+                        <button id="finishInterviewBtn" class="finish-btn" style="display: none;"
+                            onclick="showScorecardPhase()">
+                            Finish & View Scorecard
+                        </button>
+                    </div>
+                </aside>
+            </main>
+        </div>
+
+        <!-- PHASE 3: SCORECARD -->
+        <div id="scorecardPhase" class="phase-container" style="display: none;">
+            <div class="scorecard-content">
+                <div class="score-header">
+                    <h1>Interview Scorecard</h1>
+                    <div class="grade-badge" id="gradeBadge">Outstanding</div>
+                </div>
+
+                <div class="score-overall">
+                    <div class="circular-progress" id="mainProgress">
+                        <span class="score-value">92%</span>
+                    </div>
+                    <p>Excellent Performance!</p>
+                </div>
+
+                <div class="score-grid">
+                    <div class="score-item">
+                        <span>Communication</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 85%;"></div>
+                        </div>
+                        <span>8.5/10</span>
+                    </div>
+                    <div class="score-item">
+                        <span>Technical Knowledge</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 90%;"></div>
+                        </div>
+                        <span>9.0/10</span>
+                    </div>
+                    <div class="score-item">
+                        <span>Confidence</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 95%;"></div>
+                        </div>
+                        <span>9.5/10</span>
+                    </div>
+                    <div class="score-item">
+                        <span>Grammar</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 80%;"></div>
+                        </div>
+                        <span>8.0/10</span>
+                    </div>
+                    <div class="score-item">
+                        <span>Behaviors</span>
+                        <div class="bar-bg">
+                            <div class="bar-fill" style="width: 90%;"></div>
+                        </div>
+                        <span>9.0/10</span>
+                    </div>
+                </div>
+
+                <div class="report-actions">
+                    <button class="btn-premium" onclick="generatePDF()">
+                        <i class="fas fa-file-pdf"></i> Generate Detailed Report
+                    </button>
+                    <button class="btn-outline" onclick="location.reload()">
+                        <i class="fas fa-redo"></i> Retake Interview
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jsPDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/ai-interview.js"></script>
+</body>
+
+</html>

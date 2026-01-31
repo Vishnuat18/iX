@@ -1,0 +1,1265 @@
+{
+    "topic": "MongoDB Database",
+    "sets": [
+        {
+            "setId": "mongodb_1",
+            "title": "Set 1: MongoDB Basics",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "MongoDB is a?",
+                    "options": [
+                        "NoSQL Database",
+                        "SQL Database",
+                        "Graph DB",
+                        "Object DB"
+                    ],
+                    "correct": 0,
+                    "explanation": "Document store."
+                },
+                {
+                    "id": 2,
+                    "text": "Data is stored as?",
+                    "options": [
+                        "BSON Documents",
+                        "Tables",
+                        "Rows",
+                        "XML"
+                    ],
+                    "correct": 0,
+                    "explanation": "Binary JSON."
+                },
+                {
+                    "id": 3,
+                    "text": "Collection is equivalent to?",
+                    "options": [
+                        "Table",
+                        "Row",
+                        "Column",
+                        "View"
+                    ],
+                    "correct": 0,
+                    "explanation": "Group of docs."
+                },
+                {
+                    "id": 4,
+                    "text": "Primary Key in Mongo?",
+                    "options": [
+                        "_id",
+                        "id",
+                        "key",
+                        "pk"
+                    ],
+                    "correct": 0,
+                    "explanation": "ObjectId."
+                },
+                {
+                    "id": 5,
+                    "text": "Ad-hoc queries?",
+                    "options": [
+                        "Supported",
+                        "No",
+                        "Maybe",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flexible."
+                },
+                {
+                    "id": 6,
+                    "text": "Schema-less means?",
+                    "options": [
+                        "Flexible structure",
+                        "No structure",
+                        "Messy",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dynamic schema."
+                },
+                {
+                    "id": 7,
+                    "text": "What is mongod?",
+                    "options": [
+                        "Daemon process",
+                        "Shell",
+                        "Client",
+                        "Driver"
+                    ],
+                    "correct": 0,
+                    "explanation": "Server process."
+                },
+                {
+                    "id": 8,
+                    "text": "What is mongo?",
+                    "options": [
+                        "Command line shell",
+                        "Server",
+                        "Daemon",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Client."
+                },
+                {
+                    "id": 9,
+                    "text": "Database namespace?",
+                    "options": [
+                        "db.collection",
+                        "db/coll",
+                        "db-coll",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concatenation."
+                },
+                {
+                    "id": 10,
+                    "text": "Max document size?",
+                    "options": [
+                        "16MB",
+                        "4MB",
+                        "1GB",
+                        "Unlimited"
+                    ],
+                    "correct": 0,
+                    "explanation": "BSON limit."
+                }
+            ]
+        },
+        {
+            "setId": "mongodb_2",
+            "title": "Set 2: CRUD Operations",
+            "questions": [
+                {
+                    "id": 11,
+                    "text": "Insert single doc?",
+                    "options": [
+                        "insertOne()",
+                        "add()",
+                        "put()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Adds one."
+                },
+                {
+                    "id": 12,
+                    "text": "Find all docs?",
+                    "options": [
+                        "find()",
+                        "search()",
+                        "get()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Returns cursor."
+                },
+                {
+                    "id": 13,
+                    "text": "Update operator?",
+                    "options": [
+                        "$set",
+                        "set",
+                        "update",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Modifies fields."
+                },
+                {
+                    "id": 14,
+                    "text": "Delete one doc?",
+                    "options": [
+                        "deleteOne()",
+                        "remove()",
+                        "del()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Removes first match."
+                },
+                {
+                    "id": 15,
+                    "text": "Format output pretty?",
+                    "options": [
+                        ".pretty()",
+                        ".format()",
+                        ".clean()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shell formatting."
+                },
+                {
+                    "id": 16,
+                    "text": "Comparisons operator >?",
+                    "options": [
+                        "$gt",
+                        ">",
+                        "gt",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Greater than."
+                },
+                {
+                    "id": 17,
+                    "text": "Logic OR?",
+                    "options": [
+                        "$or",
+                        "or",
+                        "||",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Array of conditions."
+                },
+                {
+                    "id": 18,
+                    "text": "Check field existence?",
+                    "options": [
+                        "$exists",
+                        "has",
+                        "check",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Boolean."
+                },
+                {
+                    "id": 19,
+                    "text": "Sort result?",
+                    "options": [
+                        "sort()",
+                        "order()",
+                        "rank()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "1 or -1."
+                },
+                {
+                    "id": 20,
+                    "text": "Limit results?",
+                    "options": [
+                        "limit()",
+                        "cap()",
+                        "stop()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Number of docs."
+                }
+            ]
+        },
+        {
+            "setId": "mongodb_3",
+            "title": "Set 3: Aggregation",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Aggregation framework?",
+                    "options": [
+                        "Pipeline processing",
+                        "Loop",
+                        "Script",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Multi-stage."
+                },
+                {
+                    "id": 22,
+                    "text": "Pipeline operator?",
+                    "options": [
+                        "aggregate()",
+                        "pipe()",
+                        "process()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Entry point."
+                },
+                {
+                    "id": 23,
+                    "text": "Filter stage?",
+                    "options": [
+                        "$match",
+                        "$filter",
+                        "$find",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Like find."
+                },
+                {
+                    "id": 24,
+                    "text": "Group documents?",
+                    "options": [
+                        "$group",
+                        "$set",
+                        "$sort",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Accumulators."
+                },
+                {
+                    "id": 25,
+                    "text": "Project fields?",
+                    "options": [
+                        "$project",
+                        "$select",
+                        "$pick",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shape output."
+                },
+                {
+                    "id": 26,
+                    "text": "Unwind array?",
+                    "options": [
+                        "$unwind",
+                        "$split",
+                        "$open",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Deconstruct."
+                },
+                {
+                    "id": 27,
+                    "text": "Lookup (Join)?",
+                    "options": [
+                        "$lookup",
+                        "$join",
+                        "$link",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Left outer join."
+                },
+                {
+                    "id": 28,
+                    "text": "Sum accumulator?",
+                    "options": [
+                        "$sum",
+                        "sum",
+                        "add",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "In $group."
+                },
+                {
+                    "id": 29,
+                    "text": "Average accumulator?",
+                    "options": [
+                        "$avg",
+                        "avg",
+                        "mean",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "In $group."
+                },
+                {
+                    "id": 30,
+                    "text": "Out to collection?",
+                    "options": [
+                        "$out",
+                        "save",
+                        "write",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Last stage."
+                }
+            ]
+        },
+        {
+            "setId": "mongodb_4",
+            "title": "Set 4: Indexing",
+            "questions": [
+                {
+                    "id": 31,
+                    "text": "Create index?",
+                    "options": [
+                        "createIndex()",
+                        "ensureIndex()",
+                        "index()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimize queries."
+                },
+                {
+                    "id": 32,
+                    "text": "Default index?",
+                    "options": [
+                        "_id",
+                        "name",
+                        "date",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Always present."
+                },
+                {
+                    "id": 33,
+                    "text": "Compound index?",
+                    "options": [
+                        "Multiple fields",
+                        "Single",
+                        "Array",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Combination."
+                },
+                {
+                    "id": 34,
+                    "text": "Unique index?",
+                    "options": [
+                        "unique: true",
+                        "distinct",
+                        "one",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No duplicates."
+                },
+                {
+                    "id": 35,
+                    "text": "TTL index?",
+                    "options": [
+                        "Expire data",
+                        "Time",
+                        "Live",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Auto delete."
+                },
+                {
+                    "id": 36,
+                    "text": "Text index?",
+                    "options": [
+                        "String search",
+                        "Book",
+                        "Word",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "$text search."
+                },
+                {
+                    "id": 37,
+                    "text": "List indexes?",
+                    "options": [
+                        "getIndexes()",
+                        "list()",
+                        "show()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Show all."
+                },
+                {
+                    "id": 38,
+                    "text": "Drop index?",
+                    "options": [
+                        "dropIndex()",
+                        "remove()",
+                        "delete()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cleanup."
+                },
+                {
+                    "id": 39,
+                    "text": "Explain query?",
+                    "options": [
+                        "explain()",
+                        "detail()",
+                        "show()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Execution plan."
+                },
+                {
+                    "id": 40,
+                    "text": "Index scan vs Coll scan?",
+                    "options": [
+                        "Index is faster",
+                        "Coll is faster",
+                        "Same",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scan type."
+                }
+            ]
+        },
+        {
+            "setId": "mongodb_5",
+            "title": "Set 5: Data Modeling",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Embedding?",
+                    "options": [
+                        "Nested docs",
+                        "Linking",
+                        "Joining",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Denormalization."
+                },
+                {
+                    "id": 42,
+                    "text": "Referencing?",
+                    "options": [
+                        "Storing _id",
+                        "Embedding",
+                        "Copying",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Normalization."
+                },
+                {
+                    "id": 43,
+                    "text": "One-to-Few?",
+                    "options": [
+                        "Embed",
+                        "Reference",
+                        "Both",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Best practice."
+                },
+                {
+                    "id": 44,
+                    "text": "One-to-Many?",
+                    "options": [
+                        "Embed or Reference",
+                        "Embed",
+                        "Ref",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Depends on size."
+                },
+                {
+                    "id": 45,
+                    "text": "Capped Collection?",
+                    "options": [
+                        "Fixed size",
+                        "Unlimited",
+                        "Hat",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "FIFO buffer."
+                },
+                {
+                    "id": 46,
+                    "text": "Validation schema?",
+                    "options": [
+                        "Enforce rules",
+                        "None",
+                        "Optional",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "JSON Schema."
+                },
+                {
+                    "id": 47,
+                    "text": "Atomicity?",
+                    "options": [
+                        "Single document",
+                        "Multi",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Transaction level."
+                },
+                {
+                    "id": 48,
+                    "text": "GridFS?",
+                    "options": [
+                        "Large files > 16MB",
+                        "Grid",
+                        "Map",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "File storage."
+                },
+                {
+                    "id": 49,
+                    "text": "BSON types?",
+                    "options": [
+                        "String, Int, Date, etc.",
+                        "Text",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rich types."
+                },
+                {
+                    "id": 50,
+                    "text": "ObjectId extraction?",
+                    "options": [
+                        "Contains Timestamp",
+                        "Random",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "First 4 bytes."
+                }
+            ]
+        },
+        {
+            "setId": "mongodb_6",
+            "title": "Set 6: Replication",
+            "questions": [
+                {
+                    "id": 51,
+                    "text": "Replica Set?",
+                    "options": [
+                        "Group of processes maintaining same data",
+                        "Copy",
+                        "Backup",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Redundancy."
+                },
+                {
+                    "id": 52,
+                    "text": "Primary node?",
+                    "options": [
+                        "Accepts writes",
+                        "Read only",
+                        "Backup",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Leader."
+                },
+                {
+                    "id": 53,
+                    "text": "Secondary node?",
+                    "options": [
+                        "Replicates data",
+                        "Writes",
+                        "Leader",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Follower."
+                },
+                {
+                    "id": 54,
+                    "text": "Arbiter?",
+                    "options": [
+                        "Votes in election",
+                        "Stores data",
+                        "Primary",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tie breaker."
+                },
+                {
+                    "id": 55,
+                    "text": "Failover?",
+                    "options": [
+                        "Auto election of new Primary",
+                        "Crash",
+                        "Stop",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "High availability."
+                },
+                {
+                    "id": 56,
+                    "text": "Read preference?",
+                    "options": [
+                        "Primary/Secondary/Nearest",
+                        "Only Primary",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Routing."
+                },
+                {
+                    "id": 57,
+                    "text": "Oplog?",
+                    "options": [
+                        "Operations Log",
+                        "Error Log",
+                        "Access Log",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Replication mechanism."
+                },
+                {
+                    "id": 58,
+                    "text": "Heartbeat?",
+                    "options": [
+                        "Health check",
+                        "Love",
+                        "Pulse",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Monitoring."
+                },
+                {
+                    "id": 59,
+                    "text": "Write Concern?",
+                    "options": [
+                        "Ack level",
+                        "Worry",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Durability."
+                },
+                {
+                    "id": 60,
+                    "text": "Minimum nodes?",
+                    "options": [
+                        "3 for HA",
+                        "1",
+                        "2",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Quorum."
+                }
+            ]
+        },
+        {
+            "setId": "mongodb_7",
+            "title": "Set 7: Sharding",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Sharding?",
+                    "options": [
+                        "Horizontal scaling",
+                        "Vertical",
+                        "Backup",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Partitioning."
+                },
+                {
+                    "id": 62,
+                    "text": "Shard Key?",
+                    "options": [
+                        "Distribution logic",
+                        "Password",
+                        "Door",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Partitions data."
+                },
+                {
+                    "id": 63,
+                    "text": "Chunks?",
+                    "options": [
+                        "Data partitions",
+                        "Blocks",
+                        "Files",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Segments."
+                },
+                {
+                    "id": 64,
+                    "text": "Balancer?",
+                    "options": [
+                        "Distributes chunks",
+                        "Scale",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bg process."
+                },
+                {
+                    "id": 65,
+                    "text": "Mongos?",
+                    "options": [
+                        "Query router",
+                        "Server",
+                        "DB",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Interface."
+                },
+                {
+                    "id": 66,
+                    "text": "Config servers?",
+                    "options": [
+                        "Metadata storage",
+                        "Settings",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cluster map."
+                },
+                {
+                    "id": 67,
+                    "text": "Horizontal Scaling?",
+                    "options": [
+                        "Adding nodes",
+                        "Adding RAM",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scale out."
+                },
+                {
+                    "id": 68,
+                    "text": "Tag aware sharding?",
+                    "options": [
+                        "Location based",
+                        "Name",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Zones."
+                },
+                {
+                    "id": 69,
+                    "text": "Cardinality?",
+                    "options": [
+                        "Uniqueness of shard key",
+                        "Size",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Distribution quality."
+                },
+                {
+                    "id": 70,
+                    "text": "Jumbo chunk?",
+                    "options": [
+                        "Too big to move",
+                        "Big",
+                        "Elephant",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Problem."
+                }
+            ]
+        },
+        {
+            "setId": "mongodb_8",
+            "title": "Set 8: Security",
+            "questions": [
+                {
+                    "id": 71,
+                    "text": "Authentication?",
+                    "options": [
+                        "Verify identity",
+                        "Authz",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Login."
+                },
+                {
+                    "id": 72,
+                    "text": "Authorization?",
+                    "options": [
+                        "Permissions (Roles)",
+                        "Authn",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access."
+                },
+                {
+                    "id": 73,
+                    "text": "RBAC?",
+                    "options": [
+                        "Role Based Access Control",
+                        "Rule",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 74,
+                    "text": "Encryption at rest?",
+                    "options": [
+                        "Disk encryption",
+                        "Sleep",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Security."
+                },
+                {
+                    "id": 75,
+                    "text": "TLS/SSL?",
+                    "options": [
+                        "Transport encryption",
+                        "Disk",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Network."
+                },
+                {
+                    "id": 76,
+                    "text": "Auditing?",
+                    "options": [
+                        "Tracking activity",
+                        "Money",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Compliance."
+                },
+                {
+                    "id": 77,
+                    "text": "Bind IP?",
+                    "options": [
+                        "Restrict network access",
+                        "Glue",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Firewall."
+                },
+                {
+                    "id": 78,
+                    "text": "SCRAM?",
+                    "options": [
+                        "Auth mechanism",
+                        "Run",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Challenge Response."
+                },
+                {
+                    "id": 79,
+                    "text": "Injection?",
+                    "options": [
+                        "NoSQL Injection",
+                        "SQL",
+                        "Shot",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Attack."
+                },
+                {
+                    "id": 80,
+                    "text": "Field Level Redaction?",
+                    "options": [
+                        "Hide fields",
+                        "Delete",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Privacy."
+                }
+            ]
+        },
+        {
+            "setId": "mongodb_9",
+            "title": "Set 9: Utility & Tools",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "mongodump?",
+                    "options": [
+                        "Backup binary",
+                        "Trash",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Export."
+                },
+                {
+                    "id": 82,
+                    "text": "mongorestore?",
+                    "options": [
+                        "Restore backup",
+                        "Fix",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Import."
+                },
+                {
+                    "id": 83,
+                    "text": "mongoexport?",
+                    "options": [
+                        "JSON/CSV export",
+                        "Binary",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Readable."
+                },
+                {
+                    "id": 84,
+                    "text": "mongoimport?",
+                    "options": [
+                        "JSON/CSV import",
+                        "Binary",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Load data."
+                },
+                {
+                    "id": 85,
+                    "text": "Compass?",
+                    "options": [
+                        "GUI Client",
+                        "Map",
+                        "Tool",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Official GUI."
+                },
+                {
+                    "id": 86,
+                    "text": "Atlas?",
+                    "options": [
+                        "Cloud Service",
+                        "Map",
+                        "Book",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "MaaS."
+                },
+                {
+                    "id": 87,
+                    "text": "mongostat?",
+                    "options": [
+                        "Server status stats",
+                        "Stat",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Live view."
+                },
+                {
+                    "id": 88,
+                    "text": "mongotop?",
+                    "options": [
+                        "Collection level stats",
+                        "Top",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Activity."
+                },
+                {
+                    "id": 89,
+                    "text": "CurrentOp?",
+                    "options": [
+                        "Running operations",
+                        "Now",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Debug."
+                },
+                {
+                    "id": 90,
+                    "text": "Profiler?",
+                    "options": [
+                        "Slow query logger",
+                        "User",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": " Optimization."
+                }
+            ]
+        },
+        {
+            "setId": "mongodb_10",
+            "title": "Set 10: Drivers & Code",
+            "questions": [
+                {
+                    "id": 91,
+                    "text": "Mongoose?",
+                    "options": [
+                        "Node.js ODM",
+                        "Snake",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Popular lib."
+                },
+                {
+                    "id": 92,
+                    "text": "PyMongo?",
+                    "options": [
+                        "Python Driver",
+                        "Pie",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Official."
+                },
+                {
+                    "id": 93,
+                    "text": "Connection String?",
+                    "options": [
+                        "mongodb://...",
+                        "http://",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "URL."
+                },
+                {
+                    "id": 94,
+                    "text": "Cursor methods?",
+                    "options": [
+                        "next(), hasNext()",
+                        "go()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Iteration."
+                },
+                {
+                    "id": 95,
+                    "text": "Change Streams?",
+                    "options": [
+                        "Realtime events",
+                        "River",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Watch changes."
+                },
+                {
+                    "id": 96,
+                    "text": "Transactions?",
+                    "options": [
+                        "Multi-document ACID",
+                        "Single",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Since v4.0."
+                },
+                {
+                    "id": 97,
+                    "text": "Bulk write?",
+                    "options": [
+                        "Multiple updates at once",
+                        "Big",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance."
+                },
+                {
+                    "id": 98,
+                    "text": "Middleware (Mongoose)?",
+                    "options": [
+                        "Pre/Post hooks",
+                        "Middle",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logic."
+                },
+                {
+                    "id": 99,
+                    "text": "Virtuals?",
+                    "options": [
+                        "Computed properties",
+                        "Fake",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Not stored."
+                },
+                {
+                    "id": 100,
+                    "text": "Populate?",
+                    "options": [
+                        "Join like behavior",
+                        "Fill",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mongoose."
+                }
+            ]
+        }
+    ]
+}

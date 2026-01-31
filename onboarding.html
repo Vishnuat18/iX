@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Profile | iX Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .wizard-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .wizard-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .step-indicator::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #333;
+            z-index: 0;
+            transform: translateY(-50%);
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            background: #111;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #444;
+            color: #888;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .step.active {
+            border-color: var(--accent-primary);
+            color: #fff;
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+        }
+
+        .step.completed {
+            background: var(--accent-primary);
+            border-color: var(--accent-primary);
+            color: #000;
+        }
+
+        .form-step {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .btn-next {
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .btn-prev {
+            background: transparent;
+            border: 1px solid #555;
+            padding: 12px 30px;
+            border-radius: 6px;
+            color: #aaa;
+            cursor: pointer;
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #444;
+            border-radius: 6px;
+            color: #fff;
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background: #333;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .tag.selected {
+            background: rgba(0, 242, 255, 0.1);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">iX <span style="font-weight:300">Platform</span></div>
+    </header>
+
+    <div class="wizard-container">
+        <h2 style="text-align: center; margin-bottom: 10px; color:#fff;">Welcome aboard! 🚀</h2>
+        <p style="text-align: center; margin-bottom: 30px; color:#888;">Let's set up your profile to personalize your
+            experience.</p>
+
+        <div class="wizard-card">
+            <div class="step-indicator">
+                <div class="step active" id="step1-ind">1</div>
+                <div class="step" id="step2-ind">2</div>
+                <div class="step" id="step3-ind">3</div>
+            </div>
+
+            <form id="onboardingForm">
+                <!-- Step 1: Personal Info -->
+                <div class="form-step active" id="step1">
+                    <h3 style="color:#fff; margin-bottom: 20px;">Personal Details</h3>
+
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="e.g. John Doe">
+                    </div>
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div>
+                            <label class="form-label">Date of Birth</label>
+                            <input type="date" id="dob" class="form-control">
+                        </div>
+                        <div>
+                            <label class="form-label">Gender</label>
+                            <select id="gender" class="form-control" style="background:#222;">
+                                <option value="">Select...</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Address / Location</label>
+                        <input type="text" id="address" class="form-control" placeholder="City, Country">
+                    </div>
+
+                    <div class="btn-group" style="justify-content: flex-end;">
+                        <button type="button" class="btn-next" onclick="nextStep(1)">Next <i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Education & Skills -->
+                <div class="form-step" id="step2">
+                    <h3 style="color:#fff; margin-bottom: 20px;">Professional Profile</h3>
+
+                    <div class="form-group">
+                        <label class="form-label">Highest Education</label>
+                        <select id="education" class="form-control" style="background:#222;">
+                            <option value="">Select...</option>
+                            <option value="High School">High School</option>
+                            <option value="Undergraduate">Undergraduate</option>
+                            <option value="Postgraduate">Postgraduate</option>
+                            <option value="Ph.D">Ph.D</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Skills (Select all that apply)</label>
+                        <div class="tag-container" id="skillsContainer">
+                            <span class="tag" onclick="toggleTag(this)">Python</span>
+                            <span class="tag" onclick="toggleTag(this)">Java</span>
+                            <span class="tag" onclick="toggleTag(this)">C++</span>
+                            <span class="tag" onclick="toggleTag(this)">JavaScript</span>
+                            <span class="tag" onclick="toggleTag(this)">React</span>
+                            <span class="tag" onclick="toggleTag(this)">Node.js</span>
+                            <span class="tag" onclick="toggleTag(this)">SQL</span>
+                            <span class="tag" onclick="toggleTag(this)">MongoDB</span>
+                            <span class="tag" onclick="toggleTag(this)">Machine Learning</span>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn-prev" onclick="prevStep(2)">Back</button>
+                        <button type="button" class="btn-next" onclick="nextStep(2)">Next <i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Motivation -->
+                <div class="form-step" id="step3">
+                    <h3 style="color:#fff; margin-bottom: 20px;">Your Goals</h3>
+
+                    <div class="form-group">
+                        <label class="form-label">Why are you using iX Platform?</label>
+                        <textarea id="goal" class="form-control" rows="4"
+                            placeholder="I want to improve my algorithm skills because..."></textarea>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn-prev" onclick="prevStep(3)">Back</button>
+                        <button type="button" class="btn-next" onclick="finishOnboarding()">Complete Setup <i
+                                class="fas fa-check"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        // Check if actually logged in, else redirect
+        const user = Auth.getUser();
+        if (!user) window.location.href = 'login.html';
+
+        let currentStep = 1;
+        const totalSteps = 3;
+        const selectedSkills = [];
+
+        function showStep(step) {
+            document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
+            document.getElementById(`step${step}`).classList.add('active');
+
+            // Update Indicators
+            for (let i = 1; i <= totalSteps; i++) {
+                const ind = document.getElementById(`step${i}-ind`);
+                if (i < step) {
+                    ind.className = 'step completed';
+                    ind.innerHTML = '<i class="fas fa-check"></i>';
+                } else if (i === step) {
+                    ind.className = 'step active';
+                    ind.innerHTML = i;
+                } else {
+                    ind.className = 'step';
+                    ind.innerHTML = i;
+                }
+            }
+        }
+
+        function nextStep(step) {
+            // Validation (Basic)
+            if (step === 1) {
+                if (!document.getElementById('fullName').value) return Swal.fire('Wait', 'Please enter your name.', 'warning');
+            }
+            if (step === 2) {
+                if (!document.getElementById('education').value) return Swal.fire('Wait', 'Please select education.', 'warning');
+            }
+
+            currentStep++;
+            showStep(currentStep);
+        }
+
+        function prevStep(step) {
+            currentStep--;
+            showStep(currentStep);
+        }
+
+        function toggleTag(el) {
+            el.classList.toggle('selected');
+            const skill = el.innerText;
+            if (selectedSkills.includes(skill)) {
+                selectedSkills.splice(selectedSkills.indexOf(skill), 1);
+            } else {
+                selectedSkills.push(skill);
+            }
+        }
+
+        function finishOnboarding() {
+            // Collect Data
+            const updates = {
+                fullName: document.getElementById('fullName').value,
+                dob: document.getElementById('dob').value,
+                gender: document.getElementById('gender').value,
+                address: document.getElementById('address').value,
+                education: document.getElementById('education').value,
+                skills: selectedSkills,
+                goal: document.getElementById('goal').value,
+                isProfileComplete: true
+            };
+
+            Auth.updateProfile(updates);
+
+            Swal.fire({
+                title: 'All Set! 🎉',
+                text: 'Your profile is ready. Redirecting to home...',
+                icon: 'success',
+                timer: 2000,
+                showConfirmButton: false,
+                background: '#1e1e1e',
+                color: '#fff'
+            }).then(() => {
+                window.location.href = 'index.html';
+            });
+        }
+    </script>
+</body>
+
+</html>

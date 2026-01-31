@@ -1,0 +1,1265 @@
+{
+    "topic": "HTML5 Web Development",
+    "sets": [
+        {
+            "setId": "html_1",
+            "title": "Set 1: HTML Basics",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "HTML stands for?",
+                    "options": [
+                        "Hyper Text Markup Language",
+                        "High Text Make Language",
+                        "Hyper Tabular Markup Language",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard markup language."
+                },
+                {
+                    "id": 2,
+                    "text": "Heading tag largest size?",
+                    "options": [
+                        "<h1>",
+                        "<h6>",
+                        "<head>",
+                        "<header>"
+                    ],
+                    "correct": 0,
+                    "explanation": "h1 is largest."
+                },
+                {
+                    "id": 3,
+                    "text": "New line tag?",
+                    "options": [
+                        "<br>",
+                        "<lb>",
+                        "<break>",
+                        "<nl>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Break tag."
+                },
+                {
+                    "id": 4,
+                    "text": "Hyperlink tag?",
+                    "options": [
+                        "<a>",
+                        "<link>",
+                        "<href>",
+                        "<url>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Anchor tag."
+                },
+                {
+                    "id": 5,
+                    "text": "Image source attribute?",
+                    "options": [
+                        "src",
+                        "href",
+                        "link",
+                        "path"
+                    ],
+                    "correct": 0,
+                    "explanation": "<img src='...'>"
+                },
+                {
+                    "id": 6,
+                    "text": "Unordered list tag?",
+                    "options": [
+                        "<ul>",
+                        "<ol>",
+                        "<li>",
+                        "<dl>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bullet points."
+                },
+                {
+                    "id": 7,
+                    "text": "Which is valid doctype?",
+                    "options": [
+                        "<!DOCTYPE html>",
+                        "<!DOCTYPE HTML5>",
+                        "<!DOC html>",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "HTML5 doctype."
+                },
+                {
+                    "id": 8,
+                    "text": "Table row tag?",
+                    "options": [
+                        "<tr>",
+                        "<td>",
+                        "<th>",
+                        "<table>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Table Row."
+                },
+                {
+                    "id": 9,
+                    "text": "Input checkbox type?",
+                    "options": [
+                        "type='check'",
+                        "type='checkbox'",
+                        "type='box'",
+                        "type='tick'"
+                    ],
+                    "correct": 1,
+                    "explanation": "Checkbox input."
+                },
+                {
+                    "id": 10,
+                    "text": "HTML comments?",
+                    "options": [
+                        "<!-- -->",
+                        "//",
+                        "/* */",
+                        "#"
+                    ],
+                    "correct": 0,
+                    "explanation": "Comment syntax."
+                }
+            ]
+        },
+        {
+            "setId": "html_2",
+            "title": "Set 2: HTML5 & Semantics",
+            "questions": [
+                {
+                    "id": 11,
+                    "text": "Semantic element for nav?",
+                    "options": [
+                        "<nav>",
+                        "<navigation>",
+                        "<menu>",
+                        "<link>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Navigation links."
+                },
+                {
+                    "id": 12,
+                    "text": "HTML5 Audio tag?",
+                    "options": [
+                        "<audio>",
+                        "<sound>",
+                        "<music>",
+                        "<mp3>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Embed sound."
+                },
+                {
+                    "id": 13,
+                    "text": "Alt attribute in img used for?",
+                    "options": [
+                        "Alternative text",
+                        "Title",
+                        "Tooltip",
+                        "Caption"
+                    ],
+                    "correct": 0,
+                    "explanation": "Accessibility/Image fail."
+                },
+                {
+                    "id": 14,
+                    "text": "Merge table cells horizontally?",
+                    "options": [
+                        "colspan",
+                        "rowspan",
+                        "span",
+                        "merge"
+                    ],
+                    "correct": 0,
+                    "explanation": "Column span."
+                },
+                {
+                    "id": 15,
+                    "text": "Video tag needs?",
+                    "options": [
+                        "controls",
+                        "play",
+                        "run",
+                        "start"
+                    ],
+                    "correct": 0,
+                    "explanation": "Attribute for play buttons."
+                },
+                {
+                    "id": 16,
+                    "text": "Canvas is used for?",
+                    "options": [
+                        "Graphics drawing",
+                        "Video",
+                        "Text",
+                        "Layout"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scriptable graphics."
+                },
+                {
+                    "id": 17,
+                    "text": "SVG stands for?",
+                    "options": [
+                        "Scalable Vector Graphics",
+                        "Simple Vector Graphics",
+                        "Standard Video Graph",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Vector images."
+                },
+                {
+                    "id": 18,
+                    "text": "Local storage API?",
+                    "options": [
+                        "localStorage",
+                        "browserStorage",
+                        "cookie",
+                        "sql"
+                    ],
+                    "correct": 0,
+                    "explanation": "Key-value pair in browser."
+                },
+                {
+                    "id": 19,
+                    "text": "Form method default?",
+                    "options": [
+                        "GET",
+                        "POST",
+                        "PUT",
+                        "DELETE"
+                    ],
+                    "correct": 0,
+                    "explanation": "Default is GET."
+                },
+                {
+                    "id": 20,
+                    "text": "Block level element?",
+                    "options": [
+                        "<div>",
+                        "<span>",
+                        "<a>",
+                        "<img>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Takes full width."
+                }
+            ]
+        },
+        {
+            "setId": "html_3",
+            "title": "Set 3: Forms & Inputs",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Input for email validation?",
+                    "options": [
+                        "type='email'",
+                        "type='text' name='email'",
+                        "type='mail'",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Auto validation."
+                },
+                {
+                    "id": 22,
+                    "text": "Input value hint?",
+                    "options": [
+                        "placeholder",
+                        "value",
+                        "hint",
+                        "text"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ghost text."
+                },
+                {
+                    "id": 23,
+                    "text": "Grouping related options?",
+                    "options": [
+                        "<optgroup>",
+                        "<group>",
+                        "<list>",
+                        "<select>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inside select."
+                },
+                {
+                    "id": 24,
+                    "text": "Multi-line text input?",
+                    "options": [
+                        "<textarea>",
+                        "<input type='textarea'>",
+                        "<text>",
+                        "<box>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Text area."
+                },
+                {
+                    "id": 25,
+                    "text": "Label 'for' attribute matches?",
+                    "options": [
+                        "Input ID",
+                        "Input Name",
+                        "Input Value",
+                        "Input Class"
+                    ],
+                    "correct": 0,
+                    "explanation": "Associates label."
+                },
+                {
+                    "id": 26,
+                    "text": "Read-only input?",
+                    "options": [
+                        "readonly",
+                        "disabled",
+                        "static",
+                        "fixed"
+                    ],
+                    "correct": 0,
+                    "explanation": "User cannot edit."
+                },
+                {
+                    "id": 27,
+                    "text": "Required field?",
+                    "options": [
+                        "required",
+                        "needed",
+                        "validate",
+                        "mandantory"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prevents submit."
+                },
+                {
+                    "id": 28,
+                    "text": "Dropdown list?",
+                    "options": [
+                        "<select>",
+                        "<dropdown>",
+                        "<option>",
+                        "<list>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Contains options."
+                },
+                {
+                    "id": 29,
+                    "text": "Input for date picker?",
+                    "options": [
+                        "type='date'",
+                        "type='calendar'",
+                        "type='day'",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Native picker."
+                },
+                {
+                    "id": 30,
+                    "text": "Button to clear form?",
+                    "options": [
+                        "type='reset'",
+                        "type='clear'",
+                        "type='empty'",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Resets values."
+                }
+            ]
+        },
+        {
+            "setId": "html_4",
+            "title": "Set 4: Multimedia & Graphics",
+            "questions": [
+                {
+                    "id": 31,
+                    "text": "Embed YouTube video?",
+                    "options": [
+                        "<iframe>",
+                        "<video>",
+                        "<embed>",
+                        "<object>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inline Frame."
+                },
+                {
+                    "id": 32,
+                    "text": "Scalable image format?",
+                    "options": [
+                        "SVG",
+                        "JPG",
+                        "PNG",
+                        "GIF"
+                    ],
+                    "correct": 0,
+                    "explanation": "Vector based."
+                },
+                {
+                    "id": 33,
+                    "text": "Draw 2D shapes?",
+                    "options": [
+                        "<canvas>",
+                        "<draw>",
+                        "<paint>",
+                        "<shape>"
+                    ],
+                    "correct": 0,
+                    "explanation": "JS drawing."
+                },
+                {
+                    "id": 34,
+                    "text": "Picture element usage?",
+                    "options": [
+                        "Responsive images",
+                        "Video",
+                        "Audio",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Multiple sources."
+                },
+                {
+                    "id": 35,
+                    "text": "Audio formats supported?",
+                    "options": [
+                        "MP3, WAV, OGG",
+                        "MP4 only",
+                        "AAC only",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard formats."
+                },
+                {
+                    "id": 36,
+                    "text": "Video subtitles tag?",
+                    "options": [
+                        "<track>",
+                        "<subtitle>",
+                        "<caption>",
+                        "<text>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inside video tag."
+                },
+                {
+                    "id": 37,
+                    "text": "Image map tag?",
+                    "options": [
+                        "<map>",
+                        "<area>",
+                        "<geo>",
+                        "<loc>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Clickable areas."
+                },
+                {
+                    "id": 38,
+                    "text": "Figure caption tag?",
+                    "options": [
+                        "<figcaption>",
+                        "<caption>",
+                        "<title>",
+                        "<summary>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inside figure."
+                },
+                {
+                    "id": 39,
+                    "text": "Progress bar?",
+                    "options": [
+                        "<progress>",
+                        "<bar>",
+                        "<loading>",
+                        "<status>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shows completion."
+                },
+                {
+                    "id": 40,
+                    "text": "Meter element?",
+                    "options": [
+                        "Scalar measurement",
+                        "Distance",
+                        "Speed",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Gauge."
+                }
+            ]
+        },
+        {
+            "setId": "html_5",
+            "title": "Set 5: Global Attributes",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Editable content?",
+                    "options": [
+                        "contenteditable",
+                        "editable",
+                        "writeable",
+                        "type"
+                    ],
+                    "correct": 0,
+                    "explanation": "Makes element editable."
+                },
+                {
+                    "id": 42,
+                    "text": "Hidden element?",
+                    "options": [
+                        "hidden",
+                        "visible='false'",
+                        "display='none'",
+                        "hide"
+                    ],
+                    "correct": 0,
+                    "explanation": "Attribute."
+                },
+                {
+                    "id": 43,
+                    "text": "Tooltip text?",
+                    "options": [
+                        "title",
+                        "alt",
+                        "tip",
+                        "info"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hover text."
+                },
+                {
+                    "id": 44,
+                    "text": "Tab order?",
+                    "options": [
+                        "tabindex",
+                        "order",
+                        "index",
+                        "seq"
+                    ],
+                    "correct": 0,
+                    "explanation": "Navigation order."
+                },
+                {
+                    "id": 45,
+                    "text": "Unique identifier?",
+                    "options": [
+                        "id",
+                        "class",
+                        "name",
+                        "key"
+                    ],
+                    "correct": 0,
+                    "explanation": "Must be unique."
+                },
+                {
+                    "id": 46,
+                    "text": "CSS class?",
+                    "options": [
+                        "class",
+                        "style",
+                        "group",
+                        "type"
+                    ],
+                    "correct": 0,
+                    "explanation": "Styling hook."
+                },
+                {
+                    "id": 47,
+                    "text": "Inline style?",
+                    "options": [
+                        "style",
+                        "css",
+                        "format",
+                        "design"
+                    ],
+                    "correct": 0,
+                    "explanation": "Direct styles."
+                },
+                {
+                    "id": 48,
+                    "text": "Language of element?",
+                    "options": [
+                        "lang",
+                        "language",
+                        "locale",
+                        "text"
+                    ],
+                    "correct": 0,
+                    "explanation": "Language code."
+                },
+                {
+                    "id": 49,
+                    "text": "Drag and Drop?",
+                    "options": [
+                        "draggable",
+                        "moveable",
+                        "drop",
+                        "drag"
+                    ],
+                    "correct": 0,
+                    "explanation": "true/false."
+                },
+                {
+                    "id": 50,
+                    "text": "Custom data attribute?",
+                    "options": [
+                        "data-*",
+                        "custom-*",
+                        "attr-*",
+                        "my-*"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stores extra info."
+                }
+            ]
+        },
+        {
+            "setId": "html_6",
+            "title": "Set 6: Accessibility (A11y)",
+            "questions": [
+                {
+                    "id": 51,
+                    "text": "ARIA stands for?",
+                    "options": [
+                        "Accessible Rich Internet Applications",
+                        "Area Rich...",
+                        "Audio Rich...",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "A11y standard."
+                },
+                {
+                    "id": 52,
+                    "text": "Role attribute?",
+                    "options": [
+                        "Defines purpose",
+                        "Acting",
+                        "User role",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Semantic meaning."
+                },
+                {
+                    "id": 53,
+                    "text": "Label for screen readers?",
+                    "options": [
+                        "aria-label",
+                        "alt",
+                        "title",
+                        "desc"
+                    ],
+                    "correct": 0,
+                    "explanation": "Invisible label."
+                },
+                {
+                    "id": 54,
+                    "text": "Skip navigation?",
+                    "options": [
+                        "Link to main content",
+                        "Remove nav",
+                        "Hide nav",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "A11y pattern."
+                },
+                {
+                    "id": 55,
+                    "text": "Color contrast ratio?",
+                    "options": [
+                        "4.5:1",
+                        "1:1",
+                        "10:1",
+                        "2:1"
+                    ],
+                    "correct": 0,
+                    "explanation": "WCAG AA standard."
+                },
+                {
+                    "id": 56,
+                    "text": "Headings hierarchy?",
+                    "options": [
+                        "h1 to h6 in order",
+                        "Random",
+                        "Size only",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logical structure."
+                },
+                {
+                    "id": 57,
+                    "text": "Keyboard navigation?",
+                    "options": [
+                        "Tab key",
+                        "Mouse",
+                        "Arrow key",
+                        "Space"
+                    ],
+                    "correct": 0,
+                    "explanation": "Focusable elements."
+                },
+                {
+                    "id": 58,
+                    "text": "Focus state?",
+                    "options": [
+                        "Visible outline",
+                        "Hidden",
+                        "None",
+                        "Blur"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shows location."
+                },
+                {
+                    "id": 59,
+                    "text": "Landmark roles?",
+                    "options": [
+                        "banner, main, contentinfo",
+                        "header, body",
+                        "start, end",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Page regions."
+                },
+                {
+                    "id": 60,
+                    "text": "Captions for audio?",
+                    "options": [
+                        "Transcript/Captions",
+                        "Sound",
+                        "Volume",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "For deaf users."
+                }
+            ]
+        },
+        {
+            "setId": "html_7",
+            "title": "Set 7: Meta & SEO",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Meta tag location?",
+                    "options": [
+                        "<head>",
+                        "<body>",
+                        "<footer>",
+                        "<html>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Metadata."
+                },
+                {
+                    "id": 62,
+                    "text": "Character encoding?",
+                    "options": [
+                        "charset='UTF-8'",
+                        "text='UTF-8'",
+                        "code='UTF-8'",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Universal charset."
+                },
+                {
+                    "id": 63,
+                    "text": "Viewport meta tag?",
+                    "options": [
+                        "Responsive design",
+                        "Zoom",
+                        "Color",
+                        "Fonts"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mobile scaling."
+                },
+                {
+                    "id": 64,
+                    "text": "SEO Description?",
+                    "options": [
+                        "name='description'",
+                        "name='info'",
+                        "name='seo'",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Search snippet."
+                },
+                {
+                    "id": 65,
+                    "text": "Robots meta?",
+                    "options": [
+                        "Index/NoIndex",
+                        "Run",
+                        "Stop",
+                        "Bot"
+                    ],
+                    "correct": 0,
+                    "explanation": "Crawler instructions."
+                },
+                {
+                    "id": 66,
+                    "text": "Favicon link?",
+                    "options": [
+                        "rel='icon'",
+                        "rel='logo'",
+                        "rel='image'",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Browser tab icon."
+                },
+                {
+                    "id": 67,
+                    "text": "Open Graph tags?",
+                    "options": [
+                        "Social Media sharing",
+                        "SEO",
+                        "Graphs",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Facebook/Twitter."
+                },
+                {
+                    "id": 68,
+                    "text": "Canonical link?",
+                    "options": [
+                        "Prevents duplicate content",
+                        "Links CSS",
+                        "Links JS",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Original source."
+                },
+                {
+                    "id": 69,
+                    "text": "Title tag length?",
+                    "options": [
+                        "50-60 chars optimal",
+                        "100+",
+                        "10",
+                        "Unlimited"
+                    ],
+                    "correct": 0,
+                    "explanation": "SERP display."
+                },
+                {
+                    "id": 70,
+                    "text": "Keywords meta tag?",
+                    "options": [
+                        "Deprecated/Ignored",
+                        "Essential",
+                        "New",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Google ignores it."
+                }
+            ]
+        },
+        {
+            "setId": "html_8",
+            "title": "Set 8: Tables & Lists",
+            "questions": [
+                {
+                    "id": 71,
+                    "text": "Table header cell?",
+                    "options": [
+                        "<th>",
+                        "<td>",
+                        "<head>",
+                        "<title>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bold and centered."
+                },
+                {
+                    "id": 72,
+                    "text": "Table body?",
+                    "options": [
+                        "<tbody>",
+                        "<body>",
+                        "<table>",
+                        "<content>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Data container."
+                },
+                {
+                    "id": 73,
+                    "text": "Table footer?",
+                    "options": [
+                        "<tfoot>",
+                        "<end>",
+                        "<bottom>",
+                        "<leg>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Summary row."
+                },
+                {
+                    "id": 74,
+                    "text": "Merge rows?",
+                    "options": [
+                        "rowspan",
+                        "colspan",
+                        "range",
+                        "merge"
+                    ],
+                    "correct": 0,
+                    "explanation": "Vertical merge."
+                },
+                {
+                    "id": 75,
+                    "text": "Definition list?",
+                    "options": [
+                        "<dl>",
+                        "<ul>",
+                        "<ol>",
+                        "<list>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Key-value pairs."
+                },
+                {
+                    "id": 76,
+                    "text": "Definition term?",
+                    "options": [
+                        "<dt>",
+                        "<dd>",
+                        "<li>",
+                        "<term>"
+                    ],
+                    "correct": 0,
+                    "explanation": "The name."
+                },
+                {
+                    "id": 77,
+                    "text": "Definition description?",
+                    "options": [
+                        "<dd>",
+                        "<dt>",
+                        "<desc>",
+                        "<info>"
+                    ],
+                    "correct": 0,
+                    "explanation": "The value."
+                },
+                {
+                    "id": 78,
+                    "text": "Ordered list type?",
+                    "options": [
+                        "A, a, I, i, 1",
+                        "Circle, Square",
+                        "Disk",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Numbering style."
+                },
+                {
+                    "id": 79,
+                    "text": "Start attribute in ol?",
+                    "options": [
+                        "Starting number",
+                        "Time",
+                        "Position",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Begin count."
+                },
+                {
+                    "id": 80,
+                    "text": "Caption for table?",
+                    "options": [
+                        "<caption>",
+                        "<title>",
+                        "<name>",
+                        "<head>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Table title."
+                }
+            ]
+        },
+        {
+            "setId": "html_9",
+            "title": "Set 9: HTML APIs",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Geolocation API?",
+                    "options": [
+                        "navigator.geolocation",
+                        "window.geo",
+                        "map.loc",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "User position."
+                },
+                {
+                    "id": 82,
+                    "text": "Drag and drop event?",
+                    "options": [
+                        "ondragstart",
+                        "onmove",
+                        "onpush",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Drag API."
+                },
+                {
+                    "id": 83,
+                    "text": "Web Storage?",
+                    "options": [
+                        "Local & Session",
+                        "Cookie",
+                        "DB",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Client storage."
+                },
+                {
+                    "id": 84,
+                    "text": "Session vs Local?",
+                    "options": [
+                        "Session expires on close",
+                        "Local expires",
+                        "Same",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Persistence."
+                },
+                {
+                    "id": 85,
+                    "text": "Web Workers?",
+                    "options": [
+                        "Background threads",
+                        "UI threads",
+                        "Service",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Non-blocking JS."
+                },
+                {
+                    "id": 86,
+                    "text": "SSE stands for?",
+                    "options": [
+                        "Server Sent Events",
+                        "Simple Socket Event",
+                        "Standard...",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "One way stream."
+                },
+                {
+                    "id": 87,
+                    "text": "WebSocket?",
+                    "options": [
+                        "Full duplex communication",
+                        "Half duplex",
+                        "Static",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Realtime."
+                },
+                {
+                    "id": 88,
+                    "text": "Notification API?",
+                    "options": [
+                        "System notifications",
+                        "Alert",
+                        "Popup",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Desktop push."
+                },
+                {
+                    "id": 89,
+                    "text": "Canvas context?",
+                    "options": [
+                        "2d",
+                        "3d",
+                        "webgl",
+                        "All"
+                    ],
+                    "correct": 3,
+                    "explanation": "Drawing context."
+                },
+                {
+                    "id": 90,
+                    "text": "History API?",
+                    "options": [
+                        "pushState()",
+                        "save()",
+                        "log()",
+                        "record()"
+                    ],
+                    "correct": 0,
+                    "explanation": "SPA navigation."
+                }
+            ]
+        },
+        {
+            "setId": "html_10",
+            "title": "Set 10: Best Practices",
+            "questions": [
+                {
+                    "id": 91,
+                    "text": "Validate HTML?",
+                    "options": [
+                        "W3C Validator",
+                        "Compiler",
+                        "Browser",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Check errors."
+                },
+                {
+                    "id": 92,
+                    "text": "Semantic markup benefits?",
+                    "options": [
+                        "SEO & Accessibility",
+                        "Speed",
+                        "Design",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Meaningful code."
+                },
+                {
+                    "id": 93,
+                    "text": "Avoid inline styles?",
+                    "options": [
+                        "Maintenance/Separation",
+                        "Speed",
+                        "Color",
+                        "none"
+                    ],
+                    "correct": 0,
+                    "explanation": "CSS file best."
+                },
+                {
+                    "id": 94,
+                    "text": "Minification?",
+                    "options": [
+                        "Remove whitespace/comments",
+                        "Zip",
+                        "Resize",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Smaller file size."
+                },
+                {
+                    "id": 95,
+                    "text": "Progressive Enhancement?",
+                    "options": [
+                        "Core content first",
+                        "JS first",
+                        "CSS first",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Works without JS."
+                },
+                {
+                    "id": 96,
+                    "text": "Responsive design?",
+                    "options": [
+                        "Any device size",
+                        "Mobile only",
+                        "Desktop only",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fluid layout."
+                },
+                {
+                    "id": 97,
+                    "text": "Lazy loading?",
+                    "options": [
+                        "Load on scroll/view",
+                        "Load all",
+                        "Load later",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance."
+                },
+                {
+                    "id": 98,
+                    "text": "CDN usage?",
+                    "options": [
+                        "Faster delivery",
+                        "Storage",
+                        "Backup",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Content Delivery Network."
+                },
+                {
+                    "id": 99,
+                    "text": "HTTP/2 benefits?",
+                    "options": [
+                        "Multiplexing",
+                        "Slower",
+                        "Single",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Parallel loading."
+                },
+                {
+                    "id": 100,
+                    "text": "Critical Rendering Path?",
+                    "options": [
+                        "Steps to paint page",
+                        "URL path",
+                        "File path",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimization metric."
+                }
+            ]
+        }
+    ]
+}

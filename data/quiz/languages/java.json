@@ -1,0 +1,2465 @@
+{
+  "topic": "Core Java",
+  "sets": [
+    {
+      "setId": "java_1",
+      "title": "Set 1: Java Basics",
+      "questions": [
+        {
+          "id": 1,
+          "text": "JVM stands for?",
+          "options": [
+            "Java Virtual Machine",
+            "Visual",
+            "Mobile",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Runtime environment."
+        },
+        {
+          "id": 2,
+          "text": "Bytecode extension?",
+          "options": [
+            ".class",
+            ".java",
+            ".exe",
+            ".obj"
+          ],
+          "correct": 0,
+          "explanation": "Compiled java."
+        },
+        {
+          "id": 3,
+          "text": "Entry point signature?",
+          "options": [
+            "public static void main(String[] args)",
+            "void main()",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Standard."
+        },
+        {
+          "id": 4,
+          "text": "Java is platform?",
+          "options": [
+            "Independent",
+            "Dependent",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Write once run anywhere."
+        },
+        {
+          "id": 5,
+          "text": "int size?",
+          "options": [
+            "4 bytes",
+            "2",
+            "8",
+            "1"
+          ],
+          "correct": 0,
+          "explanation": "32 bit."
+        },
+        {
+          "id": 6,
+          "text": "Default value of boolean?",
+          "options": [
+            "false",
+            "true",
+            "null",
+            "0"
+          ],
+          "correct": 0,
+          "explanation": "Primitive."
+        },
+        {
+          "id": 7,
+          "text": "Constructor name?",
+          "options": [
+            "Same as Class",
+            "init",
+            "main",
+            "new"
+          ],
+          "correct": 0,
+          "explanation": "Rule."
+        },
+        {
+          "id": 8,
+          "text": "Method overloading?",
+          "options": [
+            "Same name diff params",
+            "Override",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Compile time poly."
+        },
+        {
+          "id": 9,
+          "text": "this keyword?",
+          "options": [
+            "Current object",
+            "Parent",
+            "Static",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Reference."
+        },
+        {
+          "id": 10,
+          "text": "super keyword?",
+          "options": [
+            "Parent object",
+            "Current",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Inheritance."
+        },
+        {
+          "id": 11,
+          "text": "Static variable?",
+          "options": [
+            "Shared by all instances",
+            "Instance",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Class level."
+        },
+        {
+          "id": 12,
+          "text": "Final variable?",
+          "options": [
+            "Constant",
+            "Changeable",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Immutable ref."
+        },
+        {
+          "id": 13,
+          "text": "Final method?",
+          "options": [
+            "Cannot be overridden",
+            "Static",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Restriction."
+        },
+        {
+          "id": 14,
+          "text": "Final class?",
+          "options": [
+            "Cannot be inherited",
+            "Abstract",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Security."
+        },
+        {
+          "id": 15,
+          "text": "Package?",
+          "options": [
+            "Folder/Namespace",
+            "Box",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Organization."
+        },
+        {
+          "id": 16,
+          "text": "Import keyword?",
+          "options": [
+            "Bring class into scope",
+            "Include",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Usage."
+        },
+        {
+          "id": 17,
+          "text": "JDK includes?",
+          "options": [
+            "JRE + Tools",
+            "Only JVM",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Dev Kit."
+        },
+        {
+          "id": 18,
+          "text": "Garbage Collection?",
+          "options": [
+            "Auto memory cleanup",
+            "Manual",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Daemon thread."
+        },
+        {
+          "id": 19,
+          "text": "Heap memory?",
+          "options": [
+            "Objects stored here",
+            "Stack",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Runtime."
+        },
+        {
+          "id": 20,
+          "text": "Stack memory?",
+          "options": [
+            "Method calls/Locals",
+            "Heap",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "LIFO."
+        }
+      ]
+    },
+    {
+      "setId": "java_2",
+      "title": "Set 2: OOPS Concepts",
+      "questions": [
+        {
+          "id": 21,
+          "text": "Inheritance keyword?",
+          "options": [
+            "extends",
+            "implements",
+            "inherits",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Parent-Child."
+        },
+        {
+          "id": 22,
+          "text": "Interface keyword?",
+          "options": [
+            "implements",
+            "extends",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Contract."
+        },
+        {
+          "id": 23,
+          "text": "Multiple inheritance?",
+          "options": [
+            "Via Interfaces",
+            "Classes",
+            "Both",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Diamond problem."
+        },
+        {
+          "id": 24,
+          "text": "Abstract class?",
+          "options": [
+            "Can have abstract/concrete methods",
+            "Pure",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Partial abstraction."
+        },
+        {
+          "id": 25,
+          "text": "Polymorphism types?",
+          "options": [
+            "Compile & Runtime",
+            "Static only",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Overload/Override."
+        },
+        {
+          "id": 26,
+          "text": "Encapsulation?",
+          "options": [
+            "Data hiding (private + getters)",
+            "Public",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Security."
+        },
+        {
+          "id": 27,
+          "text": "Abstraction?",
+          "options": [
+            "Hiding implementation details",
+            "Show",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Essential only."
+        },
+        {
+          "id": 28,
+          "text": "Object class?",
+          "options": [
+            "Root of class hierarchy",
+            "Main",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "java.lang.Object."
+        },
+        {
+          "id": 29,
+          "text": "toString()?",
+          "options": [
+            "String rep of object",
+            "Print",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Debug."
+        },
+        {
+          "id": 30,
+          "text": "equals() vs ==?",
+          "options": [
+            "Content vs Reference",
+            "Same",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Comparison."
+        },
+        {
+          "id": 31,
+          "text": "hashCode()?",
+          "options": [
+            "Hash code for object",
+            "Id",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Buckets."
+        },
+        {
+          "id": 32,
+          "text": "Copy Constructor?",
+          "options": [
+            "Creates copy of object",
+            "Clone",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Cloning."
+        },
+        {
+          "id": 33,
+          "text": "Marker Interface?",
+          "options": [
+            "Empty interface (Serializable)",
+            "Tag",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Metadata."
+        },
+        {
+          "id": 34,
+          "text": "Functional Interface?",
+          "options": [
+            "Single abstract method",
+            "Function",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Lambda target."
+        },
+        {
+          "id": 35,
+          "text": "Default method?",
+          "options": [
+            "Interface method with body",
+            "Normal",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Java 8."
+        },
+        {
+          "id": 36,
+          "text": "Static block?",
+          "options": [
+            "Runs at class load",
+            "Instance",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Init."
+        },
+        {
+          "id": 37,
+          "text": "Init block?",
+          "options": [
+            "Runs before constructor",
+            "Load",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Instance."
+        },
+        {
+          "id": 38,
+          "text": "Inner class?",
+          "options": [
+            "Class inside class",
+            "Nested",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Scope."
+        },
+        {
+          "id": 39,
+          "text": "Anonymous Inner Class?",
+          "options": [
+            "No name class",
+            "Lambda",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Ad-hoc."
+        },
+        {
+          "id": 40,
+          "text": "Composition?",
+          "options": [
+            "Has-a relationship",
+            "Is-a",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Design."
+        }
+      ]
+    },
+    {
+      "setId": "java_3",
+      "title": "Set 3: String & Arrays",
+      "questions": [
+        {
+          "id": 41,
+          "text": "String immutable?",
+          "options": [
+            "Yes",
+            "No",
+            "Maybe",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Security/Pool."
+        },
+        {
+          "id": 42,
+          "text": "StringBuilder?",
+          "options": [
+            "Mutable, not thread safe",
+            "Slow",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Fast."
+        },
+        {
+          "id": 43,
+          "text": "StringBuffer?",
+          "options": [
+            "Mutable, thread safe",
+            "Fast",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Sync."
+        },
+        {
+          "id": 44,
+          "text": "String Pool?",
+          "options": [
+            "Heap area for strings",
+            "Stack",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Optimization."
+        },
+        {
+          "id": 45,
+          "text": "intern()?",
+          "options": [
+            "Add to pool",
+            "External",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Memory."
+        },
+        {
+          "id": 46,
+          "text": "Array size fixed?",
+          "options": [
+            "Yes",
+            "No",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Static."
+        },
+        {
+          "id": 47,
+          "text": "Array index start?",
+          "options": [
+            "0",
+            "1",
+            "-1",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Zero based."
+        },
+        {
+          "id": 48,
+          "text": "length property?",
+          "options": [
+            "arr.length",
+            "len()",
+            "size()",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Field."
+        },
+        {
+          "id": 49,
+          "text": "Multi-dimensional array?",
+          "options": [
+            "int[][]",
+            "Matrix",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Grid."
+        },
+        {
+          "id": 50,
+          "text": "Arrays.sort()?",
+          "options": [
+            "Sorts primitive/objects",
+            "Order",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Utility."
+        },
+        {
+          "id": 51,
+          "text": "BinarySearch?",
+          "options": [
+            "Arrays.binarySearch",
+            "Find",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "LogN."
+        },
+        {
+          "id": 52,
+          "text": "Jagged Array?",
+          "options": [
+            "Rows with diff lengths",
+            "Raw",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Irregular."
+        },
+        {
+          "id": 53,
+          "text": "String split()?",
+          "options": [
+            "Splits by regex",
+            "Cut",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Array."
+        },
+        {
+          "id": 54,
+          "text": "trim()?",
+          "options": [
+            "Remove whitespace",
+            "Cut",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Clean."
+        },
+        {
+          "id": 55,
+          "text": "substring()?",
+          "options": [
+            "Extract part",
+            "Sub",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Range."
+        },
+        {
+          "id": 56,
+          "text": "valueOf()?",
+          "options": [
+            "Convert to String",
+            "Value",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Static."
+        },
+        {
+          "id": 57,
+          "text": "charAt()?",
+          "options": [
+            "Char at index",
+            "Get",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Access."
+        },
+        {
+          "id": 58,
+          "text": "concat()?",
+          "options": [
+            "Join strings",
+            "Add",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Append."
+        },
+        {
+          "id": 59,
+          "text": "Varargs?",
+          "options": [
+            "Type... args",
+            "Array",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Variable args."
+        },
+        {
+          "id": 60,
+          "text": "System.out.println?",
+          "options": [
+            "Print to console",
+            "Log",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "StdOut."
+        }
+      ]
+    },
+    {
+      "setId": "java_4",
+      "title": "Set 4: Exceptions",
+      "questions": [
+        {
+          "id": 61,
+          "text": "Exception parent?",
+          "options": [
+            "Throwable",
+            "Object",
+            "Error",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Root."
+        },
+        {
+          "id": 62,
+          "text": "Error vs Exception?",
+          "options": [
+            "System vs App",
+            "Same",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Recoverability."
+        },
+        {
+          "id": 63,
+          "text": "Checked Exception?",
+          "options": [
+            "Compile time check",
+            "Runtime",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Required."
+        },
+        {
+          "id": 64,
+          "text": "Unchecked Exception?",
+          "options": [
+            "Runtime (RuntimeException)",
+            "Compile",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Optional."
+        },
+        {
+          "id": 65,
+          "text": "try-catch-finally?",
+          "options": [
+            "Handling block",
+            "If",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Structure."
+        },
+        {
+          "id": 66,
+          "text": "finally executes?",
+          "options": [
+            "Always",
+            "Sometimes",
+            "Never",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Cleanup."
+        },
+        {
+          "id": 67,
+          "text": "throw vs throws?",
+          "options": [
+            "Raising vs Declaring",
+            "Same",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Action."
+        },
+        {
+          "id": 68,
+          "text": "Custom Exception?",
+          "options": [
+            "Extend Exception",
+            "Custom",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "App specific."
+        },
+        {
+          "id": 69,
+          "text": "Multiple catch?",
+          "options": [
+            "Order specific to general",
+            "Random",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Hierarchy."
+        },
+        {
+          "id": 70,
+          "text": "Try with resources?",
+          "options": [
+            "Auto close (AutoCloseable)",
+            "Resource",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Java 7."
+        },
+        {
+          "id": 71,
+          "text": "Ex: NullPointerException?",
+          "options": [
+            "Access null ref",
+            "Void",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Common."
+        },
+        {
+          "id": 72,
+          "text": "Ex: ArrayIndexOutOfBounds?",
+          "options": [
+            "Invalid index",
+            "Range",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Access."
+        },
+        {
+          "id": 73,
+          "text": "Ex: ClassCastException?",
+          "options": [
+            "Invalid cast",
+            "Type",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Casting."
+        },
+        {
+          "id": 74,
+          "text": "Ex: StackOverflowError?",
+          "options": [
+            "Infinite recursion",
+            "Memory",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Stack full."
+        },
+        {
+          "id": 75,
+          "text": "Ex: OutOfMemoryError?",
+          "options": [
+            "Heap full",
+            "RAM",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Heap full."
+        },
+        {
+          "id": 76,
+          "text": "printStackTrace()?",
+          "options": [
+            "Print error trace",
+            "Log",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Debug."
+        },
+        {
+          "id": 77,
+          "text": "getMessage()?",
+          "options": [
+            "Error description",
+            "Msg",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Info."
+        },
+        {
+          "id": 78,
+          "text": "Chained Exception?",
+          "options": [
+            "Cause wrapping",
+            "Chain",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Root cause."
+        },
+        {
+          "id": 79,
+          "text": "Suppressed Exception?",
+          "options": [
+            "In try-with-resources",
+            "Hidden",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Masked."
+        },
+        {
+          "id": 80,
+          "text": "Assert?",
+          "options": [
+            "Validation (requires -ea)",
+            "Test",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Debug check."
+        }
+      ]
+    },
+    {
+      "setId": "java_5",
+      "title": "Set 5: Collections",
+      "questions": [
+        {
+          "id": 81,
+          "text": "Collection Interface?",
+          "options": [
+            "Root of collection hierarchy",
+            "List",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Base."
+        },
+        {
+          "id": 82,
+          "text": "List vs Set?",
+          "options": [
+            "Ordered/Dupes vs Unique",
+            "Same",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Core diff."
+        },
+        {
+          "id": 83,
+          "text": "ArrayList?",
+          "options": [
+            "Resizing array",
+            "Link",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Random access."
+        },
+        {
+          "id": 84,
+          "text": "LinkedList?",
+          "options": [
+            "Double linked list",
+            "Array",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Insert/Delete."
+        },
+        {
+          "id": 85,
+          "text": "Vector?",
+          "options": [
+            "Synchronized ArrayList",
+            "List",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Legacy."
+        },
+        {
+          "id": 86,
+          "text": "HashSet?",
+          "options": [
+            "Hash table (No order)",
+            "Set",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Fast lookup."
+        },
+        {
+          "id": 87,
+          "text": "LinkedHashSet?",
+          "options": [
+            "Insertion order",
+            "Hash",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Ordered."
+        },
+        {
+          "id": 88,
+          "text": "TreeSet?",
+          "options": [
+            "Sorted (Red-Black tree)",
+            "Tree",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Sorted."
+        },
+        {
+          "id": 89,
+          "text": "Map Interface?",
+          "options": [
+            "Key-Value pair",
+            "List",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Dictionary."
+        },
+        {
+          "id": 90,
+          "text": "HashMap?",
+          "options": [
+            "Hashing key-value",
+            "Map",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Fast."
+        },
+        {
+          "id": 91,
+          "text": "Hashtable?",
+          "options": [
+            "Synchronized Map",
+            "Map",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Legacy."
+        },
+        {
+          "id": 92,
+          "text": "TreeMap?",
+          "options": [
+            "Sorted keys",
+            "Map",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Sorted."
+        },
+        {
+          "id": 93,
+          "text": "Iterator?",
+          "options": [
+            "Traverse collection",
+            "Loop",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Cursor."
+        },
+        {
+          "id": 94,
+          "text": "ListIterator?",
+          "options": [
+            "Two way traversal (List)",
+            "Iter",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Bidirectional."
+        },
+        {
+          "id": 95,
+          "text": "Comparator vs Comparable?",
+          "options": [
+            "External vs Natural order",
+            "Same",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Sorting."
+        },
+        {
+          "id": 96,
+          "text": "Collections class?",
+          "options": [
+            "Utility methods (sort, sync)",
+            "Interface",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Helper."
+        },
+        {
+          "id": 97,
+          "text": "fail-fast?",
+          "options": [
+            "Throws ConcurrentModification",
+            "Slow",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Safety."
+        },
+        {
+          "id": 98,
+          "text": "ConcurrentHashMap?",
+          "options": [
+            "Thread safe map",
+            "Map",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Concurrency."
+        },
+        {
+          "id": 99,
+          "text": "Queue Interface?",
+          "options": [
+            "FIFO",
+            "List",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Ordering."
+        },
+        {
+          "id": 100,
+          "text": "PriorityQueue?",
+          "options": [
+            "Priority heap",
+            "Queue",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Ordering."
+        }
+      ]
+    },
+    {
+      "setId": "java_6",
+      "title": "Set 6: Multithreading",
+      "questions": [
+        {
+          "id": 101,
+          "text": "Thread class?",
+          "options": [
+            "Extend Thread",
+            "Run",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Creation."
+        },
+        {
+          "id": 102,
+          "text": "Runnable interface?",
+          "options": [
+            "Implement Runnable",
+            "Thread",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Task."
+        },
+        {
+          "id": 103,
+          "text": "start() vs run()?",
+          "options": [
+            "New stack vs Current thread",
+            "Same",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Execution."
+        },
+        {
+          "id": 104,
+          "text": "Life cycle?",
+          "options": [
+            "New, Runnable, Running, Blocked, Terminated",
+            "Life",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "States."
+        },
+        {
+          "id": 105,
+          "text": "sleep()?",
+          "options": [
+            "Pause exec",
+            "Wait",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Delay."
+        },
+        {
+          "id": 106,
+          "text": "join()?",
+          "options": [
+            "Wait for thread to finish",
+            "Join",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Sync."
+        },
+        {
+          "id": 107,
+          "text": "wait() and notify()?",
+          "options": [
+            "Object communication",
+            "Thread",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Inter-thread."
+        },
+        {
+          "id": 108,
+          "text": "Synchronized block?",
+          "options": [
+            "Lock on object",
+            "Block",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Mutex."
+        },
+        {
+          "id": 109,
+          "text": "Volatile?",
+          "options": [
+            "Visibility guarantee (Main mem)",
+            "Atomicity",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Memory."
+        },
+        {
+          "id": 110,
+          "text": "Deadlock?",
+          "options": [
+            "Cyclic dependency",
+            "Lock",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Halt."
+        },
+        {
+          "id": 111,
+          "text": "Daemon thread?",
+          "options": [
+            "Background (GC)",
+            "User",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Service."
+        },
+        {
+          "id": 112,
+          "text": "ThreadLocal?",
+          "options": [
+            "Thread specific value",
+            "Local",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Scope."
+        },
+        {
+          "id": 113,
+          "text": "ExecutorService?",
+          "options": [
+            "Thread pool manager",
+            "Exec",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Pool."
+        },
+        {
+          "id": 114,
+          "text": "Callable vs Runnable?",
+          "options": [
+            "Returns value vs Void",
+            "Same",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Result."
+        },
+        {
+          "id": 115,
+          "text": "Future?",
+          "options": [
+            "Async result handle",
+            "Next",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Promise."
+        },
+        {
+          "id": 116,
+          "text": "CountDownLatch?",
+          "options": [
+            "Wait for N events",
+            "Latch",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Sync util."
+        },
+        {
+          "id": 117,
+          "text": "CyclicBarrier?",
+          "options": [
+            "Wait at barrier",
+            "Wall",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Sync util."
+        },
+        {
+          "id": 118,
+          "text": "Semaphore?",
+          "options": [
+            "Permits control",
+            "Flag",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Access."
+        },
+        {
+          "id": 119,
+          "text": "Atomic classes?",
+          "options": [
+            "CAS operations",
+            "Atom",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Thread safe."
+        },
+        {
+          "id": 120,
+          "text": "Race condition?",
+          "options": [
+            "Concurrent modification err",
+            "Run",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Bug."
+        }
+      ]
+    },
+    {
+      "setId": "java_7",
+      "title": "Set 7: Java 8 Features",
+      "questions": [
+        {
+          "id": 121,
+          "text": "Lambda?",
+          "options": [
+            "Anonymous method",
+            "Greek",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Functional."
+        },
+        {
+          "id": 122,
+          "text": "Functional Interface?",
+          "options": [
+            "@FunctionalInterface",
+            "Func",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "SAM."
+        },
+        {
+          "id": 123,
+          "text": "Stream API?",
+          "options": [
+            "Processing sequences",
+            "River",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Pipline."
+        },
+        {
+          "id": 124,
+          "text": "Intermediate op?",
+          "options": [
+            "filter, map",
+            "collect",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Lazy."
+        },
+        {
+          "id": 125,
+          "text": "Terminal op?",
+          "options": [
+            "collect, forEach",
+            "map",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Eager."
+        },
+        {
+          "id": 126,
+          "text": "Optional?",
+          "options": [
+            "Container for null safety",
+            "Choice",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "No NPE."
+        },
+        {
+          "id": 127,
+          "text": "Method Reference?",
+          "options": [
+            "Class::method",
+            "Ref",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Shorthand."
+        },
+        {
+          "id": 128,
+          "text": "Predicate?",
+          "options": [
+            "Test -> boolean",
+            "Verb",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Interface."
+        },
+        {
+          "id": 129,
+          "text": "Consumer?",
+          "options": [
+            "Accept -> void",
+            "Eat",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Interface."
+        },
+        {
+          "id": 130,
+          "text": "Supplier?",
+          "options": [
+            "Get -> T",
+            "Give",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Interface."
+        },
+        {
+          "id": 131,
+          "text": "Function?",
+          "options": [
+            "Apply -> R",
+            "Func",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Interface."
+        },
+        {
+          "id": 132,
+          "text": "Stream.map()?",
+          "options": [
+            "Transform",
+            "Map",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Convert."
+        },
+        {
+          "id": 133,
+          "text": "Stream.filter()?",
+          "options": [
+            "Select matching",
+            "Sieve",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Limit."
+        },
+        {
+          "id": 134,
+          "text": "Stream.reduce()?",
+          "options": [
+            "Accumulate",
+            "Less",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Fold."
+        },
+        {
+          "id": 135,
+          "text": "Collectors?",
+          "options": [
+            "ToList, ToSet",
+            "Collect",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Gather."
+        },
+        {
+          "id": 136,
+          "text": "Parallel Stream?",
+          "options": [
+            "Multi-core processing",
+            "Fast",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Async."
+        },
+        {
+          "id": 137,
+          "text": "LocalDate?",
+          "options": [
+            "Date API (No time)",
+            "Day",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Joda."
+        },
+        {
+          "id": 138,
+          "text": "Default methods?",
+          "options": [
+            "Interface evolution",
+            "Def",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Compat."
+        },
+        {
+          "id": 139,
+          "text": "Static in interface?",
+          "options": [
+            "Helper methods",
+            "Stat",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Util."
+        },
+        {
+          "id": 140,
+          "text": "Nashorn?",
+          "options": [
+            "JS Engine (Removed later)",
+            "Rhino",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Scripting."
+        }
+      ]
+    },
+    {
+      "setId": "java_8",
+      "title": "Set 8: IO & Networking",
+      "questions": [
+        {
+          "id": 141,
+          "text": "InputStream?",
+          "options": [
+            "Byte stream read",
+            "Input",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Binary."
+        },
+        {
+          "id": 142,
+          "text": "Reader?",
+          "options": [
+            "Char stream read",
+            "Read",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Text."
+        },
+        {
+          "id": 143,
+          "text": "BufferedReader?",
+          "options": [
+            "Efficient reading",
+            "Buf",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Buffered."
+        },
+        {
+          "id": 144,
+          "text": "Scanner?",
+          "options": [
+            "Parsed input",
+            "Scan",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Util."
+        },
+        {
+          "id": 145,
+          "text": "Serializable?",
+          "options": [
+            "Obj to stream",
+            "Serial",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Storage."
+        },
+        {
+          "id": 146,
+          "text": "transient?",
+          "options": [
+            "Skip serialization",
+            "Temp",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Secure."
+        },
+        {
+          "id": 147,
+          "text": "File class?",
+          "options": [
+            "Path repr",
+            "File",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Handle."
+        },
+        {
+          "id": 148,
+          "text": "NIO (New IO)?",
+          "options": [
+            "Buffers/Channels",
+            "New",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Non-blocking."
+        },
+        {
+          "id": 149,
+          "text": "Socket?",
+          "options": [
+            "Client endpoint",
+            "Plug",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Network."
+        },
+        {
+          "id": 150,
+          "text": "ServerSocket?",
+          "options": [
+            "Server endpoint",
+            "Host",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Listen."
+        },
+        {
+          "id": 151,
+          "text": "URL class?",
+          "options": [
+            "Resource pointer",
+            "Link",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Web."
+        },
+        {
+          "id": 152,
+          "text": "TCP vs UDP?",
+          "options": [
+            "Reliable vs Fast",
+            "Same",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Protocol."
+        },
+        {
+          "id": 153,
+          "text": "Reflection?",
+          "options": [
+            "Inspect classes runtime",
+            "Mirror",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Meta."
+        },
+        {
+          "id": 154,
+          "text": "Class.forName()?",
+          "options": [
+            "Load class",
+            "Name",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Dynamic."
+        },
+        {
+          "id": 155,
+          "text": "Files.readAllLines()?",
+          "options": [
+            "NIO read",
+            "Lines",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Util."
+        },
+        {
+          "id": 156,
+          "text": "Path interface?",
+          "options": [
+            "NIO path",
+            "Way",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Loc."
+        },
+        {
+          "id": 157,
+          "text": "try-with-resources io?",
+          "options": [
+            "Auto close streams",
+            "IO",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Safe."
+        },
+        {
+          "id": 158,
+          "text": "ObjectInputStream?",
+          "options": [
+            "Deserialize",
+            "Obj",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Read obj."
+        },
+        {
+          "id": 159,
+          "text": "Externalizable?",
+          "options": [
+            "Custom serialization",
+            "Ext",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Control."
+        },
+        {
+          "id": 160,
+          "text": "PrintStream?",
+          "options": [
+            "System.out",
+            "Print",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Output."
+        }
+      ]
+    },
+    {
+      "setId": "java_9",
+      "title": "Set 9: Memory & JVM",
+      "questions": [
+        {
+          "id": 161,
+          "text": "ClassLoader?",
+          "options": [
+            "Loads .class files",
+            "Loader",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Runtime."
+        },
+        {
+          "id": 162,
+          "text": "JIT?",
+          "options": [
+            "Just In Time Compiler",
+            "Fast",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Optimization."
+        },
+        {
+          "id": 163,
+          "text": "PermGen / Metaspace?",
+          "options": [
+            "Class metadata store",
+            "Perm",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Memory."
+        },
+        {
+          "id": 164,
+          "text": "StackOverflow?",
+          "options": [
+            "Deep recursion",
+            "Flow",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Error."
+        },
+        {
+          "id": 165,
+          "text": "Memory Leak?",
+          "options": [
+            "Unreferenced obj not GC'd",
+            "Leak",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Bug."
+        },
+        {
+          "id": 166,
+          "text": "Types of Ref?",
+          "options": [
+            "Strong, Weak, Soft, Phantom",
+            "Ref",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "GC."
+        },
+        {
+          "id": 167,
+          "text": "WeakReference?",
+          "options": [
+            "GC collects aggressively",
+            "Weak",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Cache."
+        },
+        {
+          "id": 168,
+          "text": "SoftReference?",
+          "options": [
+            "GC collects if low memory",
+            "Soft",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Cache."
+        },
+        {
+          "id": 169,
+          "text": "finalize()?",
+          "options": [
+            "Called before GC (Deprecated)",
+            "Final",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Cleanup."
+        },
+        {
+          "id": 170,
+          "text": "Native Method?",
+          "options": [
+            "C/C++ code (JNI)",
+            "Native",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "External."
+        },
+        {
+          "id": 171,
+          "text": "JNI?",
+          "options": [
+            "Java Native Interface",
+            "Interface",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Bridge."
+        },
+        {
+          "id": 172,
+          "text": "JVM Tuning?",
+          "options": [
+            "-Xms -Xmx",
+            "Tune",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Flags."
+        },
+        {
+          "id": 173,
+          "text": "Eden Space?",
+          "options": [
+            "Young Gen",
+            "Garden",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "New objects."
+        },
+        {
+          "id": 174,
+          "text": "Survivor Space?",
+          "options": [
+            "S0, S1",
+            "Live",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "GC."
+        },
+        {
+          "id": 175,
+          "text": "Old Gen?",
+          "options": [
+            "Long lived objects",
+            "Old",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Tenured."
+        },
+        {
+          "id": 176,
+          "text": "Full GC?",
+          "options": [
+            "Major collection",
+            "Stop",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Pause."
+        },
+        {
+          "id": 177,
+          "text": "VisualVM?",
+          "options": [
+            "Profiler",
+            "Vis",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Tool."
+        },
+        {
+          "id": 178,
+          "text": "Heap Dump?",
+          "options": [
+            "Snapshot of memory",
+            "Dump",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Debug."
+        },
+        {
+          "id": 179,
+          "text": "Thread Dump?",
+          "options": [
+            "Snapshot of threads",
+            "Trace",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Deadlock."
+        },
+        {
+          "id": 180,
+          "text": "ClassPath?",
+          "options": [
+            "Loc of jars",
+            "Path",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Env."
+        }
+      ]
+    },
+    {
+      "setId": "java_10",
+      "title": "Set 10: Miscellaneous",
+      "questions": [
+        {
+          "id": 181,
+          "text": "Enum?",
+          "options": [
+            "Typed constants",
+            "List",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Type."
+        },
+        {
+          "id": 182,
+          "text": "Annotation?",
+          "options": [
+            "Metadata @",
+            "Note",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Info."
+        },
+        {
+          "id": 183,
+          "text": "@Override?",
+          "options": [
+            "Check override",
+            "Over",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Safety."
+        },
+        {
+          "id": 184,
+          "text": "@Deprecated?",
+          "options": [
+            "Don't use",
+            "Old",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Warning."
+        },
+        {
+          "id": 185,
+          "text": "Generics?",
+          "options": [
+            "Type safety <T>",
+            "Gen",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Compile time."
+        },
+        {
+          "id": 186,
+          "text": "Wildcard ?",
+          "options": [
+            "Unknown type",
+            "Wild",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Generics."
+        },
+        {
+          "id": 187,
+          "text": "Type Erasure?",
+          "options": [
+            "Generics removed at runtime",
+            "Erase",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Compat."
+        },
+        {
+          "id": 188,
+          "text": "BigDecimal?",
+          "options": [
+            "Precise money math",
+            "Big",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Accuracy."
+        },
+        {
+          "id": 189,
+          "text": "BigInteger?",
+          "options": [
+            "Large ints",
+            "Big",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Size."
+        },
+        {
+          "id": 190,
+          "text": "Math.random()?",
+          "options": [
+            "0.0 to 1.0",
+            "Rand",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Util."
+        },
+        {
+          "id": 191,
+          "text": "UUID?",
+          "options": [
+            "Unique ID",
+            "Id",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Gen."
+        },
+        {
+          "id": 192,
+          "text": "Design Patterns?",
+          "options": [
+            "Singleton, Factory...",
+            "Art",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Best practices."
+        },
+        {
+          "id": 193,
+          "text": "Singleton?",
+          "options": [
+            "One instance",
+            "Single",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Pattern."
+        },
+        {
+          "id": 194,
+          "text": "Factory?",
+          "options": [
+            "Creates objects",
+            "Fac",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Pattern."
+        },
+        {
+          "id": 195,
+          "text": "Observer?",
+          "options": [
+            "Event listener",
+            "Watch",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Pattern."
+        },
+        {
+          "id": 196,
+          "text": "MVC?",
+          "options": [
+            "Model View Controller",
+            "Arch",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Pattern."
+        },
+        {
+          "id": 197,
+          "text": "DAO?",
+          "options": [
+            "Data Access Object",
+            "DB",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Pattern."
+        },
+        {
+          "id": 198,
+          "text": "DTO?",
+          "options": [
+            "Data Transfer Object",
+            "Data",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Pattern."
+        },
+        {
+          "id": 199,
+          "text": "Dependency Injection?",
+          "options": [
+            "IoC",
+            "Inj",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Spring."
+        },
+        {
+          "id": 200,
+          "text": "Java 17?",
+          "options": [
+            "LTS Version (Records)",
+            "New",
+            "None",
+            "None"
+          ],
+          "correct": 0,
+          "explanation": "Modern."
+        }
+      ]
+    }
+  ]
+}

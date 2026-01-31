@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging Challenge | iX Platform</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/back-button.css">
+    <style>
+        .score-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .score-val {
+            font-size: 2.5rem;
+            color: var(--accent-primary);
+            font-weight: bold;
+        }
+
+        .debug-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: all 0.2s;
+        }
+
+        .debug-row:hover {
+            border-color: var(--accent-primary);
+            transform: translateX(5px);
+        }
+
+        .status-solved {
+            color: #00ff9d;
+            font-weight: bold;
+        }
+
+        .status-pending {
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-module">
+        <div class="header-left">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a>
+                <span class="separator">/</span>
+                <span class="current">Debug</span>
+            </div>
+        </div>
+        <div class="header-right" style="gap: 25px;">
+            <div class="xp-badge" id="headerXP"
+                style="display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.3); padding: 8px 15px; border-radius: 8px; border: 1px solid var(--accent-primary);">
+                <span style="color: var(--accent-primary); font-weight: bold; font-size: 0.9rem;">Score:</span>
+                <span id="userScoreInHeader" style="font-size: 1.1rem; font-weight: 900; color: #fff;">0</span>
+            </div>
+            <div class="logo"><a href="../index.html">iX <span style="font-weight:300">Code</span></a></div>
+        </div>
+    </header>
+
+    <div class="sub-header">
+        <a href="../index.html" class="btn-back-global">
+            <i class="fas fa-chevron-left"></i> <span>Back</span>
+        </a>
+    </div>
+
+    <div class="quiz-container" style="max-width: 1000px;">
+        <h1 style="font-size: 3rem; margin-bottom: 10px; color: #ff6b6b;">Debugging Challenge 🐛</h1>
+        <p style="color: #aaa; margin-bottom: 30px;">Find the bugs, fix the code, earn points. (+10 Success, -2 Retry)
+        </p>
+
+        <div class="score-card">
+            <div>
+                <h3 style="color:#ccc; margin-bottom: 5px;">Total Score</h3>
+                <div style="font-size: 0.9rem; color:#888;">Keep your streaks high!</div>
+            </div>
+            <div id="totalScore" class="score-val">0</div>
+        </div>
+
+        <!-- NEW: Group Solve Banner -->
+        <!-- <div
+            style="background: linear-gradient(90deg, #2c3e50, #4ca1af); padding: 25px; border-radius: 12px; margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+                <h2 style="margin:0 0 10px 0; color: #fff;">👩‍💻 Peer Programming Mode</h2>
+                <p style="margin:0; color: #eee;">Invite 1 friend, chat, share screen, and debug together.</p>
+            </div>
+            <button onclick="startGroupSession()" class="btn-premium"
+                style="background: #fff; color: #333; font-weight: bold; padding: 12px 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                <i class="fas fa-users"></i> Start Group Session
+            </button>
+        </div> -->
+
+        <div id="challenge-list">
+            <!-- Loaded via JS -->
+            <div style="text-align:center; padding: 20px;">Loading Challenges...</div>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="../index.html" class="mobile-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="../problems/index.html" class="mobile-nav-item">
+            <i class="fas fa-code"></i>
+            <span>Coding</span>
+        </a>
+        <a href="../quiz_landing.html" class="mobile-nav-item">
+            <i class="fas fa-brain"></i>
+            <span>Quiz</span>
+        </a>
+        <a href="../community.html" class="mobile-nav-item">
+            <i class="fas fa-users"></i>
+            <span>iX Link</span>
+        </a>
+        <a href="../profile.html" class="mobile-nav-item">
+            <i class="fas fa-user-circle"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script>
+        // Auth Check
+        Auth.requireAuth();
+        const currentUser = Auth.getUser();
+        const username = currentUser.username;
+        const scoreKey = `ix_debug_score_${username}`;
+        const solvedKey = `ix_debug_solved_${username}`;
+
+        // Load Score
+        function updateScoreDisplay() {
+            const score = localStorage.getItem(scoreKey) || 0;
+            document.getElementById('totalScore').innerText = score;
+
+            // Update Header Score
+            const scores = Auth.getScores();
+            const headerScoreEl = document.getElementById('userScoreInHeader');
+            if (headerScoreEl) {
+                headerScoreEl.innerText = scores.total;
+            }
+        }
+
+        async function loadChallenges() {
+            const list = document.getElementById('challenge-list');
+            try {
+                // Try fetching from relative path
+                const res = await fetch('../data/debug_problems.json');
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+                const challenges = await res.json();
+                renderChallenges(challenges);
+            } catch (e) {
+                console.error('Failed to load challenges:', e);
+                list.innerHTML = `
+                    <div style="text-align:center; padding: 20px; color: #ff6b6b;">
+                        <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 10px;"></i><br>
+                        Failed to load challenges.<br>
+                        <small style="color:#888;">${e.message}</small>
+                    </div>
+                `;
+            }
+        }
+
+        function renderChallenges(list) {
+            const container = document.getElementById('challenge-list');
+            container.innerHTML = '';
+
+            const solvedMap = JSON.parse(localStorage.getItem(solvedKey) || '{}');
+
+            list.forEach((c, idx) => {
+                const isSolved = solvedMap[c.id];
+                const row = document.createElement('div');
+                row.className = 'debug-row';
+                row.innerHTML = `
+                    <div style="display:flex; align-items:center; gap: 15px;">
+                        <span style="font-family:monospace; color:#666;">#${idx + 1}</span>
+                        <div>
+                            <h3 style="margin:0; font-size: 1.1rem; color: #fff;">${c.title}</h3>
+                            <div style="font-size: 0.85rem; color: ${isSolved ? '#00ff9d' : '#888'}; margin-top: 5px;">
+                                ${isSolved ? '<i class="fas fa-check-circle"></i> Solved' : 'Pending Fix'}
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                         <span class="difficulty-badge" style="background:rgba(255,255,255,0.1); padding: 5px 10px; font-size:0.8rem; border-radius:10px; margin-right:15px;">${c.difficulty}</span>
+                        <a href="solve.html?id=${c.id}" class="btn-premium" style="background: ${isSolved ? '#333' : '#ff6b6b'}; color: white; padding: 8px 20px;">
+                            ${isSolved ? 'Revisit' : 'Debug Now'}
+                        </a>
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        updateScoreDisplay();
+        loadChallenges();
+
+        function startGroupSession() {
+            Swal.fire({
+                title: 'Start Peer Session',
+                html: `
+                    <div style="text-align:left; margin-bottom:15px;">
+                        <label style="color:#aaa; display:block; margin-bottom:5px;">Your ID</label>
+                        <div style="background:#333; padding:10px; color:#fff; border-radius:4px; font-family:monospace;">USER-${Math.floor(Math.random() * 10000)}</div>
+                    </div>
+                    <div style="text-align:left;">
+                        <label style="color:#aaa; display:block; margin-bottom:5px;">Invite Friend (Enter ID)</label>
+                        <input type="text" id="friendId" class="swal2-input" placeholder="e.g. FRIEND-456" style="margin:0; width:100%;">
+                    </div>
+                `,
+                background: '#1e1e1e',
+                color: '#fff',
+                showCancelButton: true,
+                confirmButtonText: 'Connect & Start',
+                confirmButtonColor: '#00f2ff',
+                cancelButtonColor: '#444',
+                preConfirm: () => {
+                    const friendId = Swal.getPopup().querySelector('#friendId').value;
+                    if (!friendId) {
+                        Swal.showValidationMessage('Please enter a friend ID');
+                    }
+                    return { friendId: friendId };
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Simulate connection
+                    let timerInterval;
+                    Swal.fire({
+                        title: 'Connecting...',
+                        html: 'Handshaking with ' + result.value.friendId,
+                        timer: 2000,
+                        timerProgressBar: true,
+                        background: '#1e1e1e',
+                        color: '#fff',
+                        didOpen: () => {
+                            Swal.showLoading();
+                        }
+                    }).then((dismiss) => {
+                        // Store session state
+                        sessionStorage.setItem('ix_group_session', JSON.stringify({
+                            active: true,
+                            friendId: result.value.friendId,
+                            role: 'host'
+                        }));
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Connected!',
+                            text: 'Entering Lobby...',
+                            background: '#1e1e1e',
+                            color: '#fff',
+                            timer: 1500,
+                            showConfirmButton: false
+                        });
+                        // Reload or let user pick a challenge
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

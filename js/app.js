@@ -76,7 +76,7 @@ function openAction(actionType) {
       break;
 
     case "mock":
-      window.location.href = `mock/?lang=${lang}`;
+      window.location.href = "ai-interview.html";
       break;
 
     default:
