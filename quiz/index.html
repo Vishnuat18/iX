@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Set | iX Quiz</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="../index.html">iX <span style="font-weight:300">Quiz</span></a></div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="quiz-container">
+        <div class="glass-panel" style="padding: 40px; text-align: center;">
+            <h1 id="topic-title" style="margin-bottom: 10px; font-size: 2.5rem;">Loading Topic...</h1>
+            <p style="color: #aaa; margin-bottom: 30px;">Complete sets to unlock more!</p>
+
+            <div id="sets-container" class="set-grid">
+                <!-- Sets will be injected here -->
+            </div>
+
+            <div style="margin-top: 40px;">
+                <a href="../index.html" class="btn-premium"
+                    style="background: transparent; border: 1px solid var(--glass-border);">Back to Topics</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+
+        async function loadSets() {
+            try {
+                // Adjust path based on topic structure "category/filename"
+                const response = await fetch(`../data/quiz/${topic}.json`);
+                if (!response.ok) throw new Error('Topic not found');
+                const data = await response.json();
+
+                document.title = `${data.topic} | iX Quiz`;
+                document.getElementById('topic-title').innerText = data.topic;
+
+                const container = document.getElementById('sets-container');
+                container.innerHTML = ''; // Clear loading
+
+                // Get progress from localStorage
+                // Structure: "topic_id": [scores_array] or just max_unlocked_index
+                // Simple logic: If Set N score >= 70%, unlock Set N+1
+                // Default: Set 1 unlocked
+
+                data.sets.forEach((set, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'set-card glass-panel';
+
+                    // Check lock status
+                    const prevSetId = index > 0 ? data.sets[index - 1].setId : null;
+                    const prevScore = prevSetId ? localStorage.getItem(`${topic}_${prevSetId}_score`) : 100; // Fake 100 for first
+
+                    let isLocked = false;
+                    if (index > 0) {
+                        if (!prevScore || parseInt(prevScore) < 70) {
+                            isLocked = true;
+                        }
+                    }
+
+                    // Current set high score
+                    const myScore = localStorage.getItem(`${topic}_${set.setId}_score`);
+
+                    if (isLocked) {
+                        card.classList.add('locked');
+                        card.innerHTML = `
+                            <h3>${set.title}</h3>
+                            <p>Score 70% in previous set to unlock</p>
+                        `;
+                    } else {
+                        card.onclick = () => window.location.href = `quiz.html?topic=${topic}&set=${set.setId}`;
+                        card.innerHTML = `
+                            <h3>${set.title}</h3>
+                            <p>${set.questions.length} Questions</p>
+                            ${myScore ? `<span class="set-score">High Score: ${myScore}%</span>` : '<span style="color:#aaa; font-size:0.9rem">Not attempted</span>'}
+                        `;
+                    }
+
+                    container.appendChild(card);
+                });
+
+            } catch (error) {
+                document.getElementById('topic-title').innerText = "Topic Not Found";
+                console.error(error);
+            }
+        }
+
+        loadSets();
+    </script>
+</body>
+
+</html>

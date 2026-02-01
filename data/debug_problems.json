@@ -1,0 +1,272 @@
+[
+    {
+        "id": "d1",
+        "title": "Even or Odd Check",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>The program should check if a number is Even or Odd. But it returns 'Even' for 3.</p>",
+        "buggyCode": "public class EvenOdd {\n    public static void main(String[] args) {\n        int n = 3;\n        if (n % 2 == 1) {\n            System.out.println(\"Even\");\n        } else {\n            System.out.println(\"Odd\");\n        }\n    }\n}",
+        "solutionPattern": "n % 2 == 0",
+        "expectedOutput": "Odd"
+    },
+    {
+        "id": "d2",
+        "title": "Sum of Two Numbers",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Calculate sum of two numbers. Output is wrong.</p>",
+        "buggyCode": "public class Sum {\n    public static void main(String[] args) {\n        int a = 5;\n        int b = 7;\n        int sum = a - b;\n        System.out.println(sum);\n    }\n}",
+        "solutionPattern": "a + b",
+        "expectedOutput": "12"
+    },
+    {
+        "id": "d3",
+        "title": "Largest of Two Numbers",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Find the largest number. It prints the smaller one.</p>",
+        "buggyCode": "public class Largest {\n    public static void main(String[] args) {\n        int a = 10, b = 20;\n        if (a < b) {\n            System.out.println(a);\n        } else {\n            System.out.println(b);\n        }\n    }\n}",
+        "solutionPattern": "a > b",
+        "expectedOutput": "20"
+    },
+    {
+        "id": "d4",
+        "title": "Factorial (Iterative)",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Calculate 5!. Be careful with loop bounds.</p>",
+        "buggyCode": "public class Factorial {\n    public static void main(String[] args) {\n        int n = 5;\n        int fact = 1;\n        for (int i = 1; i < n; i++) {\n            fact = fact * i;\n        }\n        System.out.println(fact);\n    }\n}",
+        "solutionPattern": "i <= n",
+        "expectedOutput": "120"
+    },
+    {
+        "id": "d5",
+        "title": "Reverse a Number",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Reverse the digits of 123.</p>",
+        "buggyCode": "public class Reverse {\n    public static void main(String[] args) {\n        int num = 123, rev = 0;\n        while(num != 0) {\n            int digit = num % 10;\n            rev = rev + digit; // Bug here\n            num /= 10;\n        }\n        System.out.println(rev);\n    }\n}",
+        "solutionPattern": "rev * 10 + digit",
+        "expectedOutput": "321"
+    },
+    {
+        "id": "d6",
+        "title": "Palindrome Number",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Check if 121 is palindrome. Original number is lost.</p>",
+        "buggyCode": "public class Palindrome {\n    public static void main(String[] args) {\n        int num = 121;\n        int rev = 0;\n        while (num != 0) {\n            rev = rev * 10 + num % 10;\n            num /= 10;\n        }\n        // num is now 0!\n        if (num == rev) System.out.println(\"Palindrome\");\n        else System.out.println(\"Not Palindrome\");\n    }\n}",
+        "solutionPattern": "temp = num",
+        "expectedOutput": "Palindrome"
+    },
+    {
+        "id": "d7",
+        "title": "Prime Number Check",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Check if 7 is Prime. Loop range is issue.</p>",
+        "buggyCode": "public class Prime {\n    public static void main(String[] args) {\n        int n = 7, count = 0;\n        for (int i = 1; i < n; i++) {\n            if (n % i == 0) count++;\n        }\n        if (count == 1) System.out.println(\"Prime\"); // Checks for exactly 1 factor (1)\n        else System.out.println(\"Not Prime\");\n    }\n}",
+        "solutionPattern": "i <= n",
+        "expectedOutput": "Prime"
+    },
+    {
+        "id": "d8",
+        "title": "Fibonacci Series",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Print first 5 Fibonacci numbers.</p>",
+        "buggyCode": "public class Fibo {\n    public static void main(String[] args) {\n        int n1=0, n2=1, n3, i, count=5;\n        System.out.print(n1+\" \"+n2);\n        for(i=2;i<count;++i) {\n            n1 = n2;\n            n2 = n3; // n3 not calc yet\n            n3 = n1 + n2;\n            System.out.print(\" \"+n3);\n        }\n    }\n}",
+        "solutionPattern": "n3 = n1 + n2",
+        "expectedOutput": "0 1 1 2 3"
+    },
+    {
+        "id": "d9",
+        "title": "Count Digits",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Count digits in number. 0 should have 1 digit.</p>",
+        "buggyCode": "public class Count {\n    public static void main(String[] args) {\n        int n = 0;\n        int count = 0;\n        while (n != 0) {\n            n /= 10;\n            count++;\n        }\n        System.out.println(count);\n    }\n}",
+        "solutionPattern": "do",
+        "expectedOutput": "1"
+    },
+    {
+        "id": "d10",
+        "title": "Sum of Digits",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Sum of digits of 123.</p>",
+        "buggyCode": "public class SumDigits {\n    public static void main(String[] args) {\n        int n = 123, sum = 0;\n        while(n != 0) {\n            sum += n; // Adds whole number!\n            n /= 10;\n        }\n        System.out.println(sum);\n    }\n}",
+        "solutionPattern": "n % 10",
+        "expectedOutput": "6"
+    },
+    {
+        "id": "d11",
+        "title": "Reverse String",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Reverse 'hello'.</p>",
+        "buggyCode": "public class RevStr {\n    public static void main(String[] args) {\n        String s = \"hello\";\n        String rev = \"\";\n        for(int i=0; i<s.length(); i++) {\n            rev = rev + s.charAt(i); // Appends to end\n        }\n        System.out.println(rev);\n    }\n}",
+        "solutionPattern": "s.charAt(i) + rev",
+        "expectedOutput": "olleh"
+    },
+    {
+        "id": "d12",
+        "title": "Count Vowels",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Count vowels in 'Hello'. Case sensitivity?</p>",
+        "buggyCode": "public class Vowels {\n    public static void main(String[] args) {\n        String s = \"Hello\";\n        int count = 0;\n        for(char c : s.toCharArray()) {\n            if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') count++;\n        }\n        System.out.println(count);\n    }\n}",
+        "solutionPattern": "toLowerCase",
+        "expectedOutput": "2"
+    },
+    {
+        "id": "d13",
+        "title": "Swap Two Numbers",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Swap values of a and b.</p>",
+        "buggyCode": "public class Swap {\n    public static void main(String[] args) {\n        int a=3, b=7;\n        a = b;\n        b = a;\n        System.out.println(a + \" \" + b);\n    }\n}",
+        "solutionPattern": "temp",
+        "expectedOutput": "7 3"
+    },
+    {
+        "id": "d14",
+        "title": "Multiplication Table",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>5x1 to 5x10.</p>",
+        "buggyCode": "public class Table {\n    public static void main(String[] args) {\n        int n = 5;\n        for(int i=1; i<10; i++) {\n            System.out.println(n + \"x\" + i + \"=\" + (n*i));\n        }\n    }\n}",
+        "solutionPattern": "i <= 10",
+        "expectedOutput": "5x1...5x10"
+    },
+    {
+        "id": "d15",
+        "title": "Remove Spaces",
+        "difficulty": "Easy",
+        "description": "<h3>Goal</h3><p>Remove all spaces.</p>",
+        "buggyCode": "public class NoSpace {\n    public static void main(String[] args) {\n        String s = \"Java Programming\";\n        s = s.replaceFirst(\" \", \"\");\n        System.out.println(s);\n    }\n}",
+        "solutionPattern": "replaceAll",
+        "expectedOutput": "JavaProgramming"
+    },
+    {
+        "id": "d16",
+        "title": "Find Duplicate Characters",
+        "difficulty": "Medium",
+        "description": "<h3>Goal</h3><p>Count chars. Ignore spaces.</p>",
+        "buggyCode": "public class Dups {\n    public static void main(String[] args) {\n        String s = \"pro gram ming\";\n        // ... counting logic includes space count\n    }\n}",
+        "solutionPattern": "if(c != ' ')",
+        "expectedOutput": "r=2 g=2 m=2"
+    },
+    {
+        "id": "d17",
+        "title": "Anagram Check",
+        "difficulty": "Medium",
+        "description": "<h3>Goal</h3><p>Check anagram. Length check missing.</p>",
+        "buggyCode": "public class Anagram {\n    public static boolean check(String s1, String s2) {\n        // ... sorts arrays and checks equality\n        // Missing length check!\n    }\n}",
+        "solutionPattern": "s1.length() != s2.length()",
+        "expectedOutput": "Anagram"
+    },
+    {
+        "id": "d18",
+        "title": "Reverse Each Word",
+        "difficulty": "Medium",
+        "description": "<h3>Goal</h3><p>Reverse words individually.</p>",
+        "buggyCode": "public class RevWord {\n    public static void main(String[] args) {\n        String s = \"Java is fun\";\n        StringBuilder sb = new StringBuilder(s);\n        System.out.println(sb.reverse());\n    }\n}",
+        "solutionPattern": "split(\" \")",
+        "expectedOutput": "avaJ si nuf"
+    },
+    {
+        "id": "d19",
+        "title": "Array Reverse",
+        "difficulty": "Medium",
+        "description": "<h3>Goal</h3><p>Reverse array in place.</p>",
+        "buggyCode": "public class ArrRev {\n    public static void main(String[] args) {\n        int[] arr = {1,2,3,4};\n        for(int i=0; i<arr.length; i++) {\n            int temp = arr[i];\n            arr[i] = arr[arr.length-1-i];\n            arr[arr.length-1-i] = temp;\n        }\n        // Double swap!\n    }\n}",
+        "solutionPattern": "i < arr.length / 2",
+        "expectedOutput": "[4,3,2,1]"
+    },
+    {
+        "id": "d20",
+        "title": "Missing Number",
+        "difficulty": "Medium",
+        "description": "<h3>Goal</h3><p>Find missing number 1 to N.</p>",
+        "buggyCode": "public class Missing {\n    public static void main(String[] args) {\n        int[] arr = {1,2,4,5};\n        int n = 5;\n        int sum = n*(n-1)/2; // Formula wrong for 1 to N?\n        // ...\n    }\n}",
+        "solutionPattern": "n * (n + 1) / 2",
+        "expectedOutput": "3"
+    },
+    {
+        "id": "d21",
+        "title": "Second Largest",
+        "difficulty": "Medium",
+        "description": "<h3>Goal</h3><p>Find 2nd largest. Handle duplicates.</p>",
+        "buggyCode": "public class SecondMax {\n    public static void main(String[] args) {\n        int[] arr = {5,5,3};\n        Arrays.sort(arr);\n        System.out.println(arr[arr.length-2]);\n    }\n}",
+        "solutionPattern": "arr[i] != arr[n-1]",
+        "expectedOutput": "3"
+    },
+    {
+        "id": "d22",
+        "title": "Binary Search",
+        "difficulty": "Medium",
+        "description": "<h3>Goal</h3><p>Mid calculation overflow risk.</p>",
+        "buggyCode": "public class BinSearch {\n    int mid = (low + high) / 2;\n}",
+        "solutionPattern": "low + (high - low) / 2",
+        "expectedOutput": "2"
+    },
+    {
+        "id": "d23",
+        "title": "Longest Substring No Repeats",
+        "difficulty": "Hard",
+        "description": "<h3>Goal</h3><p>Sliding window update wrong.</p>",
+        "buggyCode": "public class LongSub {\n    // if contains, set start = i? No.\n}",
+        "solutionPattern": "start = Math.max",
+        "expectedOutput": "3"
+    },
+    {
+        "id": "d24",
+        "title": "String Compression",
+        "difficulty": "Medium",
+        "description": "<h3>Goal</h3><p>a2b2c3 count logic.</p>",
+        "buggyCode": "public class Compress {\n    // count not resetting on new char\n}",
+        "solutionPattern": "count = 1",
+        "expectedOutput": "a2b2c3"
+    },
+    {
+        "id": "d25",
+        "title": "Balanced Parentheses",
+        "difficulty": "Hard",
+        "description": "<h3>Goal</h3><p>Stack pop empty check.</p>",
+        "buggyCode": "public class Balanced {\n    if(s.charAt(i) == ')') stack.pop();\n}",
+        "solutionPattern": "!stack.isEmpty()",
+        "expectedOutput": "true"
+    },
+    {
+        "id": "d26",
+        "title": "Matrix Addition",
+        "difficulty": "Medium",
+        "description": "<h3>Goal</h3><p>Wrong indices.</p>",
+        "buggyCode": "public class Matrix {\n    res[i][j] = a[j][i] + b[i][j];\n}",
+        "solutionPattern": "a[i][j]",
+        "expectedOutput": "[[6,8],[10,12]]"
+    },
+    {
+        "id": "d27",
+        "title": "Remove Duplicates Array",
+        "difficulty": "Medium",
+        "description": "<h3>Goal</h3><p>Preserve order.</p>",
+        "buggyCode": "public class Dedup {\n    // uses HashSet but prints unsorted\n}",
+        "solutionPattern": "LinkedHashSet",
+        "expectedOutput": "[1,2,3]"
+    },
+    {
+        "id": "d28",
+        "title": "Count Words",
+        "difficulty": "Medium",
+        "description": "<h3>Goal</h3><p>Multiple spaces issue.</p>",
+        "buggyCode": "public class Words {\n    String[] words = s.split(\" \");\n    System.out.println(words.length);\n}",
+        "solutionPattern": "\\s+",
+        "expectedOutput": "3"
+    },
+    {
+        "id": "d29",
+        "title": "Thread Synchronization",
+        "difficulty": "Hard",
+        "description": "<h3>Goal</h3><p>Counter race condition.</p>",
+        "buggyCode": "public void increment() {\n    count++;\n}",
+        "solutionPattern": "synchronized",
+        "expectedOutput": "Correct Count"
+    },
+    {
+        "id": "d30",
+        "title": "File Word Count",
+        "difficulty": "Hard",
+        "description": "<h3>Goal</h3><p>Counts empty lines.</p>",
+        "buggyCode": "while((line = br.readLine()) != null) {\n    count += line.split(\" \").length;\n}",
+        "solutionPattern": "trim().isEmpty()",
+        "expectedOutput": "3"
+    }
+]

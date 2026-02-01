@@ -60,7 +60,7 @@ function openAction(actionType) {
 
   switch (actionType) {
     case "learn":
-      window.location.href = `learn/?lang=${lang}`;
+      window.location.href = "courses.html";
       break;
 
     case "quiz":
@@ -76,7 +76,7 @@ function openAction(actionType) {
       break;
 
     case "mock":
-      window.location.href = `mock/?lang=${lang}`;
+      window.location.href = "ai-interview.html";
       break;
 
     default:

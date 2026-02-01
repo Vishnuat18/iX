@@ -1,0 +1,1235 @@
+{
+    "topic": "Computer Networks",
+    "sets": [
+        {
+            "setId": "cn_1",
+            "title": "Set 1: Intro & OSI Model",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "Computer Network?",
+                    "options": [
+                        "Interconnected computers",
+                        "Web",
+                        "Net",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Resource sharing."
+                },
+                {
+                    "id": 2,
+                    "text": "OSI Model?",
+                    "options": [
+                        "Open Systems Interconnection",
+                        "Operating System",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "7 layers."
+                },
+                {
+                    "id": 3,
+                    "text": "Layer 1?",
+                    "options": [
+                        "Physical",
+                        "Link",
+                        "Net",
+                        "App"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bits."
+                },
+                {
+                    "id": 4,
+                    "text": "Layer 2?",
+                    "options": [
+                        "Data Link",
+                        "Phy",
+                        "Net",
+                        "Trans"
+                    ],
+                    "correct": 0,
+                    "explanation": "Frames."
+                },
+                {
+                    "id": 5,
+                    "text": "Layer 3?",
+                    "options": [
+                        "Network",
+                        "Link",
+                        "App",
+                        "Session"
+                    ],
+                    "correct": 0,
+                    "explanation": "Packets."
+                },
+                {
+                    "id": 6,
+                    "text": "Layer 4?",
+                    "options": [
+                        "Transport",
+                        "Net",
+                        "Session",
+                        "App"
+                    ],
+                    "correct": 0,
+                    "explanation": "Segments."
+                },
+                {
+                    "id": 7,
+                    "text": "Layer 7?",
+                    "options": [
+                        "Application",
+                        "Presentation",
+                        "Session",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "User interface."
+                },
+                {
+                    "id": 8,
+                    "text": "TCP/IP Model?",
+                    "options": [
+                        "4 or 5 Layers",
+                        "7 Layers",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Internet standard."
+                },
+                {
+                    "id": 9,
+                    "text": "MAC Address?",
+                    "options": [
+                        "Physical Address (48 bit)",
+                        "Logical",
+                        "IP",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hardware ID."
+                },
+                {
+                    "id": 10,
+                    "text": "IP Address?",
+                    "options": [
+                        "Logical Address",
+                        "Physical",
+                        "MAC",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Network location."
+                },
+                {
+                    "id": 11,
+                    "text": "PDU?",
+                    "options": [
+                        "Protocol Data Unit",
+                        "Power",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unit of data."
+                },
+                {
+                    "id": 12,
+                    "text": "Switch vs Hub?",
+                    "options": [
+                        "Intelligent vs Broadcast",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Collision domains."
+                },
+                {
+                    "id": 13,
+                    "text": "Router?",
+                    "options": [
+                        "Layer 3 device",
+                        "Switch",
+                        "Hub",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Routes packets."
+                },
+                {
+                    "id": 14,
+                    "text": "LAN?",
+                    "options": [
+                        "Local Area Network",
+                        "Large",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Small area."
+                },
+                {
+                    "id": 15,
+                    "text": "WAN?",
+                    "options": [
+                        "Wide Area Network",
+                        "Web",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Large area."
+                },
+                {
+                    "id": 16,
+                    "text": "Topology?",
+                    "options": [
+                        "Physical layout",
+                        "Map",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Star, Bus, Ring."
+                },
+                {
+                    "id": 17,
+                    "text": "Mesh Topology?",
+                    "options": [
+                        "Fully connected",
+                        "Mess",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Redundancy."
+                },
+                {
+                    "id": 18,
+                    "text": "Star Topology?",
+                    "options": [
+                        "Central hub/switch",
+                        "Sun",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Common."
+                },
+                {
+                    "id": 19,
+                    "text": "Encapsulation?",
+                    "options": [
+                        "Wrapping data with headers",
+                        "Hiding",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Layering."
+                },
+                {
+                    "id": 20,
+                    "text": "Unicast?",
+                    "options": [
+                        "One to One",
+                        "One to All",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Direct."
+                }
+            ]
+        },
+        {
+            "setId": "cn_2",
+            "title": "Set 2: IP Addressing & subnetting",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "IPv4 length?",
+                    "options": [
+                        "32 bits",
+                        "64",
+                        "128",
+                        "16"
+                    ],
+                    "correct": 0,
+                    "explanation": "4 bytes."
+                },
+                {
+                    "id": 22,
+                    "text": "IPv6 length?",
+                    "options": [
+                        "128 bits",
+                        "32",
+                        "64",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hexadecimal."
+                },
+                {
+                    "id": 23,
+                    "text": "Subnet Mask?",
+                    "options": [
+                        "Identifies network/host portion",
+                        "Hide",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "CIDR."
+                },
+                {
+                    "id": 24,
+                    "text": "Class A Range?",
+                    "options": [
+                        "1-126",
+                        "128-191",
+                        "192-223",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "First octet."
+                },
+                {
+                    "id": 25,
+                    "text": "Loopback Address?",
+                    "options": [
+                        "127.0.0.1",
+                        "0.0.0.0",
+                        "255.255.255.255",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Localhost."
+                },
+                {
+                    "id": 26,
+                    "text": "Orivate IP Range Class C?",
+                    "options": [
+                        "192.168.x.x",
+                        "10.x.x.x",
+                        "172.16.x.x",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "RFC 1918."
+                },
+                {
+                    "id": 27,
+                    "text": "CIDR?",
+                    "options": [
+                        "Classless Inter-Domain Routing",
+                        "Class",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "/24 notation."
+                },
+                {
+                    "id": 28,
+                    "text": "Dotted Decimal?",
+                    "options": [
+                        "Human readable IPv4",
+                        "Hex",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "FORMAT."
+                },
+                {
+                    "id": 29,
+                    "text": "ARP?",
+                    "options": [
+                        "IP to MAC resolution",
+                        "MAC to IP",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Address Resolution."
+                },
+                {
+                    "id": 30,
+                    "text": "RARP?",
+                    "options": [
+                        "MAC to IP",
+                        "IP to MAC",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reverse."
+                },
+                {
+                    "id": 31,
+                    "text": "DHCP?",
+                    "options": [
+                        "Dynamic Host Configuration",
+                        "Domain",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Auto IP."
+                },
+                {
+                    "id": 32,
+                    "text": "NAT?",
+                    "options": [
+                        "Network Address Translation",
+                        "Net",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Private to Public."
+                },
+                {
+                    "id": 33,
+                    "text": "ICMP?",
+                    "options": [
+                        "Internet Control Message Protocol",
+                        "Ping",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Diagnostics."
+                },
+                {
+                    "id": 34,
+                    "text": "Ping uses?",
+                    "options": [
+                        "ICMP Echo Request",
+                        "TCP",
+                        "UDP",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Connectivity."
+                },
+                {
+                    "id": 35,
+                    "text": "TTL?",
+                    "options": [
+                        "Time To Live",
+                        "Time",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hop count."
+                },
+                {
+                    "id": 36,
+                    "text": "Broadcast Address?",
+                    "options": [
+                        "Last address in subnet",
+                        "First",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "All ones."
+                },
+                {
+                    "id": 37,
+                    "text": "Network Address?",
+                    "options": [
+                        "First address",
+                        "Last",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Identifier."
+                },
+                {
+                    "id": 38,
+                    "text": "Unicast vs Multicast?",
+                    "options": [
+                        "One-to-One vs One-to-Group",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Traffic type."
+                },
+                {
+                    "id": 39,
+                    "text": "IPv4 Exhaustion?",
+                    "options": [
+                        "Ran out of addresses",
+                        "Tired",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reason for IPv6."
+                },
+                {
+                    "id": 40,
+                    "text": "Anycast?",
+                    "options": [
+                        "Nearest node",
+                        "Any",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "IPv6 feature."
+                }
+            ]
+        },
+        {
+            "setId": "cn_3",
+            "title": "Set 3: Transport Layer (TCP/UDP)",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "TCP?",
+                    "options": [
+                        "Transmission Control Protocol",
+                        "Total",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reliable."
+                },
+                {
+                    "id": 42,
+                    "text": "UDP?",
+                    "options": [
+                        "User Datagram Protocol",
+                        "User",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unreliable/Fast."
+                },
+                {
+                    "id": 43,
+                    "text": "Connection Oriented?",
+                    "options": [
+                        "TCP",
+                        "UDP",
+                        "IP",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Handshake."
+                },
+                {
+                    "id": 44,
+                    "text": "Three-Way Handshake?",
+                    "options": [
+                        "SYN, SYN-ACK, ACK",
+                        "Hi, Hello",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Connection set up."
+                },
+                {
+                    "id": 45,
+                    "text": "Flow Control?",
+                    "options": [
+                        "Prevent sender overwhelming receiver",
+                        "Traffic",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Windowing."
+                },
+                {
+                    "id": 46,
+                    "text": "Congestion Control?",
+                    "options": [
+                        "Prevent network overload",
+                        "Traffic",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Slow start."
+                },
+                {
+                    "id": 47,
+                    "text": "Sliding Window?",
+                    "options": [
+                        "Flow control mechanism",
+                        "Glass",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Efficiency."
+                },
+                {
+                    "id": 48,
+                    "text": "Port Number?",
+                    "options": [
+                        "Identifies application",
+                        "Dock",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "End point."
+                },
+                {
+                    "id": 49,
+                    "text": "well-known ports?",
+                    "options": [
+                        "0-1023",
+                        "1024-49151",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reserved."
+                },
+                {
+                    "id": 50,
+                    "text": "Socket?",
+                    "options": [
+                        "IP + Port",
+                        "Plug",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Endpoint."
+                },
+                {
+                    "id": 51,
+                    "text": "HTTP Port?",
+                    "options": [
+                        "80",
+                        "443",
+                        "21",
+                        "22"
+                    ],
+                    "correct": 0,
+                    "explanation": "Web."
+                },
+                {
+                    "id": 52,
+                    "text": "HTTPS Port?",
+                    "options": [
+                        "443",
+                        "80",
+                        "8080",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Secure Web."
+                },
+                {
+                    "id": 53,
+                    "text": "SSH Port?",
+                    "options": [
+                        "22",
+                        "23",
+                        "25",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Secure Shell."
+                },
+                {
+                    "id": 54,
+                    "text": "FTP Port?",
+                    "options": [
+                        "20/21",
+                        "25",
+                        "110",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "File Transfer."
+                },
+                {
+                    "id": 55,
+                    "text": "SMTP Port?",
+                    "options": [
+                        "25",
+                        "110",
+                        "143",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Email send."
+                },
+                {
+                    "id": 56,
+                    "text": "UDP usage?",
+                    "options": [
+                        "Video streaming, Gaming, DNS",
+                        "Email",
+                        "Web",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Speed over reliability."
+                },
+                {
+                    "id": 57,
+                    "text": "TCP usage?",
+                    "options": [
+                        "File transfer, Web, Email",
+                        "Streaming",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reliability essential."
+                },
+                {
+                    "id": 58,
+                    "text": "Checksum?",
+                    "options": [
+                        "Error detection",
+                        "Math",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Integrity."
+                },
+                {
+                    "id": 59,
+                    "text": "Segmentation?",
+                    "options": [
+                        "Breaking data into segments",
+                        "Piece",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Transport layer."
+                },
+                {
+                    "id": 60,
+                    "text": "Multiplexing?",
+                    "options": [
+                        "Multiple apps using network",
+                        "Mix",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ports."
+                }
+            ]
+        },
+        {
+            "setId": "cn_4",
+            "title": "Set 4: Application Layer",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "DNS?",
+                    "options": [
+                        "Domain Name System",
+                        "Do Not Stop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Name to IP."
+                },
+                {
+                    "id": 62,
+                    "text": "HTTP Methods?",
+                    "options": [
+                        "GET, POST, PUT, DELETE",
+                        "Read, Write",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Verbs."
+                },
+                {
+                    "id": 63,
+                    "text": "Stateless protocol?",
+                    "options": [
+                        "HTTP (default)",
+                        "FTP",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No memory."
+                },
+                {
+                    "id": 64,
+                    "text": "Cookie?",
+                    "options": [
+                        "State management mechanism",
+                        "Food",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Client side."
+                },
+                {
+                    "id": 65,
+                    "text": "SMTP?",
+                    "options": [
+                        "Simple Mail Transfer Protocol",
+                        "Send",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Push email."
+                },
+                {
+                    "id": 66,
+                    "text": "POP3?",
+                    "options": [
+                        "Post Office Protocol",
+                        "Mail",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pull email."
+                },
+                {
+                    "id": 67,
+                    "text": "IMAP?",
+                    "options": [
+                        "Internet Message Access Protocol",
+                        "Map",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sync email."
+                },
+                {
+                    "id": 68,
+                    "text": "Telnet?",
+                    "options": [
+                        "Remote command line (Insecure)",
+                        "Phone",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unencrypted."
+                },
+                {
+                    "id": 69,
+                    "text": "SSH?",
+                    "options": [
+                        "Secure Shell",
+                        "Quiet",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Encrypted remote."
+                },
+                {
+                    "id": 70,
+                    "text": "FTP mode?",
+                    "options": [
+                        "Active/Passive",
+                        "Fast/Slow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Data connection."
+                },
+                {
+                    "id": 71,
+                    "text": "MIME?",
+                    "options": [
+                        "Multipurpose Internet Mail Extensions",
+                        "Mime",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Content types."
+                },
+                {
+                    "id": 72,
+                    "text": "URL?",
+                    "options": [
+                        "Uniform Resource Locator",
+                        "Link",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Address."
+                },
+                {
+                    "id": 73,
+                    "text": "URI?",
+                    "options": [
+                        "Identifier (URL is a URI)",
+                        "None",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Superclass."
+                },
+                {
+                    "id": 74,
+                    "text": "HTTP Status 200?",
+                    "options": [
+                        "OK",
+                        "Error",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Success."
+                },
+                {
+                    "id": 75,
+                    "text": "HTTP Status 404?",
+                    "options": [
+                        "Not Found",
+                        "Error",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Client error."
+                },
+                {
+                    "id": 76,
+                    "text": "HTTP Status 500?",
+                    "options": [
+                        "Server Error",
+                        "OK",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Server error."
+                },
+                {
+                    "id": 77,
+                    "text": "Proxy Server?",
+                    "options": [
+                        "Intermediary",
+                        "Fake",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cache/Filter."
+                },
+                {
+                    "id": 78,
+                    "text": "Reverse Proxy?",
+                    "options": [
+                        "Protects server",
+                        "Protects client",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Load balancer."
+                },
+                {
+                    "id": 79,
+                    "text": "CDN?",
+                    "options": [
+                        "Content Delivery Network",
+                        "Cloud",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Speed."
+                },
+                {
+                    "id": 80,
+                    "text": "P2P?",
+                    "options": [
+                        "Peer to Peer",
+                        "Person",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Decentralized."
+                }
+            ]
+        },
+        {
+            "setId": "cn_5",
+            "title": "Set 5: Security & Wireless",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Firewall?",
+                    "options": [
+                        "Filter traffic",
+                        "Burn",
+                        "Wall",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Security."
+                },
+                {
+                    "id": 82,
+                    "text": "VPN?",
+                    "options": [
+                        "Virtual Private Network",
+                        "Very",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tunnel."
+                },
+                {
+                    "id": 83,
+                    "text": "Encryption?",
+                    "options": [
+                        "Encoding data",
+                        "Hiding",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Confidentiality."
+                },
+                {
+                    "id": 84,
+                    "text": "Symmetric Key?",
+                    "options": [
+                        "Same key for encrypt/decrypt",
+                        "Different",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fast."
+                },
+                {
+                    "id": 85,
+                    "text": "Asymmetric Key?",
+                    "options": [
+                        "Public/Private pair",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Secure exchange."
+                },
+                {
+                    "id": 86,
+                    "text": "SSL/TLS?",
+                    "options": [
+                        "Secure Sockets Layer",
+                        "Security",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "HTTPS."
+                },
+                {
+                    "id": 87,
+                    "text": "Wi-Fi Standard?",
+                    "options": [
+                        "802.11",
+                        "802.3",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "IEEE."
+                },
+                {
+                    "id": 88,
+                    "text": "Ethernet Standard?",
+                    "options": [
+                        "802.3",
+                        "802.11",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Wired."
+                },
+                {
+                    "id": 89,
+                    "text": "Bluetooth?",
+                    "options": [
+                        "PAN",
+                        "LAN",
+                        "WAN",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Personal Area."
+                },
+                {
+                    "id": 90,
+                    "text": "SSID?",
+                    "options": [
+                        "Wi-Fi Name",
+                        "ID",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Service Set ID."
+                },
+                {
+                    "id": 91,
+                    "text": "WPA2/WPA3?",
+                    "options": [
+                        "Wi-Fi Security",
+                        "Name",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Encryption protocols."
+                },
+                {
+                    "id": 92,
+                    "text": "DoS Attack?",
+                    "options": [
+                        "Denial of Service",
+                        "Disk",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Overwhelm."
+                },
+                {
+                    "id": 93,
+                    "text": "DDoS?",
+                    "options": [
+                        "Distributed DoS",
+                        "Double",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Botnet."
+                },
+                {
+                    "id": 94,
+                    "text": "Man in the Middle?",
+                    "options": [
+                        "Interception",
+                        "Center",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Eavesdropping."
+                },
+                {
+                    "id": 95,
+                    "text": "Phishing?",
+                    "options": [
+                        "Fake emails/sites",
+                        "Fishing",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Social engineering."
+                },
+                {
+                    "id": 96,
+                    "text": "Subnetting?",
+                    "options": [
+                        "Dividing network",
+                        "Joining",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Efficiency."
+                },
+                {
+                    "id": 97,
+                    "text": "Gateway?",
+                    "options": [
+                        "Entry/Exit point",
+                        "Door",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Router."
+                },
+                {
+                    "id": 98,
+                    "text": "Traceroute?",
+                    "options": [
+                        "Trace path to dest",
+                        "Track",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Diagnostics."
+                },
+                {
+                    "id": 99,
+                    "text": "Netstat?",
+                    "options": [
+                        "Network statistics",
+                        "Status",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ports."
+                },
+                {
+                    "id": 100,
+                    "text": "Wireshark?",
+                    "options": [
+                        "Packet sniffer",
+                        "Fish",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Analysis."
+                }
+            ]
+        }
+    ]
+}

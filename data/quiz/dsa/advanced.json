@@ -1,0 +1,1235 @@
+{
+    "topic": "DSA Advanced",
+    "sets": [
+        {
+            "setId": "dsa_adv_1",
+            "title": "Set 1: Trees",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "Tree definition?",
+                    "options": [
+                        "Hierarchical structure",
+                        "Linear",
+                        "Graph with loop",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Root/Children."
+                },
+                {
+                    "id": 2,
+                    "text": "Binary Tree?",
+                    "options": [
+                        "Max 2 children",
+                        "3",
+                        "Any",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Left/Right."
+                },
+                {
+                    "id": 3,
+                    "text": "Height of tree?",
+                    "options": [
+                        "Longest path root to leaf",
+                        "Nodes",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Depth."
+                },
+                {
+                    "id": 4,
+                    "text": "Depth of node?",
+                    "options": [
+                        "Edges from root to node",
+                        "Up",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Level."
+                },
+                {
+                    "id": 5,
+                    "text": "Leaf node?",
+                    "options": [
+                        "No children",
+                        "Root",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "End."
+                },
+                {
+                    "id": 6,
+                    "text": "Preorder Traversal?",
+                    "options": [
+                        "Root, Left, Right",
+                        "In",
+                        "Post",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "NLR."
+                },
+                {
+                    "id": 7,
+                    "text": "Inorder Traversal?",
+                    "options": [
+                        "Left, Root, Right",
+                        "Pre",
+                        "Post",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "LNR."
+                },
+                {
+                    "id": 8,
+                    "text": "Postorder Traversal?",
+                    "options": [
+                        "Left, Right, Root",
+                        "Pre",
+                        "In",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "LRN."
+                },
+                {
+                    "id": 9,
+                    "text": "Level Order?",
+                    "options": [
+                        "BFS (Breadth First)",
+                        "DFS",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Queue."
+                },
+                {
+                    "id": 10,
+                    "text": "Inorder of BST gives?",
+                    "options": [
+                        "Sorted sequence",
+                        "Random",
+                        "Reverse",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Property."
+                },
+                {
+                    "id": 11,
+                    "text": "Full Binary Tree?",
+                    "options": [
+                        "0 or 2 children",
+                        "1",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Structure."
+                },
+                {
+                    "id": 12,
+                    "text": "Complete Binary Tree?",
+                    "options": [
+                        "Filled left to right",
+                        "Full",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Heap."
+                },
+                {
+                    "id": 13,
+                    "text": "Perfect Binary Tree?",
+                    "options": [
+                        "All leaves same level, full",
+                        "Good",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "2^h - 1 nodes."
+                },
+                {
+                    "id": 14,
+                    "text": "Diameter of Tree?",
+                    "options": [
+                        "Longest path between any 2 nodes",
+                        "Radius",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Width."
+                },
+                {
+                    "id": 15,
+                    "text": "LCA?",
+                    "options": [
+                        "Lowest Common Ancestor",
+                        "Least",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Relationship."
+                },
+                {
+                    "id": 16,
+                    "text": "View problems?",
+                    "options": [
+                        "Left/Right/Top/Bottom view",
+                        "Look",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Traversal variants."
+                },
+                {
+                    "id": 17,
+                    "text": "Serialize Tree?",
+                    "options": [
+                        "Convert to string/array",
+                        "Save",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Storage."
+                },
+                {
+                    "id": 18,
+                    "text": "Max nodes height h?",
+                    "options": [
+                        "2^(h+1) - 1",
+                        "2h",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Binary."
+                },
+                {
+                    "id": 19,
+                    "text": "Balanced Tree?",
+                    "options": [
+                        "Height diff <= 1",
+                        "Equal",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "AVL/Red-Black."
+                },
+                {
+                    "id": 20,
+                    "text": "Threaded Binary Tree?",
+                    "options": [
+                        "Null ptrs point to successor",
+                        "Sewn",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Morris Traversal."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_adv_2",
+            "title": "Set 2: BST & AVL",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "BST Property?",
+                    "options": [
+                        "Left < Root < Right",
+                        "Sort",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Search."
+                },
+                {
+                    "id": 22,
+                    "text": "Search complexity BST?",
+                    "options": [
+                        "O(h)",
+                        "O(n)",
+                        "O(1)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Depends on height."
+                },
+                {
+                    "id": 23,
+                    "text": "Worst case BST?",
+                    "options": [
+                        "Skewed (O(n))",
+                        "Balanced",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Line."
+                },
+                {
+                    "id": 24,
+                    "text": "Insert in BST?",
+                    "options": [
+                        "Find pos and attach",
+                        "Swap",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Leaf."
+                },
+                {
+                    "id": 25,
+                    "text": "Delete leaf?",
+                    "options": [
+                        "Just remove",
+                        "Complex",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Simple."
+                },
+                {
+                    "id": 26,
+                    "text": "Delete 1 child?",
+                    "options": [
+                        "Child replaces parent",
+                        "Remove",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bypass."
+                },
+                {
+                    "id": 27,
+                    "text": "Delete 2 children?",
+                    "options": [
+                        "Swap with Inorder Successor",
+                        "Predecessor",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 28,
+                    "text": "AVL Tree?",
+                    "options": [
+                        "Self-balancing BST",
+                        "Fast",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Height balanced."
+                },
+                {
+                    "id": 29,
+                    "text": "Balance Factor?",
+                    "options": [
+                        "height(left) - height(right)",
+                        "Weight",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "-1, 0, 1."
+                },
+                {
+                    "id": 30,
+                    "text": "Rotations?",
+                    "options": [
+                        "LL, RR, LR, RL",
+                        "Spin",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Re-balance."
+                },
+                {
+                    "id": 31,
+                    "text": "Red-Black Tree?",
+                    "options": [
+                        "Self-balancing color based",
+                        "Paint",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Map impl."
+                },
+                {
+                    "id": 32,
+                    "text": "BST verification?",
+                    "options": [
+                        "Range check (min, max)",
+                        "Inorder",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Correctness."
+                },
+                {
+                    "id": 33,
+                    "text": "Floor/Ceil in BST?",
+                    "options": [
+                        "Closest values",
+                        "Roof",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Search var."
+                },
+                {
+                    "id": 34,
+                    "text": "Trie (Prefix Tree)?",
+                    "options": [
+                        "Dictionary / String search",
+                        "Try",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(length)."
+                },
+                {
+                    "id": 35,
+                    "text": "B-Tree?",
+                    "options": [
+                        "Disk storage / DB",
+                        "Binary",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Multi-way."
+                },
+                {
+                    "id": 36,
+                    "text": "Successor?",
+                    "options": [
+                        "Next greater key",
+                        "Child",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inorder."
+                },
+                {
+                    "id": 37,
+                    "text": "Predecessor?",
+                    "options": [
+                        "Prev smaller key",
+                        "Parent",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inorder."
+                },
+                {
+                    "id": 38,
+                    "text": "K-th Smallest in BST?",
+                    "options": [
+                        "Inorder traversal Kth",
+                        "Sort",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rank."
+                },
+                {
+                    "id": 39,
+                    "text": "Recover BST?",
+                    "options": [
+                        "Swapped nodes fix",
+                        "Heal",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "2 bad nodes."
+                },
+                {
+                    "id": 40,
+                    "text": "Largest BST in Tree?",
+                    "options": [
+                        "Postorder check",
+                        "Max",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimization."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_adv_3",
+            "title": "Set 3: Graphs",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Graph components?",
+                    "options": [
+                        "Vertices and Edges",
+                        "Nodes and Lines",
+                        "All",
+                        "None"
+                    ],
+                    "correct": 2,
+                    "explanation": "V, E."
+                },
+                {
+                    "id": 42,
+                    "text": "Directed Graph?",
+                    "options": [
+                        "Edges have direction",
+                        "Arrow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Digraph."
+                },
+                {
+                    "id": 43,
+                    "text": "Undirected Graph?",
+                    "options": [
+                        "Bidirectional",
+                        "Line",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Two way."
+                },
+                {
+                    "id": 44,
+                    "text": "Adjacency Matrix?",
+                    "options": [
+                        "2D Array representation",
+                        "List",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(V^2) space."
+                },
+                {
+                    "id": 45,
+                    "text": "Adjacency List?",
+                    "options": [
+                        "Array of Lists",
+                        "Matrix",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(V+E) space."
+                },
+                {
+                    "id": 46,
+                    "text": "BFS (Graph)?",
+                    "options": [
+                        "Breadth First (Queue)",
+                        "DFS",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shortest path (unweighted)."
+                },
+                {
+                    "id": 47,
+                    "text": "DFS (Graph)?",
+                    "options": [
+                        "Depth First (Stack/Rec)",
+                        "BFS",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Backtracking."
+                },
+                {
+                    "id": 48,
+                    "text": "Connected Component?",
+                    "options": [
+                        "Reachable nodes",
+                        "Part",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Connectivity."
+                },
+                {
+                    "id": 49,
+                    "text": "Cycle detection Directed?",
+                    "options": [
+                        "Recursion stack / Colors",
+                        "BFS",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Back edge."
+                },
+                {
+                    "id": 50,
+                    "text": "Cycle detection Undirected?",
+                    "options": [
+                        "Visited parent check",
+                        "DFS",
+                        "Union Find",
+                        "All"
+                    ],
+                    "correct": 3,
+                    "explanation": "Methods."
+                },
+                {
+                    "id": 51,
+                    "text": "Topological Sort?",
+                    "options": [
+                        "Linear ordering (DAG only)",
+                        "Sort",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dependencies."
+                },
+                {
+                    "id": 52,
+                    "text": "Kahn's Algorithm?",
+                    "options": [
+                        "Topo Sort (Indegree)",
+                        "Genghis",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "BFS based."
+                },
+                {
+                    "id": 53,
+                    "text": "Bipartite Graph?",
+                    "options": [
+                        "2 Colorable",
+                        "Two sets",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Odd cycle check."
+                },
+                {
+                    "id": 54,
+                    "text": "DAG?",
+                    "options": [
+                        "Directed Acyclic Graph",
+                        "Day",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No cycles."
+                },
+                {
+                    "id": 55,
+                    "text": "Spanning Tree?",
+                    "options": [
+                        "Connects all V with V-1 edges",
+                        "Tree",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Minimal."
+                },
+                {
+                    "id": 56,
+                    "text": "Degree of vertex?",
+                    "options": [
+                        "Number of edges",
+                        "Temp",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "In/Out."
+                },
+                {
+                    "id": 57,
+                    "text": "Handshaking Lemma?",
+                    "options": [
+                        "Sum degrees = 2 * Edges",
+                        "Shake",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Theory."
+                },
+                {
+                    "id": 58,
+                    "text": "Path?",
+                    "options": [
+                        "Sequence of vertices",
+                        "Road",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Trail."
+                },
+                {
+                    "id": 59,
+                    "text": "Weighted Graph?",
+                    "options": [
+                        "Edges have cost",
+                        "Heavy",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Distance."
+                },
+                {
+                    "id": 60,
+                    "text": "Islands problem?",
+                    "options": [
+                        "Connected components on grid",
+                        "Land",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DFS/BFS."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_adv_4",
+            "title": "Set 4: Graph Algorithms",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Dijkstra's Algorithm?",
+                    "options": [
+                        "Shortest Path (Pos weights)",
+                        "Longest",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Greedy."
+                },
+                {
+                    "id": 62,
+                    "text": "Bellman-Ford?",
+                    "options": [
+                        "Shortest Path (Neg weights)",
+                        "Ford",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Detects neg cycle."
+                },
+                {
+                    "id": 63,
+                    "text": "Floyd Warshall?",
+                    "options": [
+                        "All-Pairs Shortest Path",
+                        "Pink",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(V^3)."
+                },
+                {
+                    "id": 64,
+                    "text": "Prim's Algorithm?",
+                    "options": [
+                        "MST (Grow tree)",
+                        "Prime",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Greedy."
+                },
+                {
+                    "id": 65,
+                    "text": "Kruskal's Algorithm?",
+                    "options": [
+                        "MST (Sort edges + Union Find)",
+                        "Crust",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Greedy."
+                },
+                {
+                    "id": 66,
+                    "text": "Disjoint Set (Union-Find)?",
+                    "options": [
+                        "Track partitions",
+                        "Set",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Path compression."
+                },
+                {
+                    "id": 67,
+                    "text": "Path Compression?",
+                    "options": [
+                        "Flatten tree in DSU",
+                        "Zip",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ackermann."
+                },
+                {
+                    "id": 68,
+                    "text": "Kosaraju's Algo?",
+                    "options": [
+                        "Strongly Connected Components",
+                        "India",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "2 DFS passes."
+                },
+                {
+                    "id": 69,
+                    "text": "Tarjan's Algo?",
+                    "options": [
+                        "SCC / Bridges / Articulation",
+                        "Tarzan",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Discovery time."
+                },
+                {
+                    "id": 70,
+                    "text": "Bridge in Graph?",
+                    "options": [
+                        "Edge removal -> Disconnected",
+                        "Span",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Critical edge."
+                },
+                {
+                    "id": 71,
+                    "text": "Articulation Point?",
+                    "options": [
+                        "Vertex removal -> Disconnected",
+                        "Cut vertex",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Critical node."
+                },
+                {
+                    "id": 72,
+                    "text": "Eulerian Path?",
+                    "options": [
+                        "Visit every edge precisely once",
+                        "Euler",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Seven Bridges."
+                },
+                {
+                    "id": 73,
+                    "text": "Hamiltonian Path?",
+                    "options": [
+                        "Visit every vertex once",
+                        "Ham",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "NP-Complete."
+                },
+                {
+                    "id": 74,
+                    "text": "Travelling Salesman?",
+                    "options": [
+                        "Min cost Hamiltonian Cycle",
+                        "Sales",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hard."
+                },
+                {
+                    "id": 75,
+                    "text": "Max Flow?",
+                    "options": [
+                        "Ford-Fulkerson",
+                        "River",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Network flow."
+                },
+                {
+                    "id": 76,
+                    "text": "Graph Coloring?",
+                    "options": [
+                        "Assign colors (No adj same)",
+                        "Paint",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "m-coloring."
+                },
+                {
+                    "id": 77,
+                    "text": "A* Search?",
+                    "options": [
+                        "Pathfinding with Heuristic",
+                        "Star",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "AI."
+                },
+                {
+                    "id": 78,
+                    "text": "Transitive Closure?",
+                    "options": [
+                        "Reachability matrix",
+                        "Switch",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Floyd Warshall."
+                },
+                {
+                    "id": 79,
+                    "text": "Alien Dictionary?",
+                    "options": [
+                        "Topo Sort application",
+                        "Space",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Order char."
+                },
+                {
+                    "id": 80,
+                    "text": "Clone Graph?",
+                    "options": [
+                        "Deep copy with Map",
+                        "Copy",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "BFS/DFS."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_adv_5",
+            "title": "Set 5: Dynamic Programming",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "DP?",
+                    "options": [
+                        "Recursion + Memoization",
+                        "Optimization",
+                        "Bottom-up",
+                        "All"
+                    ],
+                    "correct": 3,
+                    "explanation": "Overlapping subprobs."
+                },
+                {
+                    "id": 82,
+                    "text": "Memoization?",
+                    "options": [
+                        "Top-Down caching",
+                        "Memory",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "On demand."
+                },
+                {
+                    "id": 83,
+                    "text": "Tabulation?",
+                    "options": [
+                        "Bottom-Up iterative",
+                        "Table",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fill table."
+                },
+                {
+                    "id": 84,
+                    "text": "Overlapping Subproblems?",
+                    "options": [
+                        "Recomputing same states",
+                        "Lap",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DP req."
+                },
+                {
+                    "id": 85,
+                    "text": "Optimal Substructure?",
+                    "options": [
+                        "Optimal solution from sub-solutions",
+                        "Structure",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DP req."
+                },
+                {
+                    "id": 86,
+                    "text": "0/1 Knapsack?",
+                    "options": [
+                        "Take or Leave item",
+                        "Bag",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Classic DP."
+                },
+                {
+                    "id": 87,
+                    "text": "Unbounded Knapsack?",
+                    "options": [
+                        "Unlimited items",
+                        "Free",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Coin change."
+                },
+                {
+                    "id": 88,
+                    "text": "LCS?",
+                    "options": [
+                        "Longest Common Subsequence",
+                        "Seq",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Diff tool."
+                },
+                {
+                    "id": 89,
+                    "text": "LIS?",
+                    "options": [
+                        "Longest Increasing Subsequence",
+                        "List",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(n^2) or O(nlogn)."
+                },
+                {
+                    "id": 90,
+                    "text": "Edit Distance?",
+                    "options": [
+                        "Min ops to convert string",
+                        "Levenshtein",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Spell check."
+                },
+                {
+                    "id": 91,
+                    "text": "Matrix Chain Multiplication?",
+                    "options": [
+                        "Optimal parenthesis",
+                        "Math",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Partition."
+                },
+                {
+                    "id": 92,
+                    "text": "Coin Change?",
+                    "options": [
+                        "Min coins / Ways",
+                        "Money",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Knapsack var."
+                },
+                {
+                    "id": 93,
+                    "text": "Rod Cutting?",
+                    "options": [
+                        "Max profit cut",
+                        "Saw",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unbounded."
+                },
+                {
+                    "id": 94,
+                    "text": "Subset Sum?",
+                    "options": [
+                        "Exists subset with sum S",
+                        "Add",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "NP-Complete (Pseudo)."
+                },
+                {
+                    "id": 95,
+                    "text": "Fibonacci DP?",
+                    "options": [
+                        "O(n) time, O(1) space",
+                        "Fast",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimize."
+                },
+                {
+                    "id": 96,
+                    "text": "Climbing Stairs?",
+                    "options": [
+                        "Ways to reach top (Fib)",
+                        "Steps",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Counting."
+                },
+                {
+                    "id": 97,
+                    "text": "Palindrome Partitioning?",
+                    "options": [
+                        "Min cuts",
+                        "Palindrome",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "MCM style."
+                },
+                {
+                    "id": 98,
+                    "text": "Egg Dropping?",
+                    "options": [
+                        "Min attempts worst case",
+                        "Drop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hard."
+                },
+                {
+                    "id": 99,
+                    "text": "DP on Trees?",
+                    "options": [
+                        "Diameter / Max Path Sum",
+                        "Tree",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DFS post-order."
+                },
+                {
+                    "id": 100,
+                    "text": "Space optimized DP?",
+                    "options": [
+                        "Drop dimension",
+                        "Space",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prev row only."
+                }
+            ]
+        }
+    ]
+}

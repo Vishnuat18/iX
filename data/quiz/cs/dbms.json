@@ -1,0 +1,1235 @@
+{
+    "topic": "dbms System",
+    "sets": [
+        {
+            "setId": "dbms_1",
+            "title": "Set 1: Intro & ER Model",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "DBMS stands for?",
+                    "options": [
+                        "Database Management System",
+                        "Data Basic Main System",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Software for DB."
+                },
+                {
+                    "id": 2,
+                    "text": "Data Abstraction levels?",
+                    "options": [
+                        "Physical, Logical, View",
+                        "1",
+                        "2",
+                        "4"
+                    ],
+                    "correct": 0,
+                    "explanation": "3 Schema Architecture."
+                },
+                {
+                    "id": 3,
+                    "text": "Schema vs Instance?",
+                    "options": [
+                        "Design vs Data at moment",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Structure vs Content."
+                },
+                {
+                    "id": 4,
+                    "text": "DDL?",
+                    "options": [
+                        "Data Definition Language",
+                        "Dynamic",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Create/Alter."
+                },
+                {
+                    "id": 5,
+                    "text": "DML?",
+                    "options": [
+                        "Data Manipulation Language",
+                        "Model",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Insert/Update."
+                },
+                {
+                    "id": 6,
+                    "text": "Entity?",
+                    "options": [
+                        "Real world object",
+                        "Ghost",
+                        "Table",
+                        "Row"
+                    ],
+                    "correct": 0,
+                    "explanation": "Thing."
+                },
+                {
+                    "id": 7,
+                    "text": "Attribute?",
+                    "options": [
+                        "Property of entity",
+                        "Action",
+                        "Key",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Column."
+                },
+                {
+                    "id": 8,
+                    "text": "Primary Key?",
+                    "options": [
+                        "Unique identifier",
+                        "First",
+                        "Main",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No duplicates/null."
+                },
+                {
+                    "id": 9,
+                    "text": "Foreign Key?",
+                    "options": [
+                        "Links two tables",
+                        "Alien",
+                        "External",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Referential integrity."
+                },
+                {
+                    "id": 10,
+                    "text": "Weak Entity?",
+                    "options": [
+                        "Depnds on owner entity",
+                        "Strong",
+                        "Sick",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No own PK."
+                },
+                {
+                    "id": 11,
+                    "text": "Relationship types?",
+                    "options": [
+                        "1-1, 1-N, N-M",
+                        "Single",
+                        "Double",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cardinality."
+                },
+                {
+                    "id": 12,
+                    "text": "DBA?",
+                    "options": [
+                        "Database Administrator",
+                        "Degree",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Superuser."
+                },
+                {
+                    "id": 13,
+                    "text": "Composite Key?",
+                    "options": [
+                        "Multiple attributes",
+                        "Mix",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Combined."
+                },
+                {
+                    "id": 14,
+                    "text": "Multivalued Attribute?",
+                    "options": [
+                        "Double oval in ER",
+                        "Single",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "List of values."
+                },
+                {
+                    "id": 15,
+                    "text": "Derived Attribute?",
+                    "options": [
+                        "Calculated (Dashed)",
+                        "Stored",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Computed."
+                },
+                {
+                    "id": 16,
+                    "text": "Tuple?",
+                    "options": [
+                        "Row",
+                        "Column",
+                        "Table",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Record."
+                },
+                {
+                    "id": 17,
+                    "text": "Degree of relation?",
+                    "options": [
+                        "Number of attributes",
+                        "Rows",
+                        "Size",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Columns count."
+                },
+                {
+                    "id": 18,
+                    "text": "Cardinality associated?",
+                    "options": [
+                        "Number of tuples",
+                        "Cols",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rows count."
+                },
+                {
+                    "id": 19,
+                    "text": "Data Independence?",
+                    "options": [
+                        "Change schema w/o affecting app",
+                        "Free",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logical/Physical."
+                },
+                {
+                    "id": 20,
+                    "text": "Legacy model?",
+                    "options": [
+                        "Hierarchical/Network",
+                        "Relational",
+                        "NoSQL",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Old."
+                }
+            ]
+        },
+        {
+            "setId": "dbms_2",
+            "title": "Set 2: Relational Model & SQL",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Super Key?",
+                    "options": [
+                        "Uniquely identifies tuple",
+                        "Big",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Superset of CK."
+                },
+                {
+                    "id": 22,
+                    "text": "Candidate Key?",
+                    "options": [
+                        "Minimal Super Key",
+                        "Runner",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Potential PK."
+                },
+                {
+                    "id": 23,
+                    "text": "Cartesian Product?",
+                    "options": [
+                        "Cross join",
+                        "Math",
+                        "Sum",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "All combinations."
+                },
+                {
+                    "id": 24,
+                    "text": "Natural Join?",
+                    "options": [
+                        "Join on common column",
+                        "Nature",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Implicit."
+                },
+                {
+                    "id": 25,
+                    "text": "Outer Join?",
+                    "options": [
+                        "Preserves unmatched rows",
+                        "Outside",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Left, Right, Full."
+                },
+                {
+                    "id": 26,
+                    "text": "SELECT statement?",
+                    "options": [
+                        "Projection",
+                        "Selection",
+                        "Both",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Retrieval."
+                },
+                {
+                    "id": 27,
+                    "text": "WHERE clause?",
+                    "options": [
+                        "Selection/Filter",
+                        "Location",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Condition."
+                },
+                {
+                    "id": 28,
+                    "text": "GROUP BY?",
+                    "options": [
+                        "Group rows for aggregation",
+                        "Sort",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Summary."
+                },
+                {
+                    "id": 29,
+                    "text": "HAVING vs WHERE?",
+                    "options": [
+                        "Having for groups, Where for rows",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Order."
+                },
+                {
+                    "id": 30,
+                    "text": "ORDER BY default?",
+                    "options": [
+                        "ASC",
+                        "DESC",
+                        "Random",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ascending."
+                },
+                {
+                    "id": 31,
+                    "text": "LIKE operator?",
+                    "options": [
+                        "Pattern matching",
+                        "Love",
+                        "Same",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Waitcards."
+                },
+                {
+                    "id": 32,
+                    "text": "Wildcard %?",
+                    "options": [
+                        "0 or more chars",
+                        "1 char",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "SQL."
+                },
+                {
+                    "id": 33,
+                    "text": "Wildcard _?",
+                    "options": [
+                        "Exactly 1 char",
+                        "Many",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Single."
+                },
+                {
+                    "id": 34,
+                    "text": "Aggregate functions?",
+                    "options": [
+                        "SUM, AVG, COUNT, MIN, MAX",
+                        "Add",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Calc."
+                },
+                {
+                    "id": 35,
+                    "text": "Nested Query?",
+                    "options": [
+                        "Subquery",
+                        "Nest",
+                        "Bird",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Query in query."
+                },
+                {
+                    "id": 36,
+                    "text": "Correlated Subquery?",
+                    "options": [
+                        "Depends on outer query",
+                        "Solo",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Executes per row."
+                },
+                {
+                    "id": 37,
+                    "text": "View?",
+                    "options": [
+                        "Virtual table",
+                        "Window",
+                        "Look",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Saved query."
+                },
+                {
+                    "id": 38,
+                    "text": "Index?",
+                    "options": [
+                        "Speed up retrieval",
+                        "Book",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lookups."
+                },
+                {
+                    "id": 39,
+                    "text": "Integrity Constraint?",
+                    "options": [
+                        "Rules for data",
+                        "Honesty",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Consistency."
+                },
+                {
+                    "id": 40,
+                    "text": "Referential Integrity?",
+                    "options": [
+                        "FK must match PK or Null",
+                        "Reference",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Valid links."
+                }
+            ]
+        },
+        {
+            "setId": "dbms_3",
+            "title": "Set 3: Normalization",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Goal of Normalization?",
+                    "options": [
+                        "Reduce redundancy",
+                        "Increase size",
+                        "Slow down",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Avoid anomalies."
+                },
+                {
+                    "id": 42,
+                    "text": "1NF?",
+                    "options": [
+                        "Atomic values",
+                        "First",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No repeating groups."
+                },
+                {
+                    "id": 43,
+                    "text": "2NF?",
+                    "options": [
+                        "No partial dependency",
+                        "Second",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Full functional dep."
+                },
+                {
+                    "id": 44,
+                    "text": "3NF?",
+                    "options": [
+                        "No transitive dependency",
+                        "Third",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Non-key to non-key."
+                },
+                {
+                    "id": 45,
+                    "text": "BCNF?",
+                    "options": [
+                        "Boyce-Codd (Stricter 3NF)",
+                        "Best",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Determinant is candidate key."
+                },
+                {
+                    "id": 46,
+                    "text": "Lossless Join?",
+                    "options": [
+                        "No spurious tuples",
+                        "Lossy",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Decomposition."
+                },
+                {
+                    "id": 47,
+                    "text": "Dependency Preservation?",
+                    "options": [
+                        "Constraints maintained",
+                        "Save",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Checking."
+                },
+                {
+                    "id": 48,
+                    "text": "Functional Dependency?",
+                    "options": [
+                        "A -> B",
+                        "Math",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Determinant."
+                },
+                {
+                    "id": 49,
+                    "text": "Trivial Dependency?",
+                    "options": [
+                        "A -> A",
+                        "Simple",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Subset."
+                },
+                {
+                    "id": 50,
+                    "text": "Multivalued Dependency leads to?",
+                    "options": [
+                        "4NF",
+                        "1NF",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Complex."
+                },
+                {
+                    "id": 51,
+                    "text": "Join Dependency leads to?",
+                    "options": [
+                        "5NF",
+                        "2NF",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "PJNF."
+                },
+                {
+                    "id": 52,
+                    "text": "Update Anomaly?",
+                    "options": [
+                        "Inconsistent data after update",
+                        "Error",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Design flaw."
+                },
+                {
+                    "id": 53,
+                    "text": "Delete Anomaly?",
+                    "options": [
+                        "Loss of data",
+                        "Remove",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unintended loss."
+                },
+                {
+                    "id": 54,
+                    "text": "Insertion Anomaly?",
+                    "options": [
+                        "Cannot insert valid data",
+                        "Add",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pre-req missing."
+                },
+                {
+                    "id": 55,
+                    "text": "De-normalization?",
+                    "options": [
+                        "Adding redundancy for performance",
+                        "Normal",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimization."
+                },
+                {
+                    "id": 56,
+                    "text": "Armstrong Axioms?",
+                    "options": [
+                        "Inference rules for FDs",
+                        "Space",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reflexivity etc."
+                },
+                {
+                    "id": 57,
+                    "text": "Closure of attribute?",
+                    "options": [
+                        "All reachable attributes",
+                        "End",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Set cover."
+                },
+                {
+                    "id": 58,
+                    "text": "Canonical Cover?",
+                    "options": [
+                        "Minimal set of FDs",
+                        "Song",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Simplification."
+                },
+                {
+                    "id": 59,
+                    "text": "Prime attribute?",
+                    "options": [
+                        "Part of candidate key",
+                        "Main",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Key member."
+                },
+                {
+                    "id": 60,
+                    "text": "Non-prime attribute?",
+                    "options": [
+                        "Not part of any key",
+                        "Side",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Information."
+                }
+            ]
+        },
+        {
+            "setId": "dbms_4",
+            "title": "Set 4: Transaction & Concurrency",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "ACID properties?",
+                    "options": [
+                        "Atomicity, Consistency, Isolation, Durability",
+                        "Base",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Txn rules."
+                },
+                {
+                    "id": 62,
+                    "text": "Atomicity?",
+                    "options": [
+                        "All or Nothing",
+                        "Small",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Commit/Rollback."
+                },
+                {
+                    "id": 63,
+                    "text": "Consistency?",
+                    "options": [
+                        "Valid state to valid state",
+                        "Thick",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Integrity."
+                },
+                {
+                    "id": 64,
+                    "text": "Isolation?",
+                    "options": [
+                        "Transactions invisible to others",
+                        "Lonely",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concurrency."
+                },
+                {
+                    "id": 65,
+                    "text": "Durability?",
+                    "options": [
+                        "Changes persist after crash",
+                        "Hard",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Permamence."
+                },
+                {
+                    "id": 66,
+                    "text": "Schedule?",
+                    "options": [
+                        "Sequence of ops",
+                        "Time",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Execution plan."
+                },
+                {
+                    "id": 67,
+                    "text": "Serializability?",
+                    "options": [
+                        "Equivalence to serial schedule",
+                        "Series",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Correctness."
+                },
+                {
+                    "id": 68,
+                    "text": "Conflict Serializability?",
+                    "options": [
+                        "Order of conflicting ops",
+                        "Fight",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Detection."
+                },
+                {
+                    "id": 69,
+                    "text": "Dirty Read?",
+                    "options": [
+                        "Reading uncommitted data",
+                        "Clean",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Isolation level."
+                },
+                {
+                    "id": 70,
+                    "text": "Phantom Read?",
+                    "options": [
+                        "Rows appear/disappear",
+                        "Ghost",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Insertions."
+                },
+                {
+                    "id": 71,
+                    "text": "Lost Update?",
+                    "options": [
+                        "Overwritten update",
+                        "Gone",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concurrency bug."
+                },
+                {
+                    "id": 72,
+                    "text": "2PL?",
+                    "options": [
+                        "Two Phase Locking",
+                        "Protocol",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Growing/Shrinking."
+                },
+                {
+                    "id": 73,
+                    "text": "Deadlock in DBMS?",
+                    "options": [
+                        "Build wait-for graph",
+                        "Stop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cycle."
+                },
+                {
+                    "id": 74,
+                    "text": "Timestamp Ordering?",
+                    "options": [
+                        "Order by start time",
+                        "Clock",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Protocol."
+                },
+                {
+                    "id": 75,
+                    "text": "Log based recovery?",
+                    "options": [
+                        "Redo/Undo logs",
+                        "Wood",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Durability."
+                },
+                {
+                    "id": 76,
+                    "text": "Checkpoint?",
+                    "options": [
+                        "Sync point in log",
+                        "Stop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Recovery speed."
+                },
+                {
+                    "id": 77,
+                    "text": "Shadow Paging?",
+                    "options": [
+                        "Copy-on-write page table",
+                        "Dark",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Recovery."
+                },
+                {
+                    "id": 78,
+                    "text": "Isolation Levels?",
+                    "options": [
+                        "Read Uncommitted, Committed, Repeatable, Serializable",
+                        "Levels",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 79,
+                    "text": "Optimistic Concurrency?",
+                    "options": [
+                        "Validate at end",
+                        "Happy",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Low conflict."
+                },
+                {
+                    "id": 80,
+                    "text": "Cascading Rollback?",
+                    "options": [
+                        "One fail causes chain",
+                        "Waterfall",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dependency."
+                }
+            ]
+        },
+        {
+            "setId": "dbms_5",
+            "title": "Set 5: Advanced & NoSQL",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "CAP Theorem?",
+                    "options": [
+                        "Consistency, Availability, Partition Tolerance",
+                        "Hat",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pick 2."
+                },
+                {
+                    "id": 82,
+                    "text": "NoSQL?",
+                    "options": [
+                        "Not Only SQL",
+                        "No SQL",
+                        "Anti",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flexible."
+                },
+                {
+                    "id": 83,
+                    "text": "Key-Value Store?",
+                    "options": [
+                        "Redis / Dynamo",
+                        "Map",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Simple."
+                },
+                {
+                    "id": 84,
+                    "text": "Document Store?",
+                    "options": [
+                        "MongoDB / CouchDB",
+                        "File",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "JSON like."
+                },
+                {
+                    "id": 85,
+                    "text": "Column Family?",
+                    "options": [
+                        "Cassandra / HBase",
+                        "Family",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Wide column."
+                },
+                {
+                    "id": 86,
+                    "text": "Graph DB?",
+                    "options": [
+                        "Neo4j",
+                        "Chart",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Relations."
+                },
+                {
+                    "id": 87,
+                    "text": "B+ Tree?",
+                    "options": [
+                        "Index structure",
+                        "Plant",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Balanced."
+                },
+                {
+                    "id": 88,
+                    "text": "Clustered Index?",
+                    "options": [
+                        "Sorts data files",
+                        "Group",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Physical order."
+                },
+                {
+                    "id": 89,
+                    "text": "Non-Clustered Index?",
+                    "options": [
+                        "Logical order",
+                        "Pointer",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Separate."
+                },
+                {
+                    "id": 90,
+                    "text": "Bitmap Index?",
+                    "options": [
+                        "Low cardinality columns",
+                        "Image",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Efficient."
+                },
+                {
+                    "id": 91,
+                    "text": "Query Optimization?",
+                    "options": [
+                        "Execution plan selection",
+                        "Fast",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cost based."
+                },
+                {
+                    "id": 92,
+                    "text": "Heuristic optimization?",
+                    "options": [
+                        "Rules based",
+                        "Guess",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Push select down."
+                },
+                {
+                    "id": 93,
+                    "text": "Materialized View?",
+                    "options": [
+                        "Physically stored view",
+                        "Solid",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance."
+                },
+                {
+                    "id": 94,
+                    "text": "Database Trigger?",
+                    "options": [
+                        "Action on event",
+                        "Gun",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Automation."
+                },
+                {
+                    "id": 95,
+                    "text": "Stored Procedure?",
+                    "options": [
+                        "Code in DB",
+                        "Save",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logic."
+                },
+                {
+                    "id": 96,
+                    "text": "Data Warehousing?",
+                    "options": [
+                        "OLAP / Historical",
+                        "Store",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Analysis."
+                },
+                {
+                    "id": 97,
+                    "text": "Data Mining?",
+                    "options": [
+                        "Pattern discovery",
+                        "Dig",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Insights."
+                },
+                {
+                    "id": 98,
+                    "text": "Distributed DB?",
+                    "options": [
+                        "Data across sites",
+                        "Share",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scaling."
+                },
+                {
+                    "id": 99,
+                    "text": "Two-Phase Commit?",
+                    "options": [
+                        "Distributed Atomic Txn",
+                        "Protocol",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Consensus."
+                },
+                {
+                    "id": 100,
+                    "text": "BASE properties?",
+                    "options": [
+                        "Basic Avail, Soft state, Eventual consistency",
+                        "Base",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "NoSQL counterpart."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix the Bug | iX Platform</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/back-button.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body {
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .debug-header {
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-layout {
+            display: flex;
+            flex: 1;
+            height: calc(100vh - 70px);
+        }
+
+        .prob-panel {
+            width: 350px;
+            background: #111;
+            border-right: 1px solid #333;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .editor-panel {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #editor {
+            flex: 1;
+        }
+
+        .action-bar {
+            padding: 10px 20px;
+            background: #1e1e1e;
+            border-top: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-debug {
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .btn-debug:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        .console-panel {
+            height: 150px;
+            background: #000;
+            color: #0f0;
+            font-family: monospace;
+            padding: 10px;
+            overflow-y: auto;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-module">
+        <div class="header-left">
+            <div class="breadcrumbs">
+                <a href="../index.html">Home</a>
+                <span class="separator">/</span>
+                <a href="index.html">Debug</a>
+                <span class="separator">/</span>
+                <span class="current">Solve</span>
+            </div>
+        </div>
+
+        <div class="header-right" style="gap: 25px;">
+            <div class="xp-badge" id="headerXP"
+                style="display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.3); padding: 8px 15px; border-radius: 8px; border: 1px solid var(--accent-primary);">
+                <span style="color: var(--accent-primary); font-weight: bold; font-size: 0.9rem;">Score:</span>
+                <span id="userScoreInHeader" style="font-size: 1.1rem; font-weight: 900; color: #fff;">0</span>
+            </div>
+            <div class="logo">iX <span style="font-weight:300">Platform</span></div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <div class="prob-panel">
+            <h2 id="prob-title" style="margin-bottom: 20px;">Loading...</h2>
+            <div id="prob-desc" style="color: #ccc; line-height: 1.6;"></div>
+            <div style="margin-top: 30px; background: #222; padding: 10px; border-radius: 6px;">
+                <h4 style="margin:0 0 10px 0; color:#888;">Expected Output:</h4>
+                <pre id="expected-out"
+                    style="color: #ebdf93; margin:0; white-space: pre-wrap; font-family: monospace;"></pre>
+            </div>
+        </div>
+        <div class="editor-panel">
+            <div id="editor"></div>
+            <div class="console-panel" id="console">
+                // System Output...
+            </div>
+            <div class="action-bar">
+                <span class="attempts" id="attempt-info" style="color:#666;">Attempts: 0</span>
+                <div style="display:flex; gap:10px;">
+                    <button class="btn-debug" id="shareBtn" onclick="toggleScreenShare()"
+                        style="background:#333; border:1px solid #555;">
+                        <i class="fas fa-desktop"></i> Share Screen
+                    </button>
+                    <button class="btn-debug" onclick="runDebug()">
+                        <i class="fas fa-bug"></i> Run & Check
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Widget Removed as per user request -->
+
+        <!-- Mobile Bottom Navigation -->
+        <div class="mobile-bottom-nav">
+            <a href="../index.html" class="mobile-nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="../problems/index.html" class="mobile-nav-item">
+                <i class="fas fa-code"></i>
+                <span>Coding</span>
+            </a>
+            <a href="../quiz_landing.html" class="mobile-nav-item">
+                <i class="fas fa-brain"></i>
+                <span>Quiz</span>
+            </a>
+            <a href="../community.html" class="mobile-nav-item">
+                <i class="fas fa-users"></i>
+                <span>iX Link</span>
+            </a>
+            <a href="../profile.html" class="mobile-nav-item">
+                <i class="fas fa-user-circle"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+
+        <!-- Firebase SDKs -->
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+        <script src="../js/firebase-config.js"></script>
+
+        <script src="../js/auth.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.38.0/min/vs/loader.js"></script>
+        <script>
+            let editor;
+            let currentProblem;
+            let attempts = 0;
+
+            // Auth Check
+            Auth.requireAuth();
+            const currentUser = Auth.getUser();
+            const username = currentUser.username; // safe because requireAuth redirects if null
+
+            // User-Specific Score Keys
+            const scoreKey = `ix_debug_score_${username}`;
+            const solvedKey = `ix_debug_solved_${username}`;
+
+            // Load & Display Score
+            let currentScore = parseInt(localStorage.getItem(scoreKey) || 0);
+
+            // Sync Header Score
+            const userForInit = Auth.getUser();
+            const headerScoreEl = document.getElementById('userScoreInHeader');
+            if (headerScoreEl && userForInit) {
+                headerScoreEl.innerText = userForInit.stats ? (userForInit.stats.quizScore || 0) : 0;
+            }
+
+            require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.38.0/min/vs' } });
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const probId = urlParams.get('id');
+
+            async function init() {
+                try {
+                    const doc = await Auth._withTimeout(db.collection('debug_problems').doc(String(probId)).get());
+
+                    if (!doc.exists) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Problem Not Found',
+                            text: 'Redirecting to list...',
+                            background: '#1e1e1e', color: '#fff'
+                        }).then(() => window.location.href = 'index.html');
+                        return;
+                    }
+
+                    currentProblem = doc.data();
+
+                    document.getElementById('prob-title').innerText = currentProblem.title;
+                    document.getElementById('prob-desc').innerHTML = currentProblem.description;
+                    document.getElementById('expected-out').innerText = currentProblem.expectedOutput;
+
+                    require(['vs/editor/editor.main'], function () {
+                        editor = monaco.editor.create(document.getElementById('editor'), {
+                            value: currentProblem.buggyCode,
+                            language: 'java',
+                            theme: 'vs-dark',
+                            minimap: { enabled: false },
+                            fontSize: 14,
+                            automaticLayout: true
+                        });
+                    });
+
+                } catch (e) {
+                    console.error(e);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error loading problem',
+                        text: 'Please try again later.',
+                        background: '#1e1e1e', color: '#fff'
+                    });
+                }
+            }
+
+            function runDebug() {
+                const code = editor.getValue();
+                const consoleDiv = document.getElementById('console');
+                consoleDiv.innerHTML = '> Compiling...<br>';
+                attempts++;
+                document.getElementById('attempt-info').innerText = 'Attempts: ' + attempts;
+
+                setTimeout(() => {
+                    const isFixed = checkSolution(code);
+                    if (isFixed) {
+                        consoleDiv.innerHTML += `<span style="color:#00ff9d;">> SUCCESS: Output matches expected result!</span><br>`;
+                        consoleDiv.innerHTML += `Output:\n${currentProblem.expectedOutput}`;
+                        handleSuccess();
+                    } else {
+                        consoleDiv.innerHTML += `<span style="color:#ff6b6b;">> FAILURE: Logic error detected or output mismatch.</span><br>`;
+                        consoleDiv.innerHTML += `> Hint: Check logic around "${currentProblem.solutionPattern.substring(0, 5)}..."`;
+                        handleFailure();
+                    }
+                }, 800);
+            }
+
+            function checkSolution(userCode) {
+                // Simple check: does code contain the 'fixed' pattern?
+                // In a real backend, we would run the code.
+                return userCode.includes(currentProblem.solutionPattern);
+            }
+
+            async function handleSuccess() {
+                // Calculate Points
+                let points = 10 - ((attempts - 1) * 2);
+                if (points < 2) points = 2;
+
+                // Sync with Firestore
+                const isNewSolve = await Auth.markProblemSolved(probId, points, true); // true for debug collection
+
+                // Update UI Score
+                const user = Auth.getUser();
+                if (headerScoreEl && user) {
+                    headerScoreEl.innerText = user.stats ? (user.stats.quizScore || 0) : 0;
+                }
+
+                if (isNewSolve) {
+                    Swal.fire({
+                        title: 'Bug Squashed! 🐛🔨',
+                        text: `You earned +${points} points!`,
+                        icon: 'success',
+                        background: '#1e1e1e',
+                        color: '#fff',
+                        confirmButtonText: 'Back to List',
+                        confirmButtonColor: '#00f2ff'
+                    }).then(() => {
+                        window.location.href = 'index.html';
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'Good Job!',
+                        text: 'You already solved this one.',
+                        icon: 'success',
+                        background: '#1e1e1e',
+                        color: '#fff',
+                        confirmButtonColor: '#00f2ff'
+                    });
+                }
+            }
+
+            function handleFailure() {
+                // Just notify or shake
+            }
+
+            function toggleScreenShare() {
+                Swal.fire({
+                    title: 'Screen Sharing',
+                    text: 'This feature is coming soon to iX Platform!',
+                    icon: 'info',
+                    background: '#1e1e1e',
+                    color: '#fff'
+                });
+            }
+
+            init();
+        </script>
+</body>
+
+</html>

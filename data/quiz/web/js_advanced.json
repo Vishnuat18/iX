@@ -1,0 +1,1265 @@
+{
+    "topic": "JavaScript Advanced",
+    "sets": [
+        {
+            "setId": "js_adv_1",
+            "title": "Set 1: ES6 & Closures",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "What is Closure?",
+                    "options": [
+                        "Function + Lexical Scope",
+                        "Class method",
+                        "Variable hiding",
+                        "Callback"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access to outer scope."
+                },
+                {
+                    "id": 2,
+                    "text": "Arrow function syntax?",
+                    "options": [
+                        "() => {}",
+                        "func => {}",
+                        "-> {}",
+                        "function() {}"
+                    ],
+                    "correct": 0,
+                    "explanation": "Compact syntax."
+                },
+                {
+                    "id": 3,
+                    "text": "Type of 'this' in arrow function?",
+                    "options": [
+                        "Lexical",
+                        "Dynamic",
+                        "Global",
+                        "Undefined"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inherits from parent."
+                },
+                {
+                    "id": 4,
+                    "text": "Destructuring assignment?",
+                    "options": [
+                        "let {a, b} = obj",
+                        "let a, b = obj",
+                        "obj -> {a, b}",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unpack values."
+                },
+                {
+                    "id": 5,
+                    "text": "Spread operator?",
+                    "options": [
+                        "...",
+                        "&&",
+                        "||",
+                        "++"
+                    ],
+                    "correct": 0,
+                    "explanation": "Expands array/obj."
+                },
+                {
+                    "id": 6,
+                    "text": "Template Literal symbol?",
+                    "options": [
+                        "Backtick `",
+                        "Single Quote '",
+                        "Double Quote \"",
+                        "Hash #"
+                    ],
+                    "correct": 0,
+                    "explanation": "Allows interpolation."
+                },
+                {
+                    "id": 7,
+                    "text": "Default parameter?",
+                    "options": [
+                        "func(a=1)",
+                        "func(a:1)",
+                        "func(a default 1)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "ES6 feature."
+                },
+                {
+                    "id": 8,
+                    "text": "Set object stores?",
+                    "options": [
+                        "Unique values",
+                        "Key-Value",
+                        "Arrays",
+                        "Duplicates"
+                    ],
+                    "correct": 0,
+                    "explanation": "No duplicates."
+                },
+                {
+                    "id": 9,
+                    "text": "Map object vs Object?",
+                    "options": [
+                        "Map keys can be any type",
+                        "Map is slower",
+                        "Object keys are any type",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Objects keys are strings/symbols."
+                },
+                {
+                    "id": 10,
+                    "text": "Module export?",
+                    "options": [
+                        "export default",
+                        "module.out",
+                        "public",
+                        "share"
+                    ],
+                    "correct": 0,
+                    "explanation": "ES6 modules."
+                }
+            ]
+        },
+        {
+            "setId": "js_adv_2",
+            "title": "Set 2: Async & Promises",
+            "questions": [
+                {
+                    "id": 11,
+                    "text": "Promise states?",
+                    "options": [
+                        "Pending, Fulfilled, Rejected",
+                        "Start, Stop, Wait",
+                        "On, Off, Idle",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Async operation states."
+                },
+                {
+                    "id": 12,
+                    "text": "async/await makes code look?",
+                    "options": [
+                        "Synchronous",
+                        "Complex",
+                        "Slow",
+                        "Threaded"
+                    ],
+                    "correct": 0,
+                    "explanation": "Syntactic sugar for Promises."
+                },
+                {
+                    "id": 13,
+                    "text": "Fetch API returns?",
+                    "options": [
+                        "Promise",
+                        "JSON",
+                        "XML",
+                        "String"
+                    ],
+                    "correct": 0,
+                    "explanation": "Resolves to Response."
+                },
+                {
+                    "id": 14,
+                    "text": "Callback Hell solution?",
+                    "options": [
+                        "Promises",
+                        "More callbacks",
+                        "Global vars",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Chaining promises."
+                },
+                {
+                    "id": 15,
+                    "text": "Error handling in async/await?",
+                    "options": [
+                        "try...catch",
+                        ".catch()",
+                        "if(error)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Block level handling."
+                },
+                {
+                    "id": 16,
+                    "text": "Microtask queue priority?",
+                    "options": [
+                        "Higher than Macrotask",
+                        "Lower than Macrotask",
+                        "Same",
+                        "Random"
+                    ],
+                    "correct": 0,
+                    "explanation": "Promises run before setTimeout."
+                },
+                {
+                    "id": 17,
+                    "text": "Event Loop purpose?",
+                    "options": [
+                        "Handle async callbacks",
+                        "Render UI",
+                        "Compile code",
+                        "Sort arrays"
+                    ],
+                    "correct": 0,
+                    "explanation": "Manages execution stack."
+                },
+                {
+                    "id": 18,
+                    "text": "What is Hoisting?",
+                    "options": [
+                        "Moving declarations to top",
+                        "Lifting weights",
+                        "Scrolling up",
+                        "Error"
+                    ],
+                    "correct": 0,
+                    "explanation": "Var and Function declarations."
+                },
+                {
+                    "id": 19,
+                    "text": "Strict mode command?",
+                    "options": [
+                        "'use strict'",
+                        "strict: true",
+                        "@strict",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Enforces cleaner code."
+                },
+                {
+                    "id": 20,
+                    "text": "Generator function?",
+                    "options": [
+                        "function*",
+                        "function^",
+                        "async function",
+                        "gen()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Can iterate control."
+                }
+            ]
+        },
+        {
+            "setId": "js_adv_3",
+            "title": "Set 3: Prototypes & OOP",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Prototypal Inheritance?",
+                    "options": [
+                        "Objects inherit from objects",
+                        "Class based",
+                        "Copying",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "JS inheritance model."
+                },
+                {
+                    "id": 22,
+                    "text": "Access prototype?",
+                    "options": [
+                        "__proto__",
+                        "prototype",
+                        "parent",
+                        "super"
+                    ],
+                    "correct": 0,
+                    "explanation": "Internal link."
+                },
+                {
+                    "id": 23,
+                    "text": "ES6 Class?",
+                    "options": [
+                        "Syntactic sugar over prototypes",
+                        "Real classes",
+                        "Java style",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cleaner syntax."
+                },
+                {
+                    "id": 24,
+                    "text": "Super keyword?",
+                    "options": [
+                        "Calls parent constructor/method",
+                        "Global",
+                        "Root",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access parent."
+                },
+                {
+                    "id": 25,
+                    "text": "Extend class?",
+                    "options": [
+                        "class A extends B",
+                        "class A : B",
+                        "A implements B",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inheritance keyword."
+                },
+                {
+                    "id": 26,
+                    "text": "Private fields syntax?",
+                    "options": [
+                        "#field",
+                        "_field",
+                        "private field",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "ES2020 feature."
+                },
+                {
+                    "id": 27,
+                    "text": "Getter syntax?",
+                    "options": [
+                        "get prop() {}",
+                        "getter prop()",
+                        "func get()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Property access."
+                },
+                {
+                    "id": 28,
+                    "text": "Static method?",
+                    "options": [
+                        "static method()",
+                        "class method()",
+                        "global method()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Called on Class not instance."
+                },
+                {
+                    "id": 29,
+                    "text": "InstanceOf check?",
+                    "options": [
+                        "obj instanceof Class",
+                        "obj.is(Class)",
+                        "check(obj, Class)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prototype chain check."
+                },
+                {
+                    "id": 30,
+                    "text": "Object.create()?",
+                    "options": [
+                        "Creates obj with prototype",
+                        "Clones",
+                        "New instance",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Direct prototype assignment."
+                }
+            ]
+        },
+        {
+            "setId": "js_adv_4",
+            "title": "Set 4: Functional Programming",
+            "questions": [
+                {
+                    "id": 31,
+                    "text": "Higher Order Function?",
+                    "options": [
+                        "Takes/Returns function",
+                        "Complex",
+                        "Math",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Functions as values."
+                },
+                {
+                    "id": 32,
+                    "text": "Immutability?",
+                    "options": [
+                        "Data cannot change",
+                        "Const",
+                        "Freeze",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Core FP concept."
+                },
+                {
+                    "id": 33,
+                    "text": "Reduce function?",
+                    "options": [
+                        "Accumulates value",
+                        "Filters",
+                        "Maps",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fold operation."
+                },
+                {
+                    "id": 34,
+                    "text": "Currying?",
+                    "options": [
+                        "f(a)(b)(c)",
+                        "Spicy",
+                        "Mixing",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Partial application."
+                },
+                {
+                    "id": 35,
+                    "text": "Composition?",
+                    "options": [
+                        "Combine functions",
+                        "Music",
+                        "Writing",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "f(g(x))."
+                },
+                {
+                    "id": 36,
+                    "text": "Pure function requirements?",
+                    "options": [
+                        "Same input->same output, no side effects",
+                        "Fast",
+                        "Short",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Predictability."
+                },
+                {
+                    "id": 37,
+                    "text": "Recursion limit?",
+                    "options": [
+                        "Stack overflow",
+                        "Memory leak",
+                        "Time out",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Max call stack size."
+                },
+                {
+                    "id": 38,
+                    "text": "Tail Call Optimization?",
+                    "options": [
+                        "Reuse stack frame",
+                        "Fast",
+                        "Loop",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Memory logic."
+                },
+                {
+                    "id": 39,
+                    "text": "First class functions?",
+                    "options": [
+                        "Functions as variables",
+                        "Top priority",
+                        "Main",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "JS feature."
+                },
+                {
+                    "id": 40,
+                    "text": "Closure memory?",
+                    "options": [
+                        "Heap",
+                        "Stack",
+                        "Disk",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Persists after execution."
+                }
+            ]
+        },
+        {
+            "setId": "js_adv_5",
+            "title": "Set 5: Modules & Tools",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "CommonJS import?",
+                    "options": [
+                        "require()",
+                        "import",
+                        "include",
+                        "load"
+                    ],
+                    "correct": 0,
+                    "explanation": "Node.js standard."
+                },
+                {
+                    "id": 42,
+                    "text": "ES Modules export?",
+                    "options": [
+                        "export const",
+                        "module.exports",
+                        "public",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard JS."
+                },
+                {
+                    "id": 43,
+                    "text": "Dynamic import?",
+                    "options": [
+                        "import()",
+                        "require.ensure",
+                        "load()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Promise based."
+                },
+                {
+                    "id": 44,
+                    "text": "Tree shaking?",
+                    "options": [
+                        "Remove unused code",
+                        "Sort",
+                        "Move",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimization."
+                },
+                {
+                    "id": 45,
+                    "text": "Transpiler examples?",
+                    "options": [
+                        "Babel, TypeScript",
+                        "Webpack",
+                        "React",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Convert to older JS."
+                },
+                {
+                    "id": 46,
+                    "text": "Bundler examples?",
+                    "options": [
+                        "Webpack, Vite, Rollup",
+                        "Babel",
+                        "Eslint",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pack modules."
+                },
+                {
+                    "id": 47,
+                    "text": "Polyfill?",
+                    "options": [
+                        "Code for missing features",
+                        "Fill shape",
+                        "Color",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Browser compatibility."
+                },
+                {
+                    "id": 48,
+                    "text": "NPM scripts?",
+                    "options": [
+                        "package.json",
+                        "script.js",
+                        "run.bat",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Automation."
+                },
+                {
+                    "id": 49,
+                    "text": "Linters purpose?",
+                    "options": [
+                        "Code quality check",
+                        "Minify",
+                        "Run",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Catch errors."
+                },
+                {
+                    "id": 50,
+                    "text": "Strict mode impact?",
+                    "options": [
+                        "Prevents bad syntax",
+                        "Slows down",
+                        " None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Safer code."
+                }
+            ]
+        },
+        {
+            "setId": "js_adv_6",
+            "title": "Set 6: Advanced Async",
+            "questions": [
+                {
+                    "id": 51,
+                    "text": "Promise.all()?",
+                    "options": [
+                        "Wait for all promises",
+                        "Race",
+                        "First",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Parallel execution."
+                },
+                {
+                    "id": 52,
+                    "text": "Promise.race()?",
+                    "options": [
+                        "First to settle wins",
+                        "All must finish",
+                        "Last",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fastest wins."
+                },
+                {
+                    "id": 53,
+                    "text": "Promise.allSettled()?",
+                    "options": [
+                        "Wait for all regardless of error",
+                        "Strict success",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Get all results."
+                },
+                {
+                    "id": 54,
+                    "text": "Async iterator?",
+                    "options": [
+                        "for await...of",
+                        "for...of",
+                        "map",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stream processing."
+                },
+                {
+                    "id": 55,
+                    "text": "Web Workers message?",
+                    "options": [
+                        "postMessage()",
+                        "send()",
+                        "emit()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Thread communication."
+                },
+                {
+                    "id": 56,
+                    "text": "Service Worker usage?",
+                    "options": [
+                        "PWA, Caching, Offline",
+                        "UI",
+                        "DB",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Network proxy."
+                },
+                {
+                    "id": 57,
+                    "text": "AbortController?",
+                    "options": [
+                        "Cancel fetch request",
+                        "Stop loop",
+                        "Close tab",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cancel async task."
+                },
+                {
+                    "id": 58,
+                    "text": "Debounce function?",
+                    "options": [
+                        "Delay execution until quiet",
+                        "Speed up",
+                        "Bounce",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance pattern."
+                },
+                {
+                    "id": 59,
+                    "text": "Throttle function?",
+                    "options": [
+                        "Limit execution rate",
+                        "Stop",
+                        "Start",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rate limiting."
+                },
+                {
+                    "id": 60,
+                    "text": "Promise chaining return?",
+                    "options": [
+                        "New Promise",
+                        "Value",
+                        "Nothing",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Allows .then() chain."
+                }
+            ]
+        },
+        {
+            "setId": "js_adv_7",
+            "title": "Set 7: Memory & Performance",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Memory Leak cause?",
+                    "options": [
+                        "Global vars, Closures, Timers",
+                        "Local vars",
+                        "Loops",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unfreed memory."
+                },
+                {
+                    "id": 62,
+                    "text": "Garbage Collection algorithm?",
+                    "options": [
+                        "Mark and Sweep",
+                        "Clean",
+                        "Delete",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reachability."
+                },
+                {
+                    "id": 63,
+                    "text": "WeakMap usage?",
+                    "options": [
+                        "Keys are garbage collected",
+                        "Weak security",
+                        "Slow",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Memory efficiency."
+                },
+                {
+                    "id": 64,
+                    "text": "RequestAnimationFrame?",
+                    "options": [
+                        "Smooth animation loop",
+                        "Timer",
+                        "SetInterval",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Syncs with refresh rate."
+                },
+                {
+                    "id": 65,
+                    "text": "Reflow vs Repaint?",
+                    "options": [
+                        "Layout calc vs Pixel draw",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rendering pipeline."
+                },
+                {
+                    "id": 66,
+                    "text": "Virtual List/Windowing?",
+                    "options": [
+                        "Render only visible items",
+                        "Virtual DOM",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Large list performance."
+                },
+                {
+                    "id": 67,
+                    "text": "WebAssembly target?",
+                    "options": [
+                        "High performance binary",
+                        "Script",
+                        "Style",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Near native speed."
+                },
+                {
+                    "id": 68,
+                    "text": "Performance API?",
+                    "options": [
+                        "performance.now()",
+                        "time()",
+                        "date()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "High res timing."
+                },
+                {
+                    "id": 69,
+                    "text": "Lazy loading images?",
+                    "options": [
+                        "loading='lazy'",
+                        "defer",
+                        "async",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "HTML attribute."
+                },
+                {
+                    "id": 70,
+                    "text": "Defer vs Async script?",
+                    "options": [
+                        "Parse HTML vs Block parser",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Loading strategy."
+                }
+            ]
+        },
+        {
+            "setId": "js_adv_8",
+            "title": "Set 8: Design Patterns",
+            "questions": [
+                {
+                    "id": 71,
+                    "text": "Singleton in JS?",
+                    "options": [
+                        "Object literal / Module",
+                        "Class",
+                        "Func",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Single instance."
+                },
+                {
+                    "id": 72,
+                    "text": "Observer Pattern?",
+                    "options": [
+                        "Events / Listeners",
+                        "Loop",
+                        "Search",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pub/Sub."
+                },
+                {
+                    "id": 73,
+                    "text": "Factory Pattern?",
+                    "options": [
+                        "Function creating objects",
+                        "Class",
+                        "Loop",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Creation logic."
+                },
+                {
+                    "id": 74,
+                    "text": "Module Pattern?",
+                    "options": [
+                        "IIFE + Closure",
+                        "Class",
+                        "Block",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Encapsulation."
+                },
+                {
+                    "id": 75,
+                    "text": "Proxy Pattern?",
+                    "options": [
+                        "Intercept operations",
+                        "Copy",
+                        "Paste",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Middleware for objects."
+                },
+                {
+                    "id": 76,
+                    "text": "Iterator Pattern?",
+                    "options": [
+                        "next() method",
+                        "Loop",
+                        "Array",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Traversal."
+                },
+                {
+                    "id": 77,
+                    "text": "Decorator Pattern?",
+                    "options": [
+                        "Wrap function/class",
+                        "Style",
+                        "Color",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Extend behavior."
+                },
+                {
+                    "id": 78,
+                    "text": "Command Pattern?",
+                    "options": [
+                        "Encapsulate request",
+                        "Terminal",
+                        "CMD",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Decoupling."
+                },
+                {
+                    "id": 79,
+                    "text": "Prototype Pattern?",
+                    "options": [
+                        "Clone existing object",
+                        "Class",
+                        "New",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Copying."
+                },
+                {
+                    "id": 80,
+                    "text": "MVC in JS?",
+                    "options": [
+                        "Frameworks like Angular/Backbone",
+                        "React",
+                        "Node",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Architecture."
+                }
+            ]
+        },
+        {
+            "setId": "js_adv_9",
+            "title": "Set 9: Security",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "XSS stands for?",
+                    "options": [
+                        "Cross Site Scripting",
+                        "XML Style Sheet",
+                        "Extra",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Injecting scripts."
+                },
+                {
+                    "id": 82,
+                    "text": "Prevent XSS?",
+                    "options": [
+                        "Sanitize input / CSP",
+                        "Allow all",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Contextual encoding."
+                },
+                {
+                    "id": 83,
+                    "text": "CSRF?",
+                    "options": [
+                        "Cross Site Request Forgery",
+                        "Fake",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unauthorized command."
+                },
+                {
+                    "id": 84,
+                    "text": "CSRF Token?",
+                    "options": [
+                        "Validates origin",
+                        "Login",
+                        "Pass",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prevention."
+                },
+                {
+                    "id": 85,
+                    "text": "CORS error?",
+                    "options": [
+                        "Domain mismatch",
+                        "Server down",
+                        "404",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Browser policy."
+                },
+                {
+                    "id": 86,
+                    "text": "Eval is evil?",
+                    "options": [
+                        "Executes code - Risk",
+                        "Slow",
+                        "Bad",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Avoid use."
+                },
+                {
+                    "id": 87,
+                    "text": "HTTPS importance?",
+                    "options": [
+                        "Encryption",
+                        "Speed",
+                        "SEO",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Secure channel."
+                },
+                {
+                    "id": 88,
+                    "text": "LocalStorage security?",
+                    "options": [
+                        "Accessible by JS (XSS risk)",
+                        "Secure",
+                        "Encrypted",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Not for secrets."
+                },
+                {
+                    "id": 89,
+                    "text": "HttpOnly Cookie?",
+                    "options": [
+                        "Not accessible by JS",
+                        "Secure",
+                        "Fast",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prevents XSS theft."
+                },
+                {
+                    "id": 90,
+                    "text": "SQL Injection in JS?",
+                    "options": [
+                        "Via backend calls",
+                        "Direct",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": " sanitize params."
+                }
+            ]
+        },
+        {
+            "setId": "js_adv_10",
+            "title": "Set 10: Testing & Debugging",
+            "questions": [
+                {
+                    "id": 91,
+                    "text": "Unit Testing?",
+                    "options": [
+                        "Test individual functions",
+                        "Whole app",
+                        "UI",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Smallest part."
+                },
+                {
+                    "id": 92,
+                    "text": "Jest is?",
+                    "options": [
+                        "Testing Framework",
+                        "Library",
+                        "Tool",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Facebook."
+                },
+                {
+                    "id": 93,
+                    "text": "Mocking?",
+                    "options": [
+                        "Fake dependencies",
+                        "Copy",
+                        "Joke",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Isolation."
+                },
+                {
+                    "id": 94,
+                    "text": "TDD?",
+                    "options": [
+                        "Test Driven Development",
+                        "Test Data",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Write test first."
+                },
+                {
+                    "id": 95,
+                    "text": "E2E Testing?",
+                    "options": [
+                        "End to End (Cypress/Selenium)",
+                        "Start",
+                        "Unit",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "User flow."
+                },
+                {
+                    "id": 96,
+                    "text": "Console.table()?",
+                    "options": [
+                        "Print array/obj as table",
+                        "Log",
+                        "List",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Readable format."
+                },
+                {
+                    "id": 97,
+                    "text": "Console.time()?",
+                    "options": [
+                        "Measure duration",
+                        "Clock",
+                        "Date",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance check."
+                },
+                {
+                    "id": 98,
+                    "text": "Breakpoints?",
+                    "options": [
+                        "Pause execution",
+                        "Stop",
+                        "Crash",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inspection."
+                },
+                {
+                    "id": 99,
+                    "text": "Code coverage?",
+                    "options": [
+                        "% of code tested",
+                        "Lines",
+                        "Files",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Metric."
+                },
+                {
+                    "id": 100,
+                    "text": "Regression testing?",
+                    "options": [
+                        "Check existing features",
+                        "New",
+                        "Old",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prevent breaks."
+                }
+            ]
+        }
+    ]
+}

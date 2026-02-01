@@ -1,0 +1,1234 @@
+{
+    "topic": "C Programming",
+    "sets": [
+        {
+            "setId": "c_1",
+            "title": "Set 1: Intro & types",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "Who developed C?",
+                    "options": [
+                        "Dennis Ritchie",
+                        "Bjarne",
+                        "Gosling",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bell Labs."
+                },
+                {
+                    "id": 2,
+                    "text": "Entry point?",
+                    "options": [
+                        "main()",
+                        "start()",
+                        "init()",
+                        "void"
+                    ],
+                    "correct": 0,
+                    "explanation": "Execution start."
+                },
+                {
+                    "id": 3,
+                    "text": "Header file extension?",
+                    "options": [
+                        ".h",
+                        ".c",
+                        ".cpp",
+                        ".txt"
+                    ],
+                    "correct": 0,
+                    "explanation": "Includes."
+                },
+                {
+                    "id": 4,
+                    "text": "Include syntax?",
+                    "options": [
+                        "#include <stdio.h>",
+                        "import",
+                        "using",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Preprocessor."
+                },
+                {
+                    "id": 5,
+                    "text": "Comments?",
+                    "options": [
+                        "// and /* */",
+                        "#",
+                        "<!-- -->",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Styles."
+                },
+                {
+                    "id": 6,
+                    "text": "Int size (usually)?",
+                    "options": [
+                        "4 bytes",
+                        "2",
+                        "8",
+                        "1"
+                    ],
+                    "correct": 0,
+                    "explanation": "32/64 bit."
+                },
+                {
+                    "id": 7,
+                    "text": "Char size?",
+                    "options": [
+                        "1 byte",
+                        "2",
+                        "4",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "ASCII."
+                },
+                {
+                    "id": 8,
+                    "text": "Format specifier int?",
+                    "options": [
+                        "%d",
+                        "%f",
+                        "%c",
+                        "%s"
+                    ],
+                    "correct": 0,
+                    "explanation": "Decimal."
+                },
+                {
+                    "id": 9,
+                    "text": "Format specifier float?",
+                    "options": [
+                        "%f",
+                        "%d",
+                        "%i",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Float."
+                },
+                {
+                    "id": 10,
+                    "text": "Scanf usage?",
+                    "options": [
+                        "scanf(\"%d\", &x)",
+                        "read",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Input."
+                },
+                {
+                    "id": 11,
+                    "text": "Address operator?",
+                    "options": [
+                        "&",
+                        "*",
+                        "->",
+                        "."
+                    ],
+                    "correct": 0,
+                    "explanation": "Memory loc."
+                },
+                {
+                    "id": 12,
+                    "text": "Const keyword?",
+                    "options": [
+                        "Constant value",
+                        "Var",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Read only."
+                },
+                {
+                    "id": 13,
+                    "text": "Volatile keyword?",
+                    "options": [
+                        "Can change unexpectedly",
+                        "Gas",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "HW access."
+                },
+                {
+                    "id": 14,
+                    "text": "Signed vs Unsigned?",
+                    "options": [
+                        "+/- vs + only",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Range."
+                },
+                {
+                    "id": 15,
+                    "text": "Variable naming?",
+                    "options": [
+                        "Alphanumeric + _",
+                        "Any",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rules."
+                },
+                {
+                    "id": 16,
+                    "text": "Case sensitive?",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Maybe",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "C is sensitive."
+                },
+                {
+                    "id": 17,
+                    "text": "Void return?",
+                    "options": [
+                        "No return value",
+                        "0",
+                        "1",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Empty."
+                },
+                {
+                    "id": 18,
+                    "text": "Escape sequence newline?",
+                    "options": [
+                        "\\n",
+                        "\\t",
+                        "\\r",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Next line."
+                },
+                {
+                    "id": 19,
+                    "text": "Null char?",
+                    "options": [
+                        "\\0",
+                        "0",
+                        "N",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "String end."
+                },
+                {
+                    "id": 20,
+                    "text": "Preprocessor directive?",
+                    "options": [
+                        "Starts with #",
+                        "//",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Before compile."
+                }
+            ]
+        },
+        {
+            "setId": "c_2",
+            "title": "Set 2: Control & Functions",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Switch statement?",
+                    "options": [
+                        "Multi-way branch",
+                        "Loop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cases."
+                },
+                {
+                    "id": 22,
+                    "text": "Break in switch?",
+                    "options": [
+                        "Prevents fallthrough",
+                        "Stop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Exit case."
+                },
+                {
+                    "id": 23,
+                    "text": "Default case?",
+                    "options": [
+                        "If no match",
+                        "First",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fallback."
+                },
+                {
+                    "id": 24,
+                    "text": "Ternary Op?",
+                    "options": [
+                        "cond ? a : b",
+                        "if",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Short if."
+                },
+                {
+                    "id": 25,
+                    "text": "Do-While loop?",
+                    "options": [
+                        "Exit controlled (runs once)",
+                        "Entry",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Guaranteed run."
+                },
+                {
+                    "id": 26,
+                    "text": "While vs For?",
+                    "options": [
+                        "Condition vs Iteration",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Use case."
+                },
+                {
+                    "id": 27,
+                    "text": "Continue?",
+                    "options": [
+                        "Skip iteration",
+                        "Exit",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Loop control."
+                },
+                {
+                    "id": 28,
+                    "text": "Function prototype?",
+                    "options": [
+                        "Declaration before use",
+                        "Def",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Signature."
+                },
+                {
+                    "id": 29,
+                    "text": "Pass by Value?",
+                    "options": [
+                        "Copy of argument",
+                        "Ref",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Default in C."
+                },
+                {
+                    "id": 30,
+                    "text": "Pass by Reference?",
+                    "options": [
+                        "Pass address (pointers)",
+                        "Value",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Simulated."
+                },
+                {
+                    "id": 31,
+                    "text": "Recursion limit?",
+                    "options": [
+                        "Stack size",
+                        "RAM",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Overflow."
+                },
+                {
+                    "id": 32,
+                    "text": "Local static var?",
+                    "options": [
+                        "Retains value between calls",
+                        "Reset",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lifetime."
+                },
+                {
+                    "id": 33,
+                    "text": "Global variable?",
+                    "options": [
+                        "Visible to all",
+                        "Local",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scope."
+                },
+                {
+                    "id": 34,
+                    "text": "Extern keyword?",
+                    "options": [
+                        "Global in another file",
+                        "Exit",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Linkage."
+                },
+                {
+                    "id": 35,
+                    "text": "Register keyword?",
+                    "options": [
+                        "Store in CPU register",
+                        "Memory",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hint."
+                },
+                {
+                    "id": 36,
+                    "text": "Auto keyword?",
+                    "options": [
+                        "Default local storage",
+                        "Car",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stack."
+                },
+                {
+                    "id": 37,
+                    "text": "Return multiple values?",
+                    "options": [
+                        "Use pointers/struct",
+                        "No",
+                        "List",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Workaround."
+                },
+                {
+                    "id": 38,
+                    "text": "Inline function?",
+                    "options": [
+                        "Expand code at call site",
+                        "Line",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Speed."
+                },
+                {
+                    "id": 39,
+                    "text": "Main arguments?",
+                    "options": [
+                        "argc, argv",
+                        "None",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "CLI args."
+                },
+                {
+                    "id": 40,
+                    "text": "Exit()?",
+                    "options": [
+                        "Terminate program",
+                        "Stop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stdlib."
+                }
+            ]
+        },
+        {
+            "setId": "c_3",
+            "title": "Set 3: Pointers & Arrays",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Pointer variable?",
+                    "options": [
+                        "Stores address",
+                        "Value",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Ref."
+                },
+                {
+                    "id": 42,
+                    "text": "Format pointer?",
+                    "options": [
+                        "%p",
+                        "%d",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hex."
+                },
+                {
+                    "id": 43,
+                    "text": "Dereference *?",
+                    "options": [
+                        "Value at address",
+                        "Multiply",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access."
+                },
+                {
+                    "id": 44,
+                    "text": "Array name decays to?",
+                    "options": [
+                        "Pointer to first element",
+                        "Value",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Identity."
+                },
+                {
+                    "id": 45,
+                    "text": "Pointer arithmetic?",
+                    "options": [
+                        "Inc by size of type",
+                        "By 1 byte",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scale."
+                },
+                {
+                    "id": 46,
+                    "text": "Void pointer?",
+                    "options": [
+                        "Generic pointer",
+                        "Null",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Type erasure."
+                },
+                {
+                    "id": 47,
+                    "text": "NULL macro?",
+                    "options": [
+                        "((void*)0)",
+                        "0",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Zero."
+                },
+                {
+                    "id": 48,
+                    "text": "Array indexing?",
+                    "options": [
+                        "a[i] == *(a+i)",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sugar."
+                },
+                {
+                    "id": 49,
+                    "text": "Multidimensional array?",
+                    "options": [
+                        "a[i][j]",
+                        "Table",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Matrix."
+                },
+                {
+                    "id": 50,
+                    "text": "String in C?",
+                    "options": [
+                        "Char array null terminated",
+                        "Object",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No string type."
+                },
+                {
+                    "id": 51,
+                    "text": "Strlen?",
+                    "options": [
+                        "Length w/o null",
+                        "Size",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Count."
+                },
+                {
+                    "id": 52,
+                    "text": "Strcpy?",
+                    "options": [
+                        "Copy string",
+                        "Cat",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Clone."
+                },
+                {
+                    "id": 53,
+                    "text": "Strcat?",
+                    "options": [
+                        "Concatenate",
+                        "Dog",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Append."
+                },
+                {
+                    "id": 54,
+                    "text": "Strcmp?",
+                    "options": [
+                        "Compare (0 if equal)",
+                        "Diff",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lexical."
+                },
+                {
+                    "id": 55,
+                    "text": "Pointer to pointer?",
+                    "options": [
+                        "**p",
+                        "p2",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Indirect."
+                },
+                {
+                    "id": 56,
+                    "text": "Function pointer?",
+                    "options": [
+                        "(*f)(args)",
+                        "Func",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Callback."
+                },
+                {
+                    "id": 57,
+                    "text": "Segfault?",
+                    "options": [
+                        "Access invalid memory",
+                        "Crash",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Error."
+                },
+                {
+                    "id": 58,
+                    "text": "Sizeof?",
+                    "options": [
+                        "Compile time size",
+                        "Len",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Operator."
+                },
+                {
+                    "id": 59,
+                    "text": "Const pointer?",
+                    "options": [
+                        "Addr fixed",
+                        "Value fixed",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "int * const p."
+                },
+                {
+                    "id": 60,
+                    "text": "Pointer to const?",
+                    "options": [
+                        "Value fixed",
+                        "Addr fixed",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "const int * p."
+                }
+            ]
+        },
+        {
+            "setId": "c_4",
+            "title": "Set 4: Structs & Memory",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Struct definition?",
+                    "options": [
+                        "struct Name { };",
+                        "class",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Composite."
+                },
+                {
+                    "id": 62,
+                    "text": "Access member?",
+                    "options": [
+                        ". operator",
+                        "->",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Direct."
+                },
+                {
+                    "id": 63,
+                    "text": "Access via pointer?",
+                    "options": [
+                        "-> operator",
+                        ".",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Arrow."
+                },
+                {
+                    "id": 64,
+                    "text": "Typedef?",
+                    "options": [
+                        "Alias for type",
+                        "Def",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rename."
+                },
+                {
+                    "id": 65,
+                    "text": "Union?",
+                    "options": [
+                        "Shared memory for members",
+                        "Struct",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Overlay."
+                },
+                {
+                    "id": 66,
+                    "text": "Size of Union?",
+                    "options": [
+                        "Largest member",
+                        "Sum",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Max."
+                },
+                {
+                    "id": 67,
+                    "text": "Enum?",
+                    "options": [
+                        "Named integers",
+                        "List",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Enumeration."
+                },
+                {
+                    "id": 68,
+                    "text": "Bit field?",
+                    "options": [
+                        "Specific bit width",
+                        "Byte",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Packing."
+                },
+                {
+                    "id": 69,
+                    "text": "Dynamic memory?",
+                    "options": [
+                        "Heap",
+                        "Stack",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Runtime."
+                },
+                {
+                    "id": 70,
+                    "text": "Malloc?",
+                    "options": [
+                        "Alloc memory",
+                        "Make",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Uninitialized."
+                },
+                {
+                    "id": 71,
+                    "text": "Calloc?",
+                    "options": [
+                        "Alloc and Zero",
+                        "Call",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Array."
+                },
+                {
+                    "id": 72,
+                    "text": "Realloc?",
+                    "options": [
+                        "Resize memory",
+                        "Redo",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Grow/Shrink."
+                },
+                {
+                    "id": 73,
+                    "text": "Free?",
+                    "options": [
+                        "Release memory",
+                        "Lib",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Avoid leak."
+                },
+                {
+                    "id": 74,
+                    "text": "Memory Leak?",
+                    "options": [
+                        "Forgot to free",
+                        "Error",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bug."
+                },
+                {
+                    "id": 75,
+                    "text": "Dangling pointer?",
+                    "options": [
+                        "Use after free",
+                        "Hang",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Risk."
+                },
+                {
+                    "id": 76,
+                    "text": "Stack vs Heap?",
+                    "options": [
+                        "Auto vs Manual",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Storage."
+                },
+                {
+                    "id": 77,
+                    "text": "Padding?",
+                    "options": [
+                        "Alignment bytes in struct",
+                        "Cotton",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance."
+                },
+                {
+                    "id": 78,
+                    "text": "Self-referential struct?",
+                    "options": [
+                        "Node with ptr to Node",
+                        "Self",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Linked List."
+                },
+                {
+                    "id": 79,
+                    "text": "Buffer overflow?",
+                    "options": [
+                        "Write past end",
+                        "Full",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Security."
+                },
+                {
+                    "id": 80,
+                    "text": "NULL pointer check?",
+                    "options": [
+                        "Always check malloc return",
+                        "No",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Safety."
+                }
+            ]
+        },
+        {
+            "setId": "c_5",
+            "title": "Set 5: Files & Preprocessor",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "File pointer?",
+                    "options": [
+                        "FILE*",
+                        "fp",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Handle."
+                },
+                {
+                    "id": 82,
+                    "text": "Fopen?",
+                    "options": [
+                        "Open file",
+                        "Start",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Returns ptr."
+                },
+                {
+                    "id": 83,
+                    "text": "Fclose?",
+                    "options": [
+                        "Close file",
+                        "End",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flush."
+                },
+                {
+                    "id": 84,
+                    "text": "Fprintf?",
+                    "options": [
+                        "Print to file",
+                        "Screen",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Output."
+                },
+                {
+                    "id": 85,
+                    "text": "Fscanf?",
+                    "options": [
+                        "Read from file",
+                        "Input",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Input."
+                },
+                {
+                    "id": 86,
+                    "text": "Fgetc?",
+                    "options": [
+                        "Get char",
+                        "String",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Single."
+                },
+                {
+                    "id": 87,
+                    "text": "EOF?",
+                    "options": [
+                        "End of File (-1)",
+                        "Stop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Marker."
+                },
+                {
+                    "id": 88,
+                    "text": "Fseek?",
+                    "options": [
+                        "Move cursor",
+                        "Seek",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Random access."
+                },
+                {
+                    "id": 89,
+                    "text": "Ftell?",
+                    "options": [
+                        "Current position",
+                        "Tell",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Report."
+                },
+                {
+                    "id": 90,
+                    "text": "Rewind?",
+                    "options": [
+                        "Go to start",
+                        "Back",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reset."
+                },
+                {
+                    "id": 91,
+                    "text": "Binary mode?",
+                    "options": [
+                        "'rb', 'wb'",
+                        "Bin",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Raw."
+                },
+                {
+                    "id": 92,
+                    "text": "Fread/Fwrite?",
+                    "options": [
+                        "Block I/O",
+                        "Text",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Buffers."
+                },
+                {
+                    "id": 93,
+                    "text": "Macro definition?",
+                    "options": [
+                        "#define",
+                        "macro",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sub."
+                },
+                {
+                    "id": 94,
+                    "text": "Macro function?",
+                    "options": [
+                        "#define SQR(x) (x*x)",
+                        "Func",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inline."
+                },
+                {
+                    "id": 95,
+                    "text": "#ifdef?",
+                    "options": [
+                        "Conditional compilation",
+                        "If",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Check def."
+                },
+                {
+                    "id": 96,
+                    "text": "#ifndef header guard?",
+                    "options": [
+                        "Prevents double inclusion",
+                        "Guard",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 97,
+                    "text": "__LINE__?",
+                    "options": [
+                        "Current line num",
+                        "Line",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Debug."
+                },
+                {
+                    "id": 98,
+                    "text": "__FILE__?",
+                    "options": [
+                        "Filename",
+                        "File",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Debug."
+                },
+                {
+                    "id": 99,
+                    "text": "Token pasting ##?",
+                    "options": [
+                        "Concatenate tokens",
+                        "Paste",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Macro magic."
+                },
+                {
+                    "id": 100,
+                    "text": "Stringify #?",
+                    "options": [
+                        "Convert to string",
+                        "Text",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Macro."
+                }
+            ]
+        }
+    ]
+}

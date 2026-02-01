@@ -1,0 +1,1265 @@
+{
+    "topic": "React.js Framework",
+    "sets": [
+        {
+            "setId": "react_1",
+            "title": "Set 1: React Basics",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "React is a?",
+                    "options": [
+                        "Library",
+                        "Framework",
+                        "Language",
+                        "Database"
+                    ],
+                    "correct": 0,
+                    "explanation": "UI Library."
+                },
+                {
+                    "id": 2,
+                    "text": "JSX stands for?",
+                    "options": [
+                        "JavaScript XML",
+                        "Java Syntax",
+                        "JSON X",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Extension."
+                },
+                {
+                    "id": 3,
+                    "text": "Key attribute importance?",
+                    "options": [
+                        "Unique ID for lists",
+                        "Password",
+                        "Access",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Diffing algorithm."
+                },
+                {
+                    "id": 4,
+                    "text": "Props are?",
+                    "options": [
+                        "Read-only",
+                        "Mutable",
+                        "State",
+                        "Global"
+                    ],
+                    "correct": 0,
+                    "explanation": "Immutable."
+                },
+                {
+                    "id": 5,
+                    "text": "State is?",
+                    "options": [
+                        "Mutable/Local",
+                        "Global",
+                        "Static",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Managed by component."
+                },
+                {
+                    "id": 6,
+                    "text": "Component definition?",
+                    "options": [
+                        "Function or Class",
+                        "Object",
+                        "Array",
+                        "String"
+                    ],
+                    "correct": 0,
+                    "explanation": "Building block."
+                },
+                {
+                    "id": 7,
+                    "text": "Virtual DOM?",
+                    "options": [
+                        "Memory representation",
+                        "Real DOM",
+                        "Browser",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance."
+                },
+                {
+                    "id": 8,
+                    "text": "Entry point file?",
+                    "options": [
+                        "index.js",
+                        "app.js",
+                        "main.java",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Renders root."
+                },
+                {
+                    "id": 9,
+                    "text": "Transpiler for JSX?",
+                    "options": [
+                        "Babel",
+                        "Webpack",
+                        "React",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Converts to JS."
+                },
+                {
+                    "id": 10,
+                    "text": "Create-React-App tool?",
+                    "options": [
+                        "Boilerplate generator",
+                        "Library",
+                        "Hook",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Setup."
+                }
+            ]
+        },
+        {
+            "setId": "react_2",
+            "title": "Set 2: Components & Props",
+            "questions": [
+                {
+                    "id": 11,
+                    "text": "Functional vs Class?",
+                    "options": [
+                        "Func uses Hooks",
+                        "Func has logic",
+                        "Class is better",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Modern standard."
+                },
+                {
+                    "id": 12,
+                    "text": "Pass data parent to child?",
+                    "options": [
+                        "Props",
+                        "State",
+                        "Context",
+                        "Ref"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unidirectional."
+                },
+                {
+                    "id": 13,
+                    "text": "Children prop?",
+                    "options": [
+                        "Content inside tag",
+                        "Child components",
+                        "Array",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Nested content."
+                },
+                {
+                    "id": 14,
+                    "text": "PropTypes?",
+                    "options": [
+                        "Type checking",
+                        "TS",
+                        "Flow",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Validation."
+                },
+                {
+                    "id": 15,
+                    "text": "Default props?",
+                    "options": [
+                        "Fallback values",
+                        "Initial state",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "If missing."
+                },
+                {
+                    "id": 16,
+                    "text": "Destructuring props?",
+                    "options": [
+                        "({ name }) =>",
+                        "props.name",
+                        "this.props",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cleaner syntax."
+                },
+                {
+                    "id": 17,
+                    "text": "Pure Component?",
+                    "options": [
+                        "Renders only if props change",
+                        "Stateless",
+                        "Simple",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimization."
+                },
+                {
+                    "id": 18,
+                    "text": "Fragment?",
+                    "options": [
+                        "<>...</>",
+                        "<div>",
+                        "<span>",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No extra node."
+                },
+                {
+                    "id": 19,
+                    "text": "HOC?",
+                    "options": [
+                        "Higher Order Component",
+                        "Hook",
+                        "HTML",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Wrap component."
+                },
+                {
+                    "id": 20,
+                    "text": "Render props?",
+                    "options": [
+                        "Prop as function",
+                        "Render method",
+                        "Return",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sharing logic."
+                }
+            ]
+        },
+        {
+            "setId": "react_3",
+            "title": "Set 3: Hooks Basics",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "useState hook?",
+                    "options": [
+                        "Manage state",
+                        "Side effect",
+                        "Context",
+                        "Ref"
+                    ],
+                    "correct": 0,
+                    "explanation": "Returns [val, set]."
+                },
+                {
+                    "id": 22,
+                    "text": "useEffect hook?",
+                    "options": [
+                        "Side effects",
+                        "State",
+                        "Memo",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lifecycle replacement."
+                },
+                {
+                    "id": 23,
+                    "text": "Hook rules?",
+                    "options": [
+                        "Top level only",
+                        "Inside loops",
+                        "Conditionals",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Call order."
+                },
+                {
+                    "id": 24,
+                    "text": "useContext?",
+                    "options": [
+                        "Consume context",
+                        "Provider",
+                        "State",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Avoid prop drilling."
+                },
+                {
+                    "id": 25,
+                    "text": "Dependency array []?",
+                    "options": [
+                        "Run once on mount",
+                        "Run every render",
+                        "Run on update",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "ComponentDidMount."
+                },
+                {
+                    "id": 26,
+                    "text": "Custom hooks start with?",
+                    "options": [
+                        "use",
+                        "get",
+                        "hook",
+                        "set"
+                    ],
+                    "correct": 0,
+                    "explanation": "Convention."
+                },
+                {
+                    "id": 27,
+                    "text": "useReducer?",
+                    "options": [
+                        "Complex state logic",
+                        "Simple state",
+                        "Context",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Redux like."
+                },
+                {
+                    "id": 28,
+                    "text": "useRef?",
+                    "options": [
+                        "Access DOM/Mutable val",
+                        "State",
+                        "Render",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No re-render."
+                },
+                {
+                    "id": 29,
+                    "text": "Effect cleanup?",
+                    "options": [
+                        "Return function",
+                        "Return null",
+                        "Return false",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "ComponentWillUnmount."
+                },
+                {
+                    "id": 30,
+                    "text": "Replace ComponentDidUpdate?",
+                    "options": [
+                        "useEffect with deps",
+                        "useEffect []",
+                        "useState",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Watch vars."
+                }
+            ]
+        },
+        {
+            "setId": "react_4",
+            "title": "Set 4: State Management",
+            "questions": [
+                {
+                    "id": 31,
+                    "text": "Lifting state up?",
+                    "options": [
+                        "Move state to common ancestor",
+                        "Redux",
+                        "Context",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sharing state."
+                },
+                {
+                    "id": 32,
+                    "text": "Prop drilling?",
+                    "options": [
+                        "Passing props deep",
+                        "Drilling tool",
+                        "Method",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Problem."
+                },
+                {
+                    "id": 33,
+                    "text": "Context API?",
+                    "options": [
+                        "Global state",
+                        "Local",
+                        "Props",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Native solution."
+                },
+                {
+                    "id": 34,
+                    "text": "Redux store?",
+                    "options": [
+                        "Single source of truth",
+                        "Multiple",
+                        "Component",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Global object."
+                },
+                {
+                    "id": 35,
+                    "text": "Redux action?",
+                    "options": [
+                        "Events describing change",
+                        "Function",
+                        "State",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Payload."
+                },
+                {
+                    "id": 36,
+                    "text": "Redux reducer?",
+                    "options": [
+                        "Pure function updating state",
+                        "Action",
+                        "View",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "(state, action) => state."
+                },
+                {
+                    "id": 37,
+                    "text": "Dispatch?",
+                    "options": [
+                        "Send action",
+                        "Receive",
+                        "Store",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Trigger update."
+                },
+                {
+                    "id": 38,
+                    "text": "Redux Thunk?",
+                    "options": [
+                        "Async middleware",
+                        "Sync",
+                        "State",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Side effects."
+                },
+                {
+                    "id": 39,
+                    "text": "Recoil/Zustand?",
+                    "options": [
+                        "State libraries",
+                        "React",
+                        "DB",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Alternatives."
+                },
+                {
+                    "id": 40,
+                    "text": "Immutability in Redux?",
+                    "options": [
+                        "Required",
+                        "Optional",
+                        "Bad",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Predictability."
+                }
+            ]
+        },
+        {
+            "setId": "react_5",
+            "title": "Set 5: Routing",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "React Router package?",
+                    "options": [
+                        "react-router-dom",
+                        "router",
+                        "route",
+                        "react-route"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard lib."
+                },
+                {
+                    "id": 42,
+                    "text": "Display component based on URL?",
+                    "options": [
+                        "<Route>",
+                        "<Link>",
+                        "<Switch>",
+                        "<Nav>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Maps path."
+                },
+                {
+                    "id": 43,
+                    "text": "Navigate without reload?",
+                    "options": [
+                        "<Link>",
+                        "<a>",
+                        "<href>",
+                        "<go>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Client side."
+                },
+                {
+                    "id": 44,
+                    "text": "URL Parameters?",
+                    "options": [
+                        ":id",
+                        "?id",
+                        "&id",
+                        "#id"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dynamic segments."
+                },
+                {
+                    "id": 45,
+                    "text": "Access params hook?",
+                    "options": [
+                        "useParams",
+                        "useRoute",
+                        "useQuery",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Returns obj."
+                },
+                {
+                    "id": 46,
+                    "text": "Programmatic navigation?",
+                    "options": [
+                        "useNavigate",
+                        "useHistory",
+                        "push",
+                        "go"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hook."
+                },
+                {
+                    "id": 47,
+                    "text": "404 Route?",
+                    "options": [
+                        "path='*'",
+                        "path='404'",
+                        "path='error'",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Catch all."
+                },
+                {
+                    "id": 48,
+                    "text": "Nested routes?",
+                    "options": [
+                        "Route inside Route",
+                        "Link",
+                        "Nav",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sub-views."
+                },
+                {
+                    "id": 49,
+                    "text": "Outlet component?",
+                    "options": [
+                        "Renders child route",
+                        "Plug",
+                        "Exit",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Layouts."
+                },
+                {
+                    "id": 50,
+                    "text": "HashRouter vs BrowserRouter?",
+                    "options": [
+                        "Hash vs History API",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "URL style."
+                }
+            ]
+        },
+        {
+            "setId": "react_6",
+            "title": "Set 6: Forms & Events",
+            "questions": [
+                {
+                    "id": 51,
+                    "text": "Controlled component?",
+                    "options": [
+                        "State controls input",
+                        "DOM controls",
+                        "Uncontrolled",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "React source of truth."
+                },
+                {
+                    "id": 52,
+                    "text": "Uncontrolled component?",
+                    "options": [
+                        "Ref controls input",
+                        "State",
+                        "React",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DOM source of truth."
+                },
+                {
+                    "id": 53,
+                    "text": "Event naming convention?",
+                    "options": [
+                        "camelCase (onClick)",
+                        "lowercase",
+                        "kebab",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "React standard."
+                },
+                {
+                    "id": 54,
+                    "text": "Prevent default?",
+                    "options": [
+                        "e.preventDefault()",
+                        "return false",
+                        "stop",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Explicit call."
+                },
+                {
+                    "id": 55,
+                    "text": "Formik/React-Hook-Form?",
+                    "options": [
+                        "Form libraries",
+                        "Databases",
+                        "Routers",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Management."
+                },
+                {
+                    "id": 56,
+                    "text": "Synthetic Event?",
+                    "options": [
+                        "Cross-browser wrapper",
+                        "Native",
+                        "Fake",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Normalization."
+                },
+                {
+                    "id": 57,
+                    "text": "OnChange behavior?",
+                    "options": [
+                        "Fires on every keystroke",
+                        "On blur",
+                        "On submit",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Realtime."
+                },
+                {
+                    "id": 58,
+                    "text": "Textarea value?",
+                    "options": [
+                        "Value attribute",
+                        "Child text",
+                        "Inner",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Like input."
+                },
+                {
+                    "id": 59,
+                    "text": "Label htmlFor?",
+                    "options": [
+                        "Replaces 'for'",
+                        "id",
+                        "name",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Keyword clash."
+                },
+                {
+                    "id": 60,
+                    "text": "Handling multiple inputs?",
+                    "options": [
+                        "One change handler with name",
+                        "Many funcs",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dynamic key."
+                }
+            ]
+        },
+        {
+            "setId": "react_7",
+            "title": "Set 7: Performance",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "React.memo?",
+                    "options": [
+                        "Memoize component",
+                        "Memory",
+                        "Remember",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prevents re-render."
+                },
+                {
+                    "id": 62,
+                    "text": "useMemo?",
+                    "options": [
+                        "Memoize value",
+                        "Component",
+                        "Function",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Expensive calc."
+                },
+                {
+                    "id": 63,
+                    "text": "useCallback?",
+                    "options": [
+                        "Memoize function",
+                        "Value",
+                        "Component",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stable reference."
+                },
+                {
+                    "id": 64,
+                    "text": "Code splitting?",
+                    "options": [
+                        "React.lazy & Suspense",
+                        "Split()",
+                        "Cut",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Load on demand."
+                },
+                {
+                    "id": 65,
+                    "text": "Reconciliation?",
+                    "options": [
+                        "Diffing algorithm",
+                        "Agreeing",
+                        "Merging",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DOM update logic."
+                },
+                {
+                    "id": 66,
+                    "text": "Key prop warning?",
+                    "options": [
+                        "Performance issue",
+                        "Error",
+                        "Info",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "List rendering."
+                },
+                {
+                    "id": 67,
+                    "text": "Profiler API?",
+                    "options": [
+                        "Measure performance",
+                        "Profile user",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DevTools."
+                },
+                {
+                    "id": 68,
+                    "text": "Excessive re-renders?",
+                    "options": [
+                        "Slow app",
+                        "Fast",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Common bug."
+                },
+                {
+                    "id": 69,
+                    "text": "Large list rendering?",
+                    "options": [
+                        "Virtualization (Windowing)",
+                        "Pagination",
+                        "All",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "react-window."
+                },
+                {
+                    "id": 70,
+                    "text": "Production build?",
+                    "options": [
+                        "Minified & Optimized",
+                        "Debug",
+                        "Large",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "npm run build."
+                }
+            ]
+        },
+        {
+            "setId": "react_8",
+            "title": "Set 8: Advanced Patterns",
+            "questions": [
+                {
+                    "id": 71,
+                    "text": "Portals?",
+                    "options": [
+                        "Render outside root",
+                        "Door",
+                        "Game",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Modals/Tooltips."
+                },
+                {
+                    "id": 72,
+                    "text": "Error Boundaries?",
+                    "options": [
+                        "Catch crash in child",
+                        "Border",
+                        "CSS",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fallback UI."
+                },
+                {
+                    "id": 73,
+                    "text": "Context consumption Class?",
+                    "options": [
+                        "static contextType",
+                        "useContext",
+                        "Hook",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Legacy."
+                },
+                {
+                    "id": 74,
+                    "text": "Compound Components?",
+                    "options": [
+                        "Components working together",
+                        "Mixed",
+                        "Complex",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Select/Option."
+                },
+                {
+                    "id": 75,
+                    "text": "Server Side Rendering (SSR)?",
+                    "options": [
+                        "Render on server (Next.js)",
+                        "Client",
+                        "Browser",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "SEO/Performance."
+                },
+                {
+                    "id": 76,
+                    "text": "Static Site Generation (SSG)?",
+                    "options": [
+                        "Build time render",
+                        "Runtime",
+                        "Dynamic",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fastest."
+                },
+                {
+                    "id": 77,
+                    "text": "Hydration?",
+                    "options": [
+                        "Attaching handlers to HTML",
+                        "Water",
+                        "Loading",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "SSR step."
+                },
+                {
+                    "id": 78,
+                    "text": "ForwardRef?",
+                    "options": [
+                        "Pass ref to child",
+                        "Forward",
+                        "Next",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access child DOM."
+                },
+                {
+                    "id": 79,
+                    "text": "StrictMode?",
+                    "options": [
+                        "Highlights problems",
+                        "Fast",
+                        "Secure",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dev check."
+                },
+                {
+                    "id": 80,
+                    "text": "Suspense?",
+                    "options": [
+                        "Wait for async content",
+                        "Movie",
+                        "Pause",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Loading state."
+                }
+            ]
+        },
+        {
+            "setId": "react_9",
+            "title": "Set 9: Testing React",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Testing Library?",
+                    "options": [
+                        "RTL (React Testing Library)",
+                        "Jest",
+                        "Mocha",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 82,
+                    "text": "Jest?",
+                    "options": [
+                        "Test runner",
+                        "Library",
+                        "Code",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Assertion."
+                },
+                {
+                    "id": 83,
+                    "text": "Snapshot testing?",
+                    "options": [
+                        "Compare UI output",
+                        "Photo",
+                        "Screenshot",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Detect changes."
+                },
+                {
+                    "id": 84,
+                    "text": "Render hook?",
+                    "options": [
+                        "render()",
+                        "show()",
+                        "display()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "RTL method."
+                },
+                {
+                    "id": 85,
+                    "text": "FireEvent?",
+                    "options": [
+                        "Simulate user event",
+                        "Burn",
+                        "Click",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Interaction."
+                },
+                {
+                    "id": 86,
+                    "text": "WaitFor?",
+                    "options": [
+                        "Async testing",
+                        "Stop",
+                        "Pause",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Await result."
+                },
+                {
+                    "id": 87,
+                    "text": "Mocking modules?",
+                    "options": [
+                        "jest.mock()",
+                        "fake()",
+                        "copy()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Isolation."
+                },
+                {
+                    "id": 88,
+                    "text": "Screen object?",
+                    "options": [
+                        "Query DOM",
+                        "Monitor",
+                        "Display",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access elements."
+                },
+                {
+                    "id": 89,
+                    "text": "User-event lib?",
+                    "options": [
+                        "Realistic simulation",
+                        "User",
+                        "Bot",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Better than FireEvent."
+                },
+                {
+                    "id": 90,
+                    "text": "Coverage report?",
+                    "options": [
+                        "Shows tested lines",
+                        "News",
+                        "Report",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Metric."
+                }
+            ]
+        },
+        {
+            "setId": "react_10",
+            "title": "Set 10: Ecosystem",
+            "questions": [
+                {
+                    "id": 91,
+                    "text": "Next.js?",
+                    "options": [
+                        "React Framework",
+                        "Lib",
+                        "DB",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fullstack."
+                },
+                {
+                    "id": 92,
+                    "text": "Gatsby?",
+                    "options": [
+                        "Static Site Generator",
+                        "Character",
+                        "Book",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fast sites."
+                },
+                {
+                    "id": 93,
+                    "text": "React Native?",
+                    "options": [
+                        "Mobile Apps",
+                        "Web",
+                        "Desktop",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "iOS/Android."
+                },
+                {
+                    "id": 94,
+                    "text": "Material UI / Chakra?",
+                    "options": [
+                        "Component Libraries",
+                        "Code",
+                        "Colors",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Styling."
+                },
+                {
+                    "id": 95,
+                    "text": "Styled Components?",
+                    "options": [
+                        "CSS-in-JS",
+                        "SASS",
+                        "LESS",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dynamic styling."
+                },
+                {
+                    "id": 96,
+                    "text": "Storybook?",
+                    "options": [
+                        "Component development",
+                        "Stories",
+                        "Book",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Documentation."
+                },
+                {
+                    "id": 97,
+                    "text": "React Query / TanStack?",
+                    "options": [
+                        "Server state management",
+                        "DB",
+                        "SQL",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Caching."
+                },
+                {
+                    "id": 98,
+                    "text": "Remix?",
+                    "options": [
+                        "Full stack framework",
+                        "Music",
+                        "Mix",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Focus on web standards."
+                },
+                {
+                    "id": 99,
+                    "text": "Vite?",
+                    "options": [
+                        "Build tool",
+                        "Drink",
+                        "Fast",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Faster than CRA."
+                },
+                {
+                    "id": 100,
+                    "text": "Electron + React?",
+                    "options": [
+                        "Desktop Apps",
+                        "Web",
+                        "Mobile",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cross platform."
+                }
+            ]
+        }
+    ]
+}

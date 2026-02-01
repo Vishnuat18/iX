@@ -1,0 +1,1235 @@
+{
+    "topic": "Operating Systems",
+    "sets": [
+        {
+            "setId": "os_1",
+            "title": "Set 1: Basics & Processes",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "What is an Operating System?",
+                    "options": [
+                        "Interface between hardware and user",
+                        "Application software",
+                        "Compiler",
+                        "Interpreter"
+                    ],
+                    "correct": 0,
+                    "explanation": "Manages hardware resources."
+                },
+                {
+                    "id": 2,
+                    "text": "Core component of OS?",
+                    "options": [
+                        "Kernel",
+                        "Shell",
+                        "GUI",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Core that interacts with hardware."
+                },
+                {
+                    "id": 3,
+                    "text": "What is a Process?",
+                    "options": [
+                        "Program in execution",
+                        "Program in disk",
+                        "Thread",
+                        "Code"
+                    ],
+                    "correct": 0,
+                    "explanation": "Active entity."
+                },
+                {
+                    "id": 4,
+                    "text": "Who triggers context switching?",
+                    "options": [
+                        "OS",
+                        "User",
+                        "Hardware",
+                        "Compiler"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scheduler."
+                },
+                {
+                    "id": 5,
+                    "text": "PCB stands for?",
+                    "options": [
+                        "Process Control Block",
+                        "Program Control Block",
+                        "Process Central Block",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stores process info."
+                },
+                {
+                    "id": 6,
+                    "text": "First step of process state?",
+                    "options": [
+                        "New",
+                        "Ready",
+                        "Running",
+                        "Waiting"
+                    ],
+                    "correct": 0,
+                    "explanation": "Creation."
+                },
+                {
+                    "id": 7,
+                    "text": "Mode bit 0 means?",
+                    "options": [
+                        "Kernel mode",
+                        "User mode",
+                        "Sleep",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Privileged mode."
+                },
+                {
+                    "id": 8,
+                    "text": "System Call is?",
+                    "options": [
+                        "Request mechanism to OS",
+                        "Function",
+                        "Interrupt",
+                        "Signal"
+                    ],
+                    "correct": 0,
+                    "explanation": "Access kernel services."
+                },
+                {
+                    "id": 9,
+                    "text": "Process usually terminates via?",
+                    "options": [
+                        "exit()",
+                        "kill()",
+                        "stop()",
+                        "fork()"
+                    ],
+                    "correct": 0,
+                    "explanation": "System call."
+                },
+                {
+                    "id": 10,
+                    "text": "Child process is created by?",
+                    "options": [
+                        "fork()",
+                        "exec()",
+                        "run()",
+                        "new()"
+                    ],
+                    "correct": 0,
+                    "explanation": "UNIX system call."
+                },
+                {
+                    "id": 11,
+                    "text": "Return value of fork() for child?",
+                    "options": [
+                        "0",
+                        "PID of child",
+                        "-1",
+                        "1"
+                    ],
+                    "correct": 0,
+                    "explanation": "Zero in child."
+                },
+                {
+                    "id": 12,
+                    "text": "Orphan process?",
+                    "options": [
+                        "Parent dies, child lives",
+                        "Child dies",
+                        "Both die",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Adopted by init."
+                },
+                {
+                    "id": 13,
+                    "text": "Zombie process?",
+                    "options": [
+                        "Completed but entry in process table",
+                        "Running",
+                        "Sleeping",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Waiting for parent wait()."
+                },
+                {
+                    "id": 14,
+                    "text": "Long-term scheduler?",
+                    "options": [
+                        "Job scheduler",
+                        "CPU scheduler",
+                        "Swapper",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Controls multiprogramming degree."
+                },
+                {
+                    "id": 15,
+                    "text": "Short-term scheduler?",
+                    "options": [
+                        "CPU scheduler",
+                        "Job scheduler",
+                        "Disk",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Selects ready process."
+                },
+                {
+                    "id": 16,
+                    "text": "Medium-term scheduler?",
+                    "options": [
+                        "Swapping",
+                        "Job",
+                        "CPU",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Memory management."
+                },
+                {
+                    "id": 17,
+                    "text": "Inter-Process Communication?",
+                    "options": [
+                        "Shared Memory / Message Passing",
+                        "Wires",
+                        "CPU",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Data exchange."
+                },
+                {
+                    "id": 18,
+                    "text": "Threads share?",
+                    "options": [
+                        "Code, Data, Files",
+                        "Stack",
+                        "Registers",
+                        "PC"
+                    ],
+                    "correct": 0,
+                    "explanation": "Within same process."
+                },
+                {
+                    "id": 19,
+                    "text": "User-level threads are?",
+                    "options": [
+                        "Faster to switch",
+                        "Slower",
+                        "Kernel managed",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No kernel intervention."
+                },
+                {
+                    "id": 20,
+                    "text": "Microkernel vs Monolithic?",
+                    "options": [
+                        "Micro has min services in kernel",
+                        "Same",
+                        "Mono is smaller",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Architecture."
+                }
+            ]
+        },
+        {
+            "setId": "os_2",
+            "title": "Set 2: Types & Scheduling",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "FCFS stands for?",
+                    "options": [
+                        "First Come First Serve",
+                        "First Check First Save",
+                        "Fast",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Queue based."
+                },
+                {
+                    "id": 22,
+                    "text": "Round Robin is?",
+                    "options": [
+                        "Preemptive",
+                        "Non-preemptive",
+                        "Batch",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Time quantum."
+                },
+                {
+                    "id": 23,
+                    "text": "SJF stands for?",
+                    "options": [
+                        "Shortest Job First",
+                        "Simple Job",
+                        "Slow",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Min burst time."
+                },
+                {
+                    "id": 24,
+                    "text": "Starvation occurs in?",
+                    "options": [
+                        "Priority Scheduling",
+                        "RR",
+                        "FCFS",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Low priority waits forever."
+                },
+                {
+                    "id": 25,
+                    "text": "Solution to Starvation?",
+                    "options": [
+                        "Aging",
+                        "Killing",
+                        "Waiting",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Increase priority over time."
+                },
+                {
+                    "id": 26,
+                    "text": "Real-time OS requirement?",
+                    "options": [
+                        "Strict time constraints",
+                        "Fast",
+                        "UI",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Determinism."
+                },
+                {
+                    "id": 27,
+                    "text": "Batch OS goal?",
+                    "options": [
+                        "Maximize CPU utilization",
+                        "Interaction",
+                        "Response time",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Throughput."
+                },
+                {
+                    "id": 28,
+                    "text": "Time Sharing OS?",
+                    "options": [
+                        "Quick switching for user interaction",
+                        "Batch",
+                        "Simple",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Multitasking."
+                },
+                {
+                    "id": 29,
+                    "text": "Throughput?",
+                    "options": [
+                        "Jobs per unit time",
+                        "Speed",
+                        "Delay",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Metric."
+                },
+                {
+                    "id": 30,
+                    "text": "Turnaround time?",
+                    "options": [
+                        "Completion - Submission",
+                        "Waiting",
+                        "Running",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Total time."
+                },
+                {
+                    "id": 31,
+                    "text": "Waiting time?",
+                    "options": [
+                        "Time in ready queue",
+                        "Running",
+                        "I/O",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scheduling metric."
+                },
+                {
+                    "id": 32,
+                    "text": "Response time?",
+                    "options": [
+                        "Submission to first response",
+                        "Total",
+                        "Waiting",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Interactive metric."
+                },
+                {
+                    "id": 33,
+                    "text": "Multi-level Queue?",
+                    "options": [
+                        "Partitions ready queue",
+                        "Stacked",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Different classes."
+                },
+                {
+                    "id": 34,
+                    "text": "Preemptive scheduling?",
+                    "options": [
+                        "OS can interrupt",
+                        "Process hold CPU",
+                        "Cooperative",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Forced switch."
+                },
+                {
+                    "id": 35,
+                    "text": "Context switch overhead?",
+                    "options": [
+                        "Time wasted saving/restoring",
+                        "Useful",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cost."
+                },
+                {
+                    "id": 36,
+                    "text": "CPU Burst vs I/O Burst?",
+                    "options": [
+                        "Computing vs Waiting",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Execution cycle."
+                },
+                {
+                    "id": 37,
+                    "text": "Dispatcher?",
+                    "options": [
+                        "Gives control to process",
+                        "Scheduler",
+                        "Planner",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Module."
+                },
+                {
+                    "id": 38,
+                    "text": "Convoy effect?",
+                    "options": [
+                        "Short process waits for long one",
+                        "Traffic",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "FCFS issue."
+                },
+                {
+                    "id": 39,
+                    "text": "Highest Response Ratio Next?",
+                    "options": [
+                        "Considers waiting time",
+                        "SJF",
+                        "FCFS",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Aging variation."
+                },
+                {
+                    "id": 40,
+                    "text": "Soft Real-Time?",
+                    "options": [
+                        "Priority preference, no guarantee",
+                        "Strict",
+                        "Hard",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Multimedia."
+                }
+            ]
+        },
+        {
+            "setId": "os_3",
+            "title": "Set 3: Synchronization & Deadlocks",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Race Condition?",
+                    "options": [
+                        "Output depends on execution order",
+                        "Running",
+                        "Speed",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concurrency bug."
+                },
+                {
+                    "id": 42,
+                    "text": "Critical Section?",
+                    "options": [
+                        "Shared resource access code",
+                        "Important",
+                        "Kernel",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mutex needed."
+                },
+                {
+                    "id": 43,
+                    "text": "Mutual Exclusion?",
+                    "options": [
+                        "One process at a time",
+                        "Share",
+                        "All",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Requirement."
+                },
+                {
+                    "id": 44,
+                    "text": "Semaphore?",
+                    "options": [
+                        "Integer variable for signaling",
+                        "Flag",
+                        "Lock",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dijkstra."
+                },
+                {
+                    "id": 45,
+                    "text": "Binary Semaphore?",
+                    "options": [
+                        "Mutex (0 or 1)",
+                        "Counting",
+                        "Random",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lock."
+                },
+                {
+                    "id": 46,
+                    "text": "Wait() operation?",
+                    "options": [
+                        "Decrements semaphore",
+                        "Increments",
+                        "Sleeps",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "P operation."
+                },
+                {
+                    "id": 47,
+                    "text": "Signal() operation?",
+                    "options": [
+                        "Increments semaphore",
+                        "Decrements",
+                        "Wakes",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "V operation."
+                },
+                {
+                    "id": 48,
+                    "text": "Deadlock?",
+                    "options": [
+                        "Processes wait indefinitely for each other",
+                        "Crash",
+                        "Hang",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Circular wait."
+                },
+                {
+                    "id": 49,
+                    "text": "Deadlock necessary conditions?",
+                    "options": [
+                        "4 (Mutex, Hold&Wait, NoPreempt, Circular)",
+                        "3",
+                        "2",
+                        "1"
+                    ],
+                    "correct": 0,
+                    "explanation": "Coffman conditions."
+                },
+                {
+                    "id": 50,
+                    "text": "Banker's Algorithm?",
+                    "options": [
+                        "Deadlock Avoidance",
+                        "Detection",
+                        "Prevention",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Safe state."
+                },
+                {
+                    "id": 51,
+                    "text": "Safe State?",
+                    "options": [
+                        "Order exists to finish all",
+                        "Secure",
+                        "Saved",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Avoids deadlock."
+                },
+                {
+                    "id": 52,
+                    "text": "Dining Philosophers Problem?",
+                    "options": [
+                        "Synchronization classic",
+                        "Eating",
+                        "Thinking",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Resource sharing."
+                },
+                {
+                    "id": 53,
+                    "text": "Producer-Consumer Problem?",
+                    "options": [
+                        "Buffer management",
+                        "Sales",
+                        "Market",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bounded buffer."
+                },
+                {
+                    "id": 54,
+                    "text": "Monitor?",
+                    "options": [
+                        "High-level sync construct",
+                        "Screen",
+                        "Check",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Language support."
+                },
+                {
+                    "id": 55,
+                    "text": "Spinlock?",
+                    "options": [
+                        "Busy waiting",
+                        "Sleep",
+                        "Block",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Wastes CPU."
+                },
+                {
+                    "id": 56,
+                    "text": "Priority Inversion?",
+                    "options": [
+                        "Low priority holds high need lock",
+                        "Reverse",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mars Pathfinder bug."
+                },
+                {
+                    "id": 57,
+                    "text": "Resource Allocation Graph?",
+                    "options": [
+                        "Deadlock detection",
+                        "Chart",
+                        "Map",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cycle detection."
+                },
+                {
+                    "id": 58,
+                    "text": "Hold and Wait?",
+                    "options": [
+                        "Holding one, waiting for another",
+                        "Stop",
+                        "Go",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Deadlock condition."
+                },
+                {
+                    "id": 59,
+                    "text": "No Preemption?",
+                    "options": [
+                        "Cannot take resource forcibly",
+                        "Share",
+                        "Give",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Deadlock condition."
+                },
+                {
+                    "id": 60,
+                    "text": "Peterson's Solution?",
+                    "options": [
+                        "Software mutex for 2 processes",
+                        "Hardware",
+                        "Algorithm",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Turn and Flag."
+                }
+            ]
+        },
+        {
+            "setId": "os_4",
+            "title": "Set 4: Memory Management",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "MMU?",
+                    "options": [
+                        "Memory Management Unit",
+                        "Main Memory",
+                        "Map",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hardware for virtual mem."
+                },
+                {
+                    "id": 62,
+                    "text": "Logical vs Physical Address?",
+                    "options": [
+                        "CPU view vs RAM location",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mapping."
+                },
+                {
+                    "id": 63,
+                    "text": "Fragmentation?",
+                    "options": [
+                        "Wasted memory",
+                        "Broken",
+                        "Pieces",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Internal/External."
+                },
+                {
+                    "id": 64,
+                    "text": "Paging?",
+                    "options": [
+                        "Fixed size blocks",
+                        "Variable",
+                        "Segments",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Non-contiguous."
+                },
+                {
+                    "id": 65,
+                    "text": "Page Fault?",
+                    "options": [
+                        "Page not in memory",
+                        "Error",
+                        "Crash",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Needs loading."
+                },
+                {
+                    "id": 66,
+                    "text": "Thrashing?",
+                    "options": [
+                        "Excessive paging",
+                        "Beating",
+                        "Crashing",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Low CPU utility."
+                },
+                {
+                    "id": 67,
+                    "text": "Virtual Memory?",
+                    "options": [
+                        "Illusion of larger memory",
+                        "Fake",
+                        "Cloud",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Uses disk."
+                },
+                {
+                    "id": 68,
+                    "text": "Demand Paging?",
+                    "options": [
+                        "Load on request",
+                        "Load all",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lazy loading."
+                },
+                {
+                    "id": 69,
+                    "text": "TLB?",
+                    "options": [
+                        "Translation Lookaside Buffer",
+                        "Table",
+                        "List",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cache for pagination."
+                },
+                {
+                    "id": 70,
+                    "text": "Segmentation?",
+                    "options": [
+                        "Variable size logical units",
+                        "Fixed",
+                        "Pages",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "User view."
+                },
+                {
+                    "id": 71,
+                    "text": "First Fit?",
+                    "options": [
+                        "First hole big enough",
+                        "Best",
+                        "Worst",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Allocation."
+                },
+                {
+                    "id": 72,
+                    "text": "Best Fit?",
+                    "options": [
+                        "Smallest hole big enough",
+                        "First",
+                        "Largest",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Slowest."
+                },
+                {
+                    "id": 73,
+                    "text": "Worst Fit?",
+                    "options": [
+                        "Largest hole",
+                        "Smallest",
+                        "First",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Leaves large gaps."
+                },
+                {
+                    "id": 74,
+                    "text": "Swapping?",
+                    "options": [
+                        "Move process to disk",
+                        "Exchange",
+                        "Trade",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Roll in/out."
+                },
+                {
+                    "id": 75,
+                    "text": "Belady's Anomaly?",
+                    "options": [
+                        "More frames = more faults (FIFO)",
+                        "Less",
+                        "Same",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Counterintuitive."
+                },
+                {
+                    "id": 76,
+                    "text": "LRU page replacement?",
+                    "options": [
+                        "Least Recently Used",
+                        "Last",
+                        "Late",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Algorithm."
+                },
+                {
+                    "id": 77,
+                    "text": "Working Set Model?",
+                    "options": [
+                        "Locality of reference",
+                        "Job",
+                        "Set",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prevent thrashing."
+                },
+                {
+                    "id": 78,
+                    "text": "Internal fragmentation?",
+                    "options": [
+                        "Wasted space inside block",
+                        "Outside",
+                        "Between",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fixed partitions."
+                },
+                {
+                    "id": 79,
+                    "text": "External fragmentation?",
+                    "options": [
+                        "Total space exists but not contiguous",
+                        "Inside",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dynamic partitions."
+                },
+                {
+                    "id": 80,
+                    "text": "Address Binding?",
+                    "options": [
+                        "Compile/Load/Execution time",
+                        "Disk",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Map to physical."
+                }
+            ]
+        },
+        {
+            "setId": "os_5",
+            "title": "Set 5: Storage & Security",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "File System?",
+                    "options": [
+                        "Method to store/retrieve files",
+                        "Folder",
+                        "Box",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "NTFS, EXT4."
+                },
+                {
+                    "id": 82,
+                    "text": "Directory Structure?",
+                    "options": [
+                        "Tree, DAG, Single",
+                        "List",
+                        "Map",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Organization."
+                },
+                {
+                    "id": 83,
+                    "text": "File Control Block?",
+                    "options": [
+                        "File metadata",
+                        "Data",
+                        "Name",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inode."
+                },
+                {
+                    "id": 84,
+                    "text": "Disk Scheduling?",
+                    "options": [
+                        "SSTF, SCAN, C-SCAN",
+                        "CPU",
+                        "RAM",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Head movement."
+                },
+                {
+                    "id": 85,
+                    "text": "SSTF?",
+                    "options": [
+                        "Shortest Seek Time First",
+                        "Simple",
+                        "Slow",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Greedy."
+                },
+                {
+                    "id": 86,
+                    "text": "RAID?",
+                    "options": [
+                        "Redundant Array of Independent Disks",
+                        "Red",
+                        "Ray",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reliability."
+                },
+                {
+                    "id": 87,
+                    "text": "Boot block?",
+                    "options": [
+                        "Bootstrap loader",
+                        "Shoe",
+                        "Start",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Starts OS."
+                },
+                {
+                    "id": 88,
+                    "text": "Sector sparing?",
+                    "options": [
+                        "Handling bad blocks",
+                        "Saving",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reliability."
+                },
+                {
+                    "id": 89,
+                    "text": "Access Matrix?",
+                    "options": [
+                        "Protection model",
+                        "Movie",
+                        "Grid",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rights."
+                },
+                {
+                    "id": 90,
+                    "text": "Virus vs Worm?",
+                    "options": [
+                        "Attach vs Standalone",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Malware."
+                },
+                {
+                    "id": 91,
+                    "text": "Trojan Horse?",
+                    "options": [
+                        "Disguised malware",
+                        "Animal",
+                        "Secure",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Trick."
+                },
+                {
+                    "id": 92,
+                    "text": "Buffer Overflow?",
+                    "options": [
+                        "Writing past bounds",
+                        "Full",
+                        "Empty",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Exploit."
+                },
+                {
+                    "id": 93,
+                    "text": "Symlink?",
+                    "options": [
+                        "Shortcut pointer",
+                        "Direct",
+                        "Copy",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Soft link."
+                },
+                {
+                    "id": 94,
+                    "text": "Inode?",
+                    "options": [
+                        "Index Node (Unix)",
+                        "Input",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Data structure."
+                },
+                {
+                    "id": 95,
+                    "text": "Mounting?",
+                    "options": [
+                        "Attaching FS to root",
+                        "Climbing",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Availability."
+                },
+                {
+                    "id": 96,
+                    "text": "Direct Memory Access (DMA)?",
+                    "options": [
+                        "I/O bypass CPU to RAM",
+                        "Slow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Speed."
+                },
+                {
+                    "id": 97,
+                    "text": "Spooling?",
+                    "options": [
+                        "Simultaneous Peripheral Op On-Line",
+                        "Pool",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Printers."
+                },
+                {
+                    "id": 98,
+                    "text": "Device Driver?",
+                    "options": [
+                        "SW interface to HW",
+                        "Car",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Translation."
+                },
+                {
+                    "id": 99,
+                    "text": "Public Key Encryption?",
+                    "options": [
+                        "Asymmetric",
+                        "Symmetric",
+                        "Secret",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "RSA."
+                },
+                {
+                    "id": 100,
+                    "text": "User Authentication?",
+                    "options": [
+                        "Password, Biometrics",
+                        "Name",
+                        "ID",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Identity."
+                }
+            ]
+        }
+    ]
+}

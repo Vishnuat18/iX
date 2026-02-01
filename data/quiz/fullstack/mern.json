@@ -1,0 +1,257 @@
+{
+    "topic": "MERN Stack",
+    "sets": [
+        {
+            "setId": "mern_1",
+            "title": "Set 1: React & Node Basics",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "MERN stands for?",
+                    "options": [
+                        "MongoDB, Express, React, Node",
+                        "Mongo, Ember, Redux, Node",
+                        "MySql, Express, React, Net",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Full JS Stack."
+                },
+                {
+                    "id": 2,
+                    "text": "React is a?",
+                    "options": [
+                        "Library",
+                        "Framework",
+                        "Language",
+                        "Database"
+                    ],
+                    "correct": 0,
+                    "explanation": "UI Library."
+                },
+                {
+                    "id": 3,
+                    "text": "Node.js environment?",
+                    "options": [
+                        "Runtime",
+                        "Framework",
+                        "Library",
+                        "OS"
+                    ],
+                    "correct": 0,
+                    "explanation": "JS Runtime on Chrome V8."
+                },
+                {
+                    "id": 4,
+                    "text": "Express.js is for?",
+                    "options": [
+                        "Backend API",
+                        "Frontend",
+                        "Database",
+                        "Testing"
+                    ],
+                    "correct": 0,
+                    "explanation": "Web framework for Node."
+                },
+                {
+                    "id": 5,
+                    "text": "JSX in React?",
+                    "options": [
+                        "JavaScript XML",
+                        "Java Syntax",
+                        "JSON X",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "HTML-like syntax."
+                },
+                {
+                    "id": 6,
+                    "text": "State in React?",
+                    "options": [
+                        "Internal component data",
+                        "Global var",
+                        "DB",
+                        "External props"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mutable data."
+                },
+                {
+                    "id": 7,
+                    "text": "Props are?",
+                    "options": [
+                        "Read-only inputs",
+                        "Mutable",
+                        "State",
+                        "Events"
+                    ],
+                    "correct": 0,
+                    "explanation": "Passed from parent."
+                },
+                {
+                    "id": 8,
+                    "text": "npm init does?",
+                    "options": [
+                        "Create package.json",
+                        "Install node",
+                        "Start server",
+                        "Delete app"
+                    ],
+                    "correct": 0,
+                    "explanation": "Initialize project."
+                },
+                {
+                    "id": 9,
+                    "text": "useEffect hook?",
+                    "options": [
+                        "Side effects",
+                        "State",
+                        "Context",
+                        "Ref"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lifecycle replacement."
+                },
+                {
+                    "id": 10,
+                    "text": "Virtual DOM is?",
+                    "options": [
+                        "Lightweight copy of DOM",
+                        "Real DOM",
+                        "Shadow DOM",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Performance optimization."
+                }
+            ]
+        },
+        {
+            "setId": "mern_2",
+            "title": "Set 2: Advanced MERN",
+            "questions": [
+                {
+                    "id": 11,
+                    "text": "Redux is for?",
+                    "options": [
+                        "State Management",
+                        "Routing",
+                        "Styling",
+                        "DB"
+                    ],
+                    "correct": 0,
+                    "explanation": "Predictable state container."
+                },
+                {
+                    "id": 12,
+                    "text": "Middleware in Express?",
+                    "options": [
+                        "Functions executing during request",
+                        "Database",
+                        "Frontend",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "next() function."
+                },
+                {
+                    "id": 13,
+                    "text": "Mongoose is?",
+                    "options": [
+                        "ODM for MongoDB",
+                        "New DB",
+                        "React Lib",
+                        "Node Module"
+                    ],
+                    "correct": 0,
+                    "explanation": "Object Data Modeling."
+                },
+                {
+                    "id": 14,
+                    "text": "JWT usage in MERN?",
+                    "options": [
+                        "Authentication",
+                        "Styling",
+                        "Routing",
+                        "State"
+                    ],
+                    "correct": 0,
+                    "explanation": "Secure token."
+                },
+                {
+                    "id": 15,
+                    "text": "Axios is used for?",
+                    "options": [
+                        "HTTP Requests",
+                        "State",
+                        "Routing",
+                        "Styling"
+                    ],
+                    "correct": 0,
+                    "explanation": "Promise based HTTP client."
+                },
+                {
+                    "id": 16,
+                    "text": "React Router?",
+                    "options": [
+                        "Single Page Navigation",
+                        "Server Routing",
+                        "DB Routing",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Client side routing."
+                },
+                {
+                    "id": 17,
+                    "text": "CORS stands for?",
+                    "options": [
+                        "Cross-Origin Resource Sharing",
+                        "Code Origin...",
+                        "Computer Origin...",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Browser security."
+                },
+                {
+                    "id": 18,
+                    "text": "Environment variables file?",
+                    "options": [
+                        ".env",
+                        ".config",
+                        ".json",
+                        ".xml"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stores secrets."
+                },
+                {
+                    "id": 19,
+                    "text": "Next.js is built on?",
+                    "options": [
+                        "React",
+                        "Vue",
+                        "Angular",
+                        "Svelte"
+                    ],
+                    "correct": 0,
+                    "explanation": "React Framework."
+                },
+                {
+                    "id": 20,
+                    "text": "Deploy MERN app?",
+                    "options": [
+                        "Vercel/Heroku/Render",
+                        "Not possible",
+                        "Only offline",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cloud platforms."
+                }
+            ]
+        }
+    ]
+}

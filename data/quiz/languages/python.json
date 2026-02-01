@@ -1,0 +1,2465 @@
+{
+    "topic": "Core Python",
+    "sets": [
+        {
+            "setId": "py_1",
+            "title": "Set 1: Python Basics",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "Python is interpreted?",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Compiled",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Line by line."
+                },
+                {
+                    "id": 2,
+                    "text": "Extension?",
+                    "options": [
+                        ".py",
+                        ".java",
+                        ".c",
+                        ".txt"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 3,
+                    "text": "Print syntax?",
+                    "options": [
+                        "print()",
+                        "System.out",
+                        "printf",
+                        "echo"
+                    ],
+                    "correct": 0,
+                    "explanation": "Function."
+                },
+                {
+                    "id": 4,
+                    "text": "Comment char?",
+                    "options": [
+                        "#",
+                        "//",
+                        "<!--",
+                        "*"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hash."
+                },
+                {
+                    "id": 5,
+                    "text": "Variable declaration?",
+                    "options": [
+                        "x = 5",
+                        "int x = 5",
+                        "dim x",
+                        "var x"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dynamic typing."
+                },
+                {
+                    "id": 6,
+                    "text": "List brackets?",
+                    "options": [
+                        "[]",
+                        "{}",
+                        "()",
+                        "<>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Square."
+                },
+                {
+                    "id": 7,
+                    "text": "Tuple brackets?",
+                    "options": [
+                        "()",
+                        "[]",
+                        "{}",
+                        "<>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Round."
+                },
+                {
+                    "id": 8,
+                    "text": "Dictionary brackets?",
+                    "options": [
+                        "{}",
+                        "[]",
+                        "()",
+                        "<>"
+                    ],
+                    "correct": 0,
+                    "explanation": "Curly."
+                },
+                {
+                    "id": 9,
+                    "text": "Block scope?",
+                    "options": [
+                        "Indentation",
+                        "Braces",
+                        "End",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Whitespace."
+                },
+                {
+                    "id": 10,
+                    "text": "Boolean values?",
+                    "options": [
+                        "True, False",
+                        "true, false",
+                        "0, 1",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Capitalized."
+                },
+                {
+                    "id": 11,
+                    "text": "Input function?",
+                    "options": [
+                        "input()",
+                        "read()",
+                        "scan()",
+                        "get()"
+                    ],
+                    "correct": 0,
+                    "explanation": "StdIn."
+                },
+                {
+                    "id": 12,
+                    "text": "Length function?",
+                    "options": [
+                        "len()",
+                        "length()",
+                        "size()",
+                        "count()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Built-in."
+                },
+                {
+                    "id": 13,
+                    "text": "Exponent operator?",
+                    "options": [
+                        "**",
+                        "^",
+                        "exp",
+                        "pow"
+                    ],
+                    "correct": 0,
+                    "explanation": "Power."
+                },
+                {
+                    "id": 14,
+                    "text": "Floor division?",
+                    "options": [
+                        "//",
+                        "/",
+                        "%",
+                        "div"
+                    ],
+                    "correct": 0,
+                    "explanation": "Int div."
+                },
+                {
+                    "id": 15,
+                    "text": "Modulus?",
+                    "options": [
+                        "%",
+                        "mod",
+                        "rem",
+                        "/"
+                    ],
+                    "correct": 0,
+                    "explanation": "Remainder."
+                },
+                {
+                    "id": 16,
+                    "text": "Range function?",
+                    "options": [
+                        "range()",
+                        "seq()",
+                        "upto()",
+                        "list()"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sequence."
+                },
+                {
+                    "id": 17,
+                    "text": "Type function?",
+                    "options": [
+                        "type()",
+                        "typeof",
+                        "class",
+                        "gettype"
+                    ],
+                    "correct": 0,
+                    "explanation": "Check type."
+                },
+                {
+                    "id": 18,
+                    "text": "Casting?",
+                    "options": [
+                        "int()",
+                        "(int)",
+                        "cast()",
+                        "convert"
+                    ],
+                    "correct": 0,
+                    "explanation": "Constructor."
+                },
+                {
+                    "id": 19,
+                    "text": "String quote?",
+                    "options": [
+                        "Single or Double",
+                        "Only Double",
+                        "Only Single",
+                        "Backtick"
+                    ],
+                    "correct": 0,
+                    "explanation": "Flexible."
+                },
+                {
+                    "id": 20,
+                    "text": "Not Equal?",
+                    "options": [
+                        "!=",
+                        "<>",
+                        "!==",
+                        "not"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inequality."
+                }
+            ]
+        },
+        {
+            "setId": "py_2",
+            "title": "Set 2: Lists & Tuples",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "List mutable?",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Maybe",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Changeable."
+                },
+                {
+                    "id": 22,
+                    "text": "Tuple mutable?",
+                    "options": [
+                        "No",
+                        "Yes",
+                        "Maybe",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Immutable."
+                },
+                {
+                    "id": 23,
+                    "text": "Add to list?",
+                    "options": [
+                        "append()",
+                        "add()",
+                        "push()",
+                        "insert()"
+                    ],
+                    "correct": 0,
+                    "explanation": "End."
+                },
+                {
+                    "id": 24,
+                    "text": "Remove from list?",
+                    "options": [
+                        "remove()",
+                        "delete()",
+                        "kill()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Value."
+                },
+                {
+                    "id": 25,
+                    "text": "List slicing?",
+                    "options": [
+                        "list[start:end]",
+                        "slice()",
+                        "cut()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Subset."
+                },
+                {
+                    "id": 26,
+                    "text": "Negative index?",
+                    "options": [
+                        "From end",
+                        "Error",
+                        "Start",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "-1 is last."
+                },
+                {
+                    "id": 27,
+                    "text": "List comprehension?",
+                    "options": [
+                        "[x for x in list]",
+                        "map()",
+                        "loop",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concise."
+                },
+                {
+                    "id": 28,
+                    "text": "Sort list?",
+                    "options": [
+                        "sort()",
+                        "order()",
+                        "arrange()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "In-place."
+                },
+                {
+                    "id": 29,
+                    "text": "Reverse list?",
+                    "options": [
+                        "reverse()",
+                        "flip()",
+                        "back()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "In-place."
+                },
+                {
+                    "id": 30,
+                    "text": "Count occurrences?",
+                    "options": [
+                        "count()",
+                        "len()",
+                        "find()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Frequency."
+                },
+                {
+                    "id": 31,
+                    "text": "Index of item?",
+                    "options": [
+                        "index()",
+                        "find()",
+                        "search()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Position."
+                },
+                {
+                    "id": 32,
+                    "text": "Tuple with one item?",
+                    "options": [
+                        "(1,)",
+                        "(1)",
+                        "1",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Comma."
+                },
+                {
+                    "id": 33,
+                    "text": "Extend list?",
+                    "options": [
+                        "extend()",
+                        "append()",
+                        "merge()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Join."
+                },
+                {
+                    "id": 34,
+                    "text": "Pop?",
+                    "options": [
+                        "Remove last/idx",
+                        "Burst",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Return & remove."
+                },
+                {
+                    "id": 35,
+                    "text": "Clear list?",
+                    "options": [
+                        "clear()",
+                        "empty()",
+                        "del",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reset."
+                },
+                {
+                    "id": 36,
+                    "text": "Copy list?",
+                    "options": [
+                        "copy() or [:]",
+                        "assign",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shallow."
+                },
+                {
+                    "id": 37,
+                    "text": "Min value?",
+                    "options": [
+                        "min()",
+                        "low()",
+                        "small()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Built-in."
+                },
+                {
+                    "id": 38,
+                    "text": "Max value?",
+                    "options": [
+                        "max()",
+                        "high()",
+                        "big()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Built-in."
+                },
+                {
+                    "id": 39,
+                    "text": "Sum of list?",
+                    "options": [
+                        "sum()",
+                        "total()",
+                        "add()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Math."
+                },
+                {
+                    "id": 40,
+                    "text": "Unpacking?",
+                    "options": [
+                        "a, b = list",
+                        "extract",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Assign."
+                }
+            ]
+        },
+        {
+            "setId": "py_3",
+            "title": "Set 3: Dictionaries & Sets",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Dict is?",
+                    "options": [
+                        "Key-Value pairs",
+                        "Ordered List",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Map."
+                },
+                {
+                    "id": 42,
+                    "text": "Access value?",
+                    "options": [
+                        "d[key]",
+                        "d(key)",
+                        "d.get",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bracket."
+                },
+                {
+                    "id": 43,
+                    "text": "Get keys?",
+                    "options": [
+                        "keys()",
+                        "list()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "View."
+                },
+                {
+                    "id": 44,
+                    "text": "Get values?",
+                    "options": [
+                        "values()",
+                        "list()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "View."
+                },
+                {
+                    "id": 45,
+                    "text": "Get items?",
+                    "options": [
+                        "items()",
+                        "all()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pairs."
+                },
+                {
+                    "id": 46,
+                    "text": "Check key?",
+                    "options": [
+                        "'in' keyword",
+                        "has_key",
+                        "exists",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Membership."
+                },
+                {
+                    "id": 47,
+                    "text": "Add item?",
+                    "options": [
+                        "d[k] = v",
+                        "add()",
+                        "push()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Assign."
+                },
+                {
+                    "id": 48,
+                    "text": "Default value?",
+                    "options": [
+                        "get(k, default)",
+                        "try",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Safe."
+                },
+                {
+                    "id": 49,
+                    "text": "Set is?",
+                    "options": [
+                        "Unordered unique",
+                        "List",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Math set."
+                },
+                {
+                    "id": 50,
+                    "text": "Add to set?",
+                    "options": [
+                        "add()",
+                        "append()",
+                        "push()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Method."
+                },
+                {
+                    "id": 51,
+                    "text": "Union?",
+                    "options": [
+                        "union() or |",
+                        "join",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Combine."
+                },
+                {
+                    "id": 52,
+                    "text": "Intersection?",
+                    "options": [
+                        "intersection() or &",
+                        "meet",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Common."
+                },
+                {
+                    "id": 53,
+                    "text": "Difference?",
+                    "options": [
+                        "difference() or -",
+                        "minus",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Subtract."
+                },
+                {
+                    "id": 54,
+                    "text": "Symmetric Diff?",
+                    "options": [
+                        "^",
+                        "xor",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Exclusive."
+                },
+                {
+                    "id": 55,
+                    "text": "Frozenset?",
+                    "options": [
+                        "Immutable set",
+                        "Ice",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hashable."
+                },
+                {
+                    "id": 56,
+                    "text": "Dict loops?",
+                    "options": [
+                        "for k in d",
+                        "loop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Iterate keys."
+                },
+                {
+                    "id": 57,
+                    "text": "Merge dicts (3.9+)?",
+                    "options": [
+                        "|",
+                        "+",
+                        "merge()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Operator."
+                },
+                {
+                    "id": 58,
+                    "text": "Remove key?",
+                    "options": [
+                        "pop(k)",
+                        "del",
+                        "remove",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Return val."
+                },
+                {
+                    "id": 59,
+                    "text": "Clear dict?",
+                    "options": [
+                        "clear()",
+                        "empty",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Wipe."
+                },
+                {
+                    "id": 60,
+                    "text": "Update dict?",
+                    "options": [
+                        "update()",
+                        "set()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Batch."
+                }
+            ]
+        },
+        {
+            "setId": "py_4",
+            "title": "Set 4: Functions & Modules",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Define function?",
+                    "options": [
+                        "def",
+                        "function",
+                        "func",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Keyword."
+                },
+                {
+                    "id": 62,
+                    "text": "Return value?",
+                    "options": [
+                        "return",
+                        "ret",
+                        "back",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Exit."
+                },
+                {
+                    "id": 63,
+                    "text": "Lambda?",
+                    "options": [
+                        "lambda x: x",
+                        "anon",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "One line."
+                },
+                {
+                    "id": 64,
+                    "text": "Default args?",
+                    "options": [
+                        "def f(x=1)",
+                        "def f(x:1)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optional."
+                },
+                {
+                    "id": 65,
+                    "text": "*args?",
+                    "options": [
+                        "Variable positional",
+                        "Pointer",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Tuple."
+                },
+                {
+                    "id": 66,
+                    "text": "**kwargs?",
+                    "options": [
+                        "Variable keyword",
+                        "Double",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dict."
+                },
+                {
+                    "id": 67,
+                    "text": "Docstring?",
+                    "options": [
+                        "Triple quotes",
+                        "Comment",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Docs."
+                },
+                {
+                    "id": 68,
+                    "text": "Import module?",
+                    "options": [
+                        "import",
+                        "include",
+                        "use",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Load."
+                },
+                {
+                    "id": 69,
+                    "text": "Import specific?",
+                    "options": [
+                        "from x import y",
+                        "import y from x",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Selective."
+                },
+                {
+                    "id": 70,
+                    "text": "Alias?",
+                    "options": [
+                        "as",
+                        "alias",
+                        "name",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rename."
+                },
+                {
+                    "id": 71,
+                    "text": "Main check?",
+                    "options": [
+                        "if __name__ == '__main__'",
+                        "main()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Entry."
+                },
+                {
+                    "id": 72,
+                    "text": "Global var?",
+                    "options": [
+                        "global x",
+                        "var x",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scope."
+                },
+                {
+                    "id": 73,
+                    "text": "Nonlocal?",
+                    "options": [
+                        "Enclosing scope",
+                        "Parent",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Nested."
+                },
+                {
+                    "id": 74,
+                    "text": "Recursion?",
+                    "options": [
+                        "Func calls itself",
+                        "Loop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Self."
+                },
+                {
+                    "id": 75,
+                    "text": "Decorator?",
+                    "options": [
+                        "@decorator",
+                        "#dec",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Wrapper."
+                },
+                {
+                    "id": 76,
+                    "text": "Generator?",
+                    "options": [
+                        "yield",
+                        "return",
+                        "gen",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lazy."
+                },
+                {
+                    "id": 77,
+                    "text": "Built-in: map?",
+                    "options": [
+                        "Apply func to iter",
+                        "Map",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Transform."
+                },
+                {
+                    "id": 78,
+                    "text": "Built-in: filter?",
+                    "options": [
+                        "Select items",
+                        "Sieve",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Subset."
+                },
+                {
+                    "id": 79,
+                    "text": "Built-in: zip?",
+                    "options": [
+                        "Combine iterables",
+                        "Compress",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pair."
+                },
+                {
+                    "id": 80,
+                    "text": "Package init?",
+                    "options": [
+                        "__init__.py",
+                        "start.py",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Folder."
+                }
+            ]
+        },
+        {
+            "setId": "py_5",
+            "title": "Set 5: OOP",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Class keyword?",
+                    "options": [
+                        "class",
+                        "struct",
+                        "obj",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Define."
+                },
+                {
+                    "id": 82,
+                    "text": "Constructor?",
+                    "options": [
+                        "__init__",
+                        "class()",
+                        "main",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Init."
+                },
+                {
+                    "id": 83,
+                    "text": "Self?",
+                    "options": [
+                        "Instance reference",
+                        "This",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "First arg."
+                },
+                {
+                    "id": 84,
+                    "text": "Inheritance?",
+                    "options": [
+                        "class Child(Parent)",
+                        "extends",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Brackets."
+                },
+                {
+                    "id": 85,
+                    "text": "Super?",
+                    "options": [
+                        "super()",
+                        "parent()",
+                        "base()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Parent access."
+                },
+                {
+                    "id": 86,
+                    "text": "Private var?",
+                    "options": [
+                        "__var",
+                        "_var",
+                        "private",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Name mangling."
+                },
+                {
+                    "id": 87,
+                    "text": "Protected var?",
+                    "options": [
+                        "_var",
+                        "protected",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Convention."
+                },
+                {
+                    "id": 88,
+                    "text": "Str representation?",
+                    "options": [
+                        "__str__",
+                        "toString",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Readable."
+                },
+                {
+                    "id": 89,
+                    "text": "Repr representation?",
+                    "options": [
+                        "__repr__",
+                        "repr",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Debug."
+                },
+                {
+                    "id": 90,
+                    "text": "Static method?",
+                    "options": [
+                        "@staticmethod",
+                        "static",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "No self."
+                },
+                {
+                    "id": 91,
+                    "text": "Class method?",
+                    "options": [
+                        "@classmethod",
+                        "class",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "cls arg."
+                },
+                {
+                    "id": 92,
+                    "text": "Property?",
+                    "options": [
+                        "@property",
+                        "get",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Getter."
+                },
+                {
+                    "id": 93,
+                    "text": "Multiple inheritance?",
+                    "options": [
+                        "Allowed",
+                        "No",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mixins."
+                },
+                {
+                    "id": 94,
+                    "text": "MRO?",
+                    "options": [
+                        "Method Resolution Order",
+                        "My",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Lookup."
+                },
+                {
+                    "id": 95,
+                    "text": "Abstract class?",
+                    "options": [
+                        "ABC module",
+                        "abstract",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Base."
+                },
+                {
+                    "id": 96,
+                    "text": "Dunder methods?",
+                    "options": [
+                        "Double underscore",
+                        "Magic",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Special."
+                },
+                {
+                    "id": 97,
+                    "text": "Operator overloading?",
+                    "options": [
+                        "__add__, etc.",
+                        "Over",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Custom."
+                },
+                {
+                    "id": 98,
+                    "text": "Isinstance?",
+                    "options": [
+                        "Check type",
+                        "Type",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Check."
+                },
+                {
+                    "id": 99,
+                    "text": "Issubclass?",
+                    "options": [
+                        "Check inherit",
+                        "Sub",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Check."
+                },
+                {
+                    "id": 100,
+                    "text": "Slot?",
+                    "options": [
+                        "__slots__",
+                        "mem",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Memory opt."
+                }
+            ]
+        },
+        {
+            "setId": "py_6",
+            "title": "Set 6: File & Exception",
+            "questions": [
+                {
+                    "id": 101,
+                    "text": "Open file?",
+                    "options": [
+                        "open()",
+                        "read()",
+                        "file()",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Handle."
+                },
+                {
+                    "id": 102,
+                    "text": "Read mode?",
+                    "options": [
+                        "'r'",
+                        "'w'",
+                        "'a'",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Default."
+                },
+                {
+                    "id": 103,
+                    "text": "Write mode?",
+                    "options": [
+                        "'w'",
+                        "'r'",
+                        "'a'",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Truncates."
+                },
+                {
+                    "id": 104,
+                    "text": "Append mode?",
+                    "options": [
+                        "'a'",
+                        "'w'",
+                        "'r'",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Add end."
+                },
+                {
+                    "id": 105,
+                    "text": "Context manager?",
+                    "options": [
+                        "with open(...) as f",
+                        "try",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Auto close."
+                },
+                {
+                    "id": 106,
+                    "text": "Read all?",
+                    "options": [
+                        "read()",
+                        "readline()",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "String."
+                },
+                {
+                    "id": 107,
+                    "text": "Read lines?",
+                    "options": [
+                        "readlines()",
+                        "list",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "List."
+                },
+                {
+                    "id": 108,
+                    "text": "Try block?",
+                    "options": [
+                        "try:",
+                        "catch",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Attempt."
+                },
+                {
+                    "id": 109,
+                    "text": "Except block?",
+                    "options": [
+                        "except Error:",
+                        "catch",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Handle."
+                },
+                {
+                    "id": 110,
+                    "text": "Finally?",
+                    "options": [
+                        "Always runs",
+                        "End",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cleanup."
+                },
+                {
+                    "id": 111,
+                    "text": "Raise?",
+                    "options": [
+                        "raise Error",
+                        "throw",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Trigger."
+                },
+                {
+                    "id": 112,
+                    "text": "Else in try?",
+                    "options": [
+                        "Run if no exception",
+                        "Other",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Success."
+                },
+                {
+                    "id": 113,
+                    "text": "Custom Exception?",
+                    "options": [
+                        "Inherit Exception",
+                        "New",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Class."
+                },
+                {
+                    "id": 114,
+                    "text": "JSON module?",
+                    "options": [
+                        "import json",
+                        "obj",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Data."
+                },
+                {
+                    "id": 115,
+                    "text": "Serialize JSON?",
+                    "options": [
+                        "json.dump()",
+                        "load",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Write."
+                },
+                {
+                    "id": 116,
+                    "text": "Deserialize JSON?",
+                    "options": [
+                        "json.load()",
+                        "dump",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Read."
+                },
+                {
+                    "id": 117,
+                    "text": "CSV module?",
+                    "options": [
+                        "import csv",
+                        "sheet",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Comma."
+                },
+                {
+                    "id": 118,
+                    "text": "Binary mode?",
+                    "options": [
+                        "'rb', 'wb'",
+                        "bin",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bytes."
+                },
+                {
+                    "id": 119,
+                    "text": "Pickle?",
+                    "options": [
+                        "Object serialization",
+                        "Food",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Python specific."
+                },
+                {
+                    "id": 120,
+                    "text": "OS module?",
+                    "options": [
+                        "File sys ops",
+                        "Sys",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Path."
+                }
+            ]
+        },
+        {
+            "setId": "py_7",
+            "title": "Set 7: Libraries",
+            "questions": [
+                {
+                    "id": 121,
+                    "text": "NumPy?",
+                    "options": [
+                        "Numerical Python",
+                        "Num",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Arrays."
+                },
+                {
+                    "id": 122,
+                    "text": "Pandas?",
+                    "options": [
+                        "Data analysis",
+                        "Bear",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dataframes."
+                },
+                {
+                    "id": 123,
+                    "text": "Matplotlib?",
+                    "options": [
+                        "Plotting",
+                        "Math",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Graphs."
+                },
+                {
+                    "id": 124,
+                    "text": "Requests?",
+                    "options": [
+                        "HTTP lib",
+                        "Req",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Web."
+                },
+                {
+                    "id": 125,
+                    "text": "Flask?",
+                    "options": [
+                        "Micro web framework",
+                        "Bottle",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Web."
+                },
+                {
+                    "id": 126,
+                    "text": "Django?",
+                    "options": [
+                        "Full web framework",
+                        "Chain",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Web."
+                },
+                {
+                    "id": 127,
+                    "text": "Pip?",
+                    "options": [
+                        "Package installer",
+                        "Squeak",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Install."
+                },
+                {
+                    "id": 128,
+                    "text": "Virtualenv?",
+                    "options": [
+                        "Isolated env",
+                        "Virt",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sandbox."
+                },
+                {
+                    "id": 129,
+                    "text": "Pytest?",
+                    "options": [
+                        "Testing framework",
+                        "Test",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "QA."
+                },
+                {
+                    "id": 130,
+                    "text": "BeautifulSoup?",
+                    "options": [
+                        "HTML parsing",
+                        "Soup",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scraping."
+                },
+                {
+                    "id": 131,
+                    "text": "Scikit-learn?",
+                    "options": [
+                        "ML lib",
+                        "Sci",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "AI."
+                },
+                {
+                    "id": 132,
+                    "text": "TensorFlow?",
+                    "options": [
+                        "Deep learning",
+                        "Flow",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Google."
+                },
+                {
+                    "id": 133,
+                    "text": "PyTorch?",
+                    "options": [
+                        "Deep learning",
+                        "Torch",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Meta."
+                },
+                {
+                    "id": 134,
+                    "text": "SQLAlchemy?",
+                    "options": [
+                        "ORM",
+                        "SQL",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DB."
+                },
+                {
+                    "id": 135,
+                    "text": "Celery?",
+                    "options": [
+                        "Task queue",
+                        "Veg",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Async."
+                },
+                {
+                    "id": 136,
+                    "text": "Pillow?",
+                    "options": [
+                        "Image processing",
+                        "Sleep",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Img."
+                },
+                {
+                    "id": 137,
+                    "text": "PyGame?",
+                    "options": [
+                        "Game dev",
+                        "Play",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Games."
+                },
+                {
+                    "id": 138,
+                    "text": "Tkinter?",
+                    "options": [
+                        "GUI",
+                        "Tk",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Desktop."
+                },
+                {
+                    "id": 139,
+                    "text": "Asyncio?",
+                    "options": [
+                        "Async IO",
+                        "Sync",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concurrency."
+                },
+                {
+                    "id": 140,
+                    "text": "Dataclasses?",
+                    "options": [
+                        "Data holding classes",
+                        "Struct",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Boilerplate."
+                }
+            ]
+        },
+        {
+            "setId": "py_8",
+            "title": "Set 8: Advanced Concepts",
+            "questions": [
+                {
+                    "id": 141,
+                    "text": "GIL?",
+                    "options": [
+                        "Global Interpreter Lock",
+                        "Fish",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Thread limit."
+                },
+                {
+                    "id": 142,
+                    "text": "Decorators work via?",
+                    "options": [
+                        "Closures",
+                        "Magic",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Function wrapping."
+                },
+                {
+                    "id": 143,
+                    "text": "Metaclass?",
+                    "options": [
+                        "Class of a class",
+                        "Meta",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Creation."
+                },
+                {
+                    "id": 144,
+                    "text": "Monkey patching?",
+                    "options": [
+                        "Runtime modification",
+                        "Zoo",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dynamic."
+                },
+                {
+                    "id": 145,
+                    "text": "Deep vs Shallow copy?",
+                    "options": [
+                        "Recursive vs Ref",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Objects."
+                },
+                {
+                    "id": 146,
+                    "text": "Context Lib?",
+                    "options": [
+                        "Utilities for context managers",
+                        "Lib",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "With."
+                },
+                {
+                    "id": 147,
+                    "text": "Itertools?",
+                    "options": [
+                        "Iterator building blocks",
+                        "Loop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Efficient."
+                },
+                {
+                    "id": 148,
+                    "text": "Functools?",
+                    "options": [
+                        "HOC functions",
+                        "Func",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Utilities."
+                },
+                {
+                    "id": 149,
+                    "text": "Caching?",
+                    "options": [
+                        "lru_cache",
+                        "Store",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Memoize."
+                },
+                {
+                    "id": 150,
+                    "text": "Type Hinting?",
+                    "options": [
+                        "def f(x: int)",
+                        "Type",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "MyPy."
+                },
+                {
+                    "id": 151,
+                    "text": "Walrus operator?",
+                    "options": [
+                        ":=",
+                        "=",
+                        "Walrus",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Assign expr."
+                },
+                {
+                    "id": 152,
+                    "text": "f-string?",
+                    "options": [
+                        "Foramt string",
+                        "f",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Interpolation."
+                },
+                {
+                    "id": 153,
+                    "text": "Coroutines?",
+                    "options": [
+                        "async def",
+                        "Sub",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Await."
+                },
+                {
+                    "id": 154,
+                    "text": "Multiprocessing?",
+                    "options": [
+                        "Bypass GIL with Process",
+                        "Thread",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "CPU bound."
+                },
+                {
+                    "id": 155,
+                    "text": "Threading?",
+                    "options": [
+                        "IO bound tasks",
+                        "Proc",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Concurrent."
+                },
+                {
+                    "id": 156,
+                    "text": "Garbage Collection?",
+                    "options": [
+                        "Ref counting + cycle detect",
+                        "GC",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Auto."
+                },
+                {
+                    "id": 157,
+                    "text": "Dis module?",
+                    "options": [
+                        "Disassembler",
+                        "Dat",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bytecode."
+                },
+                {
+                    "id": 158,
+                    "text": "Time module?",
+                    "options": [
+                        "Time access",
+                        "Clock",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "System."
+                },
+                {
+                    "id": 159,
+                    "text": "Datetime?",
+                    "options": [
+                        "Dates and times",
+                        "Date",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Objects."
+                },
+                {
+                    "id": 160,
+                    "text": "Re module?",
+                    "options": [
+                        "Regex",
+                        "Repeat",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Patterns."
+                }
+            ]
+        },
+        {
+            "setId": "py_9",
+            "title": "Set 9: Formatting & Style",
+            "questions": [
+                {
+                    "id": 161,
+                    "text": "PEP 8?",
+                    "options": [
+                        "Style guide",
+                        "Pepsi",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 162,
+                    "text": "Indentation size?",
+                    "options": [
+                        "4 spaces",
+                        "2",
+                        "Tab",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 163,
+                    "text": "Line length?",
+                    "options": [
+                        "79 chars",
+                        "100",
+                        "Unlimited",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Readable."
+                },
+                {
+                    "id": 164,
+                    "text": "Variable naming?",
+                    "options": [
+                        "snake_case",
+                        "camelCase",
+                        "Pascal",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "PEP8."
+                },
+                {
+                    "id": 165,
+                    "text": "Class naming?",
+                    "options": [
+                        "PascalCase",
+                        "snake",
+                        "camel",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "PEP8."
+                },
+                {
+                    "id": 166,
+                    "text": "Constant naming?",
+                    "options": [
+                        "ALL_CAPS",
+                        "snake",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "PEP8."
+                },
+                {
+                    "id": 167,
+                    "text": "Docstring format?",
+                    "options": [
+                        "Google/NumPy/Sphinx",
+                        "Text",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Docs."
+                },
+                {
+                    "id": 168,
+                    "text": "Pylint?",
+                    "options": [
+                        "Linter",
+                        "Lint",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Check."
+                },
+                {
+                    "id": 169,
+                    "text": "Black?",
+                    "options": [
+                        "Formatter",
+                        "Color",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Opinionated."
+                },
+                {
+                    "id": 170,
+                    "text": "Isort?",
+                    "options": [
+                        "Sort imports",
+                        "Sort",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Order."
+                },
+                {
+                    "id": 171,
+                    "text": "Flake8?",
+                    "options": [
+                        "Linter suite",
+                        "Cereal",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Check."
+                },
+                {
+                    "id": 172,
+                    "text": "Shebang?",
+                    "options": [
+                        "#!/usr/bin/env python",
+                        "Bang",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Script."
+                },
+                {
+                    "id": 173,
+                    "text": "Encoding?",
+                    "options": [
+                        "UTF-8",
+                        "ASCII",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Default."
+                },
+                {
+                    "id": 174,
+                    "text": "Imports order?",
+                    "options": [
+                        "Std lib, 3rd party, Local",
+                        "Random",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "PEP8."
+                },
+                {
+                    "id": 175,
+                    "text": "Whitespace operators?",
+                    "options": [
+                        "Spaces around",
+                        "No",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Readability."
+                },
+                {
+                    "id": 176,
+                    "text": "Trailing comma?",
+                    "options": [
+                        "Allowed/Encouraged strings",
+                        "Error",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Diffs."
+                },
+                {
+                    "id": 177,
+                    "text": "Pass statement?",
+                    "options": [
+                        "No-op",
+                        "Go",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Placeholder."
+                },
+                {
+                    "id": 178,
+                    "text": "Ellipsis ...?",
+                    "options": [
+                        "Placeholder",
+                        "Dot",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Types."
+                },
+                {
+                    "id": 179,
+                    "text": "Zen of Python?",
+                    "options": [
+                        "import this",
+                        "Zen",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Philosophy."
+                },
+                {
+                    "id": 180,
+                    "text": "Beautiful is better than?",
+                    "options": [
+                        "Ugly",
+                        "Fast",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Zen."
+                }
+            ]
+        },
+        {
+            "setId": "py_10",
+            "title": "Set 10: Logic & Tricks",
+            "questions": [
+                {
+                    "id": 181,
+                    "text": "Swap vars?",
+                    "options": [
+                        "a, b = b, a",
+                        "temp",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Pythonic."
+                },
+                {
+                    "id": 182,
+                    "text": "Chained comparison?",
+                    "options": [
+                        "a < b < c",
+                        "and",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Math."
+                },
+                {
+                    "id": 183,
+                    "text": "Ternary operator?",
+                    "options": [
+                        "x if c else y",
+                        "?:",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "One line."
+                },
+                {
+                    "id": 184,
+                    "text": "For else?",
+                    "options": [
+                        "Run if no break",
+                        "Else",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Loop."
+                },
+                {
+                    "id": 185,
+                    "text": "While else?",
+                    "options": [
+                        "Run if no break",
+                        "Else",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Loop."
+                },
+                {
+                    "id": 186,
+                    "text": "Enumerate?",
+                    "options": [
+                        "Index and value",
+                        "Count",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Loop."
+                },
+                {
+                    "id": 187,
+                    "text": "Zip longest?",
+                    "options": [
+                        "itertools",
+                        "zip",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fill."
+                },
+                {
+                    "id": 188,
+                    "text": "Flatten list?",
+                    "options": [
+                        "sum(list, [])",
+                        "flat",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Hack."
+                },
+                {
+                    "id": 189,
+                    "text": "Reverse string?",
+                    "options": [
+                        "s[::-1]",
+                        "rev",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Slice."
+                },
+                {
+                    "id": 190,
+                    "text": "Palindrome check?",
+                    "options": [
+                        "s == s[::-1]",
+                        "check",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Slice."
+                },
+                {
+                    "id": 191,
+                    "text": "Merge dicts (old)?",
+                    "options": [
+                        "{**d1, **d2}",
+                        "update",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unpack."
+                },
+                {
+                    "id": 192,
+                    "text": "Any?",
+                    "options": [
+                        "True if one true",
+                        "Some",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Check."
+                },
+                {
+                    "id": 193,
+                    "text": "All?",
+                    "options": [
+                        "True if all true",
+                        "Every",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Check."
+                },
+                {
+                    "id": 194,
+                    "text": "Dir()?",
+                    "options": [
+                        "Attributes list",
+                        "Ls",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Inspect."
+                },
+                {
+                    "id": 195,
+                    "text": "Help()?",
+                    "options": [
+                        "Docs",
+                        "SOS",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Info."
+                },
+                {
+                    "id": 196,
+                    "text": "Id()?",
+                    "options": [
+                        "Memory address",
+                        "Identity",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unique."
+                },
+                {
+                    "id": 197,
+                    "text": "Hash()?",
+                    "options": [
+                        "Hash value",
+                        "Map",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Key."
+                },
+                {
+                    "id": 198,
+                    "text": "Sorted vs sort?",
+                    "options": [
+                        "New list vs In-place",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Diff."
+                },
+                {
+                    "id": 199,
+                    "text": "Reversed vs reverse?",
+                    "options": [
+                        "Iterator vs In-place",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Diff."
+                },
+                {
+                    "id": 200,
+                    "text": "Exit?",
+                    "options": [
+                        "sys.exit()",
+                        "quit",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stop."
+                }
+            ]
+        }
+    ]
+}

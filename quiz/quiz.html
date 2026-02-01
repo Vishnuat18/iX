@@ -2,53 +2,193 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz | InterviewPrepX</title>
-    <link rel="stylesheet" href="../css/quiz.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Quiz | iX Quiz</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
-    <!-- HEADER -->
-    <header class="quiz-header">
-        <div class="timer" id="timer">20:00</div>
-        <h2>Java Fundamentals Quiz</h2>
-        <button class="palette-toggle" onclick="togglePalette()">☰</button>
+    <header>
+        <div class="logo"><a href="../index.html">iX <span style="font-weight:300">Quiz</span></a></div>
+        <div style="font-size: 1.1rem; font-weight: bold; color: var(--accent-primary);" id="timer">00:00</div>
     </header>
 
-    <!-- MAIN -->
     <div class="quiz-container">
+        <!-- Progress Bar -->
+        <div
+            style="background: rgba(255,255,255,0.1); height: 6px; border-radius: 3px; margin-bottom: 30px; overflow: hidden;">
+            <div id="progress-bar"
+                style="width: 0%; height: 100%; background: var(--accent-primary); transition: width 0.3s;"></div>
+        </div>
 
-        <!-- QUESTION AREA -->
-        <div class="question-panel">
-            <h3 id="questionText"></h3>
+        <div class="glass-panel" style="padding: 40px;" id="quiz-box">
+            <div class="quiz-header">
+                <span id="question-count" style="color: #aaa;">Question 1 / 20</span>
+                <span id="score-now" style="color: var(--accent-success);">Score: 0</span>
+            </div>
 
-            <div class="options" id="options"></div>
+            <div class="question-box">
+                <p id="question-text" class="question-text">Loading Question...</p>
+                <div id="options-container" class="options-grid">
+                    <!-- Options injected here -->
+                </div>
+            </div>
 
-            <div class="actions">
-                <button onclick="prevQuestion()">Previous</button>
-                <button onclick="flagQuestion()">Flag for Review</button>
-                <button onclick="submitQuiz()" class="primary">Submit</button>
+            <div id="explanation-box"
+                style="display: none; margin-top: 20px; padding: 15px; background: rgba(0, 242, 255, 0.1); border-left: 4px solid var(--accent-primary); border-radius: 5px;">
+                <strong>Explanation:</strong> <span id="explanation-text"></span>
+            </div>
+
+            <div class="quiz-controls">
+                <button id="next-btn" class="btn-premium" onclick="nextQuestion()" style="display: none;">Next <i
+                        class="fas fa-arrow-right"></i></button>
             </div>
         </div>
 
-        <!-- QUESTION PALETTE -->
-        <aside class="palette" id="palette">
-            <h4>
-                <span id="progressText">0 of 0 Completed</span>
-            </h4>
-            <div class="legend">
-                <span class="answered"></span> Answered
-                <span class="flagged"></span> Flagged
-                <span class="unanswered"></span> Unanswered
-            </div>
-            <div class="palette-grid" id="paletteGrid"></div>
-        </aside>
+        <!-- Result Card (Hidden initially) -->
+        <div id="result-card" class="glass-panel" style="padding: 50px; text-align: center; display: none;">
+            <i class="fas fa-trophy fa-4x" style="color: var(--accent-primary); margin-bottom: 20px;"></i>
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Quiz Completed!</h2>
+            <p style="color: #aaa; margin-bottom: 30px;">Here is how you performed</p>
 
+            <div style="font-size: 4rem; font-weight: bold; color: var(--text-color); margin-bottom: 20px;"
+                id="final-score">80%</div>
+            <p id="feedback-text" style="margin-bottom: 30px; font-size: 1.2rem;">Great Job!</p>
+
+            <a href="../index.html" class="btn-premium">Back to Topics</a>
+            <button onclick="location.reload()" class="btn-premium"
+                style="background: transparent; border: 1px solid var(--glass-border); margin-left: 10px;">Retry</button>
+        </div>
     </div>
 
-    <script src="js/quiz.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        const setId = urlParams.get('set');
+
+        // State
+        let questions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let timerInterval;
+        let seconds = 0;
+
+        async function initQuiz() {
+            try {
+                const response = await fetch(`../data/quiz/${topic}.json`);
+                if (!response.ok) throw new Error('Failed to load topic');
+                const data = await response.json();
+
+                const set = data.sets.find(s => s.setId === setId);
+                if (!set) throw new Error('Set not found');
+
+                questions = set.questions;
+                document.title = `${set.title} | iX Quiz`;
+
+                startTimer();
+                loadQuestion();
+            } catch (error) {
+                console.error(error);
+                document.getElementById('question-text').innerText = "Error loading quiz. Please try again.";
+            }
+        }
+
+        function loadQuestion() {
+            const q = questions[currentQuestionIndex];
+
+            // UI Updates
+            document.getElementById('question-count').innerText = `Question ${currentQuestionIndex + 1} / ${questions.length}`;
+            document.getElementById('progress-bar').style.width = `${((currentQuestionIndex) / questions.length) * 100}%`;
+            document.getElementById('question-text').innerText = q.text;
+            document.getElementById('explanation-box').style.display = 'none';
+            document.getElementById('next-btn').style.display = 'none';
+
+            const opts = document.getElementById('options-container');
+            opts.innerHTML = '';
+
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('div');
+                btn.className = 'option-btn';
+                btn.innerText = opt;
+                btn.onclick = () => checkAnswer(idx, btn);
+                opts.appendChild(btn);
+            });
+        }
+
+        function checkAnswer(selectedIdx, btnElement) {
+            // Disable all buttons
+            const opts = document.querySelectorAll('.option-btn');
+            opts.forEach(btn => btn.style.pointerEvents = 'none');
+
+            const q = questions[currentQuestionIndex];
+            const correctIdx = q.correct;
+
+            if (selectedIdx === correctIdx) {
+                btnElement.classList.add('correct');
+                score++;
+                document.getElementById('score-now').innerText = `Score: ${score}`;
+            } else {
+                btnElement.classList.add('wrong');
+                // Highlight correct
+                opts[correctIdx].classList.add('correct');
+            }
+
+            // Show explanation
+            if (q.explanation) {
+                document.getElementById('explanation-text').innerText = q.explanation;
+                document.getElementById('explanation-box').style.display = 'block';
+            }
+
+            // Show next button
+            document.getElementById('next-btn').style.display = 'inline-block';
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                loadQuestion();
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            clearInterval(timerInterval);
+            document.getElementById('quiz-box').style.display = 'none';
+            document.getElementById('progress-bar').style.width = '100%';
+
+            const percentage = Math.round((score / questions.length) * 100);
+
+            document.getElementById('final-score').innerText = `${percentage}%`;
+            document.getElementById('result-card').style.display = 'block';
+
+            // Unlock next set logic
+            localStorage.setItem(`${topic}_${setId}_score`, percentage);
+
+            // Simple feedback
+            const feedback = document.getElementById('feedback-text');
+            if (percentage >= 70) {
+                feedback.innerText = "Excellent! You've unlocked the next set (if available).";
+                feedback.style.color = "var(--accent-success)";
+            } else {
+                feedback.innerText = "Keep practicing to improve your score!";
+                feedback.style.color = "var(--accent-danger)";
+            }
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                seconds++;
+                const m = Math.floor(seconds / 60).toString().padStart(2, '0');
+                const s = (seconds % 60).toString().padStart(2, '0');
+                document.getElementById('timer').innerText = `${m}:${s}`;
+            }, 1000);
+        }
+
+        initQuiz();
+    </script>
 </body>
 
 </html>

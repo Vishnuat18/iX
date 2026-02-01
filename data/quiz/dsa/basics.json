@@ -1,0 +1,1235 @@
+{
+    "topic": "DSA Basics",
+    "sets": [
+        {
+            "setId": "dsa_basic_1",
+            "title": "Set 1: Complexity Analysis",
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "Big O notation represents?",
+                    "options": [
+                        "Upper bound / Worst case",
+                        "Lower bound",
+                        "Average",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Complexity limit."
+                },
+                {
+                    "id": 2,
+                    "text": "Omega notation?",
+                    "options": [
+                        "Lower bound / Best case",
+                        "Upper",
+                        "Avg",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "At least this much."
+                },
+                {
+                    "id": 3,
+                    "text": "Theta notation?",
+                    "options": [
+                        "Tight bound / Average",
+                        "Upper",
+                        "Lower",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Exact."
+                },
+                {
+                    "id": 4,
+                    "text": "O(1) means?",
+                    "options": [
+                        "Constant time",
+                        "Linear",
+                        "Bad",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fastest."
+                },
+                {
+                    "id": 5,
+                    "text": "O(n) means?",
+                    "options": [
+                        "Linear time",
+                        "Constant",
+                        "Quad",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Proportional."
+                },
+                {
+                    "id": 6,
+                    "text": "O(log n) example?",
+                    "options": [
+                        "Binary Search",
+                        "Linear Search",
+                        "Bubble Sort",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Halving."
+                },
+                {
+                    "id": 7,
+                    "text": "O(n^2) example?",
+                    "options": [
+                        "Bubble Sort",
+                        "Merge Sort",
+                        "Binary Search",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Nested loops."
+                },
+                {
+                    "id": 8,
+                    "text": "Space Complexity?",
+                    "options": [
+                        "Memory used",
+                        "Time taken",
+                        "Disk",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "RAM."
+                },
+                {
+                    "id": 9,
+                    "text": "Trade-off?",
+                    "options": [
+                        "Time vs Space",
+                        "Good vs Bad",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimization."
+                },
+                {
+                    "id": 10,
+                    "text": "Amortized Analysis?",
+                    "options": [
+                        "Average over sequence",
+                        "Worst",
+                        "Best",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Dynamic array resize."
+                },
+                {
+                    "id": 11,
+                    "text": "Binary Search time?",
+                    "options": [
+                        "O(log n)",
+                        "O(n)",
+                        "O(1)",
+                        "O(n^2)"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sorted array."
+                },
+                {
+                    "id": 12,
+                    "text": "Linear Search time?",
+                    "options": [
+                        "O(n)",
+                        "O(log n)",
+                        "O(1)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Scan all."
+                },
+                {
+                    "id": 13,
+                    "text": "Best Case Linear Search?",
+                    "options": [
+                        "O(1)",
+                        "O(n)",
+                        "O(0)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Found at first."
+                },
+                {
+                    "id": 14,
+                    "text": "Worst Case Bubble Sort?",
+                    "options": [
+                        "O(n^2)",
+                        "O(n)",
+                        "O(log n)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reverse sorted."
+                },
+                {
+                    "id": 15,
+                    "text": "Access array index?",
+                    "options": [
+                        "O(1)",
+                        "O(n)",
+                        "O(log n)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Direct access."
+                },
+                {
+                    "id": 16,
+                    "text": "Insert at start of array?",
+                    "options": [
+                        "O(n)",
+                        "O(1)",
+                        "O(log n)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shift all."
+                },
+                {
+                    "id": 17,
+                    "text": "Search Unsorted Array?",
+                    "options": [
+                        "O(n)",
+                        "O(log n)",
+                        "O(1)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Must scan."
+                },
+                {
+                    "id": 18,
+                    "text": "Fibonacci Recursive?",
+                    "options": [
+                        "Exponential O(2^n)",
+                        "Linear",
+                        "Const",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bad without memo."
+                },
+                {
+                    "id": 19,
+                    "text": "Merge Sort time?",
+                    "options": [
+                        "O(n log n)",
+                        "O(n^2)",
+                        "O(n)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Consistent."
+                },
+                {
+                    "id": 20,
+                    "text": "Auxiliary Space?",
+                    "options": [
+                        "Extra space used",
+                        "Input space",
+                        "Total",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Algorithmic overhead."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_basic_2",
+            "title": "Set 2: Arrays & Strings",
+            "questions": [
+                {
+                    "id": 21,
+                    "text": "Array is?",
+                    "options": [
+                        "Contiguous memory",
+                        "Linked",
+                        "Random",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fixed size."
+                },
+                {
+                    "id": 22,
+                    "text": "String is?",
+                    "options": [
+                        "Array of characters",
+                        "Int",
+                        "List",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Text."
+                },
+                {
+                    "id": 23,
+                    "text": "Palindrome?",
+                    "options": [
+                        "Reads same forwards/backwards",
+                        "Mirror",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Racecar."
+                },
+                {
+                    "id": 24,
+                    "text": "Anagram?",
+                    "options": [
+                        "Same characters different order",
+                        "Copy",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sort to check."
+                },
+                {
+                    "id": 25,
+                    "text": "Subarray?",
+                    "options": [
+                        "Contiguous part",
+                        "Subset",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Slice."
+                },
+                {
+                    "id": 26,
+                    "text": "Subsequence?",
+                    "options": [
+                        "Order maintained, not contiguous",
+                        "Subarray",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Skip elements."
+                },
+                {
+                    "id": 27,
+                    "text": "Two Pointer Technique?",
+                    "options": [
+                        "Optimize loops",
+                        "Pointer",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(n)."
+                },
+                {
+                    "id": 28,
+                    "text": "Sliding Window?",
+                    "options": [
+                        "Subarray problems",
+                        "GUI",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fixed/Variable size."
+                },
+                {
+                    "id": 29,
+                    "text": "Kadane's Algorithm?",
+                    "options": [
+                        "Max Subarray Sum",
+                        "Sort",
+                        "Search",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(n)."
+                },
+                {
+                    "id": 30,
+                    "text": "Dutch National Flag?",
+                    "options": [
+                        "Sort 0s, 1s, 2s",
+                        "Colors",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "3 pointers."
+                },
+                {
+                    "id": 31,
+                    "text": "Reverse array in place?",
+                    "options": [
+                        "Swap ends inward",
+                        "New array",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(1) space."
+                },
+                {
+                    "id": 32,
+                    "text": "Rotate array?",
+                    "options": [
+                        "Shift elements",
+                        "Spin",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mod index."
+                },
+                {
+                    "id": 33,
+                    "text": "Find duplicate?",
+                    "options": [
+                        "Hash set / Sort",
+                        "Guess",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Frequency."
+                },
+                {
+                    "id": 34,
+                    "text": "Matrix?",
+                    "options": [
+                        "2D Array",
+                        "3D",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Rows/Cols."
+                },
+                {
+                    "id": 35,
+                    "text": "Transpose?",
+                    "options": [
+                        "Swap rows/cols",
+                        "Invert",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Matrix op."
+                },
+                {
+                    "id": 36,
+                    "text": "Spiral Traversal?",
+                    "options": [
+                        "Loop order",
+                        "Circle",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Matrix."
+                },
+                {
+                    "id": 37,
+                    "text": "String Immutability (Java/Py)?",
+                    "options": [
+                        "Cannot change in place",
+                        "Can",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "New obj."
+                },
+                {
+                    "id": 38,
+                    "text": "ASCII value 'A'?",
+                    "options": [
+                        "65",
+                        "97",
+                        "48",
+                        "0"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 39,
+                    "text": "ASCII value 'a'?",
+                    "options": [
+                        "97",
+                        "65",
+                        "100",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Standard."
+                },
+                {
+                    "id": 40,
+                    "text": "Prefix Sum?",
+                    "options": [
+                        "Array of cumulative sums",
+                        "Total",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Range queries."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_basic_3",
+            "title": "Set 3: Pointers & Hashing",
+            "questions": [
+                {
+                    "id": 41,
+                    "text": "Pointer stores?",
+                    "options": [
+                        "Memory address",
+                        "Value",
+                        "Int",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Reference."
+                },
+                {
+                    "id": 42,
+                    "text": "Dereference operator (C)?",
+                    "options": [
+                        "*",
+                        "&",
+                        "->",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Get value."
+                },
+                {
+                    "id": 43,
+                    "text": "Address of operator?",
+                    "options": [
+                        "&",
+                        "*",
+                        "@",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Get address."
+                },
+                {
+                    "id": 44,
+                    "text": "Null pointer?",
+                    "options": [
+                        "Points to nothing (0)",
+                        "Void",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Safety."
+                },
+                {
+                    "id": 45,
+                    "text": "Hashing?",
+                    "options": [
+                        "Map key to index",
+                        "Mix",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(1) avg."
+                },
+                {
+                    "id": 46,
+                    "text": "Hash Function?",
+                    "options": [
+                        "Calculates index",
+                        "Random",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Mapping."
+                },
+                {
+                    "id": 47,
+                    "text": "Collision?",
+                    "options": [
+                        "Two keys map to same index",
+                        "Crash",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Conflict."
+                },
+                {
+                    "id": 48,
+                    "text": "Chaining?",
+                    "options": [
+                        "LinkedList at index",
+                        "Lock",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Collision resolution."
+                },
+                {
+                    "id": 49,
+                    "text": "Open Addressing?",
+                    "options": [
+                        "Find next empty slot",
+                        "Door",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Probing."
+                },
+                {
+                    "id": 50,
+                    "text": "Load Factor?",
+                    "options": [
+                        "Items / Capacity",
+                        "Weight",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Resize trigger."
+                },
+                {
+                    "id": 51,
+                    "text": "HashMap vs HashSet?",
+                    "options": [
+                        "Key-Value vs Key only",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Structure."
+                },
+                {
+                    "id": 52,
+                    "text": "Time complexity of Hash Set?",
+                    "options": [
+                        "O(1) avg",
+                        "O(n)",
+                        "O(log n)",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Fast lookup."
+                },
+                {
+                    "id": 53,
+                    "text": "Worst case hashing?",
+                    "options": [
+                        "O(n) - all collide",
+                        "O(1)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Poor function."
+                },
+                {
+                    "id": 54,
+                    "text": "Pointer arithmetic?",
+                    "options": [
+                        "Moving address",
+                        "Math",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "C/C++."
+                },
+                {
+                    "id": 55,
+                    "text": "Dangling pointer?",
+                    "options": [
+                        "Points to freed memory",
+                        "Hang",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bug."
+                },
+                {
+                    "id": 56,
+                    "text": "Memory Leak?",
+                    "options": [
+                        "Not freeing memory",
+                        "Drip",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Resource loss."
+                },
+                {
+                    "id": 57,
+                    "text": "Frequency count?",
+                    "options": [
+                        "Use HashMap",
+                        "Sort",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Efficient."
+                },
+                {
+                    "id": 58,
+                    "text": "Distinct elements?",
+                    "options": [
+                        "Use Set",
+                        "List",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unique."
+                },
+                {
+                    "id": 59,
+                    "text": "Double Hashing?",
+                    "options": [
+                        "Secondary hash for probing",
+                        "Two",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Resolution."
+                },
+                {
+                    "id": 60,
+                    "text": "Void pointer?",
+                    "options": [
+                        "Generic type",
+                        "Null",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "C."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_basic_4",
+            "title": "Set 4: Recursion",
+            "questions": [
+                {
+                    "id": 61,
+                    "text": "Recursion?",
+                    "options": [
+                        "Function calls itself",
+                        "Loop",
+                        "Repeat",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Self-reference."
+                },
+                {
+                    "id": 62,
+                    "text": "Base Case?",
+                    "options": [
+                        "Stopping condition",
+                        "Start",
+                        "Bottom",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Prevents infinite."
+                },
+                {
+                    "id": 63,
+                    "text": "Stack Overflow?",
+                    "options": [
+                        "Too many calls",
+                        "Site",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Memory limit."
+                },
+                {
+                    "id": 64,
+                    "text": "Factorial(n)?",
+                    "options": [
+                        "n * Factorial(n-1)",
+                        "n + n",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Math."
+                },
+                {
+                    "id": 65,
+                    "text": "Fibonacci(n)?",
+                    "options": [
+                        "Fib(n-1) + Fib(n-2)",
+                        "n*n",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Series."
+                },
+                {
+                    "id": 66,
+                    "text": "Tail Recursion?",
+                    "options": [
+                        "Recursive call is last",
+                        "End",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimization."
+                },
+                {
+                    "id": 67,
+                    "text": "Indirect Recursion?",
+                    "options": [
+                        "A calls B, B calls A",
+                        "Direct",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Cycle."
+                },
+                {
+                    "id": 68,
+                    "text": "Call Stack?",
+                    "options": [
+                        "Stores function calls",
+                        "Heap",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "LIFO."
+                },
+                {
+                    "id": 69,
+                    "text": "Tower of Hanoi?",
+                    "options": [
+                        "Classic recursive problem",
+                        "Game",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Disks."
+                },
+                {
+                    "id": 70,
+                    "text": "Backtracking?",
+                    "options": [
+                        "Explore and retreat",
+                        "Rewind",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DFS base."
+                },
+                {
+                    "id": 71,
+                    "text": "Memoization?",
+                    "options": [
+                        "Caching results",
+                        "Note",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "DP."
+                },
+                {
+                    "id": 72,
+                    "text": "Complexity of simple fib?",
+                    "options": [
+                        "2^n",
+                        "n",
+                        "log n",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Bad."
+                },
+                {
+                    "id": 73,
+                    "text": "Divide and Conquer?",
+                    "options": [
+                        "Split, Solve, Merge",
+                        "War",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Strategy."
+                },
+                {
+                    "id": 74,
+                    "text": "Recurrence Relation?",
+                    "options": [
+                        "Equation for time complexity",
+                        "Family",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Analysis."
+                },
+                {
+                    "id": 75,
+                    "text": "Master Theorem?",
+                    "options": [
+                        "Solves recurrences",
+                        "Leader",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Shortcut."
+                },
+                {
+                    "id": 76,
+                    "text": "Recursive Binary Search?",
+                    "options": [
+                        "O(log n)",
+                        "O(n)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Same as iter."
+                },
+                {
+                    "id": 77,
+                    "text": "GCD (Euclidean)?",
+                    "options": [
+                        "gcd(b, a%b)",
+                        "Math",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Efficient."
+                },
+                {
+                    "id": 78,
+                    "text": "Power(x, n)?",
+                    "options": [
+                        "O(log n) via recursion",
+                        "O(n)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Binary exp."
+                },
+                {
+                    "id": 79,
+                    "text": "Space complexity of recursion?",
+                    "options": [
+                        "Depth of stack",
+                        "O(1)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Stack frames."
+                },
+                {
+                    "id": 80,
+                    "text": "Iterative vs Recursive?",
+                    "options": [
+                        "Loops vs Calls",
+                        "Same",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Code style."
+                }
+            ]
+        },
+        {
+            "setId": "dsa_basic_5",
+            "title": "Set 5: Sorting Basics (O(n^2))",
+            "questions": [
+                {
+                    "id": 81,
+                    "text": "Sorting?",
+                    "options": [
+                        "Arranging in order",
+                        "Search",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Def."
+                },
+                {
+                    "id": 82,
+                    "text": "Bubble Sort?",
+                    "options": [
+                        "Swap adjacent",
+                        "Pop",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "O(n^2)."
+                },
+                {
+                    "id": 83,
+                    "text": "Selection Sort?",
+                    "options": [
+                        "Pick min, swap to start",
+                        "Select",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Unstable."
+                },
+                {
+                    "id": 84,
+                    "text": "Insertion Sort?",
+                    "options": [
+                        "Place in correct range",
+                        "Insert",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Good for small arr."
+                },
+                {
+                    "id": 85,
+                    "text": "Stable Sort?",
+                    "options": [
+                        "Preserves order of equal",
+                        "Stable",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Property."
+                },
+                {
+                    "id": 86,
+                    "text": "In-place Sort?",
+                    "options": [
+                        "O(1) extra space",
+                        "Place",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Memory."
+                },
+                {
+                    "id": 87,
+                    "text": "Adaptive Sort?",
+                    "options": [
+                        "Benefit from presorted",
+                        "Adapt",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Insertion is adaptive."
+                },
+                {
+                    "id": 88,
+                    "text": "Bubble Sort Best Case?",
+                    "options": [
+                        "O(n) if sorted",
+                        "O(n^2)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Optimized."
+                },
+                {
+                    "id": 89,
+                    "text": "Selection Sort swaps?",
+                    "options": [
+                        "O(n)",
+                        "O(n^2)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Min swaps."
+                },
+                {
+                    "id": 90,
+                    "text": "Insertion Sort Best Case?",
+                    "options": [
+                        "O(n)",
+                        "O(n^2)",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Sorted."
+                },
+                {
+                    "id": 91,
+                    "text": "Worst case for O(n^2) sorts?",
+                    "options": [
+                        "Reverse sorted",
+                        "Sorted",
+                        "Random",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Max work."
+                },
+                {
+                    "id": 92,
+                    "text": "Comparison Sort?",
+                    "options": [
+                        "Compare elements",
+                        "Radix",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Limit O(n log n)."
+                },
+                {
+                    "id": 93,
+                    "text": "Bubble Sort sink/swim?",
+                    "options": [
+                        "Largest to end",
+                        "Smallest",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Analogy."
+                },
+                {
+                    "id": 94,
+                    "text": "Selection vs Insertion?",
+                    "options": [
+                        "Sel does less swaps",
+                        "Ins is slower",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Comp."
+                },
+                {
+                    "id": 95,
+                    "text": "Online algorithm?",
+                    "options": [
+                        "Process as data comes",
+                        "Internet",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Insertion Sort."
+                },
+                {
+                    "id": 96,
+                    "text": "Why learn O(n^2)?",
+                    "options": [
+                        "Simple, Low overhead",
+                        "Fast",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Basics."
+                },
+                {
+                    "id": 97,
+                    "text": "Shell Sort?",
+                    "options": [
+                        "Gap insertion sort",
+                        "Sea",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Improved."
+                },
+                {
+                    "id": 98,
+                    "text": "Sort built-in?",
+                    "options": [
+                        "Often Timsort/Quicksort",
+                        "Bubble",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Language standard."
+                },
+                {
+                    "id": 99,
+                    "text": "Number of passes Bubble?",
+                    "options": [
+                        "n-1",
+                        "n",
+                        "1",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Outer loop."
+                },
+                {
+                    "id": 100,
+                    "text": "Swap function?",
+                    "options": [
+                        "Temp variable",
+                        "XOR",
+                        "None",
+                        "None"
+                    ],
+                    "correct": 0,
+                    "explanation": "Logic."
+                }
+            ]
+        }
+    ]
+}
