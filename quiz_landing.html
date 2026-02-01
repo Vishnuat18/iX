@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iX Quiz | Premium Learning Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/back-button.css">
+</head>
+
+<body>
+  <header class="header-module">
+    <div class="header-left">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Quiz</span>
+      </div>
+    </div>
+    <div class="header-right" style="gap: 25px;">
+      <div class="xp-badge" id="headerXP"
+        style="display: flex; align-items: center; gap: 10px; background: rgba(0,0,0,0.3); padding: 8px 15px; border-radius: 8px; border: 1px solid var(--accent-primary);">
+        <span style="color: var(--accent-primary); font-weight: bold; font-size: 0.9rem;">Score:</span>
+        <span id="userScoreInHeader" style="font-size: 1.1rem; font-weight: 900; color: #fff;">0</span>
+      </div>
+      <div class="logo">iX <span style="font-weight:300">Platform</span></div>
+    </div>
+  </header>
+
+  <div class="sub-header">
+    <a href="index.html" class="btn-back-global">
+      <i class="fas fa-chevron-left"></i> <span>Back</span>
+    </a>
+  </div>
+
+  <!-- Back Button area integrated into sub-header above -->
+
+  <section class="hero">
+    <h1>Master Your Tech Stack</h1>
+    <p>Premium quizzes for Developers. 1000+ Questions across Fullstack, CS, and DSA.</p>
+    <button class="btn-premium"
+      onclick="document.getElementById('categories').scrollIntoView({behavior: 'smooth'})">Browse Topics</button>
+  </section>
+
+  <section id="categories" class="categories">
+
+    <!-- Web Development -->
+    <h2 class="section-title">Web Development</h2>
+    <div class="grid">
+      <a href="quiz/index.html?topic=web/html" class="card glass-panel">
+        <div>
+          <h3>HTML5</h3>
+          <p>Structure & Semantics</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fab fa-html5 fa-2x" style="color: #e34c26;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=web/css" class="card glass-panel">
+        <div>
+          <h3>CSS3</h3>
+          <p>Styling & Animations</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fab fa-css3-alt fa-2x" style="color: #264de4;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=web/js_basics" class="card glass-panel">
+        <div>
+          <h3>JS Basics</h3>
+          <p>ES6+, DOM, Loops</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fab fa-js fa-2x" style="color: #f0db4f;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=web/js_advanced" class="card glass-panel">
+        <div>
+          <h3>JS Advanced</h3>
+          <p>Closures, Async, Proto</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fab fa-js-square fa-2x" style="color: #f0db4f;"></i>
+        </div>
+      </a>
+    </div>
+
+    <!-- Full Stack Development -->
+    <h2 class="section-title" style="margin-top: 50px;">Fullstack Development</h2>
+    <div class="grid">
+      <a href="quiz/index.html?topic=fullstack/java_fullstack" class="card glass-panel">
+        <div>
+          <h3>Java Fullstack</h3>
+          <p>Spring, Hibernate, Microservices</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">200 Qs</span>
+          <i class="fab fa-java fa-2x" style="color: #f89820;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=fullstack/python_fullstack" class="card glass-panel">
+        <div>
+          <h3>Python Fullstack</h3>
+          <p>Django, Flask, FastAPI</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">200 Qs</span>
+          <i class="fab fa-python fa-2x" style="color: #ffe873;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=fullstack/react" class="card glass-panel">
+        <div>
+          <h3>React JS</h3>
+          <p>Hooks, Redux, Components</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fab fa-react fa-2x" style="color: #61dbfb;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=fullstack/node" class="card glass-panel">
+        <div>
+          <h3>Node JS</h3>
+          <p>Runtime, Modules, Event Loop</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fab fa-node fa-2x" style="color: #68a063;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=fullstack/express" class="card glass-panel">
+        <div>
+          <h3>Express JS</h3>
+          <p>Routing, Middleware, API</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fas fa-server fa-2x" style="color: #fff;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=languages/mongodb" class="card glass-panel">
+        <div>
+          <h3>MongoDB</h3>
+          <p>NoSQL, Aggregation, Indexing</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fas fa-database fa-2x" style="color: #4db33d;"></i>
+        </div>
+      </a>
+    </div>
+
+    <!-- Programming Languages -->
+    <h2 class="section-title" style="margin-top: 50px;">Languages</h2>
+    <div class="grid">
+      <a href="quiz/index.html?topic=languages/java" class="card glass-panel">
+        <div>
+          <h3>Java (Core)</h3>
+          <p>OOPS, Collections, Streams</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">200 Qs</span>
+          <i class="fab fa-java fa-2x" style="color: #f89820;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=languages/python" class="card glass-panel">
+        <div>
+          <h3>Python (Core)</h3>
+          <p>Syntax, OOP, Scripting</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">200 Qs</span>
+          <i class="fab fa-python fa-2x" style="color: #4b8bbe;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=languages/c" class="card glass-panel">
+        <div>
+          <h3>C</h3>
+          <p>Pointers, Memory, Structs</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fas fa-code fa-2x" style="color: #004482;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=languages/sql" class="card glass-panel">
+        <div>
+          <h3>SQL</h3>
+          <p>Queries, Joins, Normalization</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fas fa-layer-group fa-2x" style="color: #00758f;"></i>
+        </div>
+      </a>
+    </div>
+
+    <!-- Computer Science -->
+    <h2 class="section-title" style="margin-top: 50px;">CS Fundamentals</h2>
+    <div class="grid">
+      <a href="quiz/index.html?topic=cs/os" class="card glass-panel">
+        <div>
+          <h3>Operating Systems</h3>
+          <p>Processes, Threads, Memory</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fas fa-desktop fa-2x" style="color: #999;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=cs/dbms" class="card glass-panel">
+        <div>
+          <h3>DBMS</h3>
+          <p>Relational, ACID, NoSQL</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fas fa-server fa-2x" style="color: #999;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=cs/networks" class="card glass-panel">
+        <div>
+          <h3>Networks</h3>
+          <p>OSI, TCP/IP, Protocols</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fas fa-network-wired fa-2x" style="color: #999;"></i>
+        </div>
+      </a>
+    </div>
+
+    <!-- DSA -->
+    <h2 class="section-title" style="margin-top: 50px;">Data Structures & Algo</h2>
+    <div class="grid">
+      <a href="quiz/index.html?topic=dsa/basics" class="card glass-panel">
+        <div>
+          <h3>DSA Basics</h3>
+          <p>Arrays, Strings, Recursion</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fas fa-code-branch fa-2x" style="color: #bd00ff;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=dsa/intermediate" class="card glass-panel">
+        <div>
+          <h3>DSA Intermediate</h3>
+          <p>Lists, Stacks, Queues</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fas fa-layer-group fa-2x" style="color: #bd00ff;"></i>
+        </div>
+      </a>
+      <a href="quiz/index.html?topic=dsa/advanced" class="card glass-panel">
+        <div>
+          <h3>DSA Advanced</h3>
+          <p>Trees, Graphs, DP</p>
+        </div>
+        <div class="card-footer">
+          <span class="progress-pill">100 Qs</span>
+          <i class="fas fa-project-diagram fa-2x" style="color: #bd00ff;"></i>
+        </div>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- Mobile Bottom Navigation -->
+  <div class="mobile-bottom-nav">
+    <a href="index.html" class="mobile-nav-item">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="problems/index.html" class="mobile-nav-item">
+      <i class="fas fa-code"></i>
+      <span>Coding</span>
+    </a>
+    <a href="quiz_landing.html" class="mobile-nav-item active">
+      <i class="fas fa-brain"></i>
+      <span>Quiz</span>
+    </a>
+    <a href="community.html" class="mobile-nav-item">
+      <i class="fas fa-users"></i>
+      <span>iX Link</span>
+    </a>
+    <a href="profile.html" class="mobile-nav-item">
+      <i class="fas fa-user-circle"></i>
+      <span>Profile</span>
+    </a>
+  </div>
+
+  <footer style="text-align: center; padding: 40px; color: #666; font-size: 0.9rem;">
+    &copy; 2026 iX Quiz System. Premium Content.
+  </footer>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="js/firebase-config.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    // Auth Check
+    Auth.requireAuth();
+    const user = Auth.getUser();
+    if (user) {
+      const scores = Auth.getScores();
+      const scoreEl = document.getElementById('userScoreInHeader');
+      if (scoreEl) scoreEl.innerText = scores.total;
+    }
+  </script>
+</body>
+
+</html>

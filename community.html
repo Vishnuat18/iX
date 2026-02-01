@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iX Link | Developer Community</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header V2 -->
+    <header class="header-v2">
+        <div class="header-left">
+            <div class="logo-v2">
+                iX <span style="font-weight:300; margin-left:5px;">Platform</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <nav class="home-nav">
+                <a href="index.html" class="home-nav-link">Home</a>
+                <a href="problems/index.html" class="home-nav-link">Coding</a>
+                <a href="admin/adminhome.html" id="adminNavLink" class="home-nav-link"
+                    style="display:none; color: var(--accent-secondary); font-weight: 700;">Admin Panel</a>
+                <a href="#" class="home-nav-link active">Community</a>
+            </nav>
+            <div class="user-profile-trigger" id="userDropdownTrigger" onclick="window.location.href='profile.html'">
+                <div class="user-avatar-circle" id="headerAvatarCircle">
+                    U
+                    <div class="online-status"></div>
+                </div>
+                <span class="user-name" id="headerUserName">Loading...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Chat Application Container -->
+    <div class="chat-app-container">
+        <!-- Sidebar -->
+        <div class="chat-sidebar">
+            <div class="chat-sidebar-header">
+                <div class="user-block">
+                    <div class="my-avatar" id="myAvatar">U</div>
+                    <div>
+                        <div style="font-weight: 600;" id="myUsername">User</div>
+                        <div style="font-size: 0.7rem; color: var(--neon-blue); letter-spacing: 1px;" id="myiXcode">
+                            IX-....</div>
+                    </div>
+                </div>
+                <div class="sidebar-actions">
+                    <i class="fas fa-plus-circle" onclick="openAddFriendModal()" title="Add Friend"></i>
+                </div>
+            </div>
+
+            <div class="tab-bar">
+                <div class="tab active" onclick="switchTab('chats')">Chats</div>
+                <div class="tab" onclick="switchTab('contacts')">Contacts</div>
+            </div>
+
+            <!-- Chat List -->
+            <div class="chat-list" id="chatList">
+                <!-- Dynamic Chat Items -->
+                <div style="text-align:center; padding: 20px; color: #666;">Loading...</div>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="chat-main">
+            <div class="chat-header" id="chatHeader">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-arrow-left mobile-back-btn" onclick="exitChat()"></i>
+                    <div class="chat-item-avatar" id="currentChatAvatar" style="background: transparent;"></div>
+                    <div>
+                        <div class="chat-name" id="currentChatName">Select a chat</div>
+                        <div style="font-size: 0.7rem; color: var(--neon-blue);" id="currentChatStatus"></div>
+                    </div>
+                </div>
+                <i class="fas fa-ellipsis-v" style="color: #aaa; cursor: pointer;"></i>
+            </div>
+
+            <div class="chat-body" id="chatBody">
+                <div style="text-align: center; margin-top: 20%; color: #666;">
+                    <i class="fas fa-comments" style="font-size: 3rem; margin-bottom: 20px; color: #333;"></i>
+                    <br>
+                    Select a contact to start messaging
+                </div>
+            </div>
+
+            <div class="chat-input-wrapper" id="chatInputArea" style="display: none;">
+                <i class="fas fa-paperclip" style="color: #888; font-size: 1.2rem; cursor: pointer;"></i>
+                <input type="text" class="chat-input" id="messageInput" placeholder="Type a message...">
+                <button class="btn-send" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="problems/index.html" class="mobile-nav-item">
+            <i class="fas fa-code"></i>
+            <span>Coding</span>
+        </a>
+        <a href="quiz_landing.html" class="mobile-nav-item">
+            <i class="fas fa-brain"></i>
+            <span>Quiz</span>
+        </a>
+        <a href="community.html" class="mobile-nav-item active">
+            <i class="fas fa-users"></i>
+            <span>iX Link</span>
+        </a>
+        <a href="profile.html" class="mobile-nav-item">
+            <i class="fas fa-user-circle"></i>
+            <span>Profile</span>
+        </a>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/community.js"></script>
+
+</body>
+
+</html>

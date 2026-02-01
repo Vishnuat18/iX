@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | iX Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .breadcrumb-v2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0px;
+        }
+
+        .breadcrumb-v2 a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header V2 (Refined: Breadcrumbs Left, Logo Right) -->
+    <header class="header-v2">
+        <div class="header-left">
+            <div class="breadcrumb-v2">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span style="color: #fff; font-weight: 600;">Profile</span>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div class="logo-v2" style="margin-right: 20px;">
+                iX <span style="font-weight:300; margin-left:5px;">Platform</span>
+            </div>
+            <div class="user-profile-trigger" id="userDropdownTrigger">
+                <div class="user-avatar-circle" id="headerAvatarCircle">
+                    U
+                    <div class="online-status"></div>
+                </div>
+                <span class="user-name" id="headerUserName">Loading...</span>
+                <i class="fas fa-chevron-down" style="font-size: 0.8rem; color: #888;"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="profile-v2-wrapper">
+        <!-- Sidebar -->
+        <aside class="profile-v2-sidebar">
+            <div class="nav-item active">
+                <i class="fas fa-user-circle" style="margin-right: 15px; width: 20px;"></i>
+                Profile
+            </div>
+            <div class="nav-item" onclick="window.location.href='dashboard.html'">
+                <i class="fas fa-chart-line" style="margin-right: 15px; width: 20px;"></i>
+                Dashboard
+            </div>
+            <div class="nav-item" style="margin-top: auto; color: #ff5252;" onclick="Auth.logout()">
+                <i class="fas fa-sign-out-alt" style="margin-right: 15px; width: 20px;"></i>
+                Logout
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="profile-v2-content">
+            <div class="profile-top-section">
+                <div class="avatar-large-v2" id="mainAvatarCircle" style="position: relative;">
+                    U
+                    <div class="avatar-edit-overlay" onclick="document.getElementById('fileInput').click()">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <input type="file" id="fileInput" hidden accept="image/*">
+
+                <div class="profile-v2-card" style="flex: 1;">
+                    <div class="profile-v2-card-header">
+                        <h3>Personal Details</h3>
+                        <i class="fas fa-chevron-down" style="color: var(--accent-primary);"></i>
+                    </div>
+                    <div class="profile-v2-card-body">
+                        <div class="details-grid-v2">
+                            <div class="detail-item">
+                                <span class="detail-label" id="labelName" style="cursor:pointer;">Name</span>
+                                <span class="detail-value" id="valName">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Username</span>
+                                <span class="detail-value" id="valUsername">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Date Of Birth</span>
+                                <span class="detail-value" id="valDob">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Email <span class="verify-link"></span></span>
+                                <span class="detail-value" id="valEmail">-</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label"><span class="verify-link">location</span></span>
+                                <span class="detail-value" id="valMobile">-</span>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; justify-content: flex-end; margin-top: 30px;">
+                            <button class="btn-edit-v2" onclick="window.location.href='onboarding.html'">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Educational Details -->
+            <div class="profile-v2-card">
+                <div class="profile-v2-card-header">
+                    <h3>Educational Details</h3>
+                    <i class="fas fa-chevron-down" style="color: var(--accent-primary);"></i>
+                </div>
+                <div class="profile-v2-card-body" id="eduContent">
+                    <p style="color: rgba(255,255,255,0.4); font-style: italic;">No data available for Educational
+                        Details.</p>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="profile-v2-card">
+                <div class="profile-v2-card-header">
+                    <h3>Skills</h3>
+                    <button class="btn-edit-v2" style="padding: 5px 15px; font-size: 0.75rem;" onclick="addSkill()">+
+                        Add Skill</button>
+                </div>
+                <div class="profile-v2-card-body">
+                    <div class="skill-tags" id="skillsContainer">
+                        <!-- Skills will be rendered here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feedback & Support Section [NEW] -->
+            <div class="profile-v2-card">
+                <div class="profile-v2-card-header">
+                    <h3>Feedback & Support</h3>
+                    <i class="fas fa-comment-dots" style="color: var(--accent-primary);"></i>
+                </div>
+                <div class="profile-v2-card-body">
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 20px;">Have questions or suggestions?
+                        Message the iX Admin team directly.</p>
+                    <textarea id="feedbackText" placeholder="Write your message here..."
+                        style="width: 100%; height: 100px; background: rgba(0,0,0,0.2); border: 1px solid #333; border-radius: 8px; padding: 15px; color: #fff; font-family: inherit; resize: none; outline: none; transition: border-color 0.3s;"></textarea>
+                    <div style="display: flex; justify-content: flex-end; margin-top: 15px;">
+                        <button class="btn-premium" style="padding: 10px 25px; font-size: 0.9rem;"
+                            onclick="submitFeedback()">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Initialize Page
+        async function initProfile() {
+            Auth.requireAuth();
+
+            // Wait for auth to settle
+            auth.onAuthStateChanged(async (user) => {
+                if (user) {
+                    const userData = Auth.getUser();
+                    renderProfileData(userData);
+
+                    // Show Admin Link if user is admin
+                    if (userData.role === 'admin') {
+                        const sidebar = document.querySelector('.profile-v2-sidebar');
+                        const adminBtn = document.createElement('div');
+                        adminBtn.className = 'nav-item';
+                        adminBtn.style.color = 'var(--accent-primary)';
+                        adminBtn.innerHTML = `<i class="fas fa-user-shield" style="margin-right: 15px; width: 20px;"></i> Admin Panel`;
+                        adminBtn.onclick = () => window.location.href = 'admin/adminhome.html';
+                        sidebar.insertBefore(adminBtn, sidebar.querySelector('.nav-item:last-child'));
+                    }
+                }
+            });
+
+            // Handle Image Upload
+            document.getElementById('fileInput').addEventListener('change', async function (e) {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                if (file.size > 2 * 1024 * 1024) {
+                    Swal.fire('Error', 'Image size must be less than 2MB', 'error');
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = async function (event) {
+                    const base64 = event.target.result;
+                    const success = await Auth.updateProfile({ avatar: base64 });
+                    if (success) {
+                        renderProfileData(Auth.getUser());
+                        Swal.fire({
+                            title: 'Updated!',
+                            text: 'Profile picture saved.',
+                            icon: 'success',
+                            background: '#1e1e1e',
+                            color: '#fff',
+                            timer: 1500,
+                            showConfirmButton: false
+                        });
+                    }
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        async function addSkill() {
+            const { value: skill } = await Swal.fire({
+                title: 'Add New Skill',
+                input: 'text',
+                inputLabel: 'Enter skill name',
+                inputPlaceholder: 'e.g. React, Python, UI/UX',
+                showCancelButton: true,
+                background: '#1e1e1e',
+                color: '#fff',
+                inputAttributes: {
+                    style: 'color: #fff; background: #333; border: 1px solid #444;'
+                }
+            });
+
+            if (skill) {
+                const user = Auth.getUser();
+                const skills = user.skills || [];
+                if (!skills.includes(skill)) {
+                    skills.push(skill);
+                    const success = await Auth.updateProfile({ skills });
+                    if (success) {
+                        renderProfileData(Auth.getUser());
+                    }
+                } else {
+                    Swal.fire('Note', 'This skill is already added.', 'info');
+                }
+            }
+        }
+
+        async function removeSkill(skill) {
+            const user = Auth.getUser();
+            const skills = (user.skills || []).filter(s => s !== skill);
+            const success = await Auth.updateProfile({ skills });
+            if (success) {
+                renderProfileData(Auth.getUser());
+            }
+        }
+
+
+        function renderProfileData(user) {
+            const initials = getInitials(user.fullName || user.username);
+
+            // Header
+            const headerAvatar = document.getElementById('headerAvatarCircle');
+            const nameEl = document.getElementById('headerUserName');
+
+            if (user.avatar) {
+                headerAvatar.innerHTML = `<img src="${user.avatar}" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"><div class="online-status"></div>`;
+            } else {
+                headerAvatar.innerHTML = `${initials}<div class="online-status"></div>`;
+            }
+
+            if (nameEl) {
+                if (user.role === 'admin') {
+                    nameEl.innerHTML = `${user.fullName || user.username} <span style="font-size: 0.7rem; background: var(--accent-secondary); color: #000; padding: 2px 6px; border-radius: 4px; margin-left: 5px; vertical-align: middle;">ADMIN</span>`;
+                } else {
+                    nameEl.innerText = user.fullName || user.username;
+                }
+            }
+
+            // Main Avatar
+            const mainAv = document.getElementById('mainAvatarCircle');
+            if (user.avatar) {
+                mainAv.innerHTML = `<img src="${user.avatar}" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"><div class="avatar-edit-overlay" onclick="document.getElementById('fileInput').click()"><i class="fas fa-camera"></i></div>`;
+            } else {
+                mainAv.innerHTML = `${initials}<div class="avatar-edit-overlay" onclick="document.getElementById('fileInput').click()"><i class="fas fa-camera"></i></div>`;
+            }
+
+            // Details
+            document.getElementById('valName').innerText = user.fullName || '-';
+            document.getElementById('valUsername').innerText = user.username || '-';
+            document.getElementById('valDob').innerText = user.dob || '-';
+            document.getElementById('valEmail').innerText = user.email || '-';
+            document.getElementById('valMobile').innerText = user.address || '-';
+
+            // Educational Details
+            if (user.education) {
+                document.getElementById('eduContent').innerHTML = `<p style="color: #fff;">${user.education}</p>`;
+            } else {
+                document.getElementById('eduContent').innerHTML = `<p style="color: rgba(255,255,255,0.4); font-style: italic;">No data available for Educational Details.</p>`;
+            }
+
+            // Skills
+            const skillsContainer = document.getElementById('skillsContainer');
+            if (user.skills && user.skills.length > 0) {
+                skillsContainer.innerHTML = user.skills.map(skill => `
+                    <div class="skill-tag">
+                        ${skill}
+                        <i class="fas fa-times" onclick="removeSkill('${skill}')"></i>
+                    </div>
+                `).join('');
+            } else {
+                skillsContainer.innerHTML = `<p style="color: rgba(255,255,255,0.4); font-style: italic;">No skills added yet.</p>`;
+            }
+        }
+
+        function getInitials(name) {
+            if (!name) return "U";
+            const parts = name.split(' ');
+            if (parts.length >= 2) {
+                return (parts[0][0] + parts[1][0]).toUpperCase();
+            }
+            return parts[0][0].toUpperCase();
+        }
+
+        // Secret Upgrade Trigger (Click "Name" labe 5 times)
+        let nameClicks = 0;
+        const labelName = document.getElementById('labelName');
+        if (labelName) {
+            labelName.addEventListener('click', async () => {
+                nameClicks++;
+                if (nameClicks === 5) {
+                    nameClicks = 0; // Reset
+                    const { value: key } = await Swal.fire({
+                        title: 'Admin Upgrade',
+                        input: 'password',
+                        inputLabel: 'Enter Secret Passkey',
+                        inputPlaceholder: 'Secret Key',
+                        background: '#1e1e1e',
+                        color: '#fff',
+                        showCancelButton: true
+                    });
+
+                    if (key === 'IX_ADMIN_2026') {
+                        const success = await Auth.updateProfile({ role: 'admin' });
+                        if (success) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Upgraded to Admin!',
+                                text: 'Please refresh the page.',
+                                background: '#1e1e1e',
+                                color: '#fff'
+                            }).then(() => window.location.reload());
+                        }
+                    } else if (key) {
+                        Swal.fire('Error', 'Invalid Passkey', 'error');
+                    }
+                }
+            });
+        }
+
+        async function submitFeedback() {
+            const text = document.getElementById('feedbackText').value.trim();
+            if (!text) return Swal.fire('Error', 'Please enter a message.', 'error');
+
+            const user = Auth.getUser();
+            const btn = document.querySelector('button[onclick="submitFeedback()"]');
+            btn.disabled = true;
+            btn.innerText = 'Sending...';
+
+            try {
+                await db.collection('feedback').add({
+                    userId: user.id || 'anonymous',
+                    userName: user.fullName || user.username || 'Unknown',
+                    email: user.email,
+                    message: text,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    status: 'unread'
+                });
+
+                document.getElementById('feedbackText').value = '';
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Feedback Sent!',
+                    text: 'Our team will review your message.',
+                    background: '#1e1e1e',
+                    color: '#fff'
+                });
+            } catch (error) {
+                console.error(error);
+                Swal.fire('Error', 'Failed to send feedback. Try again later.', 'error');
+            } finally {
+                btn.disabled = false;
+                btn.innerText = 'Send Message';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initProfile);
+    </script>
+</body>
+
+</html>

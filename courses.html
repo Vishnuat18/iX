@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | iX Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .breadcrumb-v2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0px;
+        }
+
+        .breadcrumb-v2 a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+
+        /* Specific Header for Courses (No Profile) */
+        .courses-header {
+            background: rgba(11, 11, 20, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            height: 65px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .learning-category {
+            margin-bottom: 70px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .category-header h3 {
+            font-size: 1.8rem;
+            color: #fff;
+            margin: 0;
+        }
+
+        .category-header i {
+            font-size: 1.5rem;
+            color: var(--accent-primary);
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .course-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .course-card:hover::before {
+            opacity: 1;
+        }
+
+        .course-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 242, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--accent-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover .course-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .course-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.25rem;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .course-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #999;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .course-meta {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 20px;
+        }
+
+        .course-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .course-stats span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .logo-v2 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body style="background: #0b0b14;">
+    <!-- Specialized Header -->
+    <header class="courses-header">
+        <div class="header-left">
+            <div class="breadcrumb-v2">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span style="color: #fff; font-weight: 600;">Courses</span>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div class="logo-v2" style="margin-right: 20px;">
+                iX <span style="font-weight:300; margin-left:5px;">Platform</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Academy Content -->
+    <main style="padding: 60px 5%; max-width: 1600px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 3rem; color: #fff; margin: 0;">Our <span
+                    style="color: var(--accent-primary);">Curriculum</span></h2>
+            <p style="color: #888; margin-top: 15px; font-size: 1.1rem;">Explore structured, module-based learning
+                modules
+            </p>
+        </div>
+
+        <!-- 1. Web Development -->
+        <div class="learning-category">
+            <div class="category-header">
+                <i class="fas fa-globe"></i>
+                <h3>Web Development</h3>
+            </div>
+            <div class="course-grid">
+                <!-- HTML -->
+                <div class="course-card">
+                    <div class="course-icon"><i class="fab fa-html5"></i></div>
+                    <div class="course-info">
+                        <h3>HTML5 Masterclass</h3>
+                        <p>Semantic structure, advanced forms, and modern SEO best practices.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 12 Modules</span><span><i
+                                    class="fas fa-signal"></i> Beginner</span></div>
+                        <i class="fas fa-arrow-right" style="color: var(--accent-primary);"></i>
+                    </div>
+                </div>
+                <!-- CSS -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #264de4; background: rgba(38, 77, 228, 0.1);"><i
+                            class="fab fa-css3-alt"></i></div>
+                    <div class="course-info">
+                        <h3>Modern CSS Styles</h3>
+                        <p>Flexbox, Grid, Animations, and responsive design systems.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 15 Modules</span><span><i
+                                    class="fas fa-signal"></i> Beginner</span></div>
+                        <i class="fas fa-arrow-right" style="color: #264de4;"></i>
+                    </div>
+                </div>
+                <!-- JavaScript -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #f0db4f; background: rgba(240, 219, 79, 0.1);"><i
+                            class="fab fa-js"></i></div>
+                    <div class="course-info">
+                        <h3>JavaScript (ES6+)</h3>
+                        <p>The complete guide from basics to advanced asynchronous patterns.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 24 Modules</span><span><i
+                                    class="fas fa-signal"></i> Intermediate</span></div>
+                        <i class="fas fa-arrow-right" style="color: #f0db4f;"></i>
+                    </div>
+                </div>
+                <!-- React.js -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #61dbfb; background: rgba(97, 219, 251, 0.1);"><i
+                            class="fab fa-react"></i></div>
+                    <div class="course-info">
+                        <h3>React.js Ecosystem</h3>
+                        <p>Hooks, State Management, and scalable component architecture.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 18 Modules</span><span><i
+                                    class="fas fa-signal"></i> Intermediate</span></div>
+                        <i class="fas fa-arrow-right" style="color: #61dbfb;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Fullstack Development -->
+        <div class="learning-category">
+            <div class="category-header">
+                <i class="fas fa-layer-group"></i>
+                <h3>Fullstack & Backend</h3>
+            </div>
+            <div class="course-grid">
+                <!-- Node.JS -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #68a063; background: rgba(104, 160, 99, 0.1);"><i
+                            class="fab fa-node-js"></i></div>
+                    <div class="course-info">
+                        <h3>Node.js Essentials</h3>
+                        <p>Architecture, event loop, and building high-performance APIs.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 14 Modules</span><span><i
+                                    class="fas fa-signal"></i> Advanced</span></div>
+                        <i class="fas fa-arrow-right" style="color: #68a063;"></i>
+                    </div>
+                </div>
+                <!-- Express.JS -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #fff; background: rgba(255, 255, 255, 0.1);"><i
+                            class="fas fa-server"></i></div>
+                    <div class="course-info">
+                        <h3>Express.js Backend</h3>
+                        <p>Routing, Middleware, and building robust RESTful services.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 10 Modules</span><span><i
+                                    class="fas fa-signal"></i> Intermediate</span></div>
+                        <i class="fas fa-arrow-right" style="color: #fff;"></i>
+                    </div>
+                </div>
+                <!-- MongoDB -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #4db33d; background: rgba(77, 179, 61, 0.1);"><i
+                            class="fas fa-database"></i></div>
+                    <div class="course-info">
+                        <h3>MongoDB Deep Dive</h3>
+                        <p>NoSQL schemas, aggregation pipelines, and indexing strategies.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 12 Modules</span><span><i
+                                    class="fas fa-signal"></i> Intermediate</span></div>
+                        <i class="fas fa-arrow-right" style="color: #4db33d;"></i>
+                    </div>
+                </div>
+                <!-- MERN Stack -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: var(--accent-primary); background: rgba(0, 242, 255, 0.1);">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div class="course-info">
+                        <h3>Ultimate MERN Stack</h3>
+                        <p>End-to-end integration of Mongo, Express, React, and Node.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 30 Modules</span><span><i
+                                    class="fas fa-signal"></i> Expert</span></div>
+                        <i class="fas fa-arrow-right" style="color: var(--accent-primary);"></i>
+                    </div>
+                </div>
+                <!-- Java Fullstack -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #f89820; background: rgba(248, 152, 32, 0.1);"><i
+                            class="fab fa-java"></i></div>
+                    <div class="course-info">
+                        <h3>Java Fullstack Pro</h3>
+                        <p>Spring Boot, Hibernate, and modern React/Angular frontend.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 35 Modules</span><span><i
+                                    class="fas fa-signal"></i> Expert</span></div>
+                        <i class="fas fa-arrow-right" style="color: #f89820;"></i>
+                    </div>
+                </div>
+                <!-- Python Fullstack -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #4b8bbe; background: rgba(75, 139, 190, 0.1);"><i
+                            class="fab fa-python"></i></div>
+                    <div class="course-info">
+                        <h3>Python Web Dev</h3>
+                        <p>Django, Flask, and building full-stack applications with ease.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 28 Modules</span><span><i
+                                    class="fas fa-signal"></i> Intermediate</span></div>
+                        <i class="fas fa-arrow-right" style="color: #4b8bbe;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Programming Languages -->
+        <div class="learning-category">
+            <div class="category-header">
+                <i class="fas fa-code"></i>
+                <h3>Programming Languages</h3>
+            </div>
+            <div class="course-grid">
+                <!-- Java -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #f89820; background: rgba(248, 152, 32, 0.1);"><i
+                            class="fab fa-java"></i></div>
+                    <div class="course-info">
+                        <h3>Java Core</h3>
+                        <p>Object-Oriented Programming, Collections, and Streams API.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 20 Modules</span><span><i
+                                    class="fas fa-signal"></i> Intermediate</span></div>
+                        <i class="fas fa-arrow-right" style="color: #f89820;"></i>
+                    </div>
+                </div>
+                <!-- Python -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #4b8bbe; background: rgba(75, 139, 190, 0.1);"><i
+                            class="fab fa-python"></i></div>
+                    <div class="course-info">
+                        <h3>Python Core</h3>
+                        <p>Syntax, standard libraries, and powerful scripting techniques.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 18 Modules</span><span><i
+                                    class="fas fa-signal"></i> Beginner</span></div>
+                        <i class="fas fa-arrow-right" style="color: #4b8bbe;"></i>
+                    </div>
+                </div>
+                <!-- C -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #004482; background: rgba(0, 68, 130, 0.1);"><i
+                            class="fas fa-terminal"></i></div>
+                    <div class="course-info">
+                        <h3>Mastering C</h3>
+                        <p>Low-level memory management, pointers, and data structures.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 15 Modules</span><span><i
+                                    class="fas fa-signal"></i> Advanced</span></div>
+                        <i class="fas fa-arrow-right" style="color: #004482;"></i>
+                    </div>
+                </div>
+                <!-- DSA -->
+                <div class="course-card">
+                    <div class="course-icon"
+                        style="color: var(--accent-secondary); background: rgba(189, 0, 255, 0.1);"><i
+                            class="fas fa-project-diagram"></i></div>
+                    <div class="course-info">
+                        <h3>DSA Patterns</h3>
+                        <p>Algorithms, time complexity, and technical interview patterns.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 40 Modules</span><span><i
+                                    class="fas fa-signal"></i> Expert</span></div>
+                        <i class="fas fa-arrow-right" style="color: var(--accent-secondary);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. CS Fundamentals -->
+        <div class="learning-category">
+            <div class="category-header">
+                <i class="fas fa-microchip"></i>
+                <h3>CS Fundamentals</h3>
+            </div>
+            <div class="course-grid">
+                <!-- Computer Fundamentals -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #fff; background: rgba(255, 255, 255, 0.1);"><i
+                            class="fas fa-laptop-code"></i></div>
+                    <div class="course-info">
+                        <h3>Computer Fundamentals</h3>
+                        <p>Hardware, OS basics, and how computers actually work.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 8 Modules</span><span><i
+                                    class="fas fa-signal"></i> Beginner</span></div>
+                        <i class="fas fa-arrow-right" style="color: #fff;"></i>
+                    </div>
+                </div>
+                <!-- Computer Networks -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #4CAF50; background: rgba(76, 175, 80, 0.1);"><i
+                            class="fas fa-network-wired"></i></div>
+                    <div class="course-info">
+                        <h3>Networking (TCP/IP)</h3>
+                        <p>Layers, protocols, and how data travels across the globe.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 12 Modules</span><span><i
+                                    class="fas fa-signal"></i> Intermediate</span></div>
+                        <i class="fas fa-arrow-right" style="color: #4CAF50;"></i>
+                    </div>
+                </div>
+                <!-- DBMS -->
+                <div class="course-card">
+                    <div class="course-icon" style="color: #FF9800; background: rgba(255, 152, 0, 0.1);"><i
+                            class="fas fa-database"></i></div>
+                    <div class="course-info">
+                        <h3>DBMS Fundamentals</h3>
+                        <p>SQL, Normalization, ACID properties, and query optimization.</p>
+                    </div>
+                    <div class="course-meta">
+                        <div class="course-stats"><span><i class="fas fa-book-open"></i> 14 Modules</span><span><i
+                                    class="fas fa-signal"></i> Intermediate</span></div>
+                        <i class="fas fa-arrow-right" style="color: #FF9800;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Guard the page
+        Auth.requireAuth();
+    </script>
+</body>
+
+</html>

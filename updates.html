@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates & News | iX Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .updates-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .update-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .update-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-primary);
+        }
+
+        .update-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--accent-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .author-info h3 {
+            margin: 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .timestamp {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .update-body {
+            color: #ddd;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .media-container {
+            margin-top: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .media-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .media-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .media-container iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header V2 -->
+    <header class="header-v2">
+        <div class="header-left">
+            <div class="logo-v2" onclick="window.location.href='index.html'" style="cursor:pointer;">
+                iX <span style="font-weight:300; margin-left:5px;">Updates</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <nav class="home-nav">
+                <a href="index.html" class="home-nav-link">Home</a>
+                <a href="updates.html" class="home-nav-link active">Updates</a>
+                <a href="profile.html" class="home-nav-link">Settings</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="updates-container" id="updatesFeed">
+        <div style="text-align: center; color: #888; padding: 40px;">
+            <i class="fas fa-satellite-dish fa-3x" style="margin-bottom: 20px; opacity: 0.5;"></i>
+            <p>Scanning for platform updates...</p>
+        </div>
+    </main>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadUpdates();
+        });
+
+        async function loadUpdates() {
+            try {
+                const container = document.getElementById('updatesFeed');
+                const snapshot = await db.collection('broadcasts').orderBy('timestamp', 'desc').limit(20).get();
+
+                if (snapshot.empty) {
+                    container.innerHTML = `
+                        <div style="text-align: center; color: #666; padding: 40px;">
+                            <i class="fas fa-inbox fa-3x" style="margin-bottom: 20px; opacity: 0.3;"></i>
+                            <p>No new updates at the moment.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = '';
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    renderUpdateCard(container, data);
+                });
+
+            } catch (err) {
+                console.error("Error loading updates:", err);
+            }
+        }
+
+        function renderUpdateCard(container, data) {
+            const card = document.createElement('div');
+            card.className = 'update-card';
+
+            let mediaHtml = '';
+            if (data.imageUrl) {
+                mediaHtml += `<div class="media-container"><img src="${data.imageUrl}" alt="Update Image"></div>`;
+            }
+            if (data.videoUrl) {
+                // Check for YouTube
+                if (data.videoUrl.includes('youtube.com') || data.videoUrl.includes('youtu.be')) {
+                    const videoId = getYouTubeId(data.videoUrl);
+                    mediaHtml += `<div class="media-container"><iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe></div>`;
+                } else if (data.videoUrl.endsWith('.mp4') || data.videoUrl.endsWith('.webm')) {
+                    mediaHtml += `<div class="media-container"><video controls><source src="${data.videoUrl}" type="video/mp4"></video></div>`;
+                } else {
+                    // Generic link fallback or try video tag
+                    mediaHtml += `<div class="media-container"><video controls><source src="${data.videoUrl}"></video></div>`;
+                }
+            }
+
+            const timestamp = data.timestamp ? (data.timestamp.toDate ? data.timestamp.toDate() : new Date(data.timestamp)).toLocaleString() : 'Just now';
+
+            card.innerHTML = `
+                <div class="update-header">
+                    <div class="author-avatar"><i class="fas fa-bullhorn"></i></div>
+                    <div class="author-info">
+                        <h3>${data.title || 'Platform Update'}</h3>
+                        <div class="timestamp">${timestamp}</div>
+                    </div>
+                </div>
+                <div class="update-body">
+                    ${formatText(data.message)}
+                </div>
+                ${mediaHtml}
+            `;
+            container.appendChild(card);
+        }
+
+        function formatText(text) {
+            if (!text) return '';
+            return text.replace(/\n/g, '<br>');
+        }
+
+        function getYouTubeId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+    </script>
+</body>
+
+</html>

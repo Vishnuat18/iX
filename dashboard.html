@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | iX Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .breadcrumb-v2 {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0px;
+        }
+
+        .breadcrumb-v2 a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header V2 (Refined: Breadcrumbs Left, Logo Right) -->
+    <header class="header-v2">
+        <div class="header-left">
+            <div class="breadcrumb-v2">
+                <a href="index.html">Home</a>
+                <i class="fas fa-chevron-right" style="font-size: 0.7rem;"></i>
+                <span style="color: #fff; font-weight: 600;">Dashboard</span>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div class="logo-v2" style="margin-right: 20px;">
+                iX <span style="font-weight:300; margin-left:5px;">Platform</span>
+            </div>
+            <div class="user-profile-trigger" id="userDropdownTrigger" onclick="window.location.href='profile.html'">
+                <div class="user-avatar-circle" id="headerAvatarCircle">
+                    U
+                    <div class="online-status"></div>
+                </div>
+                <span class="user-name" id="headerUserName">Loading...</span>
+                <i class="fas fa-chevron-down" style="font-size: 0.8rem; color: #888;"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="profile-v2-wrapper">
+        <!-- Sidebar -->
+        <aside class="profile-v2-sidebar">
+            <div class="nav-item" onclick="window.location.href='profile.html'">
+                <i class="fas fa-user-circle" style="margin-right: 15px; width: 20px;"></i>
+                Profile
+            </div>
+            <div class="nav-item active">
+                <i class="fas fa-chart-line" style="margin-right: 15px; width: 20px;"></i>
+                Dashboard
+            </div>
+            <div class="nav-item" style="margin-top: auto; color: #ff5252;" onclick="Auth.logout()">
+                <i class="fas fa-sign-out-alt" style="margin-right: 15px; width: 20px;"></i>
+                Logout
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="profile-v2-content">
+            <h2 style="margin-bottom: 25px; color: var(--accent-primary);">Your Progress Overview</h2>
+
+            <div class="dashboard-v2-stats">
+                <div class="stat-card-v2">
+                    <span class="stat-label">Total Points</span>
+                    <span class="stat-value" id="statTotalPoints">0</span>
+                </div>
+                <div class="stat-card-v2">
+                    <span class="stat-label">Solved Problems</span>
+                    <span class="stat-value" id="statSolvedCount">0</span>
+                </div>
+                <div class="stat-card-v2">
+                    <span class="stat-label">Quiz Score</span>
+                    <span class="stat-value" id="statQuizPoints">0</span>
+                </div>
+                <div class="stat-card-v2">
+                    <span class="stat-label">Debugging Points</span>
+                    <span class="stat-value" id="statDebugPoints">0</span>
+                </div>
+            </div>
+
+            <div class="profile-v2-card">
+                <div class="profile-v2-card-header">
+                    <h3>Recent Activity</h3>
+                </div>
+                <div class="profile-v2-card-body">
+                    <p style="color: rgba(255,255,255,0.4);">No recent activity found. Start a <a
+                            href="problems/index.html"
+                            style="color:var(--accent-primary); font-weight:600;">challenge</a> to see your progress
+                        here!
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Guard the page
+        Auth.requireAuth();
+
+        function initDashboard() {
+            auth.onAuthStateChanged(async (user) => {
+                if (user) {
+                    const userData = Auth.getUser();
+                    if (userData) {
+                        renderDashboard(userData);
+                    }
+                }
+            });
+        }
+
+        function renderDashboard(user) {
+            // Header initialization
+            const initials = getInitials(user.fullName || user.username);
+            const headerAvatar = document.getElementById('headerAvatarCircle');
+            if (user.avatar) {
+                headerAvatar.innerHTML = `<img src="${user.avatar}" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"><div class="online-status"></div>`;
+            } else {
+                headerAvatar.innerHTML = `${initials}<div class="online-status"></div>`;
+            }
+            document.getElementById('headerUserName').innerText = user.fullName || user.username;
+
+            // Points calculation
+            const scores = Auth.getScores();
+            document.getElementById('statTotalPoints').innerText = scores.total;
+            document.getElementById('statSolvedCount').innerText = (user.solvedProblems || []).length;
+            document.getElementById('statQuizPoints').innerText = scores.quiz;
+            document.getElementById('statDebugPoints').innerText = scores.debug;
+        }
+
+        function getInitials(name) {
+            if (!name) return "U";
+            const parts = name.split(' ');
+            if (parts.length >= 2) {
+                return (parts[0][0] + parts[1][0]).toUpperCase();
+            }
+            return parts[0][0].toUpperCase();
+        }
+
+        document.addEventListener('DOMContentLoaded', initDashboard);
+    </script>
+
+</body>
+
+</html>
