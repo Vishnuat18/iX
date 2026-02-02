@@ -142,37 +142,14 @@
 
         <!-- Chat Widget Removed as per user request -->
 
-        <!-- Mobile Bottom Navigation -->
-        <div class="mobile-bottom-nav">
-            <a href="../index.html" class="mobile-nav-item">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-            </a>
-            <a href="../problems/index.html" class="mobile-nav-item">
-                <i class="fas fa-code"></i>
-                <span>Coding</span>
-            </a>
-            <a href="../quiz_landing.html" class="mobile-nav-item">
-                <i class="fas fa-brain"></i>
-                <span>Quiz</span>
-            </a>
-            <a href="../community.html" class="mobile-nav-item">
-                <i class="fas fa-users"></i>
-                <span>iX Link</span>
-            </a>
-            <a href="../profile.html" class="mobile-nav-item">
-                <i class="fas fa-user-circle"></i>
-                <span>Profile</span>
-            </a>
-        </div>
-
-        <!-- Firebase SDKs -->
+        <!-- Scripts -->
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
         <script src="../js/firebase-config.js"></script>
-
         <script src="../js/auth.js"></script>
+        <script src="../js/mobile-menu.js"></script>
+        <script src="../js/responsive-ui.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.38.0/min/vs/loader.js"></script>
         <script>
             let editor;
@@ -204,28 +181,61 @@
             const probId = urlParams.get('id');
 
             async function init() {
-                try {
-                    const doc = await Auth._withTimeout(db.collection('debug_problems').doc(String(probId)).get());
+                console.log("Initializing Debug Solve page (Resilient Mode)...");
 
-                    if (!doc.exists) {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Problem Not Found',
-                            text: 'Redirecting to list...',
-                            background: '#1e1e1e', color: '#fff'
-                        }).then(() => window.location.href = 'index.html');
-                        return;
+                const cleanId = probId ? String(probId).trim() : null;
+                if (!cleanId) {
+                    Swal.fire('Error', 'No challenge ID provided.', 'error');
+                    return;
+                }
+
+                try {
+                    // 1. LOAD FROM JSON FIRST
+                    console.log("Fetching local debug data...");
+                    try {
+                        const response = await fetch('../data/debug_problems.json');
+                        if (response.ok) {
+                            const allChalls = await response.json();
+                            currentProblem = allChalls.find(c => String(c.id) === cleanId);
+                        }
+                    } catch (jsonErr) {
+                        console.warn("Local JSON fetch failed for debug:", jsonErr);
                     }
 
-                    currentProblem = doc.data();
+                    // 2. TRY FIRESTORE ONLY AS BACKUP
+                    if (!currentProblem && typeof db !== 'undefined' && db) {
+                        console.log("JSON failed, trying Firestore...");
+                        try {
+                            const doc = await Auth._withTimeout(db.collection('debug_problems').doc(cleanId).get(), 3000);
+                            if (doc.exists) {
+                                currentProblem = { id: doc.id, ...doc.data() };
+                            }
+                        } catch (fsErr) {
+                            console.error("Firestore backup failed:", fsErr);
+                        }
+                    }
 
-                    document.getElementById('prob-title').innerText = currentProblem.title;
-                    document.getElementById('prob-desc').innerHTML = currentProblem.description;
-                    document.getElementById('expected-out').innerText = currentProblem.expectedOutput;
+                    if (!currentProblem) {
+                        throw new Error(`Challenge #${cleanId} not found.`);
+                    }
 
+                    // 3. UI POPULATION
+                    document.getElementById('prob-title').innerText = currentProblem.title || "Debug Challenge";
+                    document.getElementById('prob-desc').innerHTML = currentProblem.description || "No description.";
+                    document.getElementById('expected-out').innerText = currentProblem.expectedOutput || "";
+
+                    // 4. AUTH & SCORE (In parallel)
+                    if (typeof Auth !== 'undefined') {
+                        const user = Auth.getUser();
+                        if (user && headerScoreEl) {
+                            headerScoreEl.innerText = user.stats?.quizScore || 0;
+                        }
+                    }
+
+                    // 5. EDITOR SETUP
                     require(['vs/editor/editor.main'], function () {
                         editor = monaco.editor.create(document.getElementById('editor'), {
-                            value: currentProblem.buggyCode,
+                            value: currentProblem.buggyCode || "// Code not found",
                             language: 'java',
                             theme: 'vs-dark',
                             minimap: { enabled: false },
@@ -235,11 +245,16 @@
                     });
 
                 } catch (e) {
-                    console.error(e);
+                    console.error("Init Error:", e);
+                    document.getElementById('prob-title').innerText = "Load Failed";
+                    document.getElementById('prob-desc').innerHTML = `
+                        <div style="color: #ff6b6b; background: rgba(255,107,107,0.1); padding: 10px; border-radius: 4px;">
+                            ${e.message}
+                        </div>`;
                     Swal.fire({
                         icon: 'error',
-                        title: 'Error loading problem',
-                        text: 'Please try again later.',
+                        title: 'Loading Failed',
+                        text: e.message,
                         background: '#1e1e1e', color: '#fff'
                     });
                 }

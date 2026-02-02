@@ -112,183 +112,95 @@
         </div>
     </div>
 
-    <!-- Mobile Bottom Navigation -->
-    <div class="mobile-bottom-nav">
-        <a href="../index.html" class="mobile-nav-item">
-            <i class="fas fa-home"></i>
-            <span>Home</span>
-        </a>
-        <a href="../problems/index.html" class="mobile-nav-item">
-            <i class="fas fa-code"></i>
-            <span>Coding</span>
-        </a>
-        <a href="../quiz_landing.html" class="mobile-nav-item">
-            <i class="fas fa-brain"></i>
-            <span>Quiz</span>
-        </a>
-        <a href="../community.html" class="mobile-nav-item">
-            <i class="fas fa-users"></i>
-            <span>iX Link</span>
-        </a>
-        <a href="../profile.html" class="mobile-nav-item">
-            <i class="fas fa-user-circle"></i>
-            <span>Profile</span>
-        </a>
-    </div>
-
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="../js/firebase-config.js"></script>
-
     <script src="../js/auth.js"></script>
+
+    <!-- Responsive & Menu Scripts -->
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/responsive-ui.js"></script>
+
     <script>
-        // Auth Check
-        Auth.requireAuth();
-        const currentUser = Auth.getUser();
-        const username = currentUser.username;
-        const scoreKey = `ix_debug_score_${username}`;
-        const solvedKey = `ix_debug_solved_${username}`;
-
-        // Load Score
-        function updateScoreDisplay() {
-            const user = Auth.getUser();
-            const score = user && user.stats ? (user.stats.quizScore || 0) : 0;
-            document.getElementById('totalScore').innerText = score;
-
-            // Update Header Score
-            const headerScoreEl = document.getElementById('userScoreInHeader');
-            if (headerScoreEl) {
-                headerScoreEl.innerText = score;
-            }
-        }
+        let allChallenges = [];
 
         async function loadChallenges() {
             const listContainer = document.getElementById('challenge-list');
             try {
-                // Fetch from Firestore instead of JSON
-                const snapshot = await Auth._withTimeout(db.collection('debug_problems').get());
-                const challenges = snapshot.docs.map(doc => doc.data());
+                // 1. Try Firestore
+                try {
+                    const snapshot = await Auth._withTimeout(db.collection('debug_problems').get(), 5000);
+                    allChallenges = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                } catch (firestoreError) {
+                    console.warn("Firestore fetch failed, falling back to JSON:", firestoreError);
+                    allChallenges = [];
+                }
 
-                if (challenges.length === 0) {
-                    listContainer.innerHTML = `<div style="text-align:center; padding: 40px; color: #aaa;">No challenges found in database. Please seed the DB if you are an admin.</div>`;
+                // 2. Fallback to local JSON
+                if (allChallenges.length === 0) {
+                    const response = await fetch('../data/debug_problems.json');
+                    allChallenges = await response.json();
+                    console.log("Loaded debug challenges from local fallback.");
+                }
+
+                if (allChallenges.length === 0) {
+                    listContainer.innerHTML = `<div style="text-align:center; padding: 20px; color: #aaa;">No challenges found.</div>`;
                     return;
                 }
 
-                // Sort by ID to maintain order
-                challenges.sort((a, b) => (a.id || 0) - (b.id || 0));
+                // Sort by difficulty or title
+                allChallenges.sort((a, b) => (a.title || "").localeCompare(b.title || ""));
 
-                renderChallenges(challenges);
+                renderChallenges(allChallenges);
             } catch (error) {
-                console.error("Error loading debug challenges from Firestore:", error);
-                listContainer.innerHTML = `
-                    <div style="text-align:center; padding:40px; color: #ff6b6b;">
-                        <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                        <br>
-                        Failed to fetch challenges from database.<br>
-                        <span style="font-size:0.8rem; color:#666;">${error.message}</span>
-                    </div>`;
+                console.error("Error loading challenges:", error);
+                listContainer.innerHTML = `<div style="text-align:center; padding: 20px; color: #ff6b6b;">Failed to load challenges.</div>`;
             }
         }
 
-        function renderChallenges(list) {
+        function renderChallenges(challenges) {
             const container = document.getElementById('challenge-list');
             container.innerHTML = '';
 
-            // Get Firestore-synced solved problems
-            const currentUser = Auth.getUser();
-            const solvedProblems = currentUser && currentUser.solvedProblems ? currentUser.solvedProblems : [];
+            // User's solved list (from profile)
+            const user = Auth.getUser();
+            const solvedList = user && user.stats ? (user.stats.solvedChallenges || []) : [];
 
-            list.forEach((c, idx) => {
-                const isSolved = solvedProblems.includes(c.id); // Checks strings for debug IDs
+            challenges.forEach(c => {
                 const row = document.createElement('div');
-                row.className = 'debug-row';
+                const isSolved = solvedList.includes(c.id);
+                row.className = `debug-row ${isSolved ? 'solved' : ''}`;
+
                 row.innerHTML = `
-                    <div style="display:flex; align-items:center; gap: 15px;">
-                        <span style="font-family:monospace; color:#666;">#${idx + 1}</span>
-                        <div>
-                            <h3 style="margin:0; font-size: 1.1rem; color: #fff;">${c.title}</h3>
-                            <div style="font-size: 0.85rem; color: ${isSolved ? '#00ff9d' : '#888'}; margin-top: 5px;">
-                                ${isSolved ? '<i class="fas fa-check-circle"></i> Solved' : 'Pending Fix'}
-                            </div>
-                        </div>
+                    <div style="flex:1;">
+                        <h3 style="margin:0; color:#fff;">${c.title}</h3>
+                        <div style="font-size: 0.8rem; color:#888; margin-top:5px;">${c.category || 'Logic'} • Points: ${c.points || 10}</div>
                     </div>
-                    <div>
-                         <span class="difficulty-badge" style="background:rgba(255,255,255,0.1); padding: 5px 10px; font-size:0.8rem; border-radius:10px; margin-right:15px;">${c.difficulty}</span>
-                        <a href="solve.html?id=${c.id}" class="btn-premium" style="background: ${isSolved ? '#333' : '#ff6b6b'}; color: white; padding: 8px 20px;">
-                            ${isSolved ? 'Revisit' : 'Debug Now'}
-                        </a>
+                    <div style="display:flex; align-items:center; gap:15px;">
+                        ${isSolved ? '<i class="fas fa-check-circle" style="color:#00ff9d; font-size:1.2rem;"></i>' : ''}
+                        <a href="solve.html?id=${c.id}" class="btn-premium" style="padding: 8px 20px; font-size: 0.85rem;">${isSolved ? 'Review' : 'Debug'}</a>
                     </div>
                 `;
                 container.appendChild(row);
             });
         }
 
-        updateScoreDisplay();
-        loadChallenges();
-
-        function startGroupSession() {
-            Swal.fire({
-                title: 'Start Peer Session',
-                html: `
-                    <div style="text-align:left; margin-bottom:15px;">
-                        <label style="color:#aaa; display:block; margin-bottom:5px;">Your ID</label>
-                        <div style="background:#333; padding:10px; color:#fff; border-radius:4px; font-family:monospace;">USER-${Math.floor(Math.random() * 10000)}</div>
-                    </div>
-                    <div style="text-align:left;">
-                        <label style="color:#aaa; display:block; margin-bottom:5px;">Invite Friend (Enter ID)</label>
-                        <input type="text" id="friendId" class="swal2-input" placeholder="e.g. FRIEND-456" style="margin:0; width:100%;">
-                    </div>
-                `,
-                background: '#1e1e1e',
-                color: '#fff',
-                showCancelButton: true,
-                confirmButtonText: 'Connect & Start',
-                confirmButtonColor: '#00f2ff',
-                cancelButtonColor: '#444',
-                preConfirm: () => {
-                    const friendId = Swal.getPopup().querySelector('#friendId').value;
-                    if (!friendId) {
-                        Swal.showValidationMessage('Please enter a friend ID');
-                    }
-                    return { friendId: friendId };
-                }
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Simulate connection
-                    let timerInterval;
-                    Swal.fire({
-                        title: 'Connecting...',
-                        html: 'Handshaking with ' + result.value.friendId,
-                        timer: 2000,
-                        timerProgressBar: true,
-                        background: '#1e1e1e',
-                        color: '#fff',
-                        didOpen: () => {
-                            Swal.showLoading();
-                        }
-                    }).then((dismiss) => {
-                        // Store session state
-                        sessionStorage.setItem('ix_group_session', JSON.stringify({
-                            active: true,
-                            friendId: result.value.friendId,
-                            role: 'host'
-                        }));
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Connected!',
-                            text: 'Entering Lobby...',
-                            background: '#1e1e1e',
-                            color: '#fff',
-                            timer: 1500,
-                            showConfirmButton: false
-                        });
-                        // Reload or let user pick a challenge
-                    });
-                }
-            });
+        async function init() {
+            Auth.requireAuth();
+            const user = Auth.getUser();
+            if (user) {
+                const scoreEl = document.getElementById('userScoreInHeader');
+                const totalScoreEl = document.getElementById('totalScore');
+                const scoreValue = user.stats ? (user.stats.quizScore || 0) : 0;
+                if (scoreEl) scoreEl.innerText = scoreValue;
+                if (totalScoreEl) totalScoreEl.innerText = scoreValue;
+            }
+            await loadChallenges();
         }
+
+        init();
     </script>
 </body>
 

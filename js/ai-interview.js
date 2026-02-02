@@ -103,83 +103,150 @@ const SPRITE_POSITIONS = [
     'translate(-50%, -50%)' // Mouth Wide
 ];
 
+// --- INITIALIZATION ---
 document.addEventListener('DOMContentLoaded', () => {
-    setupPhase1Listeners();
+    // Basic init if needed, though most logic is now global for inline handlers
+    console.log("AI Interview Logic Loaded");
 });
 
-// --- PHASE 1: SETUP ---
-function setupPhase1Listeners() {
-    const domainSelect = document.getElementById('domainSelect');
-    const roleSelect = document.getElementById('roleSelect');
+window.updateSetupRoles = () => {
+    const dSelect = document.getElementById('domainSelect');
+    const rSelect = document.getElementById('roleSelect');
+    const domain = dSelect.value;
 
-    domainSelect.onchange = () => {
-        const domain = domainSelect.value;
-        roleSelect.innerHTML = '<option value="">Select Target Role</option>';
-        if (domain && ROLES_DATA[domain]) {
-            ROLES_DATA[domain].forEach(role => {
-                const opt = document.createElement('option');
-                opt.value = role;
-                opt.textContent = role;
-                roleSelect.appendChild(opt);
-            });
-            roleSelect.disabled = false;
-        } else { roleSelect.disabled = true; }
-        validateSetup();
-    };
+    console.log("Mock AI: Domain changed to", domain);
 
-    window.selectSetupInterviewer = (id, el) => {
-        document.querySelectorAll('.interviewer-card-v2').forEach(c => c.classList.remove('active'));
-        el.classList.add('active');
-        state.model = INTERVIEW_MODELS[id];
-        validateSetup();
-    };
+    rSelect.innerHTML = '<option value="">Select Target Role</option>';
+    if (domain && ROLES_DATA[domain]) {
+        ROLES_DATA[domain].forEach(role => {
+            const opt = document.createElement('option');
+            opt.value = role;
+            opt.textContent = role;
+            rSelect.appendChild(opt);
+        });
+        console.log("Mock AI: Unblocking role selector");
+        rSelect.disabled = false;
+        rSelect.removeAttribute('disabled'); // Force removal for stubborn browsers
+        rSelect.style.opacity = "1";
+        rSelect.style.pointerEvents = "auto";
 
-    window.validateSetup = () => {
+        // Explicit focus to trigger some mobile keyboard/picker shifts
+        setTimeout(() => {
+            rSelect.focus();
+            rSelect.click(); // Some browsers allow programmatic trigger
+        }, 100);
+    } else {
+        console.log("Mock AI: Blocking role selector (no domain)");
+        rSelect.disabled = true;
+    }
+    validateSetup();
+};
+
+// Global listener to ensure role select is NEVER blocked if domain is set
+document.addEventListener('click', (e) => {
+    if (e.target && e.target.id === 'roleSelect') {
         const domain = document.getElementById('domainSelect').value;
-        const role = document.getElementById('roleSelect').value;
-        const btn = document.getElementById('startInterviewBtn');
-        if (domain && role && state.model) {
-            state.domain = domain;
-            state.role = role;
-            btn.disabled = false;
-        } else {
-            btn.disabled = true;
+        if (domain) {
+            e.target.disabled = false;
+            e.target.removeAttribute('disabled');
+        }
+    }
+}, true);
+
+window.selectSetupInterviewer = (id, el) => {
+    document.querySelectorAll('.interviewer-card-v2').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    state.model = INTERVIEW_MODELS[id];
+    validateSetup();
+};
+
+window.validateSetup = () => {
+    const domain = document.getElementById('domainSelect').value;
+    const role = document.getElementById('roleSelect').value;
+    const nextBtn = document.getElementById('nextStepBtn');
+    const startBtn = document.getElementById('startInterviewBtn');
+
+    console.log("Mock AI Validation:", { domain, role, model: state.model });
+
+    if (domain && role) {
+        state.domain = domain;
+        state.role = role;
+        if (nextBtn) {
+            nextBtn.disabled = false;
+            nextBtn.style.opacity = "1";
+            nextBtn.style.pointerEvents = "auto";
+        }
+    } else {
+        if (nextBtn) {
+            nextBtn.disabled = true;
+            nextBtn.style.opacity = "0.5";
+        }
+    }
+
+    if (domain && role && state.model) {
+        if (startBtn) {
+            startBtn.disabled = false;
+            startBtn.style.opacity = "1";
+        }
+    } else {
+        if (startBtn) {
+            startBtn.disabled = true;
+            startBtn.style.opacity = "0.5";
+        }
+    }
+};
+
+window.nextWizardStep = () => {
+    document.getElementById('wizardTrack').style.transform = 'translateX(-50%)';
+    document.getElementById('step2-pill').classList.add('active');
+    document.getElementById('step1-pill').classList.remove('active');
+};
+
+window.prevWizardStep = () => {
+    document.getElementById('wizardTrack').style.transform = 'translateX(0)';
+    document.getElementById('step1-pill').classList.add('active');
+    document.getElementById('step2-pill').classList.remove('active');
+};
+
+window.transitionToPhase2 = () => {
+    document.getElementById('setupPhase').style.display = 'none';
+    document.getElementById('interviewPhase').style.display = 'block';
+
+    const charKey = state.model.name.toLowerCase();
+    // Populate Real AI Video (Primary)
+    const video = document.getElementById('interviewerVideo');
+    const frames = document.getElementById('talkingHead');
+    const videoSrc = `assets/${charKey}.mp4`;
+
+    // We attempt to load the video. If it fails or is missing, we use frames.
+    video.src = videoSrc;
+    video.oncanplay = () => {
+        video.style.display = 'block';
+        frames.style.display = 'none';
+        state.useVideoInterviewer = true;
+    };
+    video.onerror = () => {
+        video.style.display = 'none';
+        frames.style.display = 'block';
+        state.useVideoInterviewer = false;
+    };
+
+    // Populate AI Video Sprite (Fallback to simulation)
+    const sprite = document.getElementById('interviewerSprite');
+    sprite.src = `assets/${charKey}_video.png`;
+    sprite.onerror = () => sprite.src = state.model.asset; // Absolute fallback
+
+    document.getElementById('interviewerTitle').innerText = `${state.model.name}`;
+
+    window.togglePerformancePad = () => {
+        const pad = document.getElementById('performancePad');
+        if (pad) {
+            pad.classList.toggle('active');
         }
     };
 
-    window.transitionToPhase2 = () => {
-        document.getElementById('setupPhase').style.display = 'none';
-        document.getElementById('interviewPhase').style.display = 'block';
-
-        const charKey = state.model.name.toLowerCase();
-        // Populate Real AI Video (Primary)
-        const video = document.getElementById('interviewerVideo');
-        const frames = document.getElementById('talkingHead');
-        const videoSrc = `assets/${charKey}.mp4`;
-
-        // We attempt to load the video. If it fails or is missing, we use frames.
-        video.src = videoSrc;
-        video.oncanplay = () => {
-            video.style.display = 'block';
-            frames.style.display = 'none';
-            state.useVideoInterviewer = true;
-        };
-        video.onerror = () => {
-            video.style.display = 'none';
-            frames.style.display = 'block';
-            state.useVideoInterviewer = false;
-        };
-
-        // Populate AI Video Sprite (Fallback to simulation)
-        const sprite = document.getElementById('interviewerSprite');
-        sprite.src = `assets/${charKey}_video.png`;
-        sprite.onerror = () => sprite.src = state.model.asset; // Absolute fallback
-
-        document.getElementById('interviewerTitle').innerText = `${state.model.name}`;
-
-        startInterviewSession();
-    };
-}
+    startInterviewSession();
+};
 
 // --- PHASE 2: LIVE INTERVIEW ---
 function startInterviewSession() {

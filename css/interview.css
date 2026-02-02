@@ -59,3 +59,57 @@ body {
   justify-content: space-between;
   padding: 16px;
 }
+
+/* Prep Selection UI */
+.prep-selection-phase {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.selection-title h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.selection-title p {
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
+
+.domain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.domain-btn {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 20px;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.domain-btn i {
+  font-size: 2.5rem;
+  color: #3b82f6;
+}
+
+.domain-btn span {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.domain-btn:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: #3b82f6;
+  transform: translateY(-5px);
+}

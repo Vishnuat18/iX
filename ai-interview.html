@@ -7,6 +7,7 @@
     <title>AI Mock Interview | iX Platform</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/ai-interview.css">
+    <link rel="stylesheet" href="css/mobile.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -44,79 +45,91 @@
                 </div>
 
                 <div class="setup-main-stage">
-                    <div class="stage-section" id="stage1">
-                        <div class="section-title">
-                            <span class="badge-accent">Step 01</span>
-                            <h2>Define Your Career Path</h2>
-                            <p>Select the domain and specific role you want to practice for.</p>
-                        </div>
-
-                        <div class="selection-box-premium">
-                            <div class="premium-input">
-                                <label><i class="fas fa-layer-group"></i> Domain</label>
-                                <select id="domainSelect" class="ultra-select" onchange="updateSetupRoles()">
-                                    <option value="">Select a Domain</option>
-                                    <option value="software">Software Engineering</option>
-                                    <option value="data">Data Science & AI</option>
-                                    <option value="design">Product Design</option>
-                                    <option value="management">Product Management</option>
-                                </select>
+                    <div class="wizard-track" id="wizardTrack">
+                        <div class="stage-section" id="stage1">
+                            <div class="section-title">
+                                <span class="badge-accent">Step 01</span>
+                                <h2>Define Your Career Path</h2>
+                                <p>Select the domain and specific role you want to practice for.</p>
                             </div>
 
-                            <div class="premium-input">
-                                <label><i class="fas fa-briefcase"></i> Target Role</label>
-                                <select id="roleSelect" class="ultra-select" disabled onchange="validateSetup()">
-                                    <option value="">Select Domain First</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                            <div class="selection-box-premium">
+                                <div class="premium-input">
+                                    <label><i class="fas fa-layer-group"></i> Domain</label>
+                                    <select id="domainSelect" class="ultra-select" onchange="updateSetupRoles()">
+                                        <option value="">Select a Domain</option>
+                                        <option value="software">Software Engineering</option>
+                                        <option value="data">Data Science & AI</option>
+                                        <option value="design">Product Design</option>
+                                        <option value="management">Product Management</option>
+                                    </select>
+                                </div>
 
-                    <div class="stage-section" id="stage2">
-                        <div class="section-title">
-                            <span class="badge-accent">Step 02</span>
-                            <h2>Select Your Interviewer</h2>
-                            <p>Each interviewer has a unique personality and difficulty level.</p>
-                        </div>
-
-                        <div class="interviewer-grid-premium">
-                            <div class="interviewer-card-v2" onclick="selectSetupInterviewer('james', this)">
-                                <div class="card-status-dot"></div>
-                                <img src="assets/interviewer.png" alt="James">
-                                <div class="card-meta">
-                                    <h3>James Wilson</h3>
-                                    <span class="role-tag">Senior Tech Lead</span>
-                                    <p class="desc-text">Direct, technical focus, expects high-quality code logic.</p>
+                                <div class="premium-input">
+                                    <label><i class="fas fa-briefcase"></i> Target Role</label>
+                                    <select id="roleSelect" class="ultra-select" disabled onchange="validateSetup()">
+                                        <option value="">Select Domain First</option>
+                                    </select>
                                 </div>
                             </div>
 
-                            <div class="interviewer-card-v2" onclick="selectSetupInterviewer('sarah', this)">
-                                <div class="card-status-dot"></div>
-                                <img src="assets/interviewer_woman.png" alt="Sarah">
-                                <div class="card-meta">
-                                    <h3>Sarah Chen</h3>
-                                    <span class="role-tag">Global HR Manager</span>
-                                    <p class="desc-text">Empathetic, values soft skills and behavioral fit.</p>
-                                </div>
-                            </div>
-
-                            <div class="interviewer-card-v2" onclick="selectSetupInterviewer('robert', this)">
-                                <div class="card-status-dot"></div>
-                                <img src="assets/interviewer_old_man.png" alt="Robert">
-                                <div class="card-meta">
-                                    <h3>Dr. Robert</h3>
-                                    <span class="role-tag">Staff Engineering Director</span>
-                                    <p class="desc-text">Strategic, deep architectural inquiries, very calm.</p>
-                                </div>
+                            <div class="wizard-controls">
+                                <button id="nextStepBtn" class="premium-action-btn" disabled onclick="nextWizardStep()">
+                                    Next Step <i class="fas fa-arrow-right"></i>
+                                </button>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="setup-controls">
-                        <button id="startInterviewBtn" class="premium-action-btn" disabled
-                            onclick="transitionToPhase2()">
-                            Initialize Interview Protocol <i class="fas fa-bolt-lightning"></i>
-                        </button>
+                        <div class="stage-section" id="stage2">
+                            <div class="section-title">
+                                <span class="badge-accent">Step 02</span>
+                                <h2>Select Your Interviewer</h2>
+                                <p>Each interviewer has a unique personality and difficulty level.</p>
+                            </div>
+
+                            <div class="interviewer-grid-premium">
+                                <div class="interviewer-card-v2" onclick="selectSetupInterviewer('james', this)">
+                                    <div class="card-status-dot"></div>
+                                    <img src="assets/interviewer.png" alt="James">
+                                    <div class="card-meta">
+                                        <h3>James Wilson</h3>
+                                        <span class="role-tag">Senior Tech Lead</span>
+                                        <p class="desc-text">Direct, technical focus, expects high-quality code logic.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="interviewer-card-v2" onclick="selectSetupInterviewer('sarah', this)">
+                                    <div class="card-status-dot"></div>
+                                    <img src="assets/interviewer_woman.png" alt="Sarah">
+                                    <div class="card-meta">
+                                        <h3>Sarah Chen</h3>
+                                        <span class="role-tag">Global HR Manager</span>
+                                        <p class="desc-text">Empathetic, values soft skills and behavioral fit.</p>
+                                    </div>
+                                </div>
+
+                                <div class="interviewer-card-v2" onclick="selectSetupInterviewer('robert', this)">
+                                    <div class="card-status-dot"></div>
+                                    <img src="assets/interviewer_old_man.png" alt="Robert">
+                                    <div class="card-meta">
+                                        <h3>Dr. Robert</h3>
+                                        <span class="role-tag">Staff Engineering Director</span>
+                                        <p class="desc-text">Strategic, deep architectural inquiries, very calm.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wizard-controls" style="display: flex; gap: 20px;">
+                                <button class="premium-action-btn outline" onclick="prevWizardStep()">
+                                    <i class="fas fa-arrow-left"></i> Back
+                                </button>
+                                <button id="startInterviewBtn" class="premium-action-btn" disabled
+                                    onclick="transitionToPhase2()">
+                                    Start Interview <i class="fas fa-bolt-lightning"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -135,6 +148,9 @@
                     <span class="logo-text">iX Platform</span>
                 </div>
                 <div class="header-controls">
+                    <button id="padToggleMobile" class="pad-toggle-btn mobile-only" onclick="togglePerformancePad()">
+                        <i class="fas fa-clipboard-list"></i> Pad
+                    </button>
                     <div class="status-indicator">
                         <span class="dot"></span> Live
                     </div>
@@ -194,7 +210,7 @@
                 </div>
 
                 <!-- Column 3: Real-time Review -->
-                <aside class="review-panel">
+                <aside class="review-panel" id="performancePad">
                     <div class="panel-header">
                         <h3>Performance Review</h3>
                     </div>
@@ -302,7 +318,9 @@
     <script src="js/firebase-config.js"></script>
     <script src="js/auth.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Responsive & Menu Scripts -->
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/responsive-ui.js"></script>
     <script src="js/ai-interview.js"></script>
 </body>
 

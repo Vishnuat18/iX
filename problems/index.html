@@ -217,127 +217,124 @@
         </div>
     </div>
 
-    <!-- Mobile Bottom Navigation -->
-    <div class="mobile-bottom-nav">
-        <a href="../index.html" class="mobile-nav-item">
-            <i class="fas fa-home"></i>
-            <span>Home</span>
-        </a>
-        <a href="index.html" class="mobile-nav-item active">
-            <i class="fas fa-code"></i>
-            <span>Coding</span>
-        </a>
-        <a href="../quiz_landing.html" class="mobile-nav-item">
-            <i class="fas fa-brain"></i>
-            <span>Quiz</span>
-        </a>
-        <a href="../community.html" class="mobile-nav-item">
-            <i class="fas fa-users"></i>
-            <span>iX Link</span>
-        </a>
-        <a href="../profile.html" class="mobile-nav-item">
-            <i class="fas fa-user-circle"></i>
-            <span>Profile</span>
-        </a>
-    </div>
+    <!-- Responsive & Menu Scripts -->
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/responsive-ui.js"></script>
+</body>
+<script>
+    let allProblems = [];
 
-    <script src="../js/auth.js"></script>
-    <script>
-        let allProblems = [];
+    function loadUserScore() {
+        try {
+            if (typeof Auth !== 'undefined') {
+                const user = Auth.getUser();
+                const score = user && user.stats ? (user.stats.quizScore || 0) : 0;
 
-        function loadUserScore() {
-            try {
-                if (typeof Auth !== 'undefined') {
-                    const user = Auth.getUser();
-                    const score = user && user.stats ? (user.stats.quizScore || 0) : 0;
+                // Update Page Score
+                const scoreEl = document.getElementById('userScore');
+                if (scoreEl) scoreEl.innerText = score;
 
-                    // Update Page Score
-                    const scoreEl = document.getElementById('userScore');
-                    if (scoreEl) scoreEl.innerText = score;
-
-                    // Update Header Score
-                    const headerScoreEl = document.getElementById('userScoreInHeader');
-                    if (headerScoreEl) headerScoreEl.innerText = score;
-                }
-            } catch (e) {
-                console.warn("Auth stats load failed:", e);
+                // Update Header Score
+                const headerScoreEl = document.getElementById('userScoreInHeader');
+                if (headerScoreEl) headerScoreEl.innerText = score;
             }
+        } catch (e) {
+            console.warn("Auth stats load failed:", e);
         }
+    }
 
-        async function loadProblems() {
-            const listContainer = document.getElementById('problems-list');
+    async function loadProblems() {
+        const listContainer = document.getElementById('problems-list');
+        try {
+            // 1. Try Firestore
+            let snapshot;
             try {
-                // Fetch from Firestore instead of JSON
-                const snapshot = await Auth._withTimeout(db.collection('problems').get());
-                allProblems = snapshot.docs.map(doc => doc.data());
+                snapshot = await Auth._withTimeout(db.collection('problems').get(), 5000); // Shorter timeout for faster failover
+                allProblems = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+            } catch (firestoreError) {
+                console.warn("Firestore fetch failed, falling back to JSON:", firestoreError);
+                allProblems = [];
+            }
 
-                if (allProblems.length === 0) {
-                    listContainer.innerHTML = `<div style="text-align:center; padding: 40px; color: #aaa;">No problems found in database. Please seed the DB if you are an admin.</div>`;
-                    return;
-                }
+            // 2. Fallback to local JSON if Firestore failed or returned nothing
+            if (allProblems.length === 0) {
+                const response = await fetch('../data/problems.json');
+                allProblems = await response.json();
+                console.log("Loaded problems from local fallback.");
+            }
 
-                // Sort by ID to maintain order
-                allProblems.sort((a, b) => (a.id || 0) - (b.id || 0));
+            if (allProblems.length === 0) {
+                listContainer.innerHTML = `<div style="text-align:center; padding: 40px; color: #aaa;">No problems found.</div>`;
+                return;
+            }
 
-                populateCategories(allProblems);
-                renderProblems(allProblems);
-            } catch (error) {
-                console.error("Error loading problems from Firestore:", error);
-                listContainer.innerHTML = `
+            // Sort by ID to maintain order (handling both string and number IDs)
+            allProblems.sort((a, b) => parseInt(a.id || 0) - parseInt(b.id || 0));
+
+            populateCategories(allProblems);
+            renderProblems(allProblems);
+        } catch (error) {
+            console.error("Critical error loading problems:", error);
+            listContainer.innerHTML = `
                     <div style="text-align:center; padding:40px; color: #ff6b6b;">
                         <i class="fas fa-exclamation-circle" style="font-size: 2rem; margin-bottom: 10px;"></i>
                         <br>
-                        Failed to fetch problems from database.<br>
+                        Failed to fetch problems.<br>
                         <span style="font-size:0.8rem; color:#666;">${error.message}</span>
                     </div>`;
-            }
+        }
+    }
+
+    function populateCategories(problems) {
+        const select = document.getElementById('categorySelect');
+        // Keep "All Sections"
+        select.innerHTML = '<option value="all">All Sections</option>';
+
+        const categories = new Set();
+        problems.forEach(p => {
+            if (p.category) categories.add(p.category);
+        });
+
+        // Sort alphabetical
+        const sorted = Array.from(categories).sort();
+
+        sorted.forEach(cat => {
+            const opt = document.createElement('option');
+            opt.value = cat;
+            opt.text = cat;
+            select.appendChild(opt);
+        });
+    }
+
+    function renderProblems(problems) {
+        const container = document.getElementById('problems-list');
+        container.innerHTML = '';
+        const challengeList = getChallengeList();
+
+        // Get current user's solved problems
+        const currentUser = Auth.getUser();
+        const solvedProblems = currentUser && currentUser.solvedProblems ? currentUser.solvedProblems : [];
+
+        if (problems.length === 0) {
+            container.innerHTML = `<div style="text-align:center; padding: 40px; color: #aaa;">No problems found.</div>`;
+            return;
         }
 
-        function populateCategories(problems) {
-            const select = document.getElementById('categorySelect');
-            // Keep "All Sections"
-            select.innerHTML = '<option value="all">All Sections</option>';
-
-            const categories = new Set();
-            problems.forEach(p => {
-                if (p.category) categories.add(p.category);
-            });
-
-            // Sort alphabetical
-            const sorted = Array.from(categories).sort();
-
-            sorted.forEach(cat => {
-                const opt = document.createElement('option');
-                opt.value = cat;
-                opt.text = cat;
-                select.appendChild(opt);
-            });
-        }
-
-        function renderProblems(problems) {
-            const container = document.getElementById('problems-list');
-            container.innerHTML = '';
-            const challengeList = getChallengeList();
+        problems.forEach((p, index) => {
+            const row = document.createElement('div');
 
             // Get current user's solved problems
             const currentUser = Auth.getUser();
             const solvedProblems = currentUser && currentUser.solvedProblems ? currentUser.solvedProblems : [];
+            const isSolved = solvedProblems.includes(parseInt(p.id));
 
-            if (problems.length === 0) {
-                container.innerHTML = `<div style="text-align:center; padding: 40px; color: #aaa;">No problems found.</div>`;
-                return;
-            }
+            row.className = `problem-row ${isSolved ? 'solved' : ''}`;
 
-            problems.forEach((p, index) => {
-                const row = document.createElement('div');
-                row.className = 'problem-row';
+            // Solve Link
+            const solveUrl = `solve.html?id=${p.id}`;
+            const isBookmarked = challengeList.includes(String(p.id)); // Ensure ID string comparison
 
-                // Solve Link
-                const solveUrl = `solve.html?id=${p.id}`;
-                const isBookmarked = challengeList.includes(String(p.id)); // Ensure ID string comparison
-                const isSolved = solvedProblems.includes(parseInt(p.id)); // Check from user profile
-
-                row.innerHTML = `
+            row.innerHTML = `
                     <div style="display:flex; align-items:center; gap: 15px;">
                         <span style="color: #666; font-family: monospace; font-size: 1.1rem; width: 40px; text-align: right;">#${index + 1}</span>
                         <div>
@@ -351,113 +348,113 @@
                     <div style="display:flex; align-items:center; gap: 15px;">
                         <span class="difficulty-badge diff-${p.difficulty}">${p.difficulty}</span>
                         ${isSolved
-                        ? `<a href="${solveUrl}" class="btn-premium" style="font-size: 0.8rem; padding: 8px 20px; background:#333; color:#aaa;">Solved</a>`
-                        : `<a href="${solveUrl}" class="btn-premium" style="font-size: 0.8rem; padding: 8px 20px;">Solve</a>`
-                    }
+                    ? `<a href="${solveUrl}" class="btn-premium" style="font-size: 0.8rem; padding: 8px 20px; background:#333; color:#aaa;">Solved</a>`
+                    : `<a href="${solveUrl}" class="btn-premium" style="font-size: 0.8rem; padding: 8px 20px;">Solve</a>`
+                }
                         <button class="bookmark-btn ${isBookmarked ? 'active' : ''}" onclick="toggleChallenge('${p.id}', event)" title="Add to Challenge List">
                             <i class="${isBookmarked ? 'fas' : 'far'} fa-star"></i>
                         </button>
                     </div>
                 `;
-                container.appendChild(row);
-            });
-        }
+            container.appendChild(row);
+        });
+    }
 
-        function applyFilters() {
-            const searchText = document.getElementById('searchInput').value.toLowerCase();
-            const category = document.getElementById('categorySelect').value;
-            const difficulty = document.getElementById('difficultySelect').value;
-            const challengeList = getChallengeList(); // Returns string IDs
+    function applyFilters() {
+        const searchText = document.getElementById('searchInput').value.toLowerCase();
+        const category = document.getElementById('categorySelect').value;
+        const difficulty = document.getElementById('difficultySelect').value;
+        const challengeList = getChallengeList(); // Returns string IDs
 
-            const filtered = allProblems.filter(p => {
-                // Search Text Filter
-                const matchesSearch = p.title.toLowerCase().includes(searchText);
+        const filtered = allProblems.filter(p => {
+            // Search Text Filter
+            const matchesSearch = p.title.toLowerCase().includes(searchText);
 
-                // Category Filter
-                let matchesCategory = true;
-                if (category !== 'all') {
-                    matchesCategory = (p.category === category);
-                }
-
-                // Difficulty Filter
-                let matchesDifficulty = true;
-                if (difficulty !== 'all') {
-                    matchesDifficulty = (p.difficulty === difficulty);
-                }
-
-                // Challenge Filter
-                let matchesChallenge = true;
-                if (challengeMode) {
-                    matchesChallenge = challengeList.includes(String(p.id));
-                }
-
-                return matchesSearch && matchesCategory && matchesDifficulty && matchesChallenge;
-            });
-
-            renderProblems(filtered);
-        }
-
-        let challengeMode = false;
-
-        function getChallengeList() {
-            try {
-                const list = JSON.parse(localStorage.getItem('ix_challenge_list') || '[]');
-                // Ensure all items are strings for consistent comparison
-                return list.map(String);
-            } catch (e) { return []; }
-        }
-
-        function toggleChallenge(id, event) {
-            event.stopPropagation();
-            event.preventDefault();
-
-            id = String(id);
-            let list = getChallengeList();
-            if (list.includes(id)) {
-                list = list.filter(item => item !== id);
-            } else {
-                list.push(id);
+            // Category Filter
+            let matchesCategory = true;
+            if (category !== 'all') {
+                matchesCategory = (p.category === category);
             }
 
-            localStorage.setItem('ix_challenge_list', JSON.stringify(list));
+            // Difficulty Filter
+            let matchesDifficulty = true;
+            if (difficulty !== 'all') {
+                matchesDifficulty = (p.difficulty === difficulty);
+            }
 
-            // If currently in filter mode, re-apply filters might remove valid item from view? 
-            // Better to just re-render or update icon. 
-            // Re-rendering is safest but might be jarring if item disappears.
-            // For now, re-render to update icon state.
-            applyFilters();
-        }
-
-        function toggleChallengeFilter() {
-            challengeMode = !challengeMode;
-            const btn = document.getElementById('challengeFilterBtn');
+            // Challenge Filter
+            let matchesChallenge = true;
             if (challengeMode) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
+                matchesChallenge = challengeList.includes(String(p.id));
             }
-            applyFilters();
+
+            return matchesSearch && matchesCategory && matchesDifficulty && matchesChallenge;
+        });
+
+        renderProblems(filtered);
+    }
+
+    let challengeMode = false;
+
+    function getChallengeList() {
+        try {
+            const list = JSON.parse(localStorage.getItem('ix_challenge_list') || '[]');
+            // Ensure all items are strings for consistent comparison
+            return list.map(String);
+        } catch (e) { return []; }
+    }
+
+    function toggleChallenge(id, event) {
+        event.stopPropagation();
+        event.preventDefault();
+
+        id = String(id);
+        let list = getChallengeList();
+        if (list.includes(id)) {
+            list = list.filter(item => item !== id);
+        } else {
+            list.push(id);
         }
 
-        // Initializer
-        async function init() {
-            try {
-                // 1. Auth & Score Setup
-                loadUserScore();
-                if (typeof Auth !== 'undefined') {
-                    Auth.requireAuth();
-                }
+        localStorage.setItem('ix_challenge_list', JSON.stringify(list));
 
-                // 2. Data Fetching
-                await loadProblems();
+        // If currently in filter mode, re-apply filters might remove valid item from view? 
+        // Better to just re-render or update icon. 
+        // Re-rendering is safest but might be jarring if item disappears.
+        // For now, re-render to update icon state.
+        applyFilters();
+    }
 
-            } catch (err) {
-                console.error("Init Error:", err);
-            }
+    function toggleChallengeFilter() {
+        challengeMode = !challengeMode;
+        const btn = document.getElementById('challengeFilterBtn');
+        if (challengeMode) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
         }
+        applyFilters();
+    }
 
-        init();
-    </script>
+    // Initializer
+    async function init() {
+        try {
+            // 1. Auth & Score Setup
+            loadUserScore();
+            if (typeof Auth !== 'undefined') {
+                Auth.requireAuth();
+            }
+
+            // 2. Data Fetching
+            await loadProblems();
+
+        } catch (err) {
+            console.error("Init Error:", err);
+        }
+    }
+
+    init();
+</script>
 </body>
 
 </html>

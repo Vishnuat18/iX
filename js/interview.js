@@ -1,136 +1,131 @@
+/*********************************
+ * HELPERS
+ *********************************/
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  const lang = getQueryParam("lang");
+  const level = getQueryParam("level") || "beginner";
 
-  /*********************************
-   * READ CONTEXT (SINGLE SOURCE)
-   *********************************/
-  const lang =
-    getQueryParam("lang") ||
-    localStorage.getItem("lang") ||
-    "java";
+  if (lang) {
+    startPrep(lang, level);
+  }
+});
 
-  const level =
-    getQueryParam("level") ||
-    "beginner";
+/*********************************
+ * CORE LOGIC
+ *********************************/
+let questions = [];
+let index = 0;
+let normalizedLang = "";
+let normalizedLevel = "";
 
-  const normalizedLang = lang.toLowerCase();
-  const normalizedLevel = level.toLowerCase();
+window.startPrep = function (lang, level = "beginner") {
+  normalizedLang = lang.toLowerCase();
+  normalizedLevel = level.toLowerCase();
 
-  /*********************************
-   * PAGE TITLE
-   *********************************/
-  document.getElementById("pageTitle").innerText =
-    `${normalizedLang.toUpperCase()} Interview – ${normalizedLevel.toUpperCase()}`;
+  // 1. Update UI Visibility
+  document.getElementById("prepSelection").style.display = "none";
+  document.getElementById("prepContent").style.display = "block";
+  document.getElementById("prepNav").style.display = "flex";
 
-  /*********************************
-   * BREADCRUMBS (FINAL STATE)
-   *********************************/
+  // 2. Update Page Titles & Breadcrumbs
+  const title = document.getElementById("pageTitle");
+  if (title) title.innerText = `${normalizedLang.toUpperCase()} Interview – ${normalizedLevel.toUpperCase()}`;
+
   const breadcrumbs = document.getElementById("breadcrumbs");
   if (breadcrumbs) {
     breadcrumbs.innerHTML = `
-      <span>Home</span>
-      <span>${normalizedLang.toUpperCase()}</span>
-      <span>Interview</span>
-      <span>${normalizedLevel}</span>
-    `;
+        <span>Home</span>
+        <span>Career</span>
+        <span class="separator">/</span>
+        <span class="current">${normalizedLang.toUpperCase()}</span>
+      `;
   }
 
-  /*********************************
-   * DOM REFERENCES
-   *********************************/
+  // 3. Load Questions
+  const qEl = document.getElementById("question");
+  const aEl = document.getElementById("answer");
+  const counterEl = document.getElementById("counter");
+  const tryBtn = document.getElementById("tryBtn");
+
+  fetch(`../data/interview/${normalizedLang}/${normalizedLevel}.json`)
+    .then(res => {
+      if (!res.ok) throw new Error("Questions not found");
+      return res.json();
+    })
+    .then(data => {
+      questions = data;
+      index = 0;
+      render();
+    })
+    .catch(err => {
+      console.error(err);
+      qEl.innerText = "Questions currently unavailable for this domain.";
+      aEl.innerHTML = "";
+      counterEl.innerText = "";
+      tryBtn.style.display = "none";
+    });
+}
+
+function render() {
+  if (!questions.length) return;
+
   const qEl = document.getElementById("question");
   const aEl = document.getElementById("answer");
   const levelEl = document.getElementById("level");
   const counterEl = document.getElementById("counter");
   const tryBtn = document.getElementById("tryBtn");
 
-  let questions = [];
-  let index = 0;
+  const q = questions[index];
 
-  /*********************************
-   * LOAD QUESTIONS (LANG + LEVEL)
-   *********************************/
-  fetch(`../data/interview/${normalizedLang}/${normalizedLevel}.json`)
-    .then(res => {
-      if (!res.ok) {
-        throw new Error(
-          `Interview data not found for ${normalizedLang}/${normalizedLevel}`
-        );
-      }
-      return res.json();
-    })
-    .then(data => {
-      console.log(
-        `Loaded ${data.length} ${normalizedLang} interview questions (${normalizedLevel})`
-      );
-      questions = data;
-      render();
-    })
-    .catch(err => {
-      console.error(err);
-      qEl.innerText = "Interview questions not available.";
-      aEl.innerHTML = "";
-      counterEl.innerText = "";
-      tryBtn.style.display = "none";
-    });
+  if (qEl) qEl.innerText = q.question || "Question not available";
+  if (levelEl) levelEl.innerText = normalizedLevel.toUpperCase();
+  if (counterEl) counterEl.innerText = `${index + 1} / ${questions.length}`;
 
-  /*********************************
-   * RENDER CURRENT QUESTION
-   *********************************/
-  function render() {
-    if (!questions.length) return;
+  let html = `<p>${q.answer || ""}</p>`;
 
-    const q = questions[index];
-
-    qEl.innerText = q.question || "Question not available";
-    levelEl.innerText = normalizedLevel.toUpperCase();
-    counterEl.innerText = `${index + 1} / ${questions.length}`;
-
-    let html = `<p>${q.answer || ""}</p>`;
-
-    if (q.hasCode && q.codeSample) {
-      html += `
-        <pre><code>${escapeHtml(q.codeSample)}</code></pre>
-      `;
-    }
-
-    aEl.innerHTML = html;
-    tryBtn.style.display = q.hasCode ? "block" : "none";
+  if (q.hasCode && q.codeSample) {
+    html += `<pre><code>${escapeHtml(q.codeSample)}</code></pre>`;
   }
 
-  /*********************************
-   * NAVIGATION (BOUND TO BUTTONS)
-   *********************************/
-  window.next = function () {
-    if (index < questions.length - 1) {
-      index++;
-      render();
-    }
-  };
+  if (aEl) aEl.innerHTML = html;
+  if (tryBtn) tryBtn.style.display = q.hasCode ? "block" : "none";
+}
 
-  window.prev = function () {
-    if (index > 0) {
-      index--;
-      render();
-    }
-  };
-
-  /*********************************
-   * TRY IT OUT (EDITOR HOOK)
-   *********************************/
-  window.openEditor = function () {
-    alert(
-      `Opening ${normalizedLang.toUpperCase()} editor (${normalizedLevel})`
-    );
-  };
-
-  /*********************************
-   * SAFE HTML ESCAPE FOR CODE
-   *********************************/
-  function escapeHtml(str) {
-    return str
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
+window.next = function () {
+  if (index < questions.length - 1) {
+    index++;
+    render();
   }
+};
 
-});
+window.prev = function () {
+  if (index > 0) {
+    index--;
+    render();
+  }
+};
+
+window.openEditor = function () {
+  // Integration point for coding editor
+  Swal.fire({
+    title: 'Developer Editor',
+    text: `Opening ${normalizedLang.toUpperCase()} playground for this challenge.`,
+    icon: 'info',
+    background: '#1e1e1e',
+    color: '#fff',
+    confirmButtonColor: '#3b82f6'
+  });
+};
+
+function escapeHtml(str) {
+  if (!str) return "";
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
