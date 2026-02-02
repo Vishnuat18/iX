@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Section</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+</head>
+
+<body>
+
+  <header class="top-bar">
+    <span class="hamburger" onclick="openDrawer()">☰</span>
+    <h1 id="currentSubdomain"></h1>
+  </header>
+
+  <div class="breadcrumb-container">
+    <button class="back-btn" id="sectionBackBtn" onclick="backToActions()" style="display:none;">
+      ← Back
+    </button>
+    <div class="breadcrumbs" id="breadcrumbs"></div>
+  </div>
+
+  <!-- =========================
+       MAIN FEATURE BUTTONS
+       ========================= -->
+  <section class="features" id="actionButtons">
+
+    <div class="feature-card" onclick="openAction('learn')">
+      <h3>Learn</h3>
+      <p>Concepts & explanations</p>
+    </div>
+
+    <div class="feature-card" onclick="openAction('quiz')">
+      <h3>Quiz</h3>
+      <p>MCQs & assessments</p>
+    </div>
+
+    <div class="feature-card" onclick="openInterviewLevels()">
+      <h3>Interview Preparation</h3>
+      <p>Frequently asked questions</p>
+    </div>
+
+    <div class="feature-card" onclick="openAction('practice')">
+      <h3>Problem Solving</h3>
+      <p>Hands-on coding practice</p>
+    </div>
+
+    <div class="feature-card highlight" onclick="openAction('mock')">
+      <h3>Mock Interview (AI)</h3>
+      <p>Real-time interview simulation</p>
+    </div>
+
+  </section>
+
+  <!-- =========================
+       INTERVIEW LEVEL BUTTONS
+       ========================= -->
+  <section class="features" id="interviewLevels" style="display:none;">
+
+    <div class="feature-card" onclick="openInterview('beginner')">
+      <h3>Beginner</h3>
+      <p>Basic interview questions</p>
+    </div>
+
+    <div class="feature-card" onclick="openInterview('moderate')">
+      <h3>Moderate</h3>
+      <p>Intermediate level questions</p>
+    </div>
+
+    <div class="feature-card" onclick="openInterview('advanced')">
+      <h3>Advanced</h3>
+      <p>Advanced & tricky questions</p>
+    </div>
+
+  </section>
+
+  <script src="js/app.js"></script>
+  <!-- Responsive & Menu Scripts -->
+  <script src="js/mobile-menu.js"></script>
+  <script src="js/responsive-ui.js"></script>
+</body>
+
+</html>
